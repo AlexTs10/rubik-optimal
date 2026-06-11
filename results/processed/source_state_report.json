@@ -1,48 +1,29 @@
 {
   "current_source_state": {
-    "commit": null,
-    "commit_short": null,
-    "dirty": true,
+    "commit": "c3f68de9ad790cce81baee002301a717500e13ab",
+    "commit_short": "c3f68de",
+    "dirty": false,
     "git_available": true,
-    "has_commit": false,
-    "is_reproducible_checkout": false,
-    "limitation": "Generated from an unborn Git branch with uncommitted/untracked files; the exact source cannot be checked out by commit SHA.",
+    "has_commit": true,
+    "is_reproducible_checkout": true,
+    "limitation": "",
     "reproduction_plan": [
       "Review git status --short and decide the intentional source baseline.",
       "Create a real commit or an approved source archive; do not treat no_commit+dirty artifacts as final-submission evidence.",
       "Regenerate final result metadata from that baseline and rerun python scripts/thesis_audit.py."
     ],
     "schema_version": 1,
-    "state": "no_commit+dirty",
-    "status_entry_count": 18,
-    "status_sample": [
-      "?? .audit_workflow.js",
-      "?? .gitignore",
-      "?? AGENTS.md",
-      "?? LICENSE",
-      "?? README.md",
-      "?? REPRODUCIBILITY.md",
-      "?? THIRD_PARTY_NOTICES.md",
-      "?? data/",
-      "?? docs/",
-      "?? native/",
-      "?? pyproject.toml",
-      "?? results/",
-      "?? rubik_optimal/",
-      "?? scripts/",
-      "?? specs/",
-      "?? src/",
-      "?? tests/",
-      "?? thesis/"
-    ]
+    "state": "c3f68de",
+    "status_entry_count": 0,
+    "status_sample": []
   },
   "final_submission_source_state_required": {
-    "current_checkout_is_reproducible": false,
-    "current_limitation": "Generated from an unborn Git branch with uncommitted/untracked files; the exact source cannot be checked out by commit SHA.",
+    "current_checkout_is_reproducible": true,
+    "current_limitation": "",
     "requires_clean_checkout_metadata": true,
     "requires_commit_or_archive": true
   },
-  "generated_at_utc": "2026-06-08T15:30:45+00:00",
+  "generated_at_utc": "2026-06-11T23:23:41+00:00",
   "safe_regeneration_plan": [
     "Review git status --short and decide the exact files that form the thesis baseline.",
     "Create an intentional commit, or create and record an approved immutable source archive if a commit is not allowed.",
