@@ -915,7 +915,7 @@ def generate_h48_table(
                 solver=solver,
                 table_path=table_path,
             )
-        if trusted_ok:
+        if trusted_ok and not adopt_existing_table_metadata:
             try:
                 reused_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
             except json.JSONDecodeError as exc:
@@ -932,6 +932,11 @@ def generate_h48_table(
             )
             write_h48_latex_table(root, _all_h48_metadata_rows(root))
             return result
+        if metadata_path.exists():
+            try:
+                reused_metadata = json.loads(metadata_path.read_text(encoding="utf-8"))
+            except json.JSONDecodeError:
+                reused_metadata = None
         if not adopt_existing_table_metadata:
             if not metadata_path.exists():
                 raise RuntimeError(
@@ -961,6 +966,21 @@ def generate_h48_table(
             "runtime_seconds": 0.0,
             "generation_storage": "existing_table_recovery",
             "previous_trusted_metadata_message": trusted_message,
+            "previous_metadata_present": reused_metadata is not None,
+            "previous_generation_status": reused_metadata.get("generation_status", "")
+            if isinstance(reused_metadata, dict)
+            else "",
+            "previous_source_state": reused_metadata.get("source_state", "")
+            if isinstance(reused_metadata, dict)
+            else "",
+            "previous_source_snapshot_reproducible": reused_metadata.get(
+                "source_snapshot_reproducible", None
+            )
+            if isinstance(reused_metadata, dict)
+            else None,
+            "previous_checksum_sha256": reused_metadata.get("checksum_sha256", "")
+            if isinstance(reused_metadata, dict)
+            else "",
             "adoption_native_table_check": adoption_canary,
         }
         generation_status = "adopted_existing_table_metadata"
@@ -997,6 +1017,13 @@ def generate_h48_table(
         "adoption_previous_trusted_metadata_message": backend_payload.get(
             "previous_trusted_metadata_message", ""
         ),
+        "adoption_previous_metadata_present": backend_payload.get("previous_metadata_present", False),
+        "adoption_previous_generation_status": backend_payload.get("previous_generation_status", ""),
+        "adoption_previous_source_state": backend_payload.get("previous_source_state", ""),
+        "adoption_previous_source_snapshot_reproducible": backend_payload.get(
+            "previous_source_snapshot_reproducible", None
+        ),
+        "adoption_previous_checksum_sha256": backend_payload.get("previous_checksum_sha256", ""),
         "adoption_native_table_check_passed": (
             backend_payload.get("adoption_native_table_check", {}).get("passed") is True
             if isinstance(backend_payload.get("adoption_native_table_check"), dict)

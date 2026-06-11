@@ -121,9 +121,9 @@ def main() -> int:
         "--adopt-existing-table-metadata",
         action="store_true",
         help=(
-            "If the canonical table file already exists with the exact expected size but trusted metadata "
-            "is missing or invalid, compute SHA-256 and write explicit recovery metadata instead of "
-            "regenerating the table. This is intended for interrupted long H48H10+ prerequisite runs."
+            "If the canonical table file already exists with the exact expected size, run the native "
+            "table-check canary, compute SHA-256, and write explicit adoption metadata instead of "
+            "regenerating the table. This is intended for retained or interrupted long H48 table runs."
         ),
     )
     parser.add_argument("--force", action="store_true")

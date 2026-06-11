@@ -2,7 +2,7 @@
 
 ## Status
 
-This guide documents the current delivered-scale thesis draft. The repository, implementation, scale, research, benchmark, citation, and XeLaTeX gates pass locally, but final submission readiness is still blocked by unresolved front-matter metadata, supervisor/Secretariat approval evidence, and clean source-state provenance. The current local checkout has no commit at `HEAD`, so generated metadata that records `source_state: no_commit+dirty` is development evidence only until regenerated from a real commit or approved source archive. See `docs/final_metadata_packet.md`, `docs/final_metadata_values.template.json`, `docs/supervisor_handoff_request.md`, `docs/final_supervisor_approval.template.md`, `docs/source_state_reproducibility.md`, and `docs/repository_hygiene_runbook.md`.
+This guide documents the current delivered-scale thesis draft. The repository, implementation, scale, research, benchmark, citation, and XeLaTeX gates pass locally, but final submission readiness is still blocked by unresolved front-matter metadata and supervisor/Secretariat approval evidence. Source-state provenance must be checked with `python scripts/source_state_report.py` and `python scripts/thesis_audit.py` after any final artifact regeneration. The retained H48 `h48h7` table is handled through explicit adoption metadata: the canonical table bytes are validated, re-checksummed, and stamped from a clean committed checkout without claiming byte-for-byte table regeneration. See `docs/final_metadata_packet.md`, `docs/final_metadata_values.template.json`, `docs/supervisor_handoff_request.md`, `docs/final_supervisor_approval.template.md`, `docs/source_state_reproducibility.md`, and `docs/repository_hygiene_runbook.md`.
 
 ## Environment Observed During Prototype Build
 
@@ -199,7 +199,7 @@ cmp main.pdf thesis/main.pdf
 python scripts/thesis_audit.py
 ```
 
-These commands currently pass in this checkout. The audit command still reports `final_submission_ready: false` because front-matter metadata, final approval evidence, and clean source-state provenance are pending.
+These commands currently pass in this checkout. The audit command still reports `final_submission_ready: false` because front-matter metadata and final approval evidence are pending.
 
 If the thesis benchmark run is interrupted, restart it with:
 
@@ -211,15 +211,18 @@ The resume mode validates the existing raw JSONL seed/profile, skips completed `
 
 ## Source-State Gate
 
-Generated result metadata keeps a compact `source_state` label and new metadata producers also write `source_state_details`, `source_snapshot_reproducible`, `source_snapshot_limitation`, and `source_reproduction_plan`. In this checkout the label is currently `no_commit+dirty`, because `main` has no initial commit and the repository contents are untracked. That state must not be used as final-submission provenance.
+Generated result metadata keeps a compact `source_state` label and new metadata producers also write `source_state_details`, `source_snapshot_reproducible`, `source_snapshot_limitation`, and `source_reproduction_plan`. Final metadata must come from a clean committed checkout or an approved immutable source archive. The retained H48 `h48h7` table is the special case: its bytes are adopted only through `--adopt-existing-table-metadata`, which validates the existing table, recomputes its checksum, and records the clean source state of the adoption operation while preserving previous provenance in `adoption_previous_*` fields.
 
 The safe path is:
 
 ```bash
 git status --short
-# after reviewing the intended baseline, create a real commit or an approved immutable source archive
+# after reviewing the intended baseline, create a clean commit or an approved immutable source archive
+python scripts/generate_h48_tables.py --profile thesis --seed 2026 --oracle --threads 8 --adopt-existing-table-metadata
+python scripts/run_h48_oracle_certification.py --profile thesis --seed 2026 --timeout 90 --runtime-target 90 --threads 8
+python scripts/run_h48_oracle_certification.py --profile thesis --seed 2026 --solver h48h7 --timeout 300 --runtime-target 300 --threads 8 --trusted-table --artifact-suffix trusted_no_preload
+python scripts/run_h48_oracle_certification.py --profile thesis --seed 2026 --solver h48h7 --timeout 180 --runtime-target 180 --threads 8 --trusted-table --preload-table --artifact-suffix trusted_preload
 python scripts/source_state_report.py
-# rerun final generators that previously wrote no_commit+dirty metadata
 python scripts/thesis_audit.py
 ```
 

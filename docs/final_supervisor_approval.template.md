@@ -17,9 +17,10 @@ Required approved decisions:
 - front-matter style approved: TODO confirm template adaptation and final metadata.
 - bibliography style approved: TODO confirm bibliography style/format.
 - scoped solver claims approved: TODO confirm bounded Kociemba, Thistlethwaite, Korf, and Pocket Cube claim limits.
-- retained h48h7 evidence artifacts approved: TODO confirm acceptance of the
-  documented retention decision (in lieu of regeneration) for the six
-  artifacts tied to the thread-race-nondeterministic h48h7 oracle table:
+- retained/adopted h48h7 evidence artifacts approved: TODO confirm acceptance
+  of the documented retention decision for the existing validated h48h7 table
+  bytes, the clean-source metadata adoption record, and the regenerated
+  certification artifacts tied to the thread-race-nondeterministic h48h7 oracle table:
   `results/processed/h48_oracle_certification_seed_2026_thesis.json`,
   `results/processed/h48_oracle_certification_seed_2026_thesis_trusted.json`,
   `results/processed/h48_oracle_certification_seed_2026_thesis_trusted_no_preload.json`,

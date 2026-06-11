@@ -2204,6 +2204,64 @@ def test_h48_generation_reuses_only_pretrusted_metadata_without_rewriting(tmp_pa
     assert json.loads(metadata.read_text(encoding="utf-8")) == original_metadata
 
 
+def test_h48_generation_can_re_adopt_existing_trusted_table_metadata(tmp_path, monkeypatch):
+    monkeypatch.setattr(h48_tables, "estimated_h48_table_size_bytes", lambda _solver: 8)
+    monkeypatch.setattr(h48_tables, "capture_source_state", _fake_source_state)
+    monkeypatch.setattr(
+        h48_tables,
+        "_run_h48_adoption_native_canary",
+        lambda **_kwargs: {
+            "passed": True,
+            "native_payload": {"status": "exact", "table_check": "verified", "solution_length": 3},
+        },
+    )
+    table = h48_tables.h48_table_path(root=tmp_path, profile="thesis", seed=2026, solver="h48h0")
+    metadata = h48_tables.h48_metadata_path(root=tmp_path, profile="thesis", seed=2026, solver="h48h0")
+    table.parent.mkdir(parents=True)
+    metadata.parent.mkdir(parents=True)
+    table.write_bytes(b"12345678")
+    original_metadata = {
+        "schema_version": 1,
+        "table_kind": "h48_pruning_table",
+        "profile": "thesis",
+        "seed": 2026,
+        "solver": "h48h0",
+        "h_value": 0,
+        "file_path": "data/generated/h48/thesis_seed_2026/h48h0.bin",
+        "checksum_sha256": h48_tables.sha256_file(table),
+        "backend_source": "vendored_nissy_core_h48",
+        "license": "GPL-3.0-or-later",
+        "table_size_bytes": 8,
+        "estimated_table_size_bytes": 8,
+        "estimated_size_matches_actual": True,
+        "generation_status": "generated",
+        "generated_at_utc": "test-original",
+        "source_state": "no_commit+dirty",
+        "source_snapshot_reproducible": False,
+    }
+    metadata.write_text(json.dumps(original_metadata), encoding="utf-8")
+
+    result = h48_tables.generate_h48_table(
+        root=tmp_path,
+        profile="thesis",
+        seed=2026,
+        solver="h48h0",
+        threads=1,
+        adopt_existing_table_metadata=True,
+    )
+    refreshed = json.loads(metadata.read_text(encoding="utf-8"))
+
+    assert result["generation_status"] == "adopted_existing_table_metadata"
+    assert result["adopted_existing_table_metadata"] is True
+    assert result["adoption_previous_metadata_present"] is True
+    assert result["adoption_previous_generation_status"] == "generated"
+    assert result["adoption_previous_source_state"] == "no_commit+dirty"
+    assert result["adoption_previous_source_snapshot_reproducible"] is False
+    assert result["source_state"] == "test-source"
+    assert result["source_snapshot_reproducible"] is True
+    assert refreshed == result
+
+
 def test_h48_stronger_table_campaign_forwards_recovery_adoption_flag(tmp_path):
     decision = build_campaign_decision(
         root=tmp_path,
