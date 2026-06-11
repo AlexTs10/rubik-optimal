@@ -1,0 +1,42 @@
+% Διάμεσο μήκος λύσης ανά βάθος διατάραξης και επιλυτή. Περιεχόμενο
+% σχήματος· το περιβάλλον figure και η λεζάντα ορίζονται στο κεφάλαιο 9.
+% Δεδομένα: figures/solution_length_depth_data.tex. Η σειρά Korf
+% τερματίζει στο βάθος 10 (βαθύτερες περιπτώσεις χωρίς γραμμή διαμέσου).
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.85\textwidth,
+  height=0.62\textwidth,
+  xlabel={Βάθος διατάραξης},
+  ylabel={Διάμεσο μήκος λύσης},
+  xmin=-0.5, xmax=20.5,
+  xtick={0,5,10,15,20},
+  minor x tick num=4,
+  ymin=0, ymax=40,
+  ytick={0,5,10,15,20,25,30,35,40},
+  grid=major,
+  grid style={dotted, gray!50},
+  legend pos=north west,
+  legend cell align=left,
+  legend style={font=\footnotesize},
+]
+% Διαγώνιος αναφοράς y = x (βέλτιστο μήκος ίσο με το ονομαστικό βάθος).
+\addplot[forget plot, dashed, gray, thick] coordinates {(0,0) (20,20)}
+  node[pos=0.85, sloped, below, font=\scriptsize, text=gray] {βέλτιστο};
+\addplot[blue, thick, mark=*, mark size=1.6pt] coordinates {
+  (0,0) (1,1) (2,2) (3,3) (4,4) (5,5) (6,4) (7,7) (8,8) (10,18) (15,22) (20,23)
+};
+\addlegendentry{Kociemba (native)}
+\addplot[red, thick, mark=square*, mark size=1.6pt] coordinates {
+  (0,0) (1,1) (2,2) (3,3) (4,4) (5,5) (6,4) (7,7) (8,8) (10,9) (15,21) (20,21)
+};
+\addlegendentry{Kociemba (adapter)}
+\addplot[green!55!black, thick, mark=triangle*, mark size=2pt] coordinates {
+  (0,0) (1,1) (2,2) (3,3) (4,4) (5,5) (6,4) (7,7) (8,8) (10,9)
+};
+\addlegendentry{Korf}
+\addplot[orange!90!black, thick, mark=diamond*, mark size=2pt] coordinates {
+  (0,0) (1,1) (2,2) (3,3) (4,5) (5,17) (6,4) (7,25) (8,32) (10,31) (15,32) (20,26)
+};
+\addlegendentry{Thistlethwaite}
+\end{axis}
+\end{tikzpicture}

@@ -1,0 +1,489 @@
+{
+  "arm_order": [
+    "sequential",
+    "batch"
+  ],
+  "batch_exact_count": 12,
+  "batch_max_backend_seconds": 0.076908,
+  "batch_rows": [
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.076908; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.076908,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.027877; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.027877,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.008343; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.008343,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.00615; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.00615,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.005738; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.005738,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.005623; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.005623,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.005622; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.005622,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.005646; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.005646,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.00559; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.00559,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.00563; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.00563,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.005585; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.005585,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.181076; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.005604; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.005604,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    }
+  ],
+  "batch_sum_backend_seconds": 0.164316,
+  "batch_wall_seconds": 0.181076,
+  "cache_accounting": "The H48 table is mmapped, so the OS page cache is shared state across arms and their native processes. A warm-up solve with the same table mode runs before either timed arm, so neither arm pays the one-time cold page-in of the table inside its measured window. Arm execution order is fixed and recorded in arm_order. throughput_speedup compares the full sequential-arm wall against the batch wall; throughput_speedup_steady_state compares mean per-state cost with the sequential arm's first timed call excluded, computed as (sequential_steady_state_seconds / (repetitions - 1)) / (batch_wall_seconds / repetitions). The batch arm is a single warm invocation, so no first-call exclusion applies to it.",
+  "case": "R U F2 repeated direct CubeState",
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "repetitions": 12,
+  "schema_version": 2,
+  "seed": 2026,
+  "sequential_call_wall_seconds": [
+    0.161064,
+    0.06937,
+    0.042536,
+    0.041639,
+    0.041502,
+    0.040275,
+    0.04198,
+    0.044183,
+    0.043173,
+    0.042362,
+    0.05958,
+    0.049883
+  ],
+  "sequential_exact_count": 12,
+  "sequential_max_reported_seconds": 0.159737,
+  "sequential_rows": [
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.143454; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.15973654203116894,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.052371; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.06814708281308413,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.025857; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.04120562504976988,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.025137; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.04038687516003847,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.025794; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.04029066627845168,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.024787; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.03906804183498025,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.025525; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.040816124994307756,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.027411; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.04301537526771426,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.025717; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.04196241591125727,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.026063; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.041130916215479374,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.0421; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.05827145790681243,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.03156; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=180000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.04823525017127395,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    }
+  ],
+  "sequential_steady_state_seconds": 0.516481,
+  "sequential_sum_reported_seconds": 0.662266,
+  "sequential_total_seconds": 0.67774,
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "table_size_bytes": 3793842344,
+  "threads": 8,
+  "throughput_speedup": 3.743,
+  "throughput_speedup_steady_state": 3.112,
+  "timeout_seconds": 180.0,
+  "trusted_table": true,
+  "warmup": {
+    "is_verified": true,
+    "mode": "single_process_solve",
+    "performed": true,
+    "status": "exact",
+    "trusted_table": true,
+    "wall_seconds": 1.45569
+  }
+}

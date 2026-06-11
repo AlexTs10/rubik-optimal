@@ -1,0 +1,260 @@
+\chapter{Αναφορά Γραμμής Εντολών}
+\label{app:cli}
+
+Το παράρτημα αυτό αποτελεί την εξαντλητική αναφορά της διεπαφής γραμμής εντολών της υλοποίησης. Αναλυτικά παραδείγματα χρήσης με σχολιασμό δίνονται στο Κεφάλαιο~\ref{chap:usage}, ενώ η σημασιολογία των πεδίων εξόδου και των ετικετών κατάστασης τεκμηριώνεται στο Παράρτημα~\ref{app:schema}. Η διεπαφή καλείται ως \code{rubik-optimal} (εντολή κονσόλας που καταχωρίζεται κατά την εγκατάσταση) ή, ισοδύναμα, ως \code{python -m rubik_optimal.cli}. Ο Πίνακας~\ref{tab:cli-subcommands} συνοψίζει τις οκτώ υποεντολές.
+
+\begin{table}[htbp]\centering
+\small
+\begin{tabular}{@{}L{0.30\linewidth}L{0.62\linewidth}@{}}
+\hline
+Υποεντολή & Ρόλος \\
+\hline
+\code{scramble} & Παραγωγή ντετερμινιστικής διατάραξης (\eng{scramble}) από σπόρο. \\
+\code{facelets} & Παραγωγή έγκυρης συμβολοσειράς εδρών (\eng{facelet string})· συνώνυμο \code{random-facelets}. \\
+\code{solve} & Επίλυση κατάστασης ή διατάραξης με επιλεγόμενη διαδρομή επίλυσης. \\
+\code{verify} & Επαλήθευση προτεινόμενης λύσης πάνω σε δοσμένη κατάσταση. \\
+\code{distance} & Αναγνώριση ακριβούς απόστασης ή κάτω φράγματος. \\
+\code{oracle} & Ακριβής επίλυση δέσμης καταστάσεων με κοινή φόρτωση πίνακα H48. \\
+\code{benchmark} & Εκτέλεση της δέσμης μετρήσεων ενός προφίλ. \\
+\code{tables} & Παραγωγή πινάκων κινήσεων και πινάκων αποκοπής (\eng{pruning tables}) συντεταγμένων. \\
+\hline
+\end{tabular}
+\caption{Οι υποεντολές της διεπαφής γραμμής εντολών \code{rubik-optimal}, όπως ορίζονται στο \code{src/rubik_optimal/cli.py}.}
+\label{tab:cli-subcommands}
+\end{table}
+
+Όλες οι υποεντολές που εκτελούν αναζήτηση τυπώνουν την έξοδό τους ως JSON και ακολουθούν κοινή σύμβαση κωδικών εξόδου: η \code{solve} επιστρέφει μη μηδενικό κωδικό όταν το αποτέλεσμα φέρει ετικέτα \code{failed} ή \code{timeout}, η \code{verify} επιστρέφει μηδέν μόνο όταν η ακολουθία πράγματι λύνει την κατάσταση, και η \code{oracle} επιστρέφει μηδέν μόνο όταν όλες οι γραμμές είναι \code{exact} και επαληθευμένες. Έτσι οι εντολές χρησιμοποιούνται αξιόπιστα σε σενάρια κελύφους χωρίς ανάλυση του JSON.
+
+\section{Οι υποεντολές scramble και facelets}
+\label{sec:cli-scramble}
+
+\begin{verbatim}
+rubik-optimal scramble [--length N] [--seed S]
+rubik-optimal facelets [--length N] [--seed S]
+                       [--offset K] [--json]
+\end{verbatim}
+
+Η \code{scramble} τυπώνει ντετερμινιστική ακολουθία κινήσεων μήκους \code{--length} (προεπιλογή 20) από τον σπόρο \code{--seed} (προεπιλογή 2026). Η \code{facelets} εφαρμόζει την αντίστοιχη διατάραξη στη λυμένη κατάσταση και τυπώνει την προκύπτουσα έγκυρη συμβολοσειρά εδρών 54 χαρακτήρων· η επιλογή \code{--offset} (προεπιλογή 0) μετατοπίζει ντετερμινιστικά την παραγωγή, ώστε από τον ίδιο σπόρο να προκύπτουν διαφορετικές καταστάσεις, και η επιλογή \code{--json} επιστρέφει επιπλέον τη διατάραξη και τα μεταδεδομένα της (μήκος, σπόρος, μετρική, εγκυρότητα). Η υποεντολή είναι χρήσιμη όταν χρειάζεται είσοδος απευθείας κατάστασης, χωρίς γνώση της ακολουθίας που την παρήγαγε.
+
+\section{Η υποεντολή solve}
+\label{sec:cli-solve}
+
+\begin{verbatim}
+rubik-optimal solve [STATE] [--solver NAME] [...]
+\end{verbatim}
+
+Το προαιρετικό όρισμα \code{STATE} δέχεται συμβολοσειρά εδρών, ακολουθία κινήσεων από τη λυμένη κατάσταση ή τη λέξη \code{solved} (προεπιλογή). Η είσοδος ελέγχεται για φυσική εγκυρότητα πριν κληθεί οποιοσδήποτε επιλυτής. Η επιλογή \code{--solver} δέχεται τις ακόλουθες τιμές:
+
+\begin{itemize}
+\item Πρακτικές διαδρομές: \code{auto} (προεπιλογή· δοκιμάζει διαδοχικά την εγγενή διαδρομή δύο φάσεων, τον εξωτερικό προσαρμογέα και τη διαδρομή Thistlethwaite), \code{native-kociemba}, \code{thistlethwaite}, \code{korf} (η εκπαιδευτική IDA* σε Python), \code{kociemba} και \code{adapter} (ο εξωτερικός προσαρμογέας του πακέτου \code{kociemba} \cite{muodovKociembaPkg}). Στην ίδια ομάδα ανήκουν οι \code{bfs} (ρηχή εξαντλητική αναζήτηση πρώτα κατά πλάτος έως το \code{--max-depth}) και \code{inverse} (αντιστροφή της ακολουθίας εισόδου· έγκυρη μόνο όταν η είσοδος είναι ακολουθία κινήσεων).
+\item Εγγενείς ακριβείς διαδρομές: \code{optimal-native} (Korf/IDA* με τον γωνιακό και τους οκτώ εξακμικούς πίνακες προτύπων), \code{h48-native} και \code{h48-oracle} (το ενσωματωμένο backend H48 \cite{trontoNissyCoreH48}), \code{nissy-core-direct} (απευθείας κλήση του ενσωματωμένου πυρήνα με είσοδο κατάστασης).
+\item Εξωτερικές ακριβείς διαδρομές: \code{nissy-light} και \code{nissy-optimal} (το εξωτερικό εκτελέσιμο \code{nissy} με τους ελαφρούς και τον δημόσιο βέλτιστο πίνακά του αντίστοιχα), \code{rubikoptimal} (το εξωτερικό backend RubikOptimal).
+\item Διαδρομές χαρτοφυλακίου: \code{race-optimal}, \code{resident-race-optimal} και \code{universal-optimal}, οι οποίες συνδυάζουν παράλληλα ή κλιμακωτά τα ακριβή backends και τα πιστοποιητικά (Ενότητα~\ref{sec:cli-portfolio}).
+\end{itemize}
+
+Η επιλογή \code{--max-depth} (προεπιλογή 10) ερμηνεύεται ανά επιλυτή: μόνο ο επιλυτής \code{korf} την τηρεί κατά γράμμα, οι εγγενείς ακριβείς διαδρομές την αυξάνουν σιωπηρά σε τουλάχιστον 20, οι διαδρομές δύο φάσεων παράγουν από αυτήν φασικά όρια τουλάχιστον 12 και 18, και η διαδρομή Thistlethwaite αυξάνει τα όρια των σταδίων 3 και 4 σε τουλάχιστον 13 και 15. Τιμές κάτω από τα ελάχιστα αυτά αυξάνονται αυτόματα και δεν απορρίπτονται, ώστε καμία διαδρομή να μη γίνεται μη πλήρης από λανθασμένη διαμόρφωση. Ο Πίνακας~\ref{tab:cli-solve} συνοψίζει τις υπόλοιπες γενικές επιλογές της υποεντολής.
+
+\begin{table}[htbp]\centering
+\small
+\begin{tabular}{@{}L{0.34\linewidth}L{0.12\linewidth}L{0.44\linewidth}@{}}
+\hline
+Επιλογή & Προεπιλογή & Περιγραφή \\
+\hline
+\code{--timeout} & 5.0 & Όριο χρόνου αναζήτησης σε δευτερόλεπτα. \\
+\code{--node-limit} & 500\,000 & Προϋπολογισμός κόμβων· τον τηρεί μόνο ο επιλυτής \code{korf}. \\
+\code{--threads} & αυτόματη & Νήματα εγγενών αναζητήσεων· η προεπιλογή προκύπτει από το φορτίο του μηχανήματος ή τις μεταβλητές περιβάλλοντος \code{RUBIK_OPTIMAL_THREADS} / \code{RUBIK_OPTIMAL_H48_THREADS}. \\
+\code{--split-depth} & 3 & Βάθος διαμοιρασμού εργασιών στον εγγενή παράλληλο IDA*. \\
+\code{--native-child-order} & \code{heuristic-desc} & Διάταξη διαδόχων στον εγγενή IDA* (\code{heuristic-asc}, \code{move}). \\
+\code{--dual-heuristic} & ανενεργή & Διπλή ευρετική στον εγγενή Korf/IDA*. \\
+\code{--additive-edge-pdbs} & ανενεργή & Χρήση των προσθετικών βάσεων ακμών, εφόσον έχουν παραχθεί. \\
+\code{--seven-edge-pdbs} & ανενεργή & Προαιρετική χρήση των βάσεων 7 ακμών· εκτός της παγωμένης διαμόρφωσης αναφοράς των 6 ακμών. \\
+\code{--nissy-heuristic} & ανενεργή & Πρόσθετο παραδεκτό κάτω φράγμα μέσω της γέφυρας Nissy στον εγγενή IDA*. \\
+\code{--no-nissy-}\allowbreak\code{axis-transforms} & (ενεργοί) & Απενεργοποίηση των αξονικών μετασχηματισμών της γέφυρας Nissy. \\
+\code{--nissy-data-dir} & --- & Κατάλογος δεδομένων του εξωτερικού \code{nissy}. \\
+\code{--upper-solution} & --- & Υποψήφια λύση ως πιστοποιητικό άνω φράγματος για τον \code{optimal-native}. \\
+\code{--upper-bound-}\allowbreak\code{proof-strategy} & \code{single-bound} & Απόδειξη βελτιστότητας με μία εξαντλητική αναζήτηση ένα βάθος κάτω από το άνω φράγμα ή με κλασικά επαναληπτικά όρια (\code{iterative}). \\
+\code{--h48-start-delay} & 0.0 & Καθυστέρηση εκκίνησης του μόνιμου (\eng{resident}) H48 στους επιλυτές αγώνα, ώστε να προλαβαίνουν οι φθηνότερες απόπειρες Nissy. \\
+\code{--rubikoptimal-table-dir}, \code{--rubikoptimal-}\allowbreak\code{executable}, \code{--rubikoptimal-}\allowbreak\code{package-path} & --- & Διαδρομές πινάκων, εκτελέσιμου και πακέτου του εξωτερικού RubikOptimal. \\
+\hline
+\end{tabular}
+\caption{Γενικές επιλογές της υποεντολής \code{solve}.}
+\label{tab:cli-solve}
+\end{table}
+
+\section{Η οικογένεια επιλογών H48}
+\label{sec:cli-h48}
+
+Οι επιλογές του Πίνακα~\ref{tab:cli-h48} είναι κοινές στις υποεντολές \code{solve}, \code{distance} και \code{oracle} και ρυθμίζουν τη διαδρομή H48. Η σημαία \code{--h48-trusted-table} είναι ασφαλής μόνο για πίνακες που έχουν παραχθεί τοπικά και ταυτοποιηθεί από τα αποθηκευμένα μεταδεδομένα και αθροίσματα ελέγχου. Η σημαία \code{--h48-preload-table} προθερμαίνει σειριακά τις σελίδες του πίνακα πριν από την αναζήτηση: προορίζεται για την πιστοποίηση δύσκολων καταστάσεων μετά από ψυχρή εκκίνηση και δεν συνεπάγεται γενική επιτάχυνση κάθε κλήσης· οι μετρημένες επιπτώσεις των δύο σημαιών παρουσιάζονται στο Κεφάλαιο~\ref{chap:experiments}.
+
+\begin{table}[htbp]\centering
+\small
+\begin{tabular}{@{}L{0.30\linewidth}L{0.14\linewidth}L{0.46\linewidth}@{}}
+\hline
+Επιλογή & Προεπιλογή & Περιγραφή \\
+\hline
+\code{--h48-solver} & ανά υποεντολή & Επίπεδο πίνακα H48 (π.χ. \code{h48h0}, \code{h48h7})· προεπιλογή \code{h48h0} στη \code{distance}, \code{h48h7} στην \code{oracle}. \\
+\code{--h48-oracle} & ανενεργή & Επιλέγει το \code{h48h7}, το oracle-grade προφίλ βέλτιστης επίλυσης του ενσωματωμένου πυρήνα. \\
+\code{--h48-fastest} & ανενεργή & Επιλέγει τον μεγαλύτερο διαθέσιμο παραγόμενο πίνακα oracle-grade του προφίλ. \\
+\code{--h48-trusted-table} & ανενεργή & Παραλείπει την πλήρη σάρωση κατανομής του πίνακα μετά από επικύρωση των παραγόμενων μεταδεδομένων. \\
+\code{--h48-preload-table} & ανενεργή & Προθερμαίνει σειριακά τις σελίδες του πίνακα πριν από την αναζήτηση. \\
+\code{--h48-auto-min-depth} & ανενεργή & Εκκινεί την ακριβή αναζήτηση από το παραδεκτό κάτω φράγμα H48 αντί από βάθος 0. \\
+\code{--h48-profile} & \code{thesis} & Προφίλ πινάκων (\code{quick}, \code{thesis}, \code{stress}). \\
+\code{--h48-table} & --- & Ρητή διαδρομή αρχείου πίνακα H48. \\
+\hline
+\end{tabular}
+\caption{Η κοινή οικογένεια επιλογών H48 των υποεντολών \code{solve}, \code{distance} και \code{oracle}.}
+\label{tab:cli-h48}
+\end{table}
+
+\section{Η υποεντολή verify}
+\label{sec:cli-verify}
+
+\begin{verbatim}
+rubik-optimal verify STATE SOLUTION
+\end{verbatim}
+
+Η εντολή δέχεται την αρχική κατάσταση (συμβολοσειρά εδρών ή ακολουθία) και μια υποψήφια ακολουθία λύσης, εφαρμόζει τη δεύτερη στην πρώτη και τυπώνει τα πεδία \code{ok}, \code{move_count} και \code{message}. Δεν δέχεται άλλες επιλογές.
+
+\section{Η υποεντολή distance}
+\label{sec:cli-distance}
+
+\begin{verbatim}
+rubik-optimal distance [STATE] [...]
+\end{verbatim}
+
+Η εντολή εκτελεί κλιμακωτή αναγνώριση απόστασης: εξαντλητική BFS έως το \code{--bfs-depth}, έπειτα IDA* με το συνδυασμένο παραδεκτό κάτω φράγμα των πινάκων έως το \code{--ida-depth}, και προαιρετικά τα ισχυρότερα backends. Οι ειδικές επιλογές της συνοψίζονται στον Πίνακα~\ref{tab:cli-distance}· ισχύει επιπλέον όλη η οικογένεια επιλογών H48 του Πίνακα~\ref{tab:cli-h48}.
+
+\begin{table}[htbp]\centering
+\small
+\begin{tabular}{@{}L{0.28\linewidth}L{0.14\linewidth}L{0.48\linewidth}@{}}
+\hline
+Επιλογή & Προεπιλογή & Περιγραφή \\
+\hline
+\code{--bfs-depth} & 5 & Βάθος της εξαντλητικής αναζήτησης πρώτα κατά πλάτος. \\
+\code{--ida-depth} & 8 & Βάθος της IDA* με το συνδυασμένο κάτω φράγμα των πινάκων. \\
+\code{--timeout} & 5.0 & Όριο χρόνου σε δευτερόλεπτα. \\
+\code{--threads} & αυτόματη & Νήματα εγγενών αναζητήσεων. \\
+\code{--optimal-native} & ανενεργή & Εγγενής IDA* με τους πίνακες προτύπων μετά την BFS. \\
+\code{--h48-native} & ανενεργή & Το εγγενές backend H48 μετά την BFS, με είσοδο απευθείας την κατάσταση. \\
+\hline
+\end{tabular}
+\caption{Ειδικές επιλογές της υποεντολής \code{distance}.}
+\label{tab:cli-distance}
+\end{table}
+
+\section{Η υποεντολή oracle}
+\label{sec:cli-oracle}
+
+\begin{verbatim}
+rubik-optimal oracle [STATES ...] [--input-file F] [...]
+\end{verbatim}
+
+Η εντολή υλοποιεί τη λειτουργία μαντείου (\eng{oracle}): λύνει ακριβώς πολλές καταστάσεις με μία κοινή φόρτωση του πίνακα H48 και δέχεται εισόδους ως ορίσματα, από αρχείο ή από την πρότυπη είσοδο, μία ανά γραμμή. Με την επιλογή \code{--universal} χρησιμοποιείται το \code{UniversalOptimalOracle}: πρώτα τα πιστοποιητικά μηδενικής αναζήτησης και έπειτα μία δέσμη μόνιμου H48 για τις υπόλοιπες έγκυρες εισόδους. Γραμμές των οποίων η βελτιστότητα στηρίζεται μόνο σε ετικέτα τρίτου επιστρέφονται με ετικέτα \code{external_label_exact} και ρητή σημείωση της βάσης ακρίβειας, ποτέ ως απλό \code{exact}. Οι ειδικές επιλογές της υποεντολής συνοψίζονται στον Πίνακα~\ref{tab:cli-oracle}· ισχύουν επιπλέον οι Πίνακες \ref{tab:cli-h48} και \ref{tab:cli-portfolio}.
+
+\begin{table}[htbp]\centering
+\small
+\begin{tabular}{@{}L{0.40\linewidth}L{0.11\linewidth}L{0.39\linewidth}@{}}
+\hline
+Επιλογή & Προεπιλογή & Περιγραφή \\
+\hline
+\code{STATES} (θεσιακά) & --- & Συμβολοσειρές εδρών ή ακολουθίες σε εισαγωγικά· χωρίς ορίσματα διαβάζεται η πρότυπη είσοδος. \\
+\code{--input-file} & --- & Αρχείο με μία είσοδο ανά γραμμή· κενές γραμμές και σχόλια αγνοούνται. \\
+\code{--jsonl} & ανενεργή & Μία γραμμή JSON ανά είσοδο αντί ενός συγκεντρωτικού αντικειμένου. \\
+\code{--stream} & ανενεργή & Διατηρεί μόνιμο εγγενές backend και τυπώνει κάθε αποτέλεσμα μόλις ολοκληρωθεί. \\
+\code{--timeout} & 300.0 & Όριο χρόνου σε δευτερόλεπτα. \\
+\code{--threads} & αυτόματη & Νήματα του εγγενούς backend. \\
+\code{--max-depth} & 20 & Όριο βάθους αναζήτησης. \\
+\code{--universal} & ανενεργή & Ενεργοποίηση του \code{UniversalOptimalOracle}. \\
+\code{--rubikoptimal} & ανενεργή & Χρήση του εξωτερικού RubikOptimal ανά έγκυρη είσοδο, μαζί με τις αντίστοιχες επιλογές διαδρομών του. \\
+\code{--resident-h48-batch-timeout} & 30.0 & Όριο ανά κατάσταση της δέσμης μόνιμου H48· αρνητική τιμή καταργεί το χωριστό όριο. \\
+\code{--no-universal-}\allowbreak\code{portfolio-prepass} & ανενεργή & Παράλειψη του προπεράσματος χαρτοφυλακίου πριν από τη δέσμη μόνιμου H48. \\
+\code{--universal-portfolio-}\allowbreak\code{prepass-timeout} & \code{--timeout} & Χωριστό όριο του προπεράσματος χαρτοφυλακίου/Nissy. \\
+\code{--learned-certificate-log} & --- & Προσάρτηση νέων επαληθευμένων \code{exact} γραμμών σε αρχείο JSONL πιστοποιητικών. \\
+\code{--no-universal-}\allowbreak\code{certificate-cache} & ανενεργή & Παράλειψη της κρυφής μνήμης πιστοποιητικών, για τεκμήρια ζωντανού χρόνου εκτέλεσης. \\
+\code{--no-universal-}\allowbreak\code{upper-lower-certificate} & ανενεργή & Παράλειψη της συντόμευσης πιστοποιητικού άνω/κάτω φράγματος πριν από τα ζωντανά backends. \\
+\code{--universal-include-}\allowbreak\code{external-label-}\allowbreak\code{certificates} & ανενεργή & Επιτρέπει γραμμές με βάση ετικέτες τρίτων, επιστρεφόμενες ως \code{external_label_exact}. \\
+\hline
+\end{tabular}
+\caption{Ειδικές επιλογές της υποεντολής \code{oracle}.}
+\label{tab:cli-oracle}
+\end{table}
+
+\section{Προηγμένες επιλογές χαρτοφυλακίου και συμμετριών}
+\label{sec:cli-portfolio}
+
+Οι επιλογές του Πίνακα~\ref{tab:cli-portfolio} ρυθμίζουν λεπτομερώς τις διαδρομές χαρτοφυλακίου: τα εφεδρικά περάσματα, τους αγώνες περιστροφών όλου του κύβου μέσω των διαφορετικών backends και τις φραγμένες αποδείξεις κάτω από επαληθευμένο άνω φράγμα. Είναι διαθέσιμες στην υποεντολή \code{solve} για τους επιλυτές χαρτοφυλακίου και στην υποεντολή \code{oracle} με την επιλογή \code{--universal}. Όπου η προεπιλογή σημειώνεται ως αρνητική ή μηδενική, η αντίστοιχη φάση είναι ανενεργή αν δεν ζητηθεί ρητά.
+
+{\small
+\begin{longtable}{@{}L{0.46\linewidth}L{0.11\linewidth}L{0.34\linewidth}@{}}
+\caption{Προηγμένες επιλογές χαρτοφυλακίου και αγώνων συμμετριών, κοινές στις υποεντολές \code{solve} και \code{oracle}.}
+\label{tab:cli-portfolio} \\
+\hline
+Επιλογή & Προεπιλογή & Περιγραφή \\
+\hline
+\endfirsthead
+\hline
+Επιλογή & Προεπιλογή & Περιγραφή \\
+\hline
+\endhead
+\hline
+\multicolumn{3}{r}{\footnotesize συνέχεια στην επόμενη σελίδα} \\
+\endfoot
+\hline
+\endlastfoot
+\code{--universal-portfolio-}\allowbreak\code{fallback-timeout} & \code{--timeout} & Όριο του όψιμου εφεδρικού περάσματος χαρτοφυλακίου/Nissy. \\
+\code{--universal-fallback-}\allowbreak\code{nissy-core-direct-timeout} & 10.0 & Όριο της όψιμης απευθείας εφεδρείας του ενσωματωμένου πυρήνα με είσοδο κατάστασης. \\
+\code{--universal-rubikoptimal-}\allowbreak\code{fallback-timeout} & $-1$ & RubikOptimal μετά από αστοχία H48 και χαρτοφυλακίου. \\
+\code{--universal-rubikoptimal-}\allowbreak\code{prepass-timeout} & $-1$ & RubikOptimal πριν από τη δέσμη ή τον αγώνα μόνιμου H48. \\
+\code{--universal-rubikoptimal-}\allowbreak\code{race-timeout} & $-1$ & RubikOptimal ταυτόχρονα μέσα στον αγώνα μόνιμου H48/Nissy. \\
+\code{--universal-resident-}\allowbreak\code{race-prepass-timeout} & $-1$ & Φραγμένος αγώνας H48/Nissy/RubikOptimal πριν από τις διαδοχικές φάσεις. \\
+\code{--universal-rubikoptimal-}\allowbreak\code{symmetry-variants} & 0 & Πλήθος περιστροφών όλου του κύβου μέσω RubikOptimal. \\
+\code{--universal-rubikoptimal-}\allowbreak\code{symmetry-timeout} & \code{--timeout} & Συνολικό όριο της φάσης συμμετριών RubikOptimal. \\
+\code{--universal-rubikoptimal-}\allowbreak\code{symmetry-max-concurrency} & 0 & Ταυτόχρονες διεργασίες της φάσης· με 0 οι περιστροφές λύνονται διαδοχικά σε μία δέσμη. \\
+\code{--h48-symmetry-variants} & 0 & Περιστροφές μέσω μόνιμου H48. \\
+\code{--h48-symmetry-timeout} & 5.0 & Συνολικό όριο της φάσης συμμετριών H48. \\
+\code{--nissy-symmetry-variants} & 0 & Περιστροφές μέσω του εξωτερικού Nissy. \\
+\code{--nissy-symmetry-timeout} & \code{--timeout} & Όριο της δέσμης περιστροφών Nissy. \\
+\code{--nissy-core-direct-}\allowbreak\code{symmetry-variants} & 0 & Περιστροφές μέσω του ενσωματωμένου πυρήνα με είσοδο κατάστασης. \\
+\code{--nissy-core-direct-}\allowbreak\code{symmetry-timeout} & \code{--timeout} & Συνολικό όριο του αντίστοιχου αγώνα. \\
+\code{--nissy-core-direct-}\allowbreak\code{symmetry-max-concurrency} & 0 & Μέγιστες ταυτόχρονες διεργασίες· με 0 εκκινούν όλες οι περιστροφές. \\
+\code{--h48-parallel-symmetry-variants} & 0 & Παράλληλος αγώνας περιστροφών μέσω H48. \\
+\code{--h48-parallel-symmetry-timeout} & 5.0 & Συνολικό όριο του παράλληλου αγώνα H48. \\
+\code{--h48-parallel-symmetry-}\allowbreak\code{max-concurrency} & 0 & Μέγιστες ταυτόχρονες διεργασίες H48. \\
+\code{--h48-parallel-symmetry-}\allowbreak\code{order-by-lower-bound} & ανενεργή & Διάταξη των υποψήφιων περιστροφών με φθηνή δέσμη παραδεκτών κάτω φραγμάτων H48. \\
+\code{--h48-parallel-symmetry-}\allowbreak\code{lower-bound-order-timeout} & 30.0 & Όριο της δέσμης κάτω φραγμάτων για τη διάταξη. \\
+\code{--h48-lower-bound-}\allowbreak\code{symmetry-variants} & 23 & Κάτω φράγματα H48 σε περιστροφές πριν από την αποδοχή πιστοποιητικών άνω/κάτω φράγματος. \\
+\code{--kociemba-upper-bound-}\allowbreak\code{symmetry-variants} & 23 & Περιστροφές μέσω Kociemba ως βελτιωμένα άνω φράγματα πριν από την αποδοχή πιστοποιητικών. \\
+\code{--h48-upper-bound-proof-timeout} & 0 & Δευτερόλεπτα φραγμένης απόδειξης H48 ότι δεν υπάρχει λύση κάτω από επαληθευμένο άνω φράγμα. \\
+\code{--h48-upper-bound-proof-max-gap} & 1 & Μέγιστο χάσμα άνω και κάτω φράγματος για να εκτελεστεί η απόδειξη. \\
+\code{--native-korf-}\allowbreak\code{upper-bound-proof-timeout} & 0 & Δευτερόλεπτα εγγενούς απόδειξης Korf/IDA* ενός φράγματος κάτω από επαληθευμένη λύση. \\
+\code{--native-korf-}\allowbreak\code{upper-bound-proof-max-gap} & 1 & Αντίστοιχο μέγιστο χάσμα για την εγγενή απόδειξη. \\
+\end{longtable}
+}
+
+\section{Οι υποεντολές benchmark και tables}
+\label{sec:cli-benchmark}
+
+\begin{verbatim}
+rubik-optimal benchmark [--profile P] [--seed S]
+                        [--quick] [--root DIR]
+rubik-optimal tables    [--profile P] [--seed S]
+                        [--quick] [--root DIR]
+\end{verbatim}
+
+Η \code{benchmark} εκτελεί τη δέσμη μετρήσεων του προφίλ \code{--profile} (τιμές \code{quick}, \code{thesis}, \code{stress}) με σπόρο \code{--seed} (προεπιλογή 2026) και τυπώνει τις διαδρομές των παραγόμενων αρχείων· η σημαία \code{--quick} είναι συντόμευση για το προφίλ \code{quick}. Η \code{tables} παράγει τους πίνακες κινήσεων και αποκοπής των συντεταγμένων με τις ίδιες επιλογές. Η επιλογή \code{--root} ορίζει τον κατάλογο εργασίας (προεπιλογή ο τρέχων).
+
+\section{Σενάρια παραγωγής τεκμηρίων}
+\label{sec:cli-scripts}
+
+Η διεπαφή γραμμής εντολών εξυπηρετεί άμεσους ελέγχους και χειροκίνητη διερεύνηση, ενώ τα σενάρια του καταλόγου \code{scripts/} παράγουν τα τεκμήρια αναφοράς με σταθερά ονόματα αρχείων και συμβάσεις προφίλ. Οι αριθμοί του Κεφαλαίου~\ref{chap:experiments} προέρχονται αποκλειστικά από τα σενάρια αυτά, με την πλήρη αλληλουχία εκτέλεσης του Παραρτήματος~\ref{app:repro}.
+
+Το \path{scripts/generate_tables.py} παράγει τους πίνακες συντεταγμένων και πρέπει να εκτελείται όταν αλλάζουν οι κωδικοποιήσεις συντεταγμένων, οι συμβάσεις κινήσεων ή οι προδιαγραφές των πινάκων. Τα \path{scripts/generate_corner_pdb.py} και \path{scripts/generate_edge_pdb.py} παράγουν τον γωνιακό πίνακα προτύπων (\eng{pattern database}, PDB) και τους πίνακες ακμών αντίστοιχα. Το \path{scripts/generate_h48_tables.py} παράγει τους πίνακες H48 με τα μεταδεδομένα και τα αθροίσματα ελέγχου τους: η επιλογή \code{--solver h48h0} παράγει τον μικρό πίνακα, ενώ η επιλογή \code{--oracle} τον πίνακα \code{h48h7} που χρησιμοποιείται στις γραμμές πίεσης oracle-grade (για τη μη αναπαραγωγιμότητα byte προς byte του διατηρημένου τεκμηρίου, βλ.\ Ενότητα~\ref{sec:repro-h48h7}).
+
+Το \code{scripts/run_benchmarks.py} εκτελεί το σώμα μετρήσεων του κύβου 3×3×3 και πρέπει να εκτελείται όταν αλλάζουν επιλυτές, ευρετικές, όρια χρόνου ή περιπτώσεις. Το \code{scripts/run_3x3_optimal.py} εκτελεί τις ακριβείς διαδρομές, και με τις επιλογές \code{--backend h48-native} και \code{--h48-oracle} χρησιμοποιεί τον πίνακα \code{h48h7}. Το \code{scripts/generate_pocket_cube.py} παράγει την πλήρη κατανομή του κύβου 2×2×2 και τις αντιπροσωπευτικές γραμμές του. Εξειδικευμένα σενάρια καλύπτουν τις επιμέρους μετρήσεις του Κεφαλαίου~\ref{chap:experiments}: η πιστοποίηση της διαδρομής μαντείου σε μικρό σώμα που περιλαμβάνει το superflip, η μέτρηση της επιτάχυνσης από κοινή φόρτωση πίνακα, η απομόνωση του κόστους πλήρους ελέγχου πίνακα και η καταγραφή της δημόσιας διαδρομής \code{oracle} της γραμμής εντολών.
+
+Το \code{scripts/generate_figures.py} ανανεώνει τους πίνακες LaTeX και τα αρχεία δεδομένων σχημάτων που εξαρτώνται από τις συνόψεις των μετρήσεων· το όνομά του διατηρείται για ιστορικούς λόγους, καθώς παράγει και πίνακες. Το \code{scripts/verify_results.py} εκτελείται μετά από κάθε παραγωγή μετρήσεων ή τεκμηρίων του 2×2×2, όπως περιγράφεται στο Παράρτημα~\ref{app:repro}.
+
+\section{Ερμηνεία της εξόδου}
+\label{sec:cli-output}
+
+Η έξοδος κάθε εντολής επίλυσης διατηρεί χωριστά την ετικέτα κατάστασης και την ένδειξη επαλήθευσης, και τα δύο πεδία πρέπει να διαβάζονται μαζί: το \code{verified=true} σημαίνει ότι η λύση λύνει πράγματι τον κύβο, ενώ μόνο η ετικέτα \code{exact} δηλώνει αποδεδειγμένα βέλτιστη λύση. Μια ετικέτα \code{non_exact} συνοδεύει έγκυρη λύση χωρίς απόδειξη ελάχιστου μήκους, ενώ η ετικέτα \code{timeout} δηλώνει ότι δεν επιστράφηκε λύση εντός του ορίου, με το πεδίο \code{notes} να εξηγεί την αιτία. Ο πλήρης κατάλογος των ετικετών και η ακριβής σημασιολογία τους δίνονται στο Παράρτημα~\ref{app:schema}.

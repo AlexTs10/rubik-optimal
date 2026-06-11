@@ -1,0 +1,96 @@
+% Αρχιτεκτονική του συστήματος σε επίπεδα (περιεχόμενο σχήματος· το περιβάλλον
+% figure και η λεζάντα ορίζονται στο Κεφάλαιο 5). Τα ονόματα αρθρωμάτων
+% αντιστοιχούν στο πραγματικό δέντρο πηγαίου κώδικα: src/rubik_optimal/
+% (cli.py, oracle.py, verify.py, solvers/, tables/), native/ και results/.
+\begin{tikzpicture}[
+  font=\footnotesize,
+  band/.style={draw=black!60, rounded corners=3pt, fill=black!4},
+  bandtitle/.style={anchor=north west, font=\scriptsize\bfseries, text=black!70, inner sep=2pt},
+  comp/.style={draw=black!75, rounded corners=1.5pt, fill=white, align=center,
+               font=\scriptsize, inner sep=3pt, minimum height=1.05cm},
+  flow/.style={-{Stealth[length=2.4mm]}, semithick},
+  resflow/.style={-{Stealth[length=2.4mm]}, semithick, black!55},
+  lbl/.style={font=\tiny, align=center}
+]
+
+% ---------- Επίπεδο 1: Διεπαφή γραμμής εντολών ----------
+\draw[band] (0,14.3) rectangle (12.4,15.9);
+\node[bandtitle] at (0.12,15.82) {Διεπαφή γραμμής εντολών (CLI)};
+\node[comp, minimum width=10.8cm] at (6.2,14.85)
+  {{\ttfamily rubik-optimal} ({\ttfamily src/rubik\_optimal/cli.py}) — οκτώ υποεντολές\\
+   {\tiny\ttfamily solve · distance · oracle · benchmark · verify · scramble · facelets · tables}};
+
+% ---------- Επίπεδο 2: Επιλυτές Python ----------
+\draw[band] (0,11.3) rectangle (12.4,13.5);
+\node[bandtitle] at (0.12,13.42) {Επιλυτές Python ({\ttfamily rubik\_optimal.solvers})};
+\node[comp, minimum width=2.85cm] at (1.65,12.2)
+  {Korf / IDA*\\ {\tiny\ttfamily korf.py}};
+\node[comp, minimum width=2.85cm] at (4.68,12.2)
+  {Kociemba\\ {\tiny\ttfamily kociemba.py}\\ {\tiny\ttfamily kociemba\_optimal.py}\\
+   {\tiny προσαρμογέας {\ttfamily kociemba} (PyPI)}};
+\node[comp, minimum width=2.85cm] at (7.71,12.2)
+  {Thistlethwaite\\ {\tiny\ttfamily thistlethwaite.py}};
+\node[comp, minimum width=2.85cm] at (10.74,12.2)
+  {Κύβος 2×2×2 (\eng{Pocket})\\ {\tiny\ttfamily pocket\_cube.py · pocket/}};
+
+% ---------- Στρώμα μαντείου (γέφυρα επιπέδων 2-3) ----------
+\node[comp, fill=black!8, minimum width=7.4cm] at (8.4,10.05)
+  {Στρώμα μαντείου: {\ttfamily oracle.py} — {\ttfamily FastOptimalOracle}\\
+   {\tiny παραμένουσα διεργασία (\eng{resident}) και λειτουργία δέσμης (\eng{batch})}};
+
+% ---------- Επίπεδο 3: Εγγενείς μηχανές C/C++ ----------
+\draw[band] (1.6,6.85) rectangle (12.4,8.85);
+\node[bandtitle] at (1.72,8.77) {Εγγενείς μηχανές C/C++ ({\ttfamily native/})};
+\node[comp, minimum width=2.5cm] at (3.01,7.6)
+  {Εγγενής IDA*\\ {\tiny\ttfamily optimal\_solver}};
+\node[comp, minimum width=2.5cm] at (5.67,7.6)
+  {Παραγωγή PDB\\ {\tiny\ttfamily corner\_pdb}\\ {\tiny\ttfamily edge\_pdb}};
+\node[comp, minimum width=2.5cm] at (8.33,7.6)
+  {Απόδειξη φάσης 2\\ {\tiny\ttfamily kociemba\_phase2\_probe}};
+\node[comp, minimum width=2.5cm] at (10.99,7.6)
+  {Μηχανή H48\\ {\tiny\ttfamily h48\_backend}\\ {\tiny ενσωματωμένο {\ttfamily nissy-core}}};
+
+% ---------- Επίπεδο 4: Πίνακες ----------
+\draw[band] (0,4.05) rectangle (12.4,6.05);
+\node[bandtitle] at (0.12,5.97) {Πίνακες ({\ttfamily data/generated/})};
+\node[comp, minimum width=3.7cm] at (2.17,4.8)
+  {PDB γωνιών + 8 PDB έξι ακμών\\
+   {\tiny\ttfamily *\_corner\_state\_pdb.bin}\\ {\tiny\ttfamily *\_edge\_subset\_*\_pdb.bin}};
+\node[comp, minimum width=3.7cm] at (6.19,4.8)
+  {Πίνακες αποστάσεων\\ συμπλόκων\\
+   {\tiny Thistlethwaite · φάση 1 Kociemba}};
+\node[comp, minimum width=3.7cm] at (10.21,4.8)
+  {Πίνακας αποκοπής H48\\ {\tiny\ttfamily h48h7.bin}};
+
+% ---------- Επίπεδο 5: Επαλήθευση και αποτελέσματα ----------
+\draw[band] (0,1.05) rectangle (12.4,3.25);
+\node[bandtitle] at (0.12,3.17) {Επαλήθευση και αποτελέσματα};
+\node[comp, minimum width=3.7cm] at (2.17,2.0)
+  {Ελεγκτής λύσεων\\ {\tiny\ttfamily verify.py}\\ {\tiny\ttfamily scripts/verify\_results.py}};
+\node[comp, minimum width=3.7cm] at (6.19,2.0)
+  {Αρχεία αποτελεσμάτων\\ {\tiny\ttfamily results/raw $\to$ results/processed}};
+\node[comp, minimum width=3.7cm] at (10.21,2.0)
+  {Εξωτερικός διασταυρωτικός\\ έλεγχος — Nissy 2.0.8\\ {\tiny\ttfamily solvers/nissy\_external.py}};
+
+% ---------- Ροές κλήσεων (προς τα κάτω) ----------
+\draw[flow] (6.2,14.3) -- (6.2,13.5)
+  node[lbl, right=2pt, midway] {κλήσεις επιλυτών και μαντείου};
+\draw[flow] (8.4,11.3) -- (8.4,10.5)
+  node[lbl, right=2pt, midway] {ερωτήματα ακριβούς απόστασης /\\ βέλτιστης λύσης};
+\draw[flow] (8.4,9.6) -- (8.4,8.85)
+  node[lbl, right=2pt, midway] {παραμένουσα εγγενής διεργασία};
+\draw[flow] (3.0,11.3) -- (3.0,8.85)
+  node[lbl, left=2pt, midway, align=right]
+  {περιτυλίγματα\\ {\ttfamily optimal\_native.py}\\ {\ttfamily h48\_native.py}};
+\draw[flow, dashed] (0.7,11.3) -- (0.7,6.05);
+\node[lbl, rotate=90] at (0.42,8.68) {απευθείας φόρτωση πινάκων};
+\draw[flow] (6.19,6.85) -- (6.19,6.05)
+  node[lbl, right=2pt, midway] {παραγωγή και φόρτωση πινάκων};
+
+% ---------- Ροή αποτελεσμάτων (δεξιός διάδρομος) ----------
+\draw[resflow] (12.4,12.2) -- (13.25,12.2) -- (13.25,2.0) -- (12.4,2.0);
+\draw[semithick, black!55] (12.4,7.6) -- (13.25,7.6);
+\node[lbl, rotate=90, text=black!60] at (13.6,7.1)
+  {ροή εγγραφών αποτελεσμάτων (JSONL)};
+
+\end{tikzpicture}

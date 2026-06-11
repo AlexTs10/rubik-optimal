@@ -1,0 +1,60 @@
+{
+  "algorithmic_contract": {
+    "exactness_rule": "exact is propagated only from a backend row that independently verified the solution",
+    "metric": "HTM / face-turn metric",
+    "portfolio_order": "try Nissy optimal table for a bounded interval, then fall back to resident H48",
+    "runtime_claim": "this artifact proves the recorded corpus, not every-state practical worst-case runtime",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "all_exact": true,
+  "all_expected_distances_match": true,
+  "case_ids": [
+    "superflip_distance_20"
+  ],
+  "case_set": "hard",
+  "errors": [],
+  "h48_solver": "h48h7",
+  "h48_table_exists": true,
+  "h48_table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "h48_table_profile": "thesis",
+  "h48_threads": 4,
+  "h48_timeout_seconds": 360.0,
+  "max_runtime_seconds": 135.679618,
+  "nissy_threads": 2,
+  "nissy_timeout_seconds": 3.0,
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "case_id": "superflip_distance_20",
+      "description": "standard all-edges-flipped superflip state",
+      "expanded_nodes": 3368554656,
+      "expected_distance": 20,
+      "expected_distance_matches": true,
+      "generated_nodes": null,
+      "notes": "portfolio exact oracle; nissy_optimal_batch_invoked=true; nissy_status=timeout; nissy_runtime_seconds=3.572025; nissy_notes=external Nissy `optimal` batch timed out after 3.0s; partial_output=; resident_h48_invoked=true; selected_backend=resident-h48; backend_solver=fast_optimal_oracle_h48h7; backend_runtime_seconds=132.107593; fast optimal oracle API; arbitrary_valid_3x3_domain=true; resident_native_h48=true; max_depth=20; trusted_table=True; resident in-repo native H48 backend; table_loaded_once=true; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=132.104493; table_lookups=3267288719; table_fallbacks=1041344740; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; error=",
+      "profile": "thesis",
+      "runtime_seconds": 135.679618,
+      "seed": 2026,
+      "selected_backend": "resident-h48",
+      "solution": "U D R U2 R F2 L U2 R F' B' R2 D R' L U2 F2 D2 F R2",
+      "solution_length": 20,
+      "solver": "portfolio_optimal_oracle",
+      "source_depth": 0,
+      "source_sequence": "",
+      "state": "UBULURUFURURFRBRDRFUFLFRFDFDFDLDRDBDLULBLFLDLBUBRBLBDB",
+      "status": "exact",
+      "table_size_bytes": 3793842344,
+      "valid": true,
+      "validation_message": "Cube is physically solvable",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "selected_backends": [
+    "resident-h48"
+  ],
+  "trusted_table": true
+}

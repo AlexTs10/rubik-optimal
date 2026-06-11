@@ -1,0 +1,97 @@
+\documentclass[11pt,a4paper,twoside]{report}
+\makeatletter
+\def\input@path{{thesis/}}
+\makeatother
+
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setmainlanguage{greek}
+\setotherlanguage{english}
+\setmainfont{Arial}[Ligatures=TeX]
+\setmonofont{Courier New}[Scale=0.92]
+\newfontfamily\greekfont{Arial}[Ligatures=TeX]
+\newfontfamily\englishfont{Arial}[Ligatures=TeX]
+\newfontfamily\greekfonttt{Courier New}[Scale=0.92]
+\usepackage{geometry}
+\geometry{a4paper,top=2.54cm,bottom=2.54cm,inner=3.17cm,outer=3.17cm}
+\usepackage[skip=11pt,indent=0pt]{parskip}
+\usepackage{setspace}
+\singlespacing
+\usepackage{amsmath}
+\usepackage{url}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage{fancyhdr}
+\usepackage[hidelinks]{hyperref}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\fancypagestyle{plain}{%
+  \fancyhf{}%
+  \fancyfoot[LE,RO]{\thepage}%
+  \renewcommand{\headrulewidth}{0pt}%
+}
+\setlength{\emergencystretch}{3em}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+
+\DeclareRobustCommand{\eng}[1]{\textenglish{#1}}
+\DeclareRobustCommand{\code}[1]{\texttt{\detokenize{#1}}}
+\newcommand{\thesisGreekTitle}{Αλγόριθμοι Βέλτιστης Επίλυσης για τον Κύβο του Rubik}
+\newcommand{\thesisEnglishTitle}{Optimal Solution Algorithms for Rubik's Cube}
+\newcommand{\thesisStudentName}{ΑΛΕΞΑΝΔΡΟΣ ΤΟΣΚΑ}
+\newcommand{\thesisStudentNameEnglish}{ALEXANDROS TOSKA}
+\newcommand{\thesisStudentFullName}{ΑΛΕΞΑΝΔΡΟΣ ΤΟΣΚΑ ΤΟΥ ΠΑΤΡΩΝΥΜΟ}
+\newcommand{\thesisRegistrationNumber}{ΧΧΧΧΧΧΧ}
+\newcommand{\thesisSupervisor}{Κυριάκος Σγάρμπας}
+\newcommand{\thesisSupervisorRank}{Αναπληρωτής Καθηγητής}
+\newcommand{\thesisDivision}{ΤΟΜΕΑΣ ΤΗΛΕΠΙΚΟΙΝΩΝΙΩΝ ΚΑΙ ΤΕΧΝΟΛΟΓΙΑΣ ΠΛΗΡΟΦΟΡΙΑΣ}
+\newcommand{\thesisLaboratory}{ΕΡΓΑΣΤΗΡΙΟ ΕΝΣΥΡΜΑΤΗΣ ΤΗΛΕΠΙΚΟΙΝΩΝΙΑΣ}
+\newcommand{\thesisPlaceDate}{ΠΑΤΡΑ - ΜΗΝΑΣ 2026}
+
+\title{\thesisGreekTitle\\
+\large \thesisEnglishTitle}
+\author{Πανεπιστήμιο Πατρών\\
+Τμήμα Ηλεκτρολόγων Μηχανικών και Τεχνολογίας Υπολογιστών\\
+Επιβλέπων: \thesisSupervisor}
+\date{2026}
+
+\begin{document}
+
+\pagenumbering{roman}
+\input{chapters/00_front_matter}
+\input{chapters/00_abstracts}
+\tableofcontents
+\listoffigures
+\listoftables
+\clearpage
+\pagenumbering{arabic}
+
+\input{chapters/01_introduction}
+\input{chapters/02_background}
+\input{chapters/03_cube_model}
+\input{chapters/04_algorithms}
+\input{chapters/05_system_design}
+\input{chapters/06_implementation}
+\input{chapters/07_usage}
+\input{chapters/08_validation}
+\input{chapters/09_experiments}
+\input{chapters/10_conclusions}
+
+\appendix
+\input{chapters/a_reproducibility}
+\input{chapters/b_result_schema}
+\input{chapters/d_cli_reference}
+\input{chapters/e_ai_usage}
+
+\bibliographystyle{plain}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Βιβλιογραφία}
+\IfFileExists{thesis/references.bib}{\bibliography{thesis/references}}{\bibliography{references}}
+
+\end{document}

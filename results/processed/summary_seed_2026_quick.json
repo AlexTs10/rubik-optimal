@@ -1,0 +1,48 @@
+{
+  "generated_at_unix": 1780932615.3579159,
+  "profile": "quick",
+  "quick": true,
+  "row_count": 28,
+  "seed": 2026,
+  "solvers": {
+    "kociemba_native_scoped": {
+      "cases": 7,
+      "max_solution_length": 5,
+      "median_runtime_seconds": 0.004886874929070473,
+      "statuses": [
+        "lower_bound",
+        "non_exact"
+      ],
+      "verified_solutions": 6
+    },
+    "kociemba_two_phase_adapter": {
+      "cases": 7,
+      "max_solution_length": 17,
+      "median_runtime_seconds": 0.0006600832566618919,
+      "statuses": [
+        "non_exact"
+      ],
+      "verified_solutions": 7
+    },
+    "korf_ida_star_scoped": {
+      "cases": 7,
+      "max_solution_length": 5,
+      "median_runtime_seconds": 0.0028225411660969257,
+      "statuses": [
+        "exact",
+        "lower_bound"
+      ],
+      "verified_solutions": 6
+    },
+    "thistlethwaite_native_scoped": {
+      "cases": 7,
+      "max_solution_length": 10,
+      "median_runtime_seconds": 0.43030549958348274,
+      "statuses": [
+        "non_exact",
+        "timeout"
+      ],
+      "verified_solutions": 6
+    }
+  }
+}

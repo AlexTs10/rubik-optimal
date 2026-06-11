@@ -1,0 +1,73 @@
+{
+  "notes": "End-to-end 3x3 evidence: validation, distance recognition, auto solving, and solution verification for sequence and facelet inputs. Exact optimality is claimed only where the distance/status is exact.",
+  "passed": true,
+  "profile": "thesis",
+  "rows": [
+    {
+      "auto_notes": "Solved input; native scoped two-phase path does not claim global optimality",
+      "auto_solution_length": 0,
+      "auto_solver": "kociemba_native_scoped",
+      "auto_status": "non_exact",
+      "auto_verified": true,
+      "case_id": "solved",
+      "distance_kind": "exact_distance",
+      "distance_method": "bfs_depth_5",
+      "distance_value": 0,
+      "input_kind": "solved",
+      "valid": true,
+      "validation_message": "Cube is physically solvable"
+    },
+    {
+      "auto_notes": "Native bounded two-phase result; shortest VERIFIED total over all ranked phase-1 handoff candidates (Kociemba-style length minimization); no global optimality proof claimed; phase1_length=3; phase2_length=0; phase1_candidates_collected=8; phase1_candidates_tried=1; selected_phase2_lower_bound=0; phase1_heuristic=sym_reduced_exact_depth12; phase1_candidate_limit=8",
+      "auto_solution_length": 3,
+      "auto_solver": "kociemba_native_scoped",
+      "auto_status": "non_exact",
+      "auto_verified": true,
+      "case_id": "shallow_sequence",
+      "distance_kind": "exact_distance",
+      "distance_method": "bfs_depth_5",
+      "distance_value": 3,
+      "input_kind": "sequence",
+      "korf_solution_length": 3,
+      "korf_status": "exact",
+      "korf_verified": true,
+      "native_kociemba_status": "non_exact",
+      "native_kociemba_verified": true,
+      "native_thistlethwaite_status": "non_exact",
+      "native_thistlethwaite_verified": true,
+      "valid": true,
+      "validation_message": "Cube is physically solvable"
+    },
+    {
+      "auto_notes": "Native bounded two-phase result; shortest VERIFIED total over all ranked phase-1 handoff candidates (Kociemba-style length minimization); no global optimality proof claimed; phase1_length=8; phase2_length=13; phase1_candidates_collected=8; phase1_candidates_tried=7; selected_phase2_lower_bound=8; phase1_heuristic=sym_reduced_exact_depth12; phase1_candidate_limit=8",
+      "auto_solution_length": 21,
+      "auto_solver": "kociemba_native_scoped",
+      "auto_status": "non_exact",
+      "auto_verified": true,
+      "case_id": "deep_sequence_20",
+      "distance_kind": "lower_bound",
+      "distance_method": "combined_table_lower_bound",
+      "distance_value": 8,
+      "input_kind": "sequence",
+      "valid": true,
+      "validation_message": "Cube is physically solvable"
+    },
+    {
+      "auto_notes": "Native bounded two-phase result; shortest VERIFIED total over all ranked phase-1 handoff candidates (Kociemba-style length minimization); no global optimality proof claimed; phase1_length=8; phase2_length=13; phase1_candidates_collected=8; phase1_candidates_tried=8; selected_phase2_lower_bound=8; phase1_heuristic=sym_reduced_exact_depth12; phase1_candidate_limit=8",
+      "auto_solution_length": 21,
+      "auto_solver": "kociemba_native_scoped",
+      "auto_status": "non_exact",
+      "auto_verified": true,
+      "case_id": "deep_facelets_20",
+      "distance_kind": "lower_bound",
+      "distance_method": "combined_table_lower_bound",
+      "distance_value": 8,
+      "input_kind": "facelets",
+      "valid": true,
+      "validation_message": "Cube is physically solvable"
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "timeout_seconds": 5.0
+}

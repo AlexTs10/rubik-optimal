@@ -1,0 +1,136 @@
+{
+  "artifact_suffix": "noaws_detached_waitsafe_live_mmap020_dynamic_threads",
+  "campaign_result_exists": false,
+  "campaign_result_passed": null,
+  "campaign_result_path": "results/processed/h48_stronger_table_campaign_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_dynamic_threads.json",
+  "campaign_result_status": null,
+  "checked_at_utc": "2026-06-02T02:34:19.853258+00:00",
+  "current_safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 358187008,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 14537826304,
+      "load_average": [
+        3.61279296875,
+        3.1689453125,
+        3.13037109375
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 214748364,
+      "mmap_output": true
+    },
+    "reasons": [
+      "free disk is below 2.0x the h48h8 table size, leaving little room for retries"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h8",
+    "threads": 4
+  },
+  "detached_launch_status": "detached_waitsafe_started_not_runtime_evidence",
+  "detached_payload_path": "results/processed/h48_stronger_table_detached_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_dynamic_threads.json",
+  "detached_status": {
+    "effective_pid": 16560,
+    "log_path_exists": true,
+    "log_tail": "{\"available_memory_bytes\": 188235776, \"checked_at_utc\": \"2026-06-02T02:31:04.271857+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 0.00405, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.82177734375, 3.1181640625, 3.12744140625], \"reasons\": [\"available memory 0.18 GiB is below the 0.20 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 1, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 216203264, \"checked_at_utc\": \"2026-06-02T02:32:04.285185+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 60.017363, \"event\": \"h48_generation_safety_sample\", \"load_average\": [3.1015625, 3.12890625, 3.12744140625], \"reasons\": [], \"resolved_threads\": 5, \"safe_to_start\": true, \"sample_index\": 2, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 299286528, \"checked_at_utc\": \"2026-06-02T02:33:04.294088+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 120.026268, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.93310546875, 3.0478515625, 3.09375], \"reasons\": [], \"resolved_threads\": 5, \"safe_to_start\": true, \"sample_index\": 3, \"thread_setting\": \"auto\", \"threads\": 5}\n[H48 gendata] cocsep data computed\n[H48 gendata] Computing depth <=8\n[H48 gendata] Computed 7437855 positions\n[H48 gendata] Processing 'short cubes'. This will take a while.\n[H48 gendata] Processed 0 / 7437855 cubes\n[H48 gendata] Processed 0 / 7437855 cubes\n[H48 gendata] Processed 0 / 7437855 cubes\n[H48 gendata] Processed 0 / 7437855 cubes\n[H48 gendata] Processed 0 / 7437855 cubes",
+    "pid": 16560,
+    "pid_alive": true,
+    "pid_file_exists": true,
+    "pid_file_pid": 16560
+  },
+  "fast_runtime_proven_for_every_possible_state": false,
+  "full_checksum_details": {},
+  "full_checksum_message": "not requested",
+  "full_checksum_requested": false,
+  "full_checksum_valid": null,
+  "generation_log_progress": {
+    "available": true,
+    "computed_short_positions": 7437855,
+    "latest_processed_short_cubes": 0,
+    "latest_progress_fraction": 0.0,
+    "latest_progress_line": "[H48 gendata] Processed 0 / 7437855 cubes",
+    "partial_table_allocated_bytes": 7584690176,
+    "partial_table_exists": true,
+    "partial_table_size_bytes": 7585624040,
+    "progress_sample_count": 5,
+    "recent_progress_samples": [
+      {
+        "line": "[H48 gendata] Processed 0 / 7437855 cubes",
+        "processed_short_cubes": 0,
+        "progress_fraction": 0.0,
+        "total_short_cubes": 7437855
+      },
+      {
+        "line": "[H48 gendata] Processed 0 / 7437855 cubes",
+        "processed_short_cubes": 0,
+        "progress_fraction": 0.0,
+        "total_short_cubes": 7437855
+      },
+      {
+        "line": "[H48 gendata] Processed 0 / 7437855 cubes",
+        "processed_short_cubes": 0,
+        "progress_fraction": 0.0,
+        "total_short_cubes": 7437855
+      },
+      {
+        "line": "[H48 gendata] Processed 0 / 7437855 cubes",
+        "processed_short_cubes": 0,
+        "progress_fraction": 0.0,
+        "total_short_cubes": 7437855
+      },
+      {
+        "line": "[H48 gendata] Processed 0 / 7437855 cubes",
+        "processed_short_cubes": 0,
+        "progress_fraction": 0.0,
+        "total_short_cubes": 7437855
+      }
+    ],
+    "saw_processing_phase": true,
+    "total_short_cubes": 7437855
+  },
+  "native_h48_backend_processes": {
+    "available": true,
+    "matches": [
+      {
+        "basename": "h48_backend",
+        "command": "/Users/alextoska/Desktop/sgarbas/native/build/h48_backend",
+        "pid": 19816
+      }
+    ],
+    "return_code": 0,
+    "stderr_tail": ""
+  },
+  "native_h48_backend_running": true,
+  "notes": "Read-only local no-AWS detached status. This proves process/table state only; the fast every-state claim remains false until trusted stronger-table metadata, full checksum, certification, broad runtime evidence, and a worst-case runtime boundary exist.",
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "status": "native_generation_or_solver_process_running_not_runtime_evidence",
+  "target_metadata": {
+    "exists": false,
+    "path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+    "size_bytes": 0
+  },
+  "target_partial_table": {
+    "allocated_bytes": 7584690176,
+    "exists": true,
+    "path": "data/generated/h48/thesis_seed_2026/.h48h8.bin.partial",
+    "size_bytes": 7585624040
+  },
+  "target_solver": "h48h8",
+  "target_table": {
+    "exists": false,
+    "expected_size_bytes": 7585624040,
+    "path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+    "size_bytes": 0
+  },
+  "target_trusted_message": "missing target table or metadata",
+  "target_trusted_table": false
+}

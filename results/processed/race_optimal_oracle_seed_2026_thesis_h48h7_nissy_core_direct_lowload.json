@@ -1,0 +1,41 @@
+{
+  "all_exact": true,
+  "all_verified": true,
+  "errors": [],
+  "h48_enabled": false,
+  "max_runtime_seconds": 3.993046,
+  "nissy_core_direct_enabled": true,
+  "nissy_threads": 1,
+  "oracle_contract": {
+    "exactness_policy": "exact only after independent verification from the original input state",
+    "latency_strategy": "start native H48 and a Nissy-side exact subprocess concurrently when enabled; for source-less states, the Nissy side prefers direct nissy-core cube-state input before representative-scramble recovery",
+    "runtime_claim": "this artifact is corpus evidence for race behavior, not an exhaustive every-state timing proof",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "case_id": "shallow_r_u_f2",
+      "description": "direct facelet/cubie state for a shallow three-move scramble",
+      "killed_backends": "none",
+      "notes": "race exact oracle; exactness_policy=first_verified_exact_solution_wins; selected_backend=nissy-core-direct; started_backends=nissy-core-direct; killed_backends=none; backend_solver=nissy_core_direct_h48h7; backend_runtime_seconds=3.963016; setup_notes=; race backend=nissy-core-direct; input_mode=cube_state; table_symlink=true; source_sequence_provided=false; solver=h48h7; table_path=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; max_depth=20; optimal=0; threads=1; return_code=0",
+      "runtime_seconds": 3.993046,
+      "selected_backend": "nissy-core-direct",
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "started_backends": "nissy-core-direct",
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "threads": 1,
+  "timeout_seconds": 30.0,
+  "trusted_table": true
+}

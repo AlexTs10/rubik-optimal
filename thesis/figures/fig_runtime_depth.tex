@@ -1,0 +1,33 @@
+% Χρόνος εκτέλεσης του επιλυτή Korf ως προς το βάθος διατάραξης (1-8).
+% Περιεχόμενο σχήματος· το περιβάλλον figure και η λεζάντα ορίζονται στο
+% κεφάλαιο 9. Δεδομένα: figures/runtime_depth_data.tex.
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.85\textwidth,
+  height=0.55\textwidth,
+  xlabel={Βάθος διατάραξης},
+  ylabel={Χρόνος εκτέλεσης (s)},
+  xmin=0.5, xmax=8.5,
+  xtick={1,2,3,4,5,6,7,8},
+  ymin=0, ymax=0.07,
+  scaled y ticks=false,
+  yticklabel style={/pgf/number format/fixed, /pgf/number format/precision=3},
+  grid=major,
+  grid style={dotted, gray!50},
+  legend pos=north west,
+  legend cell align=left,
+  legend style={font=\footnotesize},
+]
+\addplot[blue, thick, mark=*, mark size=1.8pt] coordinates {
+  (1,0.001663)
+  (2,0.002298)
+  (3,0.017847)
+  (4,0.024893)
+  (5,0.060181)
+  (6,0.022632)
+  (7,0.030163)
+  (8,0.059619)
+};
+\addlegendentry{Korf (IDA*)}
+\end{axis}
+\end{tikzpicture}

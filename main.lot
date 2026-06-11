@@ -1,0 +1,61 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {6.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Μεταδεδομένα των παραγόμενων πινάκων κινήσεων και αποκοπής ανά συντεταγμένη: μέγεθος πεδίου τιμών, πλήθος εγγραφών και πλήθος επιτρεπτών κινήσεων, όπως καταγράφονται στο μανιφέστο \code {table_manifest_thesis_seed_2026.json}.}}{38}{table.6.1}%
+\contentsline {table}{\numberline {6.2}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Μεταδεδομένα του γωνιακού πίνακα προτύπων του 3×3×3: πλήθος προβεβλημένων καταστάσεων, πληρότητα, μέγιστη απόσταση, μέγεθος δυαδικού αρχείου και χρόνος παραγωγής, από το τεκμήριο \code {corner_pdb_metadata_seed_2026_thesis.json}.}}{39}{table.6.2}%
+\contentsline {table}{\numberline {6.3}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Μεταδεδομένα των οκτώ εξακμικών πινάκων προτύπων του 3×3×3 ανά υποσύνολο ακμών: πλήθος καταστάσεων, πληρότητα, μέγιστη απόσταση, μέγεθος και χρόνος παραγωγής, από τα τεκμήρια \code {edge_pdb_metadata_subset_*.json}.}}{39}{table.6.3}%
+\contentsline {table}{\numberline {6.4}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Σύγκριση κάλυψης του παραδεκτού φράγματος ακμών μεταξύ του αρχικού συνόλου τεσσάρων και του εκτεταμένου συνόλου οκτώ εξακμικών προβολών, σε ντετερμινιστικό δείγμα ανά βάθος διατάραξης, από το τεκμήριο \code {edge_pdb_coverage_seed_2026_thesis_expanded8.json}.}}{40}{table.6.4}%
+\contentsline {table}{\numberline {6.5}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Μεταδεδομένα των παραγόμενων πινάκων αποκοπής H48 ανά επίπεδο και προφίλ: μέγεθος σε bytes, πρόθεμα SHA-256 και κατάσταση παραγωγής, από τα τεκμήρια \code {h48_metadata_seed_2026_*.json}.}}{41}{table.6.5}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {9.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Σύνοψη των συνόλων περιπτώσεων του κύριου σώματος μετρήσεων}}{63}{table.9.1}%
+\contentsline {table}{\numberline {9.2}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Κατάλογος περιπτώσεων του κύριου σώματος μετρήσεων}}{64}{table.9.2}%
+\contentsline {table}{\numberline {9.3}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αποτελέσματα ελέγχου από άκρο σε άκρο για τον κύβο 3×3×3}}{64}{table.9.3}%
+\contentsline {table}{\numberline {9.4}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Σύνοψη αναγνώρισης απόστασης ανά μοναδική περίπτωση}}{65}{table.9.4}%
+\contentsline {table}{\numberline {9.5}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Σύγκριση συνιστωσών κάτω φράγματος της IDA*}}{65}{table.9.5}%
+\contentsline {table}{\numberline {9.6}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αποτελέσματα του εγγενούς βέλτιστου επιλυτή}}{66}{table.9.6}%
+\contentsline {table}{\numberline {9.7}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Δίκαιη σύγκριση ελεγχόμενης και έμπιστης χρήσης του πίνακα h48h7}}{67}{table.9.7}%
+\contentsline {table}{\numberline {9.8}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Δίκαιη μέτρηση του κόστους δέσμης με έμπιστο πίνακα}}{67}{table.9.8}%
+\contentsline {table}{\numberline {9.9}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Δίκαιη σύγκριση ξεχωριστών και παραμένουσας εγγενούς διεργασίας}}{68}{table.9.9}%
+\contentsline {table}{\numberline {9.10}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αποτελέσματα πίεσης της διαδρομής H48 με τον πίνακα h48h0}}{68}{table.9.10}%
+\contentsline {table}{\numberline {9.11}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αποτελέσματα πίεσης της διαδρομής H48 με τον πίνακα h48h7}}{69}{table.9.11}%
+\contentsline {table}{\numberline {9.12}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Πιστοποίηση του μαντείου H48 σε ελεγχόμενη λειτουργία}}{69}{table.9.12}%
+\contentsline {table}{\numberline {9.13}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Πιστοποίηση του μαντείου H48 σε έμπιστη λειτουργία με προφόρτωση}}{70}{table.9.13}%
+\contentsline {table}{\numberline {9.14}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Πιστοποίηση του μαντείου H48 σε έμπιστη λειτουργία χωρίς προφόρτωση}}{70}{table.9.14}%
+\contentsline {table}{\numberline {9.15}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Πιστοποίηση του δύσκολου σώματος μέσω παραμένουσας διεργασίας}}{70}{table.9.15}%
+\contentsline {table}{\numberline {9.16}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Κόστος δέσμης σε ελεγχόμενη λειτουργία χωρίς κοινή προθέρμανση}}{71}{table.9.16}%
+\contentsline {table}{\numberline {9.17}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Τεκμήριο της εντολής δέσμης του μαντείου}}{71}{table.9.17}%
+\contentsline {table}{\numberline {9.18}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Η εντολή του μαντείου με έμπιστο πίνακα}}{71}{table.9.18}%
+\contentsline {table}{\numberline {9.19}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Λειτουργία ροής του μαντείου με παραμένουσα διεργασία}}{72}{table.9.19}%
+\contentsline {table}{\numberline {9.20}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Τεκμήριο της προγραμματιστικής διεπαφής του μαντείου}}{72}{table.9.20}%
+\contentsline {table}{\numberline {9.21}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Σώμα πίεσης της εξωτερικής διαδρομής Nissy}}{73}{table.9.21}%
+\contentsline {table}{\numberline {9.22}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Τεκμήρια της εγγενούς απόδειξης κάτω φράγματος του superflip}}{74}{table.9.22}%
+\contentsline {table}{\numberline {9.23}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Σώμα του χαρτοφυλακίου με προτεραιότητα στο Nissy}}{75}{table.9.23}%
+\contentsline {table}{\numberline {9.24}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Γραμμή εφεδρείας του χαρτοφυλακίου για το superflip}}{75}{table.9.24}%
+\contentsline {table}{\numberline {9.25}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Επιστροφή του superflip από την κρυφή μνήμη πιστοποιητικών}}{75}{table.9.25}%
+\contentsline {table}{\numberline {9.26}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Σύνοψη του κύριου σώματος μετρήσεων ανά επιλυτή}}{76}{table.9.26}%
+\contentsline {table}{\numberline {9.27}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Κατάσταση υλοποίησης και εγγυήσεις αλγοριθμικών διαδρομών}}{76}{table.9.27}%
+\contentsline {table}{\numberline {9.28}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Πλήθη καταστάσεων αποτελέσματος ανά επιλυτή}}{77}{table.9.28}%
+\contentsline {table}{\numberline {9.29}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Χρόνοι εκτέλεσης ανά επιλυτή}}{79}{table.9.29}%
+\contentsline {table}{\numberline {9.30}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Μήκη επαληθευμένων λύσεων ανά επιλυτή}}{79}{table.9.30}%
+\contentsline {table}{\numberline {9.31}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Κόμβοι αναζήτησης ανά επιλυτή}}{80}{table.9.31}%
+\contentsline {table}{\numberline {9.32}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Μήτρα κατάστασης ανά περίπτωση και επιλυτή}}{81}{table.9.32}%
+\contentsline {table}{\numberline {9.33}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Γραμμές εξάντλησης χρονικού ορίου του κύριου σώματος μετρήσεων}}{81}{table.9.33}%
+\contentsline {table}{\numberline {9.34}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Πλήρης κατανομή αποστάσεων του κύβου 2×2×2}}{82}{table.9.34}%
+\contentsline {table}{\numberline {9.35}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Αντιπροσωπευτικές λύσεις του κύβου 2×2×2}}{82}{table.9.35}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {\Greeknumeral {1}.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Πλήρης καταγραφή των ελέγχων συμβολαίου του μαντείου H48 (\code {h48h7}), όπως παράγεται από το \code {scripts/generate_h48_oracle_contract.py}.}}{94}{table.Alph1.1}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {\Greeknumeral {3}.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Οι υποεντολές της διεπαφής γραμμής εντολών \code {rubik-optimal}, όπως ορίζονται στο \code {src/rubik_optimal/cli.py}.}}{98}{table.Alph3.1}%
+\contentsline {table}{\numberline {\Greeknumeral {3}.2}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Γενικές επιλογές της υποεντολής \code {solve}.}}{100}{table.Alph3.2}%
+\contentsline {table}{\numberline {\Greeknumeral {3}.3}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Η κοινή οικογένεια επιλογών H48 των υποεντολών \code {solve}, \code {distance} και \code {oracle}.}}{101}{table.Alph3.3}%
+\contentsline {table}{\numberline {\Greeknumeral {3}.4}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Ειδικές επιλογές της υποεντολής \code {distance}.}}{102}{table.Alph3.4}%
+\contentsline {table}{\numberline {\Greeknumeral {3}.6}{Προηγμένες επιλογές χαρτοφυλακίου και αγώνων συμμετριών, κοινές στις υποεντολές \code {solve} και \code {oracle}.}}{102}{table.\Greeknumeral {3}.6}%
+\contentsline {table}{\numberline {\Greeknumeral {3}.5}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Ειδικές επιλογές της υποεντολής \code {oracle}.}}{104}{table.Alph3.5}%
+\addvspace {10\p@ }

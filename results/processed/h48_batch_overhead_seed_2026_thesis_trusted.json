@@ -1,0 +1,459 @@
+{
+  "batch_exact_count": 12,
+  "batch_max_backend_seconds": 0.023942,
+  "batch_rows": [
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.023942; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.023942,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.008728; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.008728,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.005768; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.005768,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.005588; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.005588,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.005529; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.005529,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.005638; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.005638,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.005531; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.005531,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.00551; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.00551,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.006221; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.006221,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.007325; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.007325,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.007398; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.007398,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=0.105130; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.007153; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.007153,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    }
+  ],
+  "batch_sum_backend_seconds": 0.094331,
+  "batch_wall_seconds": 0.10513,
+  "case": "R U F2 repeated direct CubeState",
+  "passed": true,
+  "profile": "thesis",
+  "repetitions": 12,
+  "schema_version": 1,
+  "seed": 2026,
+  "sequential_exact_count": 12,
+  "sequential_max_reported_seconds": 3.5996,
+  "sequential_rows": [
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=3.590241; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 3.599600207991898,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.022685; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.033470415975898504,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.022419; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.03312862478196621,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.02229; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.03309737518429756,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.022333; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.032639916986227036,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.022612; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.03317224979400635,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.022181; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.03301754221320152,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.022448; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.03269450040534139,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.0234; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.06049033300951123,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.027999; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.042582499794662,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.02338; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.0339069589972496,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; backend_solve_seconds=0.023182; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.03353691706433892,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    }
+  ],
+  "sequential_sum_reported_seconds": 4.001338,
+  "sequential_total_seconds": 4.015766,
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "table_size_bytes": 3793842344,
+  "threads": 8,
+  "throughput_speedup": 38.198,
+  "timeout_seconds": 180.0,
+  "trusted_table": true
+}

@@ -1,0 +1,98 @@
+{
+  "all_exact": true,
+  "all_verified": true,
+  "cli_batch_wall_seconds": 5.853855,
+  "command": "/opt/miniconda3/bin/python -m rubik_optimal.cli oracle --h48-solver h48h7 --h48-profile thesis --timeout 60.0 --threads 8",
+  "input_count": 4,
+  "passed": true,
+  "profile": "thesis",
+  "return_code": 0,
+  "rows": [
+    {
+      "case_id": "solved",
+      "distance": 0,
+      "expanded_nodes": 0,
+      "index": 0,
+      "input": "solved",
+      "input_kind": "solved",
+      "metric": "HTM",
+      "notes": "solved state; H48 backend not invoked",
+      "runtime_seconds": 0.0,
+      "solution_length": 0,
+      "solution_moves": [],
+      "status": "exact",
+      "table_bytes": 0,
+      "verified": true
+    },
+    {
+      "case_id": "sequence_shallow",
+      "distance": 3,
+      "expanded_nodes": 0,
+      "index": 1,
+      "input": "R U F2",
+      "input_kind": "sequence",
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=5.851525; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; backend_solve_seconds=0.013599; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.013599,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "status": "exact",
+      "table_bytes": 3793842344,
+      "verified": true
+    },
+    {
+      "case_id": "facelets_shallow",
+      "distance": 3,
+      "expanded_nodes": 0,
+      "index": 2,
+      "input": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "input_kind": "facelets",
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=5.851525; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; backend_solve_seconds=0.005634; table_lookups=43032; table_fallbacks=43032; max_depth=20; error=",
+      "runtime_seconds": 0.005634,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "status": "exact",
+      "table_bytes": 3793842344,
+      "verified": true
+    },
+    {
+      "case_id": "sequence_mixed",
+      "distance": 5,
+      "expanded_nodes": 43260,
+      "index": 3,
+      "input": "R U R' U' F2",
+      "input_kind": "sequence",
+      "metric": "HTM",
+      "notes": "in-repo native H48 batch backend; table_loaded_once=true; batch_wall_seconds=5.851525; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; backend_solve_seconds=0.012297; table_lookups=43254; table_fallbacks=43254; max_depth=20; error=",
+      "runtime_seconds": 0.012297,
+      "solution_length": 5,
+      "solution_moves": [
+        "F2",
+        "U",
+        "R",
+        "U'",
+        "R'"
+      ],
+      "status": "exact",
+      "table_bytes": 3793842344,
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "table_size_bytes": 3793842344,
+  "threads": 8,
+  "timeout_seconds": 60.0,
+  "wrapper_wall_seconds": 5.917467
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "command": "oracle",
+  "backend": "universal_resident_h48_batch",
+  "solver": "h48h7",
+  "profile": "thesis",
+  "metric": "HTM",
+  "max_depth": 20,
+  "timeout_seconds": 20.0,
+  "threads": 1,
+  "universal_oracle": true,
+  "prefer_resident_h48_batch_for_state_input": true,
+  "resident_h48_batch_timeout_seconds": 20.0,
+  "resident_h48_symmetry_variants": 0,
+  "resident_h48_symmetry_timeout_seconds": 5.0,
+  "parallel_h48_symmetry_variants": 0,
+  "parallel_h48_symmetry_timeout_seconds": 5.0,
+  "h48_lower_bound_symmetry_variants": 23,
+  "try_portfolio_batch_before_resident_h48_batch": true,
+  "portfolio_prepass_timeout_seconds": null,
+  "portfolio_fallback_timeout_seconds": null,
+  "try_certificate_cache": false,
+  "try_upper_lower_certificate": true,
+  "h48_trusted_table": true,
+  "h48_preload_table": false,
+  "batch_wall_seconds": 0.018360666930675507,
+  "input_count": 1,
+  "all_exact": true,
+  "all_verified": true,
+  "rows": [
+    {
+      "index": 0,
+      "input": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "input_kind": "facelets",
+      "status": "exact",
+      "distance": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solution_length": 3,
+      "metric": "HTM",
+      "verified": true,
+      "runtime_seconds": 0.01803450006991625,
+      "expanded_nodes": 0,
+      "table_bytes": 3793842344,
+      "selected_backend": "upper-lower-certificate",
+      "backend_solver": "portfolio_optimal_oracle",
+      "notes": "universal exact oracle; exactness_policy=verified_exact_only; arbitrary_valid_3x3_domain=true; optimized_paths=exact_certificate_cache,upper_lower_certificate,nissy_symmetry_batch,resident_h48_symmetry_batch,parallel_h48_symmetry_race,resident_h48_batch,portfolio_after_resident_h48_fallback,resident_race; fast_runtime_proven_for_every_possible_state=false; selected_backend=upper-lower-certificate; backend_solver=portfolio_optimal_oracle; backend_runtime_seconds=0.018022; portfolio exact oracle; selected_backend=upper-lower-certificate; nissy_optimal_invoked=false; resident_h48_invoked=false; h48_lower_bound_invoked=true; admissible_lower_bound_matches_verified_upper_solution=true; upper_solver=kociemba_two_phase_adapter; upper_runtime_seconds=0.006941; h48_lower_bound=3; h48_lower_bound_runtime_seconds=0.006777; h48_lower_bound_notes=in-repo native H48 rotational admissible lower-bound batch; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; return_code=0; rotation_count=24; include_identity=True; best_rotation=rot00; best_rotation_backend_runtime_seconds=0.001232; valid_bounds=[('rot00', 3, 0.001232), ('rot02', 3, 0.000443), ('rot05', 3, 0.000197), ('rot01', 3, 0.000206), ('rot03', 3, 0.000395), ('rot04', 3, 0.000104), ('rot06', 3, 1e-06), ('rot07', 3, 0.000139), ('rot08', 3, 0.000169), ('rot09', 3, 2.7e-05), ('rot10', 3, 2.7e-05), ('rot11', 3, 2.2e-05), ('rot12', 3, 1e-06), ('rot13', 3, 2.7e-05), ('rot14', 3, 2.2e-05), ('rot15', 3, 2.2e-05), ('rot16', 3, 0.0), ('rot17', 3, 0.0), ('rot18', 3, 1e-06), ('rot19', 3, 2.8e-05), ('rot20', 3, 1e-06), ('rot21', 3, 2e-06), ('rot22', 3, 4.9e-05), ('rot23', 3, 2.7e-05)]; failed_rows=[]; parse_errors=[]; stdout_line_count=24; table_check=skipped; table_storage=mmap; table_preload=disabled; stderr=; upper_notes=Two-phase package result verified; no optimality proof claimed"
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+{
+  "all_state_fast_oracle_goal_satisfied": false,
+  "all_state_fast_oracle_goal_satisfied_by_this_decision": false,
+  "allow_unsafe_generation": false,
+  "artifact_suffix": "noaws_detached_waitsafe_live_mmap020_workbatch1",
+  "checked_at_utc": "2026-06-02T03:11:02.820740+00:00",
+  "commands": [
+    {
+      "command": "nice -n 20 /opt/miniconda3/bin/python scripts/generate_h48_tables.py --profile thesis --seed 2026 --solver h48h8 --threads 5 --mmap-output --progress-log --gendata-workbatch 1 --require-safe --min-mmap-available-memory-gib 0.19999999925494194",
+      "phase": "generate_table",
+      "return_code": -15,
+      "runtime_seconds": 575.028386,
+      "stderr_tail": "",
+      "stdout_tail": "[H48 gendata] cocsep data computed\n[H48 gendata] Computing depth <=8\n[H48 gendata] Computed 7437855 positions\n[H48 gendata] Processing 'short cubes'. This will take a while.\n[H48 gendata] Processed 14 / 7437855 cubes\n[H48 gendata] Processed 25 / 7437855 cubes\n[H48 gendata] Processed 36 / 7437855 cubes\n[H48 gendata] Processed 52 / 7437855 cubes\n[H48 gendata] Processed 65 / 7437855 cubes\n[H48 gendata] Processed 76 / 7437855 cubes\n[H48 gendata] Processed 90 / 7437855 cubes\n[H48 gendata] Processed 103 / 7437855 cubes\n[H48 gendata] Processed 117 / 7437855 cubes",
+      "streamed_output": true,
+      "terminated_process_group": false,
+      "timed_out": false
+    }
+  ],
+  "current_next_missing_oracle_grade_solver": "h48h8",
+  "current_strongest_local_oracle_solver": "h48h7",
+  "dry_run": false,
+  "dynamic_thread_selection": true,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "generation_command": "nice -n 20 /opt/miniconda3/bin/python scripts/generate_h48_tables.py --profile thesis --seed 2026 --solver h48h8 --threads 5 --mmap-output --progress-log --gendata-workbatch 1 --require-safe --min-mmap-available-memory-gib 0.19999999925494194",
+  "generation_command_args": [
+    "nice",
+    "-n",
+    "20",
+    "/opt/miniconda3/bin/python",
+    "scripts/generate_h48_tables.py",
+    "--profile",
+    "thesis",
+    "--seed",
+    "2026",
+    "--solver",
+    "h48h8",
+    "--threads",
+    "5",
+    "--mmap-output",
+    "--progress-log",
+    "--gendata-workbatch",
+    "1",
+    "--require-safe",
+    "--min-mmap-available-memory-gib",
+    "0.19999999925494194"
+  ],
+  "generation_threads": 5,
+  "h48_gendata_workbatch": 1,
+  "notes": "Stronger H48 table campaign for the requested fast optimal oracle over every valid 3x3 state. This artifact is deliberately not a completion claim unless the target table is trusted, the full table checksum matches its metadata, hard-case certification passes, broad runtime evidence exists, and a worst-case runtime boundary is documented.",
+  "passed": false,
+  "post_campaign_checksum_details": {
+    "full_checksum_valid": false,
+    "metadata_exists": false,
+    "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+    "table_exists": false,
+    "table_path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+    "trusted_metadata_valid": false
+  },
+  "post_campaign_full_checksum_message": "missing target table or metadata after campaign",
+  "post_campaign_full_checksum_valid": false,
+  "post_campaign_target_trusted_message": "missing target table or metadata after campaign",
+  "post_campaign_target_trusted_table": false,
+  "profile": "thesis",
+  "remaining_completion_requirements": [
+    "trusted h48h8 table metadata and checksum",
+    "hard-case exact certification with h48h8",
+    "broad arbitrary-state corpus under thesis runtime target with h48h8",
+    "formal or supervisor-approved empirical worst-case runtime boundary"
+  ],
+  "safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 1645412352,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 22197661696,
+      "load_average": [
+        3.09765625,
+        3.1142578125,
+        3.2548828125
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 214748364,
+      "mmap_output": true
+    },
+    "reasons": [],
+    "safe_to_start": true,
+    "solver": "h48h8",
+    "threads": 5
+  },
+  "safety_wait": null,
+  "schema_version": 1,
+  "seed": 2026,
+  "should_run_generation": true,
+  "status": "generation_failed_or_timed_out",
+  "target_estimated_table_size_bytes": 7585624040,
+  "target_h_value": 8,
+  "target_metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+  "target_solver": "h48h8",
+  "target_table_path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+  "target_trusted_message": "missing target table or metadata",
+  "target_trusted_table": false,
+  "thread_setting": "auto"
+}

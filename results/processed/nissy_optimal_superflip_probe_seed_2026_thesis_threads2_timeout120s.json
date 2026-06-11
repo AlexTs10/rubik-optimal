@@ -1,0 +1,54 @@
+{
+  "elapsed": 120.09784399997443,
+  "probe_name": "nissy_optimal_superflip_bounded_probe",
+  "probe_policy": "status=timeout records only that the external Nissy `solve optimal` step did not finish within timeout_seconds at this thread count on this machine; it is not a distance bound. Any exact row is independently replay-verified before being reported.",
+  "profile": "thesis",
+  "result": {
+    "expanded_nodes": null,
+    "generated_nodes": null,
+    "input_state": "UBULURUFURURFRBRDRFUFLFRFDFDFDLDRDBDLULBLFLDLBUBRBLBDB",
+    "is_verified": false,
+    "metric": "HTM",
+    "notes": "external Nissy `optimal` timed out after 120.0s; partial_output=",
+    "runtime_seconds": 120.08499595802277,
+    "solution_length": null,
+    "solution_moves": [],
+    "solver_name": "nissy_optimal_external",
+    "status": "timeout",
+    "table_bytes": 3256052479
+  },
+  "schema_version": 1,
+  "scramble": "U R2 F B R B2 R U2 L B2 R U' D' R2 F R' L B2 U2 F2",
+  "seed": 2026,
+  "source_reproduction_plan": [
+    "Review git status --short and decide the intentional source baseline.",
+    "Create a real commit or an approved source archive; do not treat no_commit+dirty artifacts as final-submission evidence.",
+    "Regenerate final result metadata from that baseline and rerun python scripts/thesis_audit.py."
+  ],
+  "source_snapshot_limitation": "",
+  "source_snapshot_reproducible": true,
+  "source_state": "38e2dbe",
+  "source_state_details": {
+    "commit": "38e2dbebf6d52f9e238415fe105ff86dc3e6caf7",
+    "commit_short": "38e2dbe",
+    "dirty": false,
+    "git_available": true,
+    "has_commit": true,
+    "is_reproducible_checkout": true,
+    "limitation": "",
+    "reproduction_plan": [
+      "Review git status --short and decide the intentional source baseline.",
+      "Create a real commit or an approved source archive; do not treat no_commit+dirty artifacts as final-submission evidence.",
+      "Regenerate final result metadata from that baseline and rerun python scripts/thesis_audit.py."
+    ],
+    "schema_version": 1,
+    "state": "38e2dbe",
+    "status_entry_count": 0,
+    "status_sample": []
+  },
+  "status": "timeout",
+  "target": "superflip",
+  "threads": 2,
+  "timeout_seconds": 120.0,
+  "uses_h48_or_nissy": true
+}

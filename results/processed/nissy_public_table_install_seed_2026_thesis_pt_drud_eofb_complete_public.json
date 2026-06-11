@@ -1,0 +1,89 @@
+{
+  "already_present": false,
+  "archive_entry": {
+    "compressed_size": 261441,
+    "compression_method": 8,
+    "crc32": "42ed04bb",
+    "disk_start": 0,
+    "external_attrs": 2175008768,
+    "flags": 0,
+    "internal_attrs": 0,
+    "last_mod_date": 22179,
+    "last_mod_time": 22281,
+    "local_header_offset": 1662806537,
+    "name": "tables/pt_drud_eofb",
+    "uncompressed_size": 541415,
+    "version_made_by": 798,
+    "version_needed": 20
+  },
+  "archive_head": {
+    "accept_ranges": null,
+    "content_length": 1781826023,
+    "content_type": "application/octet-stream",
+    "etag": null,
+    "headers": {
+      "connection": "close",
+      "content-length": "1781826023",
+      "content-type": "application/octet-stream",
+      "date": "Tue, 02 Jun 2026 03:49:15 UTC",
+      "last-modified": "Wed, 03 May 2023 14:44:26 UTC",
+      "server": "OpenBSD httpd"
+    },
+    "last_modified": "Wed, 03 May 2023 14:44:26 UTC",
+    "status": 200
+  },
+  "central_directory": {
+    "comment_length": 0,
+    "entries_this_disk": 19,
+    "offset": 1781824310,
+    "size_bytes": 1691,
+    "total_entries": 19
+  },
+  "central_directory_range_response": {
+    "content_range": "bytes 1780777447-1781826022/1781826023",
+    "headers": {
+      "connection": "close",
+      "content-length": "1048576",
+      "content-range": "bytes 1780777447-1781826022/1781826023",
+      "content-type": "application/octet-stream",
+      "date": "Tue, 02 Jun 2026 03:49:15 UTC",
+      "last-modified": "Wed, 03 May 2023 14:44:26 UTC",
+      "server": "OpenBSD httpd"
+    },
+    "received_bytes": 1048576,
+    "requested_tail_bytes": 1048576,
+    "status": 206
+  },
+  "checked_at_utc": "2026-06-02T03:49:17.682262+00:00",
+  "dry_run": false,
+  "errors": [],
+  "install_result": {
+    "compressed_bytes_read": 261441,
+    "crc32": "42ed04bb",
+    "runtime_seconds": 0.737167,
+    "uncompressed_bytes_written": 541415
+  },
+  "installed": true,
+  "local_header": {
+    "compressed_size": 261441,
+    "compression_method": 8,
+    "crc32": "42ed04bb",
+    "data_offset_delta": 77,
+    "extra_length": 28,
+    "flags": 0,
+    "last_mod_date": 22179,
+    "last_mod_time": 22281,
+    "name": "tables/pt_drud_eofb",
+    "name_length": 19,
+    "uncompressed_size": 541415,
+    "version_needed": 20
+  },
+  "passed": true,
+  "schema_version": 1,
+  "source_url": "https://nissy.tronto.net/nissy-tables-2.0.4.zip",
+  "table_name": "tables/pt_drud_eofb",
+  "target_exists": true,
+  "target_path": ".codex_external/nissy_data/tables/pt_drud_eofb",
+  "target_size_bytes": 541415,
+  "target_size_matches_archive": true
+}

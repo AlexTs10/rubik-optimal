@@ -1,0 +1,53 @@
+% Αρίθμηση κυβιδίων όπως ορίζεται στο src/rubik_optimal/cube.py
+% (CORNER_NAMES, EDGE_NAMES):
+%   γωνίες: URF, UFL, ULB, UBR, DFR, DLF, DBL, DRB (δείκτες 0-7)
+%   ακμές:  UR, UF, UL, UB, DR, DF, DL, DB, FR, FL, BL, BR (δείκτες 0-11)
+% Περιεχόμενο σχήματος μόνο: το περιβάλλον figure/caption ορίζεται στο κεφάλαιο.
+\begin{tikzpicture}[x=1.2cm, y=1.2cm, line cap=round, line join=round]
+  % Σημείωση προσανατολισμού (κοινή και για τα τρία στρώματα).
+  \node[font=\scriptsize, text=black!75] at (5.4,3.6)
+    {Κάτοψη των τριών στρωμάτων: πίσω έδρα (\texttt{B}) πάνω, μπροστινή (\texttt{F}) κάτω.};
+
+  % Γωνιακά κυβίδια (8 θέσεις, δείκτες 0-7).
+  \foreach \x/\y/\idx/\nm in {%
+      0/2/2/ULB, 2/2/3/UBR, 0/0/1/UFL, 2/0/0/URF,
+      7.8/2/6/DBL, 9.8/2/7/DRB, 7.8/0/5/DLF, 9.8/0/4/DFR}{
+    \draw[draw=black!45, fill=blue!14] (\x,\y) rectangle (\x+1,\y+1);
+    \node[align=center, font=\scriptsize] at (\x+0.5,\y+0.5)
+      {\textbf{\idx}\\\texttt{\nm}};
+  }
+
+  % Ακμικά κυβίδια (12 θέσεις, δείκτες 0-11).
+  \foreach \x/\y/\idx/\nm in {%
+      1/2/3/UB, 0/1/2/UL, 2/1/0/UR, 1/0/1/UF,
+      3.9/2/10/BL, 5.9/2/11/BR, 3.9/0/9/FL, 5.9/0/8/FR,
+      8.8/2/7/DB, 7.8/1/6/DL, 9.8/1/4/DR, 8.8/0/5/DF}{
+    \draw[draw=black!45, fill=orange!18] (\x,\y) rectangle (\x+1,\y+1);
+    \node[align=center, font=\scriptsize] at (\x+0.5,\y+0.5)
+      {\textbf{\idx}\\\texttt{\nm}};
+  }
+
+  % Κεντρικά κυβίδια (σταθερές θέσεις αναφοράς) και πυρήνας.
+  \foreach \x/\y/\lab in {1/1/U, 4.9/2/B, 3.9/1/L, 5.9/1/R, 4.9/0/F, 8.8/1/D}{
+    \draw[draw=black!45, fill=gray!16] (\x,\y) rectangle (\x+1,\y+1);
+    \node[font=\scriptsize, text=black!65] at (\x+0.5,\y+0.5) {\texttt{\lab}};
+  }
+  \draw[draw=black!45, fill=gray!30] (4.9,1) rectangle (5.9,2);
+
+  % Εξωτερικά περιγράμματα και τίτλοι στρωμάτων.
+  \foreach \ox/\ttl in {%
+      0/{Άνω στρώμα (\texttt{U})},
+      3.9/{Μεσαίο στρώμα},
+      7.8/{Κάτω στρώμα (\texttt{D})}}{
+    \draw[black, line width=0.8pt] (\ox,0) rectangle (\ox+3,3);
+    \node[font=\footnotesize] at (\ox+1.5,-0.45) {\ttl};
+  }
+
+  % Υπόμνημα χρωμάτων.
+  \draw[draw=black!45, fill=blue!14] (0,-1.55) rectangle (0.3,-1.25);
+  \node[anchor=west, font=\scriptsize] at (0.4,-1.4) {γωνιακά κυβίδια (0–7)};
+  \draw[draw=black!45, fill=orange!18] (4.0,-1.55) rectangle (4.3,-1.25);
+  \node[anchor=west, font=\scriptsize] at (4.4,-1.4) {ακμικά κυβίδια (0–11)};
+  \draw[draw=black!45, fill=gray!16] (7.8,-1.55) rectangle (8.1,-1.25);
+  \node[anchor=west, font=\scriptsize] at (8.2,-1.4) {κέντρα εδρών (σταθερά)};
+\end{tikzpicture}

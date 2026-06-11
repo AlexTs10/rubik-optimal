@@ -1,0 +1,45 @@
+{
+  "all_exact": true,
+  "all_used_direct_state_bridge": true,
+  "all_verified": true,
+  "case_count": 2,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "generated_at_utc": "2026-06-02T16:45:03.813156+00:00",
+  "max_runtime_seconds": 1.634207,
+  "notes": "Direct cubie-state evidence for the Nissy 2.x public optimal backend. This proves direct arbitrary-state input plumbing for these rows; it is not a worst-case runtime proof for every possible 3x3 state.",
+  "profile": "thesis",
+  "rows": [
+    {
+      "case_id": "direct_state_ru",
+      "expected_distance": 2,
+      "notes": "Nissy 2.x direct-state optimal bridge; input_mode=cube_state; step=optimal; optimal=0; source_sequence_provided=false; threads=2; bridge=/Users/alextoska/Desktop/sgarbas/native/build/nissy2_state_bridge; required_tables=pt_nxopt31_HTM,pt_corners_HTM; return_code=0",
+      "runtime_seconds": 1.634207,
+      "solution": "U' R'",
+      "solution_length": 2,
+      "solver_name": "nissy2_state_optimal_external",
+      "source": "in-repo deterministic cubie state",
+      "state": "UUUUUUFFFUBBRRRRRRRRRFFDFFDDDBDDBDDBFFDLLLLLLLLLUBBUBB",
+      "status": "exact",
+      "used_direct_state_bridge": true,
+      "verified": true
+    },
+    {
+      "case_id": "direct_state_ruf2",
+      "expected_distance": 3,
+      "notes": "Nissy 2.x direct-state optimal bridge; input_mode=cube_state; step=optimal; optimal=0; source_sequence_provided=false; threads=2; bridge=/Users/alextoska/Desktop/sgarbas/native/build/nissy2_state_bridge; required_tables=pt_nxopt31_HTM,pt_corners_HTM; return_code=0",
+      "runtime_seconds": 1.558624,
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "solver_name": "nissy2_state_optimal_external",
+      "source": "in-repo deterministic cubie state",
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "used_direct_state_bridge": true,
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "threads": 2,
+  "timeout_seconds": 30.0
+}

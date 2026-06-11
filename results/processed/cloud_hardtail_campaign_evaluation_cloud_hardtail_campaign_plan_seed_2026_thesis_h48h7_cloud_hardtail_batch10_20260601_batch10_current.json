@@ -1,0 +1,103 @@
+{
+  "all_required_workloads_passed": false,
+  "cloud_runtime_evidence_passed": false,
+  "contract_checks": {
+    "all_state_exact_contract_supported": true,
+    "contract_present": true,
+    "fast_optimal_oracle_implemented_for_every_valid_3x3_state": true,
+    "fast_runtime_proven_for_every_possible_state": false
+  },
+  "created_at_utc": "2026-06-01T14:51:35.396809+00:00",
+  "evaluated_workload_count": 8,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "missing_or_failed_workloads": [
+    "known_distance_20_shard_000",
+    "known_distance_20_shard_001",
+    "known_distance_20_shard_002",
+    "stronger_table_h48h8",
+    "rubikoptimal_superflip_hardcase",
+    "postprocess_00",
+    "postprocess_01",
+    "postprocess_02"
+  ],
+  "notes": "This evaluator can only mark the final fast-runtime flag true after all cloud workload artifacts pass and the regenerated contract itself records fast_runtime_proven_for_every_possible_state=true.",
+  "plan_available_scramble_rows": 25,
+  "plan_claim_scope": "full",
+  "plan_distance": 20,
+  "plan_objective": "prove or falsify a fast optimal oracle claim for every valid 3x3 state",
+  "plan_path": "results/processed/cloud_hardtail_campaign_plan_seed_2026_thesis_h48h7_cloud_hardtail_batch10_20260601.json",
+  "plan_profile": "thesis",
+  "plan_seed": 2026,
+  "plan_selected_offset_end": 25,
+  "plan_selected_offset_start": 0,
+  "plan_solver": "h48h7",
+  "rows": [
+    {
+      "kind": "public_known_distance_hardtail_batch",
+      "passed": false,
+      "reason": "missing workload execution artifact",
+      "required": true,
+      "result_present": false,
+      "workload_id": "known_distance_20_shard_000"
+    },
+    {
+      "kind": "public_known_distance_hardtail_batch",
+      "passed": false,
+      "reason": "missing workload execution artifact",
+      "required": true,
+      "result_present": false,
+      "workload_id": "known_distance_20_shard_001"
+    },
+    {
+      "kind": "public_known_distance_hardtail_batch",
+      "passed": false,
+      "reason": "missing workload execution artifact",
+      "required": true,
+      "result_present": false,
+      "workload_id": "known_distance_20_shard_002"
+    },
+    {
+      "kind": "h48_stronger_table_generation_and_certification",
+      "passed": false,
+      "reason": "missing workload execution artifact",
+      "required": true,
+      "result_present": false,
+      "workload_id": "stronger_table_h48h8"
+    },
+    {
+      "kind": "rubikoptimal_table_complete_hardcase",
+      "passed": false,
+      "reason": "missing workload execution artifact",
+      "required": true,
+      "result_present": false,
+      "workload_id": "rubikoptimal_superflip_hardcase"
+    },
+    {
+      "kind": "postprocess_and_audit",
+      "passed": false,
+      "reason": "missing workload execution artifact",
+      "required": true,
+      "result_present": false,
+      "workload_id": "postprocess_00"
+    },
+    {
+      "kind": "postprocess_and_audit",
+      "passed": false,
+      "reason": "missing workload execution artifact",
+      "required": true,
+      "result_present": false,
+      "workload_id": "postprocess_01"
+    },
+    {
+      "kind": "postprocess_and_audit",
+      "passed": false,
+      "reason": "missing workload execution artifact",
+      "required": true,
+      "result_present": false,
+      "workload_id": "postprocess_02"
+    }
+  ],
+  "schema_version": 1,
+  "thesis_audit_acceptance_gates_passed": true,
+  "workload_count": 8
+}

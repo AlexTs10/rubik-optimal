@@ -1,0 +1,44 @@
+{
+  "all_exact": true,
+  "all_verified": true,
+  "errors": [],
+  "h48_repetitions": 0,
+  "h48_reuse_wall_seconds": 2e-06,
+  "h48_start_delay_seconds": 10.0,
+  "max_runtime_seconds": 4.46796,
+  "nissy_core_direct_enabled": true,
+  "nissy_threads": 1,
+  "oracle_contract": {
+    "exactness_policy": "exact only after independent verification from the original input state",
+    "latency_strategy": "race direct nissy-core cube-state solving or external Nissy optimal against a resident FastOptimalOracle H48 session",
+    "runtime_claim": "this artifact proves low-overhead resident race behavior on a corpus, not exhaustive every-state timing",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "case_id": "shallow_r_u_f2",
+      "description": "direct facelet/cubie state for a shallow three-move scramble",
+      "mode": "resident_race",
+      "notes": "resident race exact oracle; exactness_policy=first_verified_exact_solution_wins; resident_h48_process=shared_batch_session; selected_backend=nissy-core-direct; started_backends=nissy-core-direct; stopped_backends=resident-h48-deferred; h48_start_delay_seconds=10.000000; backend_solver=nissy_core_direct_h48h7; backend_runtime_seconds=4.461062; setup_notes=; resident race backend=nissy-core-direct; input_mode=cube_state; table_symlink=true; source_sequence_provided=false; solver=h48h7; table_path=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; max_depth=20; optimal=0; threads=1; return_code=0; h48_competes_concurrently=true",
+      "runtime_seconds": 4.46796,
+      "selected_backend": "nissy-core-direct",
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "started_backends": "nissy-core-direct",
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "stopped_backends": "resident-h48-deferred",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "threads": 1,
+  "timeout_seconds": 30.0,
+  "trusted_table": true
+}

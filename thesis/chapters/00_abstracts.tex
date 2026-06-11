@@ -1,0 +1,46 @@
+\chapter*{Περίληψη}
+\addcontentsline{toc}{chapter}{Περίληψη}
+
+\begin{center}
+\textbf{\thesisGreekTitle}\\[0.25cm]
+\thesisStudentName\\
+Επιβλέπων: \thesisSupervisor
+\end{center}
+
+Η παρούσα διπλωματική εργασία εξετάζει αλγορίθμους επίλυσης του κύβου του Rubik με έμφαση στη διάκριση ανάμεσα σε πρακτική επίλυση, ακριβή αναγνώριση απόστασης και αναζήτηση αποδεδειγμένα βέλτιστης λύσης. Υλοποιούνται αναπαράσταση του κύβου 3×3×3 σε επίπεδο κυβιδίων (\eng{cubies}), συντακτικός αναλυτής κινήσεων στη μετρική μισών στροφών (\eng{half-turn metric}, HTM), έλεγχος φυσικής εγκυρότητας, ανεξάρτητος επαληθευτής λύσεων, εξαντλητική αναζήτηση BFS για ρηχά βάθη, καθώς και επιλύτης IDA* τύπου Korf με παραδεκτή ευρετική από πίνακες προβολών (\eng{projection tables}), από εγγενώς παραγόμενο γωνιακό πίνακα προτύπων (\eng{pattern database}, PDB) 3×3×3 και από εγγενείς πίνακες προτύπων έξι ακμών.
+
+Στην υλοποίηση ενσωματώνεται επίσης υποσύστημα H48 με αναπαραγώγιμο πίνακα \code{h48h0} και πίνακα \code{h48h7} επιπέδου \eng{oracle}, βασισμένο στον ενσωματωμένο (\eng{vendored}) δημόσιο κώδικα \code{nissy-core}/H48 των Tronto/Tenuti, ο οποίος διατίθεται υπό την άδεια GPL-3.0-or-later. Το υποσύστημα αυτό παρέχει ισχυρότερα τεκμήρια ακριβούς αναζήτησης (\eng{exact-search evidence}) σε απαιτητικές περιπτώσεις 3×3×3 με άμεση είσοδο κατάστασης, συμπεριλαμβανομένης πιστοποίησης απόστασης 20 για το \eng{superflip}, καθώς και λειτουργία δέσμης (\eng{batch}) για επαναλαμβανόμενες κλήσεις. Επιπλέον, παρουσιάζεται καθαρά εγγενής --- χωρίς H48/Nissy --- απόδειξη βελτιστότητας για το \eng{superflip}: ένας συμμετρικά ανηγμένος πίνακας \eng{FlipUDSlice} φάσης 1 με 16 συμμετρίες και παραδεκτό κάτω φράγμα τριών αξόνων, μαζί με εξαντλητικό IDA* ενιαίου ορίου (\eng{single-bound}) κατά Reid, αποκλείουν κάθε λύση μήκους 19 ή μικρότερου· σε συνδυασμό με την επαληθευμένη λύση μήκους 20, αποδεικνύεται ότι η απόσταση του \eng{superflip} είναι ακριβώς 20.
+
+Η διαδρομή H48/Nissy/RubikOptimal παρουσιάζεται ως πλήρως αποδιδόμενο τεκμήριο προερχόμενο από δημόσιους επιλύτες και όχι ως πρωτότυπη αλγοριθμική συνεισφορά, και λειτουργεί επίσης ως ανεξάρτητη διασταύρωση για το \eng{superflip}. Τη βασική αλγοριθμική συνεισφορά της εργασίας αποτελούν η εγγενής υποδομή Korf/IDA* με τους τοπικά παραγόμενους πίνακες, η συμμετρικά ανηγμένη διαδρομή φάσης 1 του Kociemba και η εγγενής απόδειξη βελτιστότητας του \eng{superflip}. Για πρακτικές λύσεις γενικότερων καταστάσεων χρησιμοποιούνται εγγενής οριοθετημένη (\eng{scoped}) διαδρομή Kociemba, εγγενής τετραφασική διαδρομή Thistlethwaite με τελικό στάδιο μισών στροφών και προαιρετικός προσαρμογέας της μεθόδου δύο φάσεων του Kociemba· οι λύσεις αυτές επισημαίνονται ρητά ως επαληθευμένες αλλά μη αποδεδειγμένα βέλτιστες.
+
+Τα πειραματικά αποτελέσματα παράγονται από αναπαραγώγιμα σενάρια με σταθερό σπόρο τυχαιότητας (\eng{seed}) και αποθηκεύονται σε αρχεία αποτελεσμάτων πριν ενσωματωθούν στους πίνακες της εργασίας. Η πλήρης κανονικοποιημένη μελέτη του κύβου 2×2×2 (\eng{Pocket Cube}) διατηρείται ως μικρή συνιστώσα εξαντλητικής ακριβούς αναζήτησης, ενώ ο κύριος αλγοριθμικός όγκος της εργασίας αφορά τους επιλύτες 3×3×3 και τα τεκμήρια που στηρίζονται στους παραγόμενους πίνακες. Η εργασία τεκμηριώνει επίσης ρητά τους περιορισμούς της: δεν αναπαράγει την απόδειξη του αριθμού του Θεού (\eng{God's number}), δεν αποδεικνύει καθολική εγγύηση πρακτικού χρόνου εκτέλεσης χείριστης περίπτωσης για κάθε αυθαίρετη κατάσταση 3×3×3 και δεν περιλαμβάνει πλήρη υλοποίηση των στατικών πινάκων ελιγμών του Thistlethwaite. Τα όρια κάθε ισχυρισμού και οι αντίστοιχες παραπομπές δηλώνονται ρητά στα οικεία κεφάλαια.
+
+Ο πλήρης πηγαίος κώδικας της εργασίας, μαζί με τα σενάρια αναπαραγωγής των μετρήσεων και τα δεδομένα εισόδου των πειραμάτων, διατίθεται δημόσια στη διεύθυνση: \url{https://github.com/AlexTs10/rubik-optimal}
+
+\chapter*{\eng{Abstract}}
+\addcontentsline{toc}{chapter}{Abstract}
+\begin{english}
+\begin{center}
+\textbf{\thesisEnglishTitle}\\[0.25cm]
+\thesisStudentNameEnglish\\
+Supervisor: \thesisSupervisor
+\end{center}
+
+This thesis studies Rubik's Cube solving algorithms with emphasis on the distinction between practical solving, exact distance recognition, and provably optimal solution search. The implementation provides a cubie-level 3×3×3 model, a half-turn-metric move parser, physical-validity checks, an independent solution verifier, shallow breadth-first exact search, and a Korf-style IDA* solver with an admissible heuristic drawn from projection tables, a native-generated 3×3×3 corner pattern database, and native six-edge pattern databases.
+
+The implementation also integrates an H48 backend with a reproducible \code{h48h0} table and an oracle-grade \code{h48h7} table, built from the vendored \code{nissy-core}/H48 public source by Tronto/Tenuti, distributed under the GPL-3.0-or-later license. This backend provides stronger exact-search evidence on demanding direct-state 3×3×3 cases, including a distance-20 superflip certification, and a batch mode for repeated oracle calls. In addition, the thesis presents a purely own-code (no H48/Nissy) optimality proof for the superflip: a symmetry-reduced 16-symmetry FlipUDSlice phase-1 table with an admissible three-axis bound, together with an exhaustive Mike Reid-style single-bound IDA*, rules out every solution of length 19 or shorter; combined with the verified length-20 solution, this proves that the superflip distance is exactly 20.
+
+The H48/Nissy/RubikOptimal path is presented as fully attributed evidence derived from public solvers, not as original algorithmic authorship, and also serves as an independent cross-check for the superflip. The core algorithmic contribution of the thesis consists of the native Korf/IDA* infrastructure with the locally generated tables, the symmetry-reduced Kociemba phase-1 path, and the own-code superflip optimality proof. For practical solutions on broader states, the implementation includes a native scoped Kociemba path, a native four-phase Thistlethwaite path with a half-turn final stage, and an optional Kociemba two-phase adapter; these solutions are explicitly labeled as verified but not provably optimal.
+
+Experimental results are generated by reproducible scripts using a fixed random seed and are saved as result files before being imported into the thesis tables. The complete normalized 2×2×2 (Pocket Cube) case study is retained as a small exhaustive exact-search component, while the main algorithmic work remains on the 3×3×3 solvers and the generated table-backed evidence. The thesis also documents its limitations explicitly: it does not reproduce the proof of God's Number, it does not prove a universal worst-case practical runtime guarantee for every arbitrary 3×3×3 state, and it does not implement full Thistlethwaite static maneuver tables. The scope of every claim and the corresponding references are stated explicitly in the respective chapters.
+
+The complete source code of this thesis, together with the measurement-reproduction scripts and the experiment input data, is publicly available at: \url{https://github.com/AlexTs10/rubik-optimal}
+\end{english}
+
+\chapter*{Πρόλογος}
+\addcontentsline{toc}{chapter}{Πρόλογος}
+
+Η παρούσα διπλωματική εργασία εκπονήθηκε κατά το ακαδημαϊκό έτος 2025--2026 στο Εργαστήριο Ενσύρματης Τηλεπικοινωνίας του Τμήματος Ηλεκτρολόγων Μηχανικών και Τεχνολογίας Υπολογιστών του Πανεπιστημίου Πατρών, υπό την επίβλεψη του Αναπληρωτή Καθηγητή Κυριάκου Σγάρμπα. Αντικείμενό της είναι η μελέτη και η υλοποίηση αλγορίθμων βέλτιστης επίλυσης για τον κύβο του Rubik, με έμφαση στη διάκριση ανάμεσα σε πρακτική επίλυση, ακριβή αναγνώριση απόστασης και αποδεδειγμένα βέλτιστη λύση.
+
+Θα ήθελα να ευχαριστήσω θερμά τον επιβλέποντα της εργασίας, Αναπληρωτή Καθηγητή Κυριάκο Σγάρμπα, για την ανάθεση του θέματος και την καθοδήγησή του κατά την εκπόνηση της εργασίας.
+\clearpage

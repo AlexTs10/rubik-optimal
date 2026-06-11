@@ -1,0 +1,54 @@
+{
+  "current_source_state": {
+    "commit": null,
+    "commit_short": null,
+    "dirty": true,
+    "git_available": true,
+    "has_commit": false,
+    "is_reproducible_checkout": false,
+    "limitation": "Generated from an unborn Git branch with uncommitted/untracked files; the exact source cannot be checked out by commit SHA.",
+    "reproduction_plan": [
+      "Review git status --short and decide the intentional source baseline.",
+      "Create a real commit or an approved source archive; do not treat no_commit+dirty artifacts as final-submission evidence.",
+      "Regenerate final result metadata from that baseline and rerun python scripts/thesis_audit.py."
+    ],
+    "schema_version": 1,
+    "state": "no_commit+dirty",
+    "status_entry_count": 18,
+    "status_sample": [
+      "?? .audit_workflow.js",
+      "?? .gitignore",
+      "?? AGENTS.md",
+      "?? LICENSE",
+      "?? README.md",
+      "?? REPRODUCIBILITY.md",
+      "?? THIRD_PARTY_NOTICES.md",
+      "?? data/",
+      "?? docs/",
+      "?? native/",
+      "?? pyproject.toml",
+      "?? results/",
+      "?? rubik_optimal/",
+      "?? scripts/",
+      "?? specs/",
+      "?? src/",
+      "?? tests/",
+      "?? thesis/"
+    ]
+  },
+  "final_submission_source_state_required": {
+    "current_checkout_is_reproducible": false,
+    "current_limitation": "Generated from an unborn Git branch with uncommitted/untracked files; the exact source cannot be checked out by commit SHA.",
+    "requires_clean_checkout_metadata": true,
+    "requires_commit_or_archive": true
+  },
+  "generated_at_utc": "2026-06-08T15:30:45+00:00",
+  "safe_regeneration_plan": [
+    "Review git status --short and decide the exact files that form the thesis baseline.",
+    "Create an intentional commit, or create and record an approved immutable source archive if a commit is not allowed.",
+    "From that baseline, rerun the generation commands whose result metadata currently records no_commit+dirty.",
+    "Run python scripts/source_state_report.py and python scripts/thesis_audit.py.",
+    "Do not set or claim final_submission_ready=true while generated metadata still records no_commit+dirty or any dirty source snapshot."
+  ],
+  "schema_version": 1
+}

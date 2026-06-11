@@ -1,0 +1,30 @@
+% Ανάπτυγμα του κύβου 3×3×3 (διάταξη σταυρού) με τη σημειογραφία κινήσεων.
+% Περιεχόμενο σχήματος μόνο: το περιβάλλον figure/caption ορίζεται στο κεφάλαιο.
+\begin{tikzpicture}[x=0.55cm, y=0.55cm, line cap=round, line join=round]
+  % Οι έξι έδρες του αναπτύγματος: U πάνω, L-F-R-B στη μεσαία ζώνη, D κάτω.
+  \foreach \ox/\oy/\lab/\gr in {%
+      3/6/U/{πάνω},
+      0/3/L/{αριστερά},
+      3/3/F/{μπροστά},
+      6/3/R/{δεξιά},
+      9/3/B/{πίσω},
+      3/0/D/{κάτω}}{
+    \fill[gray!10] (\ox+1,\oy+1) rectangle (\ox+2,\oy+2);
+    \draw[step=1, gray!55, very thin] (\ox,\oy) grid (\ox+3,\oy+3);
+    \draw[black, line width=0.8pt] (\ox,\oy) rectangle (\ox+3,\oy+3);
+    \node[font=\large\bfseries] at (\ox+1.5,\oy+1.5) {\lab};
+    \node[font=\scriptsize, text=black!75, fill=white, inner sep=1pt]
+      at (\ox+1.5,\oy+0.5) {\gr};
+  }
+  % Υπόμνημα: τα τρία επιθήματα κινήσεων της σημειογραφίας Singmaster.
+  \node[anchor=west, font=\footnotesize\bfseries] at (13.2,6.6)
+    {Επιθήματα κινήσεων};
+  \node[anchor=west, font=\footnotesize] at (13.2,5.8)
+    {όπου \texttt{X} \(\in\) \{\texttt{U}, \texttt{L}, \texttt{F}, \texttt{R}, \texttt{B}, \texttt{D}\}};
+  \node[anchor=west, font=\footnotesize] at (13.2,4.7)
+    {\texttt{X}: δεξιόστροφη στροφή \(90^{\circ}\)};
+  \node[anchor=west, font=\footnotesize] at (13.2,3.85)
+    {\texttt{X\textquotesingle}: αριστερόστροφη στροφή \(90^{\circ}\)};
+  \node[anchor=west, font=\footnotesize] at (13.2,3.0)
+    {\texttt{X2}: στροφή \(180^{\circ}\)};
+\end{tikzpicture}

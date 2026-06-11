@@ -1,0 +1,75 @@
+{
+  "authorize_ssh_ingress_command_template": [
+    "aws",
+    "ec2",
+    "authorize-security-group-ingress",
+    "--region",
+    "eu-west-1",
+    "--group-id",
+    "SECURITY_GROUP_ID_AFTER_CREATE",
+    "--ip-permissions",
+    "[{\"IpProtocol\":\"tcp\",\"FromPort\":22,\"ToPort\":22,\"IpRanges\":[{\"CidrIp\":\"203.0.113.10/32\",\"Description\":\"sgarbas H48 proof SSH\"}]}]"
+  ],
+  "authorize_ssh_ingress_result": null,
+  "cleanup_commands": {
+    "delete_security_group": [
+      "aws",
+      "ec2",
+      "delete-security-group",
+      "--region",
+      "eu-west-1",
+      "--group-id",
+      "SECURITY_GROUP_ID_AFTER_CREATE"
+    ],
+    "revoke_ssh_ingress": [
+      "aws",
+      "ec2",
+      "revoke-security-group-ingress",
+      "--region",
+      "eu-west-1",
+      "--group-id",
+      "SECURITY_GROUP_ID_AFTER_CREATE",
+      "--ip-permissions",
+      "[{\"IpProtocol\":\"tcp\",\"FromPort\":22,\"ToPort\":22,\"IpRanges\":[{\"CidrIp\":\"203.0.113.10/32\"}]}]"
+    ]
+  },
+  "create_security_group_command": [
+    "aws",
+    "ec2",
+    "create-security-group",
+    "--region",
+    "eu-west-1",
+    "--group-name",
+    "sgarbas-h48-fasttarget-proof",
+    "--description",
+    "Temporary SSH access for sgarbas H48 fast-target proof host",
+    "--vpc-id",
+    "vpc-0624402b39a1b767e",
+    "--tag-specifications",
+    "[{\"ResourceType\":\"security-group\",\"Tags\":[{\"Key\":\"Name\",\"Value\":\"sgarbas-h48-fasttarget-proof\"},{\"Key\":\"Project\",\"Value\":\"sgarbas-h48-fasttarget\"},{\"Key\":\"Purpose\",\"Value\":\"h48-fast-optimal-oracle-proof\"}]}]",
+    "--dry-run"
+  ],
+  "create_security_group_dry_run": {
+    "attempted": true,
+    "authorized": true,
+    "message": "An error occurred (DryRunOperation) when calling the CreateSecurityGroup operation: Request would have succeeded, but DryRun flag is set.",
+    "passed": true,
+    "returncode": 254,
+    "unauthorized": false
+  },
+  "create_security_group_result": null,
+  "created_at_utc": "2026-06-01T21:05:34.144839+00:00",
+  "created_security_group_id": null,
+  "dedicated_security_group_planned": true,
+  "description": "Temporary SSH access for sgarbas H48 fast-target proof host",
+  "execute": false,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "group_name": "sgarbas-h48-fasttarget-proof",
+  "passed": true,
+  "region": "eu-west-1",
+  "schema_version": 1,
+  "security_group_ack_required_for_execute": "I understand this creates or changes an AWS security group",
+  "ssh_cidr": "203.0.113.10/32",
+  "status": "dedicated_security_group_dryrun_authorized_not_runtime_evidence",
+  "vpc_id": "vpc-0624402b39a1b767e"
+}

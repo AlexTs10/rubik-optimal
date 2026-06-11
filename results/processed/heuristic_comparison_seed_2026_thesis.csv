@@ -1,0 +1,14 @@
+case_id,corpus,source_depth,exact_distance,bfs_status,misplaced_cubie_lower_bound,coordinate_pruning_lower_bound,corner_pdb_lower_bound,edge_pdb_lower_bound,combined_lower_bound,additive_edge_cpdb_lower_bound,combined_with_optional_cpdb_lower_bound,dominant_default_component,sequence,exact_admissible,combined_not_weaker_than_components,optional_cpdb_not_weaker_than_default
+solved,shallow_exact,0,0,exact,0,0,0,0,0,0,0,"misplaced_cubie,coordinate_pruning,corner_pdb,edge_pdb",,True,True,True
+single_R,shallow_exact,1,1,exact,1,1,1,1,1,1,1,"misplaced_cubie,coordinate_pruning,corner_pdb,edge_pdb",R,True,True,True
+two_R_U,shallow_exact,2,2,exact,2,2,2,2,2,2,2,"misplaced_cubie,coordinate_pruning,corner_pdb,edge_pdb",R U,True,True,True
+three_F_R_U,shallow_exact,3,3,exact,2,3,3,3,3,2,3,"coordinate_pruning,corner_pdb,edge_pdb",F R U,True,True,True
+commutator_R_U_Ri_Ui,shallow_exact,4,4,exact,1,4,4,4,4,1,4,"coordinate_pruning,corner_pdb,edge_pdb",R U R' U',True,True,True
+deterministic_depth_5_a,shallow_exact,5,5,exact,3,1,4,5,5,2,5,edge_pdb,L R U2 F2 R,True,True,True
+deterministic_depth_5_b,shallow_exact,5,4,exact,3,0,4,4,4,2,4,"corner_pdb,edge_pdb",D' U D' F2 D',True,True,True
+sample_depth_8_0,deterministic_sample,8,,,3,4,6,7,7,4,7,edge_pdb,D' R' D' U2 D2 B2 D B',,True,True
+sample_depth_8_1,deterministic_sample,8,,,3,4,5,7,7,4,7,edge_pdb,D2 U' B' U' B' R2 D' U,,True,True
+sample_depth_12_0,deterministic_sample,12,,,3,1,6,7,7,3,7,edge_pdb,U' L2 F2 B2 F2 U' R2 F2 U2 F B' F,,True,True
+sample_depth_12_1,deterministic_sample,12,,,3,4,7,8,8,3,8,edge_pdb,D L B2 U' R' L' D R' F' D' B F2,,True,True
+sample_depth_16_0,deterministic_sample,16,,,3,5,7,8,8,3,8,edge_pdb,D2 U' R' U' L D2 F' R L' R2 U2 F B' L' R' F,,True,True
+sample_depth_16_1,deterministic_sample,16,,,3,5,10,8,10,3,10,corner_pdb,D2 L' U' R2 D2 B2 F U' F D' F' D' R' U R U',,True,True

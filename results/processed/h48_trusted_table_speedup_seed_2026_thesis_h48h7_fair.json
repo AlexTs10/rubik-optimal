@@ -1,0 +1,193 @@
+{
+  "arm_order": [
+    "checked",
+    "trusted"
+  ],
+  "cache_accounting": "The H48 table is mmapped, so the OS page cache is shared state across arms and their per-call native processes. A warm-up checked solve (full table scan plus the same lookups as both arms) runs before either timed arm, so neither arm pays the one-time cold page-in of the table inside its measured window. Arm execution order is fixed and recorded in arm_order. trusted_speedup compares full arm totals; trusted_speedup_steady_state excludes each arm's first timed call to remove any residual first-call effects.",
+  "case": "R U F2 repeated direct CubeState",
+  "checked_call_wall_seconds": [
+    10.318179,
+    11.638944,
+    10.159277,
+    9.941362
+  ],
+  "checked_exact_count": 4,
+  "checked_rows": [
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=verified; table_storage=mmap; table_preload=disabled; backend_solve_seconds=1.59298; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=120000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 10.31578475004062,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=verified; table_storage=mmap; table_preload=disabled; backend_solve_seconds=1.69478; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=120000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 11.635156707838178,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=verified; table_storage=mmap; table_preload=disabled; backend_solve_seconds=1.774636; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=120000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 10.157547125127167,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=verified; table_storage=mmap; table_preload=disabled; backend_solve_seconds=1.642453; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=120000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 9.939597999677062,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    }
+  ],
+  "checked_steady_state_seconds": 31.739583,
+  "checked_total_seconds": 42.058193,
+  "passed": true,
+  "profile": "thesis",
+  "repetitions": 4,
+  "schema_version": 2,
+  "seed": 2026,
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "table_size_bytes": 3793842344,
+  "threads": 8,
+  "timeout_seconds": 120.0,
+  "trusted_call_wall_seconds": [
+    0.055616,
+    0.045277,
+    0.044638,
+    0.046537
+  ],
+  "trusted_exact_count": 4,
+  "trusted_rows": [
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.02505; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=120000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.05346241686493158,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.024004; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=120000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.04400037508457899,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.023396; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=120000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.043439125176519156,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    },
+    {
+      "expanded_nodes": 0,
+      "generated_nodes": null,
+      "input_state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "is_verified": true,
+      "metric": "HTM",
+      "notes": "in-repo native H48 backend; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.025367; table_lookups=43032; table_fallbacks=43032; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=120000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.045399332884699106,
+      "solution_length": 3,
+      "solution_moves": [
+        "F2",
+        "U'",
+        "R'"
+      ],
+      "solver_name": "h48_native_h48h7",
+      "status": "exact",
+      "table_bytes": 3793842344
+    }
+  ],
+  "trusted_speedup": 218.855,
+  "trusted_speedup_steady_state": 232.606,
+  "trusted_steady_state_seconds": 0.136452,
+  "trusted_total_seconds": 0.192174,
+  "warmup": {
+    "is_verified": true,
+    "mode": "checked",
+    "performed": true,
+    "status": "exact",
+    "wall_seconds": 10.139896
+  }
+}

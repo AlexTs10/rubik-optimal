@@ -1,0 +1,29 @@
+% Ροή του αλγορίθμου δύο φάσεων του Kociemba (περιεχόμενο σχήματος· το
+% περιβάλλον figure και η λεζάντα ορίζονται στο κεφάλαιο 4). Φασικά βάθη
+% κατά τα κλειδωμένα δεδομένα: φάση 1 <= 12, φάση 2 <= 18.
+\begin{tikzpicture}[
+  state/.style={draw, rectangle, align=center, font=\small,
+                minimum height=1.1cm, minimum width=2.7cm, inner sep=5pt},
+  phase/.style={font=\footnotesize},
+  desc/.style={font=\scriptsize, align=center, anchor=north},
+  flow/.style={-{Stealth[length=2.8mm]}, semithick},
+  node distance=2.6cm
+]
+\node[state] (start) {Αυθαίρετη\\ κατάσταση};
+\node[state, right=of start] (g1) {Υποομάδα \(G_1\)};
+\node[state, right=of g1] (solved) {Λυμένη\\ κατάσταση};
+
+\draw[flow] (start) -- node[phase, above] {Φάση 1} (g1);
+\draw[flow] (g1) -- node[phase, above] {Φάση 2} (solved);
+
+\node[desc] at ($(start.east)!0.5!(g1.west) + (0,-0.7)$)
+  {IDA* στις συντεταγμένες\\ φάσης 1, βάθος \(\le 12\)};
+\node[desc] at ($(g1.east)!0.5!(solved.west) + (0,-0.7)$)
+  {IDA* στις συντεταγμένες\\ φάσης 2, βάθος \(\le 18\)};
+
+\draw[flow, dashed] (solved.north) -- ++(0,0.85) -| (start.north);
+\node[font=\scriptsize, align=center, anchor=south]
+  at ($(start.north)!0.5!(solved.north) + (0,0.95)$)
+  {επαναληπτική εμβάθυνση στο μήκος της φάσης 1\\
+   \(\rightarrow\) διαδοχικά καλύτερες συνολικές λύσεις};
+\end{tikzpicture}

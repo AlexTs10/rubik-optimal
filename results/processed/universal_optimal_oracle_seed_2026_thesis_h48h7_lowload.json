@@ -1,0 +1,92 @@
+{
+  "all_exact": true,
+  "all_verified": true,
+  "api_class": "UniversalOptimalOracle",
+  "case_ids": [
+    "solved",
+    "superflip_distance_20",
+    "shallow_r_u_f2"
+  ],
+  "errors": [],
+  "fast_runtime_proven_for_every_possible_state": false,
+  "h48_start_delay_seconds": 10.0,
+  "max_runtime_seconds": 3.411335,
+  "nissy_threads": 1,
+  "oracle_contract": {
+    "exactness_policy": "exact only after independent verification from the original input state or revalidated saved certificate",
+    "latency_strategy": "exact certificate cache, upper/lower certificate, then resident exact-backend race",
+    "runtime_claim": "this artifact proves optimized universal-oracle control flow on a corpus, not exhaustive every-state timing",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "backend_solver": null,
+      "case_id": "solved",
+      "description": "solved identity state",
+      "expected_distance": 0,
+      "fast_runtime_proven_for_every_possible_state": true,
+      "h48_start_delay_seconds": null,
+      "notes": "universal exact oracle; selected_backend=solved_fast_path; exactness_policy=verified_exact_only; arbitrary_valid_3x3_domain=true; fast_runtime_proven_for_every_possible_state=false; no backend process started",
+      "runtime_seconds": 0.0,
+      "selected_backend": "solved_fast_path",
+      "solution": "",
+      "solution_length": 0,
+      "started_backends": null,
+      "state": "UUUUUUUUURRRRRRRRRFFFFFFFFFDDDDDDDDDLLLLLLLLLBBBBBBBBB",
+      "status": "exact",
+      "stopped_backends": null,
+      "verified": true
+    },
+    {
+      "backend_solver": "portfolio_optimal_oracle",
+      "case_id": "superflip_distance_20",
+      "description": "standard all-edges-flipped superflip state, a known HTM distance-20 representative",
+      "expected_distance": 20,
+      "fast_runtime_proven_for_every_possible_state": true,
+      "h48_start_delay_seconds": null,
+      "notes": "universal exact oracle; exactness_policy=verified_exact_only; arbitrary_valid_3x3_domain=true; optimized_paths=exact_certificate_cache,upper_lower_certificate,resident_race; fast_runtime_proven_for_every_possible_state=false; selected_backend=exact-certificate-cache; backend_solver=portfolio_optimal_oracle; backend_runtime_seconds=0.012522; portfolio exact oracle; selected_backend=exact-certificate-cache; nissy_optimal_invoked=false; resident_h48_invoked=false; saved exact/verified artifact row revalidated before reuse; certificate_artifact=results/processed/h48_resident_certification_seed_2026_thesis_h48h7_trusted.json; certificate_case_id=superflip_distance_20; certificate_source_solver=saved_exact_artifact; certificate_source_runtime_seconds=77.822389",
+      "runtime_seconds": 0.012637,
+      "selected_backend": "exact-certificate-cache",
+      "solution": "U R D2 F' B' D L2 U F2 D L2 D R L D2 F R2 F2 L2 D'",
+      "solution_length": 20,
+      "started_backends": null,
+      "state": "UBULURUFURURFRBRDRFUFLFRFDFDFDLDRDBDLULBLFLDLBUBRBLBDB",
+      "status": "exact",
+      "stopped_backends": null,
+      "verified": true
+    },
+    {
+      "backend_solver": "resident_race_optimal_oracle",
+      "case_id": "shallow_r_u_f2",
+      "description": "direct facelet/cubie state for a shallow three-move scramble",
+      "expected_distance": 3,
+      "fast_runtime_proven_for_every_possible_state": true,
+      "h48_start_delay_seconds": "10.000000",
+      "notes": "universal exact oracle; exactness_policy=verified_exact_only; arbitrary_valid_3x3_domain=true; optimized_paths=exact_certificate_cache,upper_lower_certificate,resident_race; fast_runtime_proven_for_every_possible_state=false; selected_backend=resident-race; backend_solver=resident_race_optimal_oracle; backend_runtime_seconds=3.411276; resident race exact oracle; exactness_policy=first_verified_exact_solution_wins; resident_h48_process=shared_batch_session; selected_backend=nissy-optimal; started_backends=nissy-optimal; stopped_backends=resident-h48-deferred; h48_start_delay_seconds=10.000000; backend_solver=nissy_optimal_external; backend_runtime_seconds=3.408949; setup_notes=; race backend=nissy-optimal; input_mode=representative_scramble; source_sequence_provided=True; scramble_source=source_sequence; threads=1; required_table=pt_nxopt31_HTM; return_code=0",
+      "runtime_seconds": 3.411335,
+      "selected_backend": "resident-race",
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "started_backends": "nissy-optimal",
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "stopped_backends": "resident-h48-deferred",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "selected_backends": [
+    "exact-certificate-cache",
+    "resident-race",
+    "solved_fast_path"
+  ],
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "threads": 1,
+  "timeout_seconds": 45.0,
+  "trusted_table": true
+}

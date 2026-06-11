@@ -1,0 +1,23 @@
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Το ανάπτυγμα του κύβου 3×3×3 με τις έξι έδρες και τη σημειογραφία κινήσεων κατά Singmaster: U, D, L, R, F, B για δεξιόστροφες στροφές κατά ένα τέταρτο, με τόνο (π.χ. U\textquotesingle ) για αριστερόστροφες και με κατάληξη 2 (π.χ. U2) για μισές στροφές.}}{7}{figure.2.1}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Η αρίθμηση των οκτώ γωνιακών και των δώδεκα ακμικών κυβιδίων στο μοντέλο της εργασίας, με τις θέσεις αναφοράς κάθε κυβιδίου.}}{15}{figure.3.1}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {4.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Η αλυσίδα υποομάδων του αλγορίθμου Thistlethwaite: από την πλήρη ομάδα \(G_0\) έως τη λυμένη κατάσταση, με το μέγεθος του πίνακα αποστάσεων κάθε σταδίου (2048, 1\,082\,565, 29\,400 προσβάσιμες από 58\,800, 663\,552 καταχωρίσεις) και τα μέγιστα βάθη 7/10/13/15.}}{22}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Ο αλγόριθμος δύο φάσεων του Kociemba: η φάση 1 (βάθος έως 12) οδηγεί την κατάσταση στην υποομάδα \(G_1\) και η φάση 2 (βάθος έως 18) ολοκληρώνει την επίλυση· η επαναληπτική εμβάθυνση στο μήκος της φάσης 1 παράγει διαδοχικά καλύτερες συνολικές λύσεις.}}{23}{figure.4.2}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Η αρχιτεκτονική του συστήματος σε επίπεδα: διεπαφή γραμμής εντολών, επιλυτές Python, εγγενείς (\eng {native}) μηχανές C/C++, στρώμα πινάκων αποκοπής και πινάκων προτύπων, στρώμα μαντείου (\eng {oracle}), και αλυσίδα επαλήθευσης και αποτελεσμάτων με εξωτερικό διασταυρωτικό έλεγχο.}}{29}{figure.5.1}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {9.1}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Κατανομή καταστάσεων αποτελέσματος ανά επιλυτή}}{77}{figure.9.1}%
+\contentsline {figure}{\numberline {9.2}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Χρόνος εκτέλεσης του επιλυτή Korf ως προς το βάθος διατάραξης}}{78}{figure.9.2}%
+\contentsline {figure}{\numberline {9.3}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Διάμεσος και μέγιστος χρόνος εκτέλεσης ανά επιλυτή}}{78}{figure.9.3}%
+\contentsline {figure}{\numberline {9.4}{\ignorespaces \xpg@aux {}{greek}\ignorespaces Διάμεσο μήκος λύσης ανά βάθος διατάραξης και επιλυτή}}{79}{figure.9.4}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

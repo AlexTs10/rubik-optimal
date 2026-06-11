@@ -1,0 +1,34 @@
+{
+  "actual_checksum_sha256": "46dcee74f59cf61852ac55acc7e1f5c6ec5acc63e2bf67320ee338466fb34f53",
+  "certificate_kind": "h48_full_checksum_validation_certificate",
+  "checksum_runtime_seconds": 0.021986,
+  "created_at_utc": "2026-06-02T20:17:21.378735+00:00",
+  "full_checksum_valid": true,
+  "identity": {
+    "certificate_kind": "h48_full_checksum_validation_certificate",
+    "expected_checksum_sha256": "46dcee74f59cf61852ac55acc7e1f5c6ec5acc63e2bf67320ee338466fb34f53",
+    "metadata": {
+      "ctime_ns": 1780426022623081077,
+      "device": 16777231,
+      "inode": 360736867,
+      "mtime_ns": 1780426022623081077,
+      "path": "results/processed/h48_metadata_seed_2026_thesis_h48h0.json",
+      "resolved_path": "/Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h0.json",
+      "size_bytes": 2095
+    },
+    "profile": "thesis",
+    "seed": 2026,
+    "solver": "h48h0",
+    "table": {
+      "ctime_ns": 1780426022575288878,
+      "device": 16777231,
+      "inode": 369880185,
+      "mtime_ns": 1780426022572562413,
+      "path": "data/generated/h48/thesis_seed_2026/h48h0.bin",
+      "resolved_path": "/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h0.bin",
+      "size_bytes": 31683944
+    }
+  },
+  "reuse_policy": "Reusable only while the canonical table and metadata file identities exactly match the recorded paths, sizes, mtimes, ctimes, inodes, devices, and expected checksum.",
+  "schema_version": 1
+}

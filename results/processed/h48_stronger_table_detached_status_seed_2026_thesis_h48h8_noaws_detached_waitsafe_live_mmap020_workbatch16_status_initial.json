@@ -1,0 +1,123 @@
+{
+  "artifact_suffix": "noaws_detached_waitsafe_live_mmap020_workbatch16",
+  "campaign_result_exists": false,
+  "campaign_result_passed": null,
+  "campaign_result_path": "results/processed/h48_stronger_table_campaign_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_workbatch16.json",
+  "campaign_result_status": null,
+  "checked_at_utc": "2026-06-02T02:54:48.095313+00:00",
+  "current_safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 371556352,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 14627946496,
+      "load_average": [
+        4.435546875,
+        3.85498046875,
+        3.54248046875
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 214748364,
+      "mmap_output": true
+    },
+    "reasons": [
+      "current one-minute load average 4.44 is at least 50% of logical CPUs",
+      "free disk is below 2.0x the h48h8 table size, leaving little room for retries"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h8",
+    "threads": 4
+  },
+  "detached_launch_status": "detached_waitsafe_started_not_runtime_evidence",
+  "detached_payload_path": "results/processed/h48_stronger_table_detached_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_workbatch16.json",
+  "detached_status": {
+    "effective_pid": 53586,
+    "log_path_exists": true,
+    "log_tail": "{\"available_memory_bytes\": 262193152, \"checked_at_utc\": \"2026-06-02T02:54:36.095086+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 0.003959, \"event\": \"h48_generation_safety_sample\", \"load_average\": [4.31103515625, 3.8154296875, 3.52587890625], \"reasons\": [\"current one-minute load average 4.31 is at least 50% of logical CPUs\", \"free disk is below 2.0x the h48h8 table size, leaving little room for retries\"], \"resolved_threads\": 4, \"safe_to_start\": false, \"sample_index\": 1, \"thread_setting\": \"auto\", \"threads\": 4}",
+    "pid": 53586,
+    "pid_alive": true,
+    "pid_file_exists": true,
+    "pid_file_pid": 53586,
+    "process_resources": {
+      "available": true,
+      "matches": [
+        {
+          "command": "/opt/miniconda3/bin/python scripts/run_h48_stronger_table_campaign.py --profile thesis --seed 2026 --target-solver h48h8 --threads auto --certification-timeout 300.0 --runtime-target 300.0 --artifact-suffix noaws_detached_waitsafe_live_mmap020_workbatch16 --wait-for-safe --safety-wait-timeout 43200.0 --safety-check-interval 60.0 --safety-required-consecutive-checks 2 --min-mmap-available-memory-gib 0.19999999925494194 --gendata-workbatch 16",
+          "cpu_percent": 0.0,
+          "elapsed": "00:13",
+          "mem_percent": 0.2,
+          "pgid": 53586,
+          "pid": 53586,
+          "ppid": 1,
+          "rss_bytes": 34832384,
+          "rss_kib": 34016,
+          "stat": "Ss"
+        }
+      ],
+      "return_code": 0,
+      "stderr_tail": ""
+    }
+  },
+  "fast_runtime_proven_for_every_possible_state": false,
+  "full_checksum_details": {},
+  "full_checksum_message": "not requested",
+  "full_checksum_requested": false,
+  "full_checksum_valid": null,
+  "generation_log_progress": {
+    "available": true,
+    "computed_short_positions": null,
+    "latest_processed_short_cubes": null,
+    "latest_progress_fraction": null,
+    "latest_progress_line": "",
+    "partial_table_allocated_bytes": 7584690176,
+    "partial_table_exists": true,
+    "partial_table_size_bytes": 7585624040,
+    "progress_sample_count": 0,
+    "recent_progress_samples": [],
+    "saw_processing_phase": false,
+    "total_short_cubes": null
+  },
+  "native_h48_backend_process_resources": {
+    "available": true,
+    "matches": []
+  },
+  "native_h48_backend_processes": {
+    "available": true,
+    "matches": [],
+    "return_code": 0,
+    "stderr_tail": ""
+  },
+  "native_h48_backend_running": false,
+  "notes": "Read-only local no-AWS detached status. This proves process/table state only; the fast every-state claim remains false until trusted stronger-table metadata, full checksum, certification, broad runtime evidence, and a worst-case runtime boundary exist.",
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "status": "detached_python_alive_waiting_or_running_no_trusted_table",
+  "target_metadata": {
+    "exists": false,
+    "path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+    "size_bytes": 0
+  },
+  "target_partial_table": {
+    "allocated_bytes": 7584690176,
+    "exists": true,
+    "path": "data/generated/h48/thesis_seed_2026/.h48h8.bin.partial",
+    "size_bytes": 7585624040
+  },
+  "target_solver": "h48h8",
+  "target_table": {
+    "exists": false,
+    "expected_size_bytes": 7585624040,
+    "path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+    "size_bytes": 0
+  },
+  "target_trusted_message": "missing target table or metadata",
+  "target_trusted_table": false
+}

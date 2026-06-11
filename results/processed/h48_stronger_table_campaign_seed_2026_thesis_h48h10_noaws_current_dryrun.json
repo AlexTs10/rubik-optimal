@@ -1,0 +1,93 @@
+{
+  "all_state_fast_oracle_goal_satisfied": false,
+  "all_state_fast_oracle_goal_satisfied_by_this_decision": false,
+  "allow_unsafe_generation": false,
+  "artifact_suffix": "noaws_current_dryrun",
+  "checked_at_utc": "2026-06-02T00:59:28.825846+00:00",
+  "commands": [],
+  "current_next_missing_oracle_grade_solver": "h48h8",
+  "current_strongest_local_oracle_solver": "h48h7",
+  "dry_run": true,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "generation_command": "nice -n 20 /opt/miniconda3/bin/python scripts/generate_h48_tables.py --profile thesis --seed 2026 --solver h48h10 --threads 5 --mmap-output --progress-log --require-safe",
+  "generation_command_args": [
+    "nice",
+    "-n",
+    "20",
+    "/opt/miniconda3/bin/python",
+    "scripts/generate_h48_tables.py",
+    "--profile",
+    "thesis",
+    "--seed",
+    "2026",
+    "--solver",
+    "h48h10",
+    "--threads",
+    "5",
+    "--mmap-output",
+    "--progress-log",
+    "--require-safe"
+  ],
+  "notes": "Stronger H48 table campaign for the requested fast optimal oracle over every valid 3x3 state. This artifact is deliberately not a completion claim unless the target table is trusted, the full table checksum matches its metadata, hard-case certification passes, broad runtime evidence exists, and a worst-case runtime boundary is documented.",
+  "passed": false,
+  "post_campaign_checksum_details": {
+    "full_checksum_valid": false,
+    "metadata_exists": false,
+    "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h10.json",
+    "table_exists": false,
+    "table_path": "data/generated/h48/thesis_seed_2026/h48h10.bin",
+    "trusted_metadata_valid": false
+  },
+  "post_campaign_full_checksum_message": "missing target table or metadata after campaign",
+  "post_campaign_full_checksum_valid": false,
+  "post_campaign_target_trusted_message": "missing target table or metadata after campaign",
+  "post_campaign_target_trusted_table": false,
+  "profile": "thesis",
+  "remaining_completion_requirements": [
+    "trusted h48h10 table metadata and checksum",
+    "hard-case exact certification with h48h10",
+    "broad arbitrary-state corpus under thesis runtime target with h48h10",
+    "formal or supervisor-approved empirical worst-case runtime boundary"
+  ],
+  "safety": {
+    "estimated_table_size_bytes": 30336314216,
+    "estimated_table_size_gib": 28.252894,
+    "machine": {
+      "available_memory_bytes": 199262208,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 22445518848,
+      "load_average": [
+        3.1875,
+        2.94189453125,
+        2.904296875
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [
+      "available memory 0.19 GiB is below the 4.00 GiB mmap generation guard",
+      "free disk is below 2.0x the h48h10 table size, leaving little room for retries"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h10",
+    "threads": 5
+  },
+  "schema_version": 1,
+  "seed": 2026,
+  "should_run_generation": false,
+  "status": "dry_run_refused_unsafe_generation",
+  "target_estimated_table_size_bytes": 30336314216,
+  "target_h_value": 10,
+  "target_metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h10.json",
+  "target_solver": "h48h10",
+  "target_table_path": "data/generated/h48/thesis_seed_2026/h48h10.bin",
+  "target_trusted_message": "missing target table or metadata",
+  "target_trusted_table": false
+}

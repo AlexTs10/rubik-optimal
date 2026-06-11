@@ -1,0 +1,47 @@
+{
+  "action": "end-to-end",
+  "aws_command_scan": {
+    "forbidden_aws_match_count": 0,
+    "matches": [],
+    "passed": true
+  },
+  "aws_unlock_env": "RUBIK_OPTIMAL_ENABLE_AWS",
+  "aws_unlock_env_present": false,
+  "aws_usage_allowed": false,
+  "command": "bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_end_to_end_single_machine.sh",
+  "command_result": null,
+  "created_at_utc": "2026-06-02T15:37:00.818975+00:00",
+  "errors": [],
+  "execute": false,
+  "execution_provider": "local_non_aws",
+  "fast_runtime_proven_for_every_possible_state": false,
+  "final_contract": {
+    "all_state_exact_contract_supported": false,
+    "cloud_runtime_proof_passed": false,
+    "empirical_fast_corpus_supported": false,
+    "fast_runtime_proven_for_every_possible_state": false,
+    "missing_or_failed_workload_count": 8,
+    "passed": false,
+    "path": "results/processed/h48_oracle_contract_seed_2026_thesis_h48h10.json"
+  },
+  "final_contract_proof_passed": false,
+  "final_contract_required_for_pass": false,
+  "notes": "Local non-AWS proof-host entrypoint. Dry-run is only a plan; execute mode runs the generated runbook script on the current machine after an AWS-command scan and records the final H48 contract state.",
+  "passed": true,
+  "planned_step": {
+    "command": [
+      "bash",
+      "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_end_to_end_single_machine.sh"
+    ],
+    "id": "end-to-end",
+    "script": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_end_to_end_single_machine.sh"
+  },
+  "profile": "thesis",
+  "run_suffix": "cloud_20260601_h48h10_fasttarget_batch10",
+  "runbook_manifest_path": "results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json",
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h10",
+  "status": "local_nonaws_dryrun_planned",
+  "timeout_seconds": null
+}

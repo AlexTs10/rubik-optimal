@@ -1,0 +1,220 @@
+{
+  "all_archive_table_sizes_match": true,
+  "all_archive_tables_installed": true,
+  "archive_table_entry_count": 18,
+  "checked_at_utc": "2026-06-02T03:52:13.058505+00:00",
+  "expected_pruning_tables": [
+    "pt_corners_HTM",
+    "pt_cornershtr_HTM",
+    "pt_coud_HTM",
+    "pt_cp_drud",
+    "pt_drud_eofb",
+    "pt_drud_sym16_HTM",
+    "pt_drudfin_noE_sym16_drud",
+    "pt_eofb_HTM",
+    "pt_htr_drud",
+    "pt_htrfin_htr",
+    "pt_nxopt31_HTM"
+  ],
+  "expected_total_uncompressed_bytes": 3256052479,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "installed_table_count": 18,
+  "installed_total_bytes": 3256052479,
+  "missing_from_ptable": [],
+  "missing_tables": [],
+  "nissy_ptable": {
+    "available": true,
+    "binary": "/Users/alextoska/Desktop/sgarbas/.codex_external/nissy-2.0.8/nissy",
+    "combined_output": "Available pruning tables:\n\tpt_eofb_HTM\n\tpt_coud_HTM\n\tpt_cornershtr_HTM\n\tpt_corners_HTM\n\tpt_drud_sym16_HTM\n\tpt_drud_eofb\n\tpt_drudfin_noE_sym16_drud\n\tpt_htr_drud\n\tpt_cp_drud\n\tpt_htrfin_htr\n\tpt_nxopt31_HTM\nUse ptable [TABLE] to see the table distribution and other information\n",
+    "error": null,
+    "listed_pruning_tables": [
+      "pt_eofb_HTM",
+      "pt_coud_HTM",
+      "pt_cornershtr_HTM",
+      "pt_corners_HTM",
+      "pt_drud_sym16_HTM",
+      "pt_drud_eofb",
+      "pt_drudfin_noE_sym16_drud",
+      "pt_htr_drud",
+      "pt_cp_drud",
+      "pt_htrfin_htr",
+      "pt_nxopt31_HTM"
+    ],
+    "reports_missing_tables": false,
+    "return_code": 0,
+    "stderr": "",
+    "stdout": "Available pruning tables:\n\tpt_eofb_HTM\n\tpt_coud_HTM\n\tpt_cornershtr_HTM\n\tpt_corners_HTM\n\tpt_drud_sym16_HTM\n\tpt_drud_eofb\n\tpt_drudfin_noE_sym16_drud\n\tpt_htr_drud\n\tpt_cp_drud\n\tpt_htrfin_htr\n\tpt_nxopt31_HTM\nUse ptable [TABLE] to see the table distribution and other information\n"
+  },
+  "notes": "Completeness check for the installed public Nissy 2.x table archive. Passing this check removes the external backend's missing-table warning, but it is installation evidence, not a worst-case runtime proof for every 3x3 state.",
+  "passed": true,
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "source_url": "https://nissy.tronto.net/nissy-tables-2.0.4.zip",
+  "table_dir": ".codex_external/nissy_data/tables",
+  "table_rows": [
+    {
+      "actual_size_bytes": 1226,
+      "crc32": "772a91c5",
+      "exists": true,
+      "expected_size_bytes": 1226,
+      "name": "tables/pt_coud_HTM",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_coud_HTM"
+    },
+    {
+      "actual_size_bytes": 20292,
+      "crc32": "691053cc",
+      "exists": true,
+      "expected_size_bytes": 20292,
+      "name": "tables/pt_cp_drud",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_cp_drud"
+    },
+    {
+      "actual_size_bytes": 459402,
+      "crc32": "80c0d7ef",
+      "exists": true,
+      "expected_size_bytes": 459402,
+      "name": "tables/pt_cornershtr_HTM",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_cornershtr_HTM"
+    },
+    {
+      "actual_size_bytes": 202396800,
+      "crc32": "0851ba1a",
+      "exists": true,
+      "expected_size_bytes": 202396800,
+      "name": "tables/symc_trans",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/symc_trans"
+    },
+    {
+      "actual_size_bytes": 663684,
+      "crc32": "1f1b49e9",
+      "exists": true,
+      "expected_size_bytes": 663684,
+      "name": "tables/pt_htrfin_htr",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_htrfin_htr"
+    },
+    {
+      "actual_size_bytes": 2465897307,
+      "crc32": "8c7e4d23",
+      "exists": true,
+      "expected_size_bytes": 2465897307,
+      "name": "tables/pt_nxopt31_HTM",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_nxopt31_HTM"
+    },
+    {
+      "actual_size_bytes": 14832,
+      "crc32": "dcbd9a54",
+      "exists": true,
+      "expected_size_bytes": 14832,
+      "name": "tables/pt_htr_drud",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_htr_drud"
+    },
+    {
+      "actual_size_bytes": 1156,
+      "crc32": "5375b823",
+      "exists": true,
+      "expected_size_bytes": 1156,
+      "name": "tables/pt_eofb_HTM",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_eofb_HTM"
+    },
+    {
+      "actual_size_bytes": 44350680,
+      "crc32": "fb9e7c94",
+      "exists": true,
+      "expected_size_bytes": 44350680,
+      "name": "tables/symc_moves",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/symc_moves"
+    },
+    {
+      "actual_size_bytes": 13196008,
+      "crc32": "7282b448",
+      "exists": true,
+      "expected_size_bytes": 13196008,
+      "name": "tables/sd_eofbepos_16_new",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/sd_eofbepos_16_new"
+    },
+    {
+      "actual_size_bytes": 541415,
+      "crc32": "42ed04bb",
+      "exists": true,
+      "expected_size_bytes": 541415,
+      "name": "tables/pt_drud_eofb",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_drud_eofb"
+    },
+    {
+      "actual_size_bytes": 19664700,
+      "crc32": "618283b9",
+      "exists": true,
+      "expected_size_bytes": 19664700,
+      "name": "tables/mtables",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/mtables"
+    },
+    {
+      "actual_size_bytes": 44090052,
+      "crc32": "16532fdf",
+      "exists": true,
+      "expected_size_bytes": 44090052,
+      "name": "tables/pt_corners_HTM",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_corners_HTM"
+    },
+    {
+      "actual_size_bytes": 15546240,
+      "crc32": "28481b77",
+      "exists": true,
+      "expected_size_bytes": 15546240,
+      "name": "tables/ttables",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/ttables"
+    },
+    {
+      "actual_size_bytes": 528136,
+      "crc32": "43d05f0e",
+      "exists": true,
+      "expected_size_bytes": 528136,
+      "name": "tables/sd_cp_16_new",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/sd_cp_16_new"
+    },
+    {
+      "actual_size_bytes": 55803012,
+      "crc32": "d3f98ad1",
+      "exists": true,
+      "expected_size_bytes": 55803012,
+      "name": "tables/pt_drudfin_noE_sym16_drud",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_drudfin_noE_sym16_drud"
+    },
+    {
+      "actual_size_bytes": 70454337,
+      "crc32": "68beff6a",
+      "exists": true,
+      "expected_size_bytes": 70454337,
+      "name": "tables/pt_drud_sym16_HTM",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/pt_drud_sym16_HTM"
+    },
+    {
+      "actual_size_bytes": 322423200,
+      "crc32": "23eb449f",
+      "exists": true,
+      "expected_size_bytes": 322423200,
+      "name": "tables/invtables",
+      "size_matches_archive": true,
+      "target_path": ".codex_external/nissy_data/tables/invtables"
+    }
+  ],
+  "wrong_size_tables": []
+}

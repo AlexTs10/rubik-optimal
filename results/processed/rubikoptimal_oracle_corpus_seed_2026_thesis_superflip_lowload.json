@@ -1,0 +1,139 @@
+{
+  "algorithmic_contract": {
+    "exactness_rule": "a row is exact only when RubikOptimal returns an optimal line and the local verifier accepts it",
+    "input_mode": "the solver receives only the cube state, never the generating scramble",
+    "metric": "HTM / face-turn metric",
+    "runtime_claim": "this artifact proves the recorded corpus, not exhaustive every-state timing",
+    "state_scope": "physically valid 3x3 facelet/cubie states accepted by the local verifier"
+  },
+  "all_exact": false,
+  "all_expected_distances_match": false,
+  "all_verified": false,
+  "api": "rubik_optimal.solvers.rubikoptimal_external.solve_rubikoptimal_external",
+  "backend": "rubikoptimal_external",
+  "case_count": 1,
+  "errors": [
+    "superflip_distance_20: expected exact verified result, got timeout",
+    "superflip_distance_20: expected distance 20, got None"
+  ],
+  "expected_table_bytes": 963061264,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "max_runtime_seconds": 300.030517,
+  "mean_runtime_seconds": 300.030517,
+  "passed": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "case_id": "superflip_distance_20",
+      "description": "standard all-edges-flipped superflip state",
+      "expanded_nodes": null,
+      "expected_distance": 20,
+      "expected_distance_matches": false,
+      "generated_nodes": null,
+      "notes": "RubikOptimal timed out; selected_backend=rubikoptimal_external; backend_solver=rubikoptimal_external; timeout_seconds=300.0; partial_output=",
+      "runtime_seconds": 300.030517,
+      "selected_backend": "rubikoptimal_external",
+      "solution": "",
+      "solution_length": null,
+      "solver": "rubikoptimal_external",
+      "source_depth": 0,
+      "source_sequence": "",
+      "source_sequence_provided_to_solver": false,
+      "state": "UBULURUFURURFRBRDRFUFLFRFDFDFDLDRDBDLULBLFLDLBUBRBLBDB",
+      "status": "timeout",
+      "table_bytes": 963061264,
+      "valid": true,
+      "validation_message": "Cube is physically solvable",
+      "verified": false
+    }
+  ],
+  "rubikoptimal_table_complete": true,
+  "schema_version": 1,
+  "seed": 2026,
+  "table_bytes": 963061264,
+  "table_dir": ".codex_external/rubikoptimal_tables",
+  "table_inventory": [
+    {
+      "actual_size_bytes": 69984,
+      "exists": true,
+      "expected_size_bytes": 69984,
+      "name": "conj_twist",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/conj_twist",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 97320960,
+      "exists": true,
+      "expected_size_bytes": 97320960,
+      "name": "fs24_classidx",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/fs24_classidx",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 24330240,
+      "exists": true,
+      "expected_size_bytes": 24330240,
+      "name": "fs24_sym",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/fs24_sym",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 6095456,
+      "exists": true,
+      "expected_size_bytes": 6095456,
+      "name": "fs24_rep",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/fs24_rep",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 78732,
+      "exists": true,
+      "expected_size_bytes": 78732,
+      "name": "move_twist",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_twist",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 73728,
+      "exists": true,
+      "expected_size_bytes": 73728,
+      "name": "move_flip",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_flip",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 427680,
+      "exists": true,
+      "expected_size_bytes": 427680,
+      "name": "move_slice_sorted",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_slice_sorted",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 1451520,
+      "exists": true,
+      "expected_size_bytes": 1451520,
+      "name": "move_corners",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_corners",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 833172644,
+      "exists": true,
+      "expected_size_bytes": 833172644,
+      "name": "phase1x24_prun",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/phase1x24_prun",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 40320,
+      "exists": true,
+      "expected_size_bytes": 40320,
+      "name": "cornerprun",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/cornerprun",
+      "size_matches": true
+    }
+  ],
+  "table_ready": true,
+  "timeout_seconds": 300.0
+}

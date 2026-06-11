@@ -1,0 +1,83 @@
+{
+  "action": "preflight",
+  "action_artifact_summary": {
+    "exists": true,
+    "fast_runtime_proven_for_every_possible_state": false,
+    "machine": {
+      "cpu_count": 8,
+      "data_generated_h48_free_gib": 37.926636,
+      "data_generated_h48_total_gib": 460.431721,
+      "memory_gib": 16.0
+    },
+    "passed": false,
+    "path": "results/processed/cloud_hardtail_preflight_seed_2026_thesis_h48h10_cloud_20260601_h48h10_fasttarget_batch10_leader.json",
+    "profile": "thesis",
+    "reasons": [
+      "cpu_count 8 is below required 16",
+      "memory_gib 16.000 is below required 64.000"
+    ],
+    "require_target_table": false,
+    "seed": 2026,
+    "solver": "h48h10",
+    "target_h48_workspace": {
+      "available_workspace_gib": 37.926636,
+      "required_workspace_gib": 32.490828,
+      "satisfies_workspace": true,
+      "target_table_size_gib": 28.252894,
+      "workspace_headroom_gib": 5.435807
+    },
+    "target_table_validation": null
+  },
+  "aws_command_scan": {
+    "forbidden_aws_match_count": 0,
+    "matches": [],
+    "passed": true
+  },
+  "aws_unlock_env": "RUBIK_OPTIMAL_ENABLE_AWS",
+  "aws_unlock_env_present": false,
+  "aws_usage_allowed": false,
+  "command": "bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh",
+  "command_result": {
+    "command": "bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh",
+    "return_code": 1,
+    "runtime_seconds": 0.093547,
+    "stderr_tail": "",
+    "stdout_tail": "{\n  \"output\": \"/Users/alextoska/Desktop/sgarbas/results/processed/cloud_hardtail_preflight_seed_2026_thesis_h48h10_cloud_20260601_h48h10_fasttarget_batch10_leader.json\",\n  \"solver\": \"h48h10\",\n  \"passed\": false,\n  \"reasons\": [\n    \"cpu_count 8 is below required 16\",\n    \"memory_gib 16.000 is below required 64.000\"\n  ],\n  \"fast_runtime_proven_for_every_possible_state\": false\n}",
+    "terminated_process_group": false,
+    "timed_out": false
+  },
+  "created_at_utc": "2026-06-02T15:59:02.351144+00:00",
+  "errors": [],
+  "execute": true,
+  "execution_provider": "local_non_aws",
+  "fast_runtime_proven_for_every_possible_state": false,
+  "final_contract": {
+    "all_state_exact_contract_supported": false,
+    "cloud_runtime_proof_passed": false,
+    "empirical_fast_corpus_supported": false,
+    "fast_runtime_proven_for_every_possible_state": false,
+    "missing_or_failed_workload_count": 8,
+    "passed": false,
+    "path": "results/processed/h48_oracle_contract_seed_2026_thesis_h48h10.json"
+  },
+  "final_contract_proof_passed": false,
+  "final_contract_required_for_pass": false,
+  "notes": "Local non-AWS proof-host entrypoint. Dry-run is only a plan; execute mode runs the generated runbook script on the current machine after an AWS-command scan and records the final H48 contract state.",
+  "passed": false,
+  "planned_step": {
+    "command": [
+      "bash",
+      "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh"
+    ],
+    "id": "preflight",
+    "script": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh"
+  },
+  "profile": "thesis",
+  "run_suffix": "cloud_20260601_h48h10_fasttarget_batch10",
+  "runbook_manifest_path": "results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json",
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h10",
+  "status": "local_nonaws_action_failed",
+  "timeout_seconds": 120.0
+}

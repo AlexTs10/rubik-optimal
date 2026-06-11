@@ -1,0 +1,39 @@
+{
+  "all_exact": true,
+  "all_verified": true,
+  "errors": [],
+  "max_runtime_seconds": 2.668843,
+  "nissy_threads": 1,
+  "oracle_contract": {
+    "exactness_policy": "exact only after independent verification from the original input state",
+    "latency_strategy": "start native H48 and external Nissy optimal subprocesses concurrently, return first verified exact solution, terminate slower running backend",
+    "runtime_claim": "this artifact is corpus evidence for race behavior, not an exhaustive every-state timing proof",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "case_id": "shallow_r_u_f2",
+      "description": "direct facelet/cubie state for a shallow three-move scramble",
+      "killed_backends": "native-h48",
+      "notes": "race exact oracle; exactness_policy=first_verified_exact_solution_wins; selected_backend=nissy-optimal; started_backends=native-h48,nissy-optimal; killed_backends=native-h48; backend_solver=nissy_optimal_external; backend_runtime_seconds=2.646894; setup_notes=; race backend=nissy-optimal; input_mode=representative_scramble; source_sequence_provided=False; scramble_source=inverse_verified_kociemba_solution; threads=1; required_table=pt_nxopt31_HTM; return_code=0",
+      "runtime_seconds": 2.668843,
+      "selected_backend": "nissy-optimal",
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "started_backends": "native-h48,nissy-optimal",
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "threads": 1,
+  "timeout_seconds": 20.0,
+  "trusted_table": true
+}

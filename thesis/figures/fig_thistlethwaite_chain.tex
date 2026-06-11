@@ -1,0 +1,34 @@
+% Αλυσίδα υποομάδων Thistlethwaite (περιεχόμενο σχήματος· το περιβάλλον figure
+% και η λεζάντα ορίζονται στο κεφάλαιο 4). Μεγέθη πινάκων και μέγιστα βάθη
+% κατά τα κλειδωμένα δεδομένα: 2048 / 1 082 565 / 29 400 προσβάσιμες (από
+% 58 800) / 663 552 καταχωρίσεις, βάθη <= 7/10/13/15.
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  gbox/.style={draw, rectangle, align=center, font=\footnotesize,
+               minimum height=1.35cm, minimum width=1.8cm, inner sep=4pt},
+  stage/.style={font=\footnotesize},
+  ann/.style={font=\scriptsize, align=center, anchor=north},
+  flow/.style={-{Stealth[length=2.6mm]}, semithick},
+  node distance=0.95cm
+]
+\node[gbox] (g0) {\(G_0\)\\ πλήρης ομάδα};
+\node[gbox, right=of g0] (g1) {\(G_1\)\\ προσανατολισμένες\\ ακμές};
+\node[gbox, right=of g1] (g2) {\(G_2\)\\ προσανατολισμοί\\ και φέτα UD};
+\node[gbox, right=of g2] (g3) {\(G_3\)\\ υποομάδα\\ μισών στροφών};
+\node[gbox, right=of g3] (g4) {\(G_4 = I\)\\ λυμένη\\ κατάσταση};
+
+\draw[flow] (g0) -- node[stage, above] {Στάδιο 1} (g1);
+\draw[flow] (g1) -- node[stage, above] {Στάδιο 2} (g2);
+\draw[flow] (g2) -- node[stage, above] {Στάδιο 3} (g3);
+\draw[flow] (g3) -- node[stage, above] {Στάδιο 4} (g4);
+
+\node[ann] at ($(g0.east)!0.5!(g1.west) + (0,-0.8)$)
+  {2048 καταχωρίσεις\\ βάθος \(\le 7\)};
+\node[ann] at ($(g1.east)!0.5!(g2.west) + (0,-0.8)$)
+  {1\,082\,565 καταχωρίσεις\\ βάθος \(\le 10\)};
+\node[ann] at ($(g2.east)!0.5!(g3.west) + (0,-0.8)$)
+  {29\,400 προσβάσιμες\\ (από 58\,800)\\ βάθος \(\le 13\)};
+\node[ann] at ($(g3.east)!0.5!(g4.west) + (0,-0.8)$)
+  {663\,552 καταχωρίσεις\\ βάθος \(\le 15\)};
+\end{tikzpicture}%
+}

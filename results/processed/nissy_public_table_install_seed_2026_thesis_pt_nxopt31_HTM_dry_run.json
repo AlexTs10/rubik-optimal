@@ -1,0 +1,71 @@
+{
+  "already_present": false,
+  "archive_entry": {
+    "compressed_size": 1626187745,
+    "compression_method": 8,
+    "crc32": "8c7e4d23",
+    "disk_start": 0,
+    "external_attrs": 2175008768,
+    "flags": 0,
+    "internal_attrs": 0,
+    "last_mod_date": 22179,
+    "last_mod_time": 25559,
+    "local_header_offset": 27248440,
+    "name": "tables/pt_nxopt31_HTM",
+    "uncompressed_size": 2465897307,
+    "version_made_by": 798,
+    "version_needed": 20
+  },
+  "archive_head": {
+    "accept_ranges": null,
+    "content_length": 1781826023,
+    "content_type": "application/octet-stream",
+    "etag": null,
+    "headers": {
+      "connection": "close",
+      "content-length": "1781826023",
+      "content-type": "application/octet-stream",
+      "date": "Tue, 26 May 2026 23:35:01 UTC",
+      "last-modified": "Wed, 03 May 2023 14:44:26 UTC",
+      "server": "OpenBSD httpd"
+    },
+    "last_modified": "Wed, 03 May 2023 14:44:26 UTC",
+    "status": 200
+  },
+  "central_directory": {
+    "comment_length": 0,
+    "entries_this_disk": 19,
+    "offset": 1781824310,
+    "size_bytes": 1691,
+    "total_entries": 19
+  },
+  "central_directory_range_response": {
+    "content_range": "bytes 1780777447-1781826022/1781826023",
+    "headers": {
+      "connection": "close",
+      "content-length": "1048576",
+      "content-range": "bytes 1780777447-1781826022/1781826023",
+      "content-type": "application/octet-stream",
+      "date": "Tue, 26 May 2026 23:35:02 UTC",
+      "last-modified": "Wed, 03 May 2023 14:44:26 UTC",
+      "server": "OpenBSD httpd"
+    },
+    "received_bytes": 1048576,
+    "requested_tail_bytes": 1048576,
+    "status": 206
+  },
+  "checked_at_utc": "2026-05-26T23:35:03.398514+00:00",
+  "dry_run": true,
+  "errors": [],
+  "install_result": null,
+  "installed": false,
+  "local_header": null,
+  "passed": true,
+  "schema_version": 1,
+  "source_url": "https://nissy.tronto.net/nissy-tables-2.0.4.zip",
+  "table_name": "tables/pt_nxopt31_HTM",
+  "target_exists": false,
+  "target_path": ".codex_external/nissy_data/tables/pt_nxopt31_HTM",
+  "target_size_bytes": null,
+  "target_size_matches_archive": false
+}

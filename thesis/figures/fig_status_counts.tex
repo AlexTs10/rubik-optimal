@@ -1,0 +1,38 @@
+% Κατανομή καταστάσεων αποτελέσματος ανά επιλυτή (ομαδοποιημένο ραβδόγραμμα).
+% Περιεχόμενο σχήματος· το περιβάλλον figure και η λεζάντα ορίζονται στο
+% κεφάλαιο 9. Δεδομένα: figures/status_counts_data.tex. Μηδενικές ράβδοι
+% παραλείπονται ανά σειρά.
+\begin{tikzpicture}
+\begin{axis}[
+  width=0.85\textwidth,
+  height=0.55\textwidth,
+  ybar,
+  bar width=11pt,
+  ylabel={Πλήθος περιπτώσεων},
+  symbolic x coords={Korf, Koc. native, Koc. adapter, Thistle.},
+  xtick={Korf, Koc. native, Koc. adapter, Thistle.},
+  ymin=0, ymax=16,
+  ytick={0,2,4,6,8,10,12,14,16},
+  enlarge x limits=0.18,
+  ymajorgrids,
+  grid style={dotted, gray!50},
+  legend pos=north west,
+  legend cell align=left,
+  legend style={font=\footnotesize},
+]
+\addplot[fill=blue!60, draw=blue!50!black] coordinates {
+  (Korf,11)
+};
+\addlegendentry{\texttt{exact}}
+\addplot[fill=orange!75, draw=orange!60!black] coordinates {
+  (Korf,2)
+};
+\addlegendentry{\texttt{lower\_bound}}
+\addplot[fill=gray!55, draw=gray!70!black] coordinates {
+  (Koc. native,13)
+  (Koc. adapter,13)
+  (Thistle.,13)
+};
+\addlegendentry{\texttt{non\_exact}}
+\end{axis}
+\end{tikzpicture}

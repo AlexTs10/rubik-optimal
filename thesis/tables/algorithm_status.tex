@@ -1,0 +1,14 @@
+{\small
+\begin{tabular}{L{0.17\textwidth}L{0.29\textwidth}L{0.25\textwidth}L{0.17\textwidth}}
+\hline
+Algorithm & Implementation status & Optimality status & Evidence \\
+\hline
+BFS & Shallow exhaustive search & exact within configured depth & tests/results \\
+Korf/IDA* & Scoped Python IDA* with projection tables and native corner/edge PDB lower bounds & exact when completed & tests + PDB \\
+Korf native optimal & C++ full-cube IDA* with complete corner and 6-edge PDBs & exact when completed & optimal evidence \\
+Kociemba native & Scoped two-phase: exact sym-reduced phase-1 heuristic plus phase-2 projection pruning & non-exact verified when completed & tests + tables \\
+Kociemba adapter & Optional external two-phase adapter & non-exact verified solution & verifier/results \\
+Thistlethwaite native & Four-phase greedy descent over exact BFS stage-distance tables & non-exact verified, guaranteed termination & tests + tables \\
+\hline
+\end{tabular}
+}
