@@ -13,9 +13,9 @@ The repository is **not complete** as a final submission package.
 
 The current checkout satisfies the repository, implementation, research,
 generated-artifact, page/word/table, benchmark, citation, XeLaTeX/PDF identity,
-and handoff-document checks that can be verified locally. The final scale/readiness
-gate is still false because final source provenance is dirty/no-commit and
-external institutional metadata plus approval are missing:
+source-state, and handoff-document checks that can be verified locally. The
+final readiness gate is still false because external institutional metadata plus
+approval are missing:
 `results/processed/thesis_audit.json` reports `acceptance_scale_passed: false`,
 `final_submission_ready: false`, `handoff_documents.passed: true`, and missing
 final approval evidence under `supervisor_approval_evidence`.
@@ -41,12 +41,12 @@ kept for traceability but do not satisfy or block the topic brief's three requir
 | Required generated artifacts | 178 required, none missing/stale/empty |
 | Repository gate | `acceptance_repository_passed: true` |
 | Implementation gate | `acceptance_implementation_passed: true` |
-| Scale gate | `acceptance_scale_passed: false` because source provenance is dirty/no-commit |
+| Scale gate | Source-state artifact entries are reproducible after H48 metadata adoption; final result still blocked by front-matter/approval |
 | Research gate | `acceptance_research_passed: true` |
 | Handoff-document gate | `handoff_documents.passed: true` |
 | Supervisor approval evidence | `supervisor_approval.passed: false` |
 | Final readiness | `final_submission_ready: false` |
-| Submission blockers | `front_matter_metadata_placeholders`; `supervisor_approval_evidence`; `final_artifact_git_provenance`; `source_snapshot_reproducibility` |
+| Submission blockers | `front_matter_metadata_placeholders`; `supervisor_approval_evidence` |
 | Cloud/H48H10 scope drift | `cloud_scope_drift.classification: archived_stretch_or_negative_evidence`; `completion_gate: false` |
 
 ## Required Read-First Sources

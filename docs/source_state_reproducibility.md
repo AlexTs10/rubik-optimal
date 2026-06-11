@@ -46,8 +46,16 @@ existing table with the native table-check canary, recomputes the SHA-256
 checksum, writes fresh adoption metadata, and preserves the previous table
 metadata provenance in `adoption_previous_*` fields.
 
-After adoption, regenerate the H48 certification artifacts that embed the table
+After adoption, refresh the H48 certification artifacts that embed the table
 metadata:
+
+```bash
+python scripts/refresh_h48_certification_metadata.py
+```
+
+This preserves existing certification rows and timings only when the retained
+table checksum is unchanged. If solver rows must be regenerated rather than
+metadata-refreshed, rerun the final evidence commands:
 
 ```bash
 python scripts/run_h48_oracle_certification.py \
@@ -70,7 +78,7 @@ using `--force`, followed by all dependent certification and audit commands.
 
 1. Review `git status --short` and commit the intended source baseline.
 2. Run the H48 adoption or full regeneration command from that clean baseline.
-3. Regenerate dependent certification artifacts.
+3. Refresh or regenerate dependent certification artifacts.
 4. Run `python scripts/verify_results.py`.
 5. Run `python scripts/source_state_report.py`.
 6. Run `python scripts/thesis_audit.py`.

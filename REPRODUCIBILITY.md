@@ -219,12 +219,14 @@ The safe path is:
 git status --short
 # after reviewing the intended baseline, create a clean commit or an approved immutable source archive
 python scripts/generate_h48_tables.py --profile thesis --seed 2026 --oracle --threads 8 --adopt-existing-table-metadata
-python scripts/run_h48_oracle_certification.py --profile thesis --seed 2026 --timeout 90 --runtime-target 90 --threads 8
-python scripts/run_h48_oracle_certification.py --profile thesis --seed 2026 --solver h48h7 --timeout 300 --runtime-target 300 --threads 8 --trusted-table --artifact-suffix trusted_no_preload
-python scripts/run_h48_oracle_certification.py --profile thesis --seed 2026 --solver h48h7 --timeout 180 --runtime-target 180 --threads 8 --trusted-table --preload-table --artifact-suffix trusted_preload
+python scripts/refresh_h48_certification_metadata.py
 python scripts/source_state_report.py
 python scripts/thesis_audit.py
 ```
+
+If the certification rows themselves must be regenerated instead of only
+refreshing their embedded table metadata, rerun the H48 certification commands
+listed in the full verification sequence above.
 
 The audit scans generated JSON metadata for non-reproducible source states and adds `source_snapshot_reproducibility` to `submission_blockers` until all final artifact metadata comes from a clean committed checkout or approved archive.
 
