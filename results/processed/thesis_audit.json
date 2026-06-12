@@ -499,31 +499,12 @@
     "stale": []
   },
   "git_provenance": {
-    "dirty_path_count": 20,
+    "dirty_path_count": 1,
     "dirty_paths_sample": [
-      " M docs/progress.md",
-      " M results/processed/thesis_audit.json",
-      " M thesis/chapters/00_abstracts.tex",
-      " M thesis/chapters/00_front_matter.tex",
-      " M thesis/chapters/01_introduction.tex",
-      " M thesis/chapters/02_background.tex",
-      " M thesis/chapters/03_cube_model.tex",
-      " M thesis/chapters/04_algorithms.tex",
-      " M thesis/chapters/06_implementation.tex",
-      " M thesis/chapters/08_validation.tex",
-      " M thesis/chapters/09_experiments.tex",
-      " M thesis/chapters/10_conclusions.tex",
-      " M thesis/chapters/d_cli_reference.tex",
-      " M thesis/figures/fig_architecture.tex",
-      " M thesis/figures/fig_cubie_indexing.tex",
-      " M thesis/figures/fig_kociemba_twophase.tex",
-      " M thesis/figures/fig_solution_length_depth.tex",
-      " M thesis/main.pdf",
-      " M thesis/main.tex",
-      "?? thesis/assets/"
+      " M thesis/main.pdf"
     ],
     "head_error": null,
-    "head_sha": "e822ca40a80e988030d8dffe4000a97aeb250cd1",
+    "head_sha": "f560451c2ed5bbc26eb55d75ef965ed3352b73a1",
     "inside_work_tree": true,
     "passed": false
   },
@@ -566,13 +547,13 @@
     "passed": true,
     "root_exists": true,
     "root_pdf": "main.pdf",
-    "root_sha256": "cb2faec84fa540fa3881c7be433de9b15577b4e3325b738580a53ce140cdca86",
-    "root_size_bytes": 773876,
+    "root_sha256": "78aaf51df9227793f3770a44f01d9aba877bb2e6d2340426b0f0ee7162bc9445",
+    "root_size_bytes": 775165,
     "thesis_exists": true,
-    "thesis_sha256": "cb2faec84fa540fa3881c7be433de9b15577b4e3325b738580a53ce140cdca86",
-    "thesis_size_bytes": 773876
+    "thesis_sha256": "78aaf51df9227793f3770a44f01d9aba877bb2e6d2340426b0f0ee7162bc9445",
+    "thesis_size_bytes": 775165
   },
-  "pdf_word_count": 42976,
+  "pdf_word_count": 43122,
   "repository": {
     "missing": [],
     "passed": true,
@@ -1006,8 +987,8 @@
   "source_state": {
     "artifact_count_scanned": 375,
     "current_source_state": {
-      "commit": "e822ca40a80e988030d8dffe4000a97aeb250cd1",
-      "commit_short": "e822ca4",
+      "commit": "f560451c2ed5bbc26eb55d75ef965ed3352b73a1",
+      "commit_short": "f560451",
       "dirty": true,
       "git_available": true,
       "has_commit": true,
@@ -1019,29 +1000,10 @@
         "Regenerate final result metadata from that baseline and rerun python scripts/thesis_audit.py."
       ],
       "schema_version": 1,
-      "state": "e822ca4+dirty",
-      "status_entry_count": 20,
+      "state": "f560451+dirty",
+      "status_entry_count": 1,
       "status_sample": [
-        " M docs/progress.md",
-        " M results/processed/thesis_audit.json",
-        " M thesis/chapters/00_abstracts.tex",
-        " M thesis/chapters/00_front_matter.tex",
-        " M thesis/chapters/01_introduction.tex",
-        " M thesis/chapters/02_background.tex",
-        " M thesis/chapters/03_cube_model.tex",
-        " M thesis/chapters/04_algorithms.tex",
-        " M thesis/chapters/06_implementation.tex",
-        " M thesis/chapters/08_validation.tex",
-        " M thesis/chapters/09_experiments.tex",
-        " M thesis/chapters/10_conclusions.tex",
-        " M thesis/chapters/d_cli_reference.tex",
-        " M thesis/figures/fig_architecture.tex",
-        " M thesis/figures/fig_cubie_indexing.tex",
-        " M thesis/figures/fig_kociemba_twophase.tex",
-        " M thesis/figures/fig_solution_length_depth.tex",
-        " M thesis/main.pdf",
-        " M thesis/main.tex",
-        "?? thesis/assets/"
+        " M thesis/main.pdf"
       ]
     },
     "non_reproducible_entry_count": 0,
@@ -1090,37 +1052,18 @@
     },
     {
       "description": "Final artifact provenance is not tied to a clean committed checkout.",
-      "dirty_path_count": 20,
+      "dirty_path_count": 1,
       "dirty_paths_sample": [
-        " M docs/progress.md",
-        " M results/processed/thesis_audit.json",
-        " M thesis/chapters/00_abstracts.tex",
-        " M thesis/chapters/00_front_matter.tex",
-        " M thesis/chapters/01_introduction.tex",
-        " M thesis/chapters/02_background.tex",
-        " M thesis/chapters/03_cube_model.tex",
-        " M thesis/chapters/04_algorithms.tex",
-        " M thesis/chapters/06_implementation.tex",
-        " M thesis/chapters/08_validation.tex",
-        " M thesis/chapters/09_experiments.tex",
-        " M thesis/chapters/10_conclusions.tex",
-        " M thesis/chapters/d_cli_reference.tex",
-        " M thesis/figures/fig_architecture.tex",
-        " M thesis/figures/fig_cubie_indexing.tex",
-        " M thesis/figures/fig_kociemba_twophase.tex",
-        " M thesis/figures/fig_solution_length_depth.tex",
-        " M thesis/main.pdf",
-        " M thesis/main.tex",
-        "?? thesis/assets/"
+        " M thesis/main.pdf"
       ],
-      "head_sha": "e822ca40a80e988030d8dffe4000a97aeb250cd1",
+      "head_sha": "f560451c2ed5bbc26eb55d75ef965ed3352b73a1",
       "id": "final_artifact_git_provenance",
       "status": "repository_required"
     },
     {
       "current_source_state": {
-        "commit": "e822ca40a80e988030d8dffe4000a97aeb250cd1",
-        "commit_short": "e822ca4",
+        "commit": "f560451c2ed5bbc26eb55d75ef965ed3352b73a1",
+        "commit_short": "f560451",
         "dirty": true,
         "git_available": true,
         "has_commit": true,
@@ -1132,29 +1075,10 @@
           "Regenerate final result metadata from that baseline and rerun python scripts/thesis_audit.py."
         ],
         "schema_version": 1,
-        "state": "e822ca4+dirty",
-        "status_entry_count": 20,
+        "state": "f560451+dirty",
+        "status_entry_count": 1,
         "status_sample": [
-          " M docs/progress.md",
-          " M results/processed/thesis_audit.json",
-          " M thesis/chapters/00_abstracts.tex",
-          " M thesis/chapters/00_front_matter.tex",
-          " M thesis/chapters/01_introduction.tex",
-          " M thesis/chapters/02_background.tex",
-          " M thesis/chapters/03_cube_model.tex",
-          " M thesis/chapters/04_algorithms.tex",
-          " M thesis/chapters/06_implementation.tex",
-          " M thesis/chapters/08_validation.tex",
-          " M thesis/chapters/09_experiments.tex",
-          " M thesis/chapters/10_conclusions.tex",
-          " M thesis/chapters/d_cli_reference.tex",
-          " M thesis/figures/fig_architecture.tex",
-          " M thesis/figures/fig_cubie_indexing.tex",
-          " M thesis/figures/fig_kociemba_twophase.tex",
-          " M thesis/figures/fig_solution_length_depth.tex",
-          " M thesis/main.pdf",
-          " M thesis/main.tex",
-          "?? thesis/assets/"
+          " M thesis/main.pdf"
         ]
       },
       "description": "Final generated metadata must come from a clean committed checkout or approved immutable source archive; current evidence includes no-commit, dirty, or otherwise non-reproducible source-state records.",
