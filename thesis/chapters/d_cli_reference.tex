@@ -70,11 +70,11 @@ rubik-optimal solve [STATE] [--solver NAME] [...]
 \code{--seven-edge-pdbs} & ανενεργή & Προαιρετική χρήση των βάσεων 7 ακμών· εκτός της παγωμένης διαμόρφωσης αναφοράς των 6 ακμών. \\
 \code{--nissy-heuristic} & ανενεργή & Πρόσθετο παραδεκτό κάτω φράγμα μέσω της γέφυρας Nissy στον εγγενή IDA*. \\
 \code{--no-nissy-}\allowbreak\code{axis-transforms} & (ενεργοί) & Απενεργοποίηση των αξονικών μετασχηματισμών της γέφυρας Nissy. \\
-\code{--nissy-data-dir} & --- & Κατάλογος δεδομένων του εξωτερικού \code{nissy}. \\
-\code{--upper-solution} & --- & Υποψήφια λύση ως πιστοποιητικό άνω φράγματος για τον \code{optimal-native}. \\
+\code{--nissy-data-dir} & N/A & Κατάλογος δεδομένων του εξωτερικού \code{nissy}. \\
+\code{--upper-solution} & N/A & Υποψήφια λύση ως πιστοποιητικό άνω φράγματος για τον \code{optimal-native}. \\
 \code{--upper-bound-}\allowbreak\code{proof-strategy} & \code{single-bound} & Απόδειξη βελτιστότητας με μία εξαντλητική αναζήτηση ένα βάθος κάτω από το άνω φράγμα ή με κλασικά επαναληπτικά όρια (\code{iterative}). \\
 \code{--h48-start-delay} & 0.0 & Καθυστέρηση εκκίνησης του μόνιμου (\eng{resident}) H48 στους επιλυτές αγώνα, ώστε να προλαβαίνουν οι φθηνότερες απόπειρες Nissy. \\
-\code{--rubikoptimal-table-dir}, \code{--rubikoptimal-}\allowbreak\code{executable}, \code{--rubikoptimal-}\allowbreak\code{package-path} & --- & Διαδρομές πινάκων, εκτελέσιμου και πακέτου του εξωτερικού RubikOptimal. \\
+\code{--rubikoptimal-table-dir}, \code{--rubikoptimal-}\allowbreak\code{executable}, \code{--rubikoptimal-}\allowbreak\code{package-path} & N/A & Διαδρομές πινάκων, εκτελέσιμου και πακέτου του εξωτερικού RubikOptimal. \\
 \hline
 \end{tabular}
 \caption{Γενικές επιλογές της υποεντολής \code{solve}.}
@@ -99,7 +99,7 @@ rubik-optimal solve [STATE] [--solver NAME] [...]
 \code{--h48-preload-table} & ανενεργή & Προθερμαίνει σειριακά τις σελίδες του πίνακα πριν από την αναζήτηση. \\
 \code{--h48-auto-min-depth} & ανενεργή & Εκκινεί την ακριβή αναζήτηση από το παραδεκτό κάτω φράγμα H48 αντί από βάθος 0. \\
 \code{--h48-profile} & \code{thesis} & Προφίλ πινάκων (\code{quick}, \code{thesis}, \code{stress}). \\
-\code{--h48-table} & --- & Ρητή διαδρομή αρχείου πίνακα H48. \\
+\code{--h48-table} & N/A & Ρητή διαδρομή αρχείου πίνακα H48. \\
 \hline
 \end{tabular}
 \caption{Η κοινή οικογένεια επιλογών H48 των υποεντολών \code{solve}, \code{distance} και \code{oracle}.}
@@ -157,8 +157,8 @@ rubik-optimal oracle [STATES ...] [--input-file F] [...]
 \hline
 Επιλογή & Προεπιλογή & Περιγραφή \\
 \hline
-\code{STATES} (θεσιακά) & --- & Συμβολοσειρές εδρών ή ακολουθίες σε εισαγωγικά· χωρίς ορίσματα διαβάζεται η πρότυπη είσοδος. \\
-\code{--input-file} & --- & Αρχείο με μία είσοδο ανά γραμμή· κενές γραμμές και σχόλια αγνοούνται. \\
+\code{STATES} (θεσιακά) & N/A & Συμβολοσειρές εδρών ή ακολουθίες σε εισαγωγικά· χωρίς ορίσματα διαβάζεται η πρότυπη είσοδος. \\
+\code{--input-file} & N/A & Αρχείο με μία είσοδο ανά γραμμή· κενές γραμμές και σχόλια αγνοούνται. \\
 \code{--jsonl} & ανενεργή & Μία γραμμή JSON ανά είσοδο αντί ενός συγκεντρωτικού αντικειμένου. \\
 \code{--stream} & ανενεργή & Διατηρεί μόνιμο εγγενές backend και τυπώνει κάθε αποτέλεσμα μόλις ολοκληρωθεί. \\
 \code{--timeout} & 300.0 & Όριο χρόνου σε δευτερόλεπτα. \\
@@ -169,7 +169,7 @@ rubik-optimal oracle [STATES ...] [--input-file F] [...]
 \code{--resident-h48-batch-timeout} & 30.0 & Όριο ανά κατάσταση της δέσμης μόνιμου H48· αρνητική τιμή καταργεί το χωριστό όριο. \\
 \code{--no-universal-}\allowbreak\code{portfolio-prepass} & ανενεργή & Παράλειψη του προπεράσματος χαρτοφυλακίου πριν από τη δέσμη μόνιμου H48. \\
 \code{--universal-portfolio-}\allowbreak\code{prepass-timeout} & \code{--timeout} & Χωριστό όριο του προπεράσματος χαρτοφυλακίου/Nissy. \\
-\code{--learned-certificate-log} & --- & Προσάρτηση νέων επαληθευμένων \code{exact} γραμμών σε αρχείο JSONL πιστοποιητικών. \\
+\code{--learned-certificate-log} & N/A & Προσάρτηση νέων επαληθευμένων \code{exact} γραμμών σε αρχείο JSONL πιστοποιητικών. \\
 \code{--no-universal-}\allowbreak\code{certificate-cache} & ανενεργή & Παράλειψη της κρυφής μνήμης πιστοποιητικών, για τεκμήρια ζωντανού χρόνου εκτέλεσης. \\
 \code{--no-universal-}\allowbreak\code{upper-lower-certificate} & ανενεργή & Παράλειψη της συντόμευσης πιστοποιητικού άνω/κάτω φράγματος πριν από τα ζωντανά backends. \\
 \code{--universal-include-}\allowbreak\code{external-label-}\allowbreak\code{certificates} & ανενεργή & Επιτρέπει γραμμές με βάση ετικέτες τρίτων, επιστρεφόμενες ως \code{external_label_exact}. \\

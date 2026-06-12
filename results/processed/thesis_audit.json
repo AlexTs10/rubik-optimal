@@ -2,7 +2,7 @@
   "acceptance_implementation_passed": true,
   "acceptance_repository_passed": true,
   "acceptance_research_passed": true,
-  "acceptance_scale_passed": true,
+  "acceptance_scale_passed": false,
   "backend_identity": {
     "backend_wrapper": "native/h48_backend/h48_backend.c",
     "checks": {
@@ -140,22 +140,22 @@
     "figure_table_target_met": true,
     "generated_artifacts_not_stale": true,
     "generated_artifacts_present": true,
-    "git_provenance_clean": true,
+    "git_provenance_clean": false,
     "page_target_met": true,
     "pdf_deliverable_current": true,
-    "source_state_reproducible": true,
+    "source_state_reproducible": false,
     "third_party_notices_present": true,
     "topic_brief_artifacts_valid": true,
     "word_target_met": true
   },
   "claim_risk_markers": [
     {
-      "line": 44,
+      "line": 45,
       "path": "thesis/main.tex",
       "text": "\\newcommand{\\thesisGreekTitle}{Αλγόριθμοι Βέλτιστης Επίλυσης για τον Κύβο του Rubik}"
     },
     {
-      "line": 45,
+      "line": 46,
       "path": "thesis/main.tex",
       "text": "\\newcommand{\\thesisEnglishTitle}{Optimal Solution Algorithms for Rubik's Cube}"
     },
@@ -210,7 +210,7 @@
       "text": "Η παρούσα διπλωματική εργασία εκπονήθηκε κατά το ακαδημαϊκό έτος 2025--2026 στο Εργαστήριο Ενσύρματης Τηλεπικοινωνίας του Τμήματος Ηλεκτρολόγων Μηχανικών και Τεχνολογίας Υπολογιστών του Πανεπιστημίου Πατρών, υπό την επίβ"
     },
     {
-      "line": 29,
+      "line": 43,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "Ως προς την τεχνική υλοποίηση, πρωτότυπο έργο αποτελούν η συνολική οργάνωση του λογισμικού, η υποδομή μοντελοποίησης, επαλήθευσης, πειραματισμού και αναπαραγωγής σε Python και σε εγγενή κώδικα C/C++, οι εγγενείς διαδρομέ"
     },
@@ -222,7 +222,7 @@
     {
       "line": 7,
       "path": "thesis/chapters/01_introduction.tex",
-      "text": "Ο γνωστός ισχυρισμός ότι κάθε επιλύσιμη κατάσταση λύνεται με το πολύ 20 κινήσεις στη μετρική μισών στροφών --- ο λεγόμενος αριθμός του Θεού (\\eng{God's number}) --- έχει αποδειχθεί από τους Rokicki, Kociemba, Davidson κα"
+      "text": "Ο γνωστός ισχυρισμός ότι κάθε επιλύσιμη κατάσταση λύνεται με το πολύ 20 κινήσεις στη μετρική μισών στροφών, ο λεγόμενος αριθμός του Θεού (\\eng{God's number}), έχει αποδειχθεί από τους Rokicki, Kociemba, Davidson και Deth"
     },
     {
       "line": 9,
@@ -450,56 +450,44 @@
   "final_submission_ready": false,
   "front_matter_placeholders": [
     {
-      "field": "registration_number",
-      "line": 49,
-      "path": "thesis/main.tex",
-      "text": "\\newcommand{\\thesisRegistrationNumber}{ΧΧΧΧΧΧΧ}"
-    },
-    {
-      "field": "place_date",
-      "line": 54,
-      "path": "thesis/main.tex",
-      "text": "\\newcommand{\\thesisPlaceDate}{ΠΑΤΡΑ - ΜΗΝΑΣ 2026}"
-    },
-    {
       "field": "exam_date",
-      "line": 51,
+      "line": 65,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "…….../……../………"
     },
     {
       "field": "committee_member",
-      "line": 59,
+      "line": 73,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "Όνομα Επώνυμο, Βαθμίδα, Τμήμα (μέλος επιτροπής)\\\\[0.25cm]"
     },
     {
       "field": "rank_placeholder",
-      "line": 59,
+      "line": 73,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "Όνομα Επώνυμο, Βαθμίδα, Τμήμα (μέλος επιτροπής)\\\\[0.25cm]"
     },
     {
       "field": "committee_member",
-      "line": 60,
+      "line": 74,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "Όνομα Επώνυμο, Βαθμίδα, Τμήμα (μέλος επιτροπής)"
     },
     {
       "field": "rank_placeholder",
-      "line": 60,
+      "line": 74,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "Όνομα Επώνυμο, Βαθμίδα, Τμήμα (μέλος επιτροπής)"
     },
     {
       "field": "division_director",
-      "line": 68,
+      "line": 82,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "\\centering \\thesisSupervisor && \\centering Ονοματεπώνυμο \\tabularnewline"
     },
     {
       "field": "rank_placeholder",
-      "line": 69,
+      "line": 83,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "\\centering \\thesisSupervisorRank && \\centering Βαθμίδα \\tabularnewline"
     }
@@ -511,12 +499,33 @@
     "stale": []
   },
   "git_provenance": {
-    "dirty_path_count": 0,
-    "dirty_paths_sample": [],
+    "dirty_path_count": 20,
+    "dirty_paths_sample": [
+      " M docs/progress.md",
+      " M results/processed/thesis_audit.json",
+      " M thesis/chapters/00_abstracts.tex",
+      " M thesis/chapters/00_front_matter.tex",
+      " M thesis/chapters/01_introduction.tex",
+      " M thesis/chapters/02_background.tex",
+      " M thesis/chapters/03_cube_model.tex",
+      " M thesis/chapters/04_algorithms.tex",
+      " M thesis/chapters/06_implementation.tex",
+      " M thesis/chapters/08_validation.tex",
+      " M thesis/chapters/09_experiments.tex",
+      " M thesis/chapters/10_conclusions.tex",
+      " M thesis/chapters/d_cli_reference.tex",
+      " M thesis/figures/fig_architecture.tex",
+      " M thesis/figures/fig_cubie_indexing.tex",
+      " M thesis/figures/fig_kociemba_twophase.tex",
+      " M thesis/figures/fig_solution_length_depth.tex",
+      " M thesis/main.pdf",
+      " M thesis/main.tex",
+      "?? thesis/assets/"
+    ],
     "head_error": null,
-    "head_sha": "e60e6a51c178166992e4eb7938687805214c6839",
+    "head_sha": "e822ca40a80e988030d8dffe4000a97aeb250cd1",
     "inside_work_tree": true,
-    "passed": true
+    "passed": false
   },
   "handoff_documents": {
     "missing_documents": [],
@@ -557,13 +566,13 @@
     "passed": true,
     "root_exists": true,
     "root_pdf": "main.pdf",
-    "root_sha256": "03db6133c7feabd7449a8147bc15c9507fb657e1a65f65f6c93a9a4bb99ea486",
-    "root_size_bytes": 581251,
+    "root_sha256": "cb2faec84fa540fa3881c7be433de9b15577b4e3325b738580a53ce140cdca86",
+    "root_size_bytes": 773876,
     "thesis_exists": true,
-    "thesis_sha256": "03db6133c7feabd7449a8147bc15c9507fb657e1a65f65f6c93a9a4bb99ea486",
-    "thesis_size_bytes": 581251
+    "thesis_sha256": "cb2faec84fa540fa3881c7be433de9b15577b4e3325b738580a53ce140cdca86",
+    "thesis_size_bytes": 773876
   },
-  "pdf_word_count": 42955,
+  "pdf_word_count": 42976,
   "repository": {
     "missing": [],
     "passed": true,
@@ -997,26 +1006,47 @@
   "source_state": {
     "artifact_count_scanned": 375,
     "current_source_state": {
-      "commit": "e60e6a51c178166992e4eb7938687805214c6839",
-      "commit_short": "e60e6a5",
-      "dirty": false,
+      "commit": "e822ca40a80e988030d8dffe4000a97aeb250cd1",
+      "commit_short": "e822ca4",
+      "dirty": true,
       "git_available": true,
       "has_commit": true,
-      "is_reproducible_checkout": true,
-      "limitation": "",
+      "is_reproducible_checkout": false,
+      "limitation": "Generated from a dirty working tree; the commit alone does not reproduce the exact source.",
       "reproduction_plan": [
         "Review git status --short and decide the intentional source baseline.",
         "Create a real commit or an approved source archive; do not treat no_commit+dirty artifacts as final-submission evidence.",
         "Regenerate final result metadata from that baseline and rerun python scripts/thesis_audit.py."
       ],
       "schema_version": 1,
-      "state": "e60e6a5",
-      "status_entry_count": 0,
-      "status_sample": []
+      "state": "e822ca4+dirty",
+      "status_entry_count": 20,
+      "status_sample": [
+        " M docs/progress.md",
+        " M results/processed/thesis_audit.json",
+        " M thesis/chapters/00_abstracts.tex",
+        " M thesis/chapters/00_front_matter.tex",
+        " M thesis/chapters/01_introduction.tex",
+        " M thesis/chapters/02_background.tex",
+        " M thesis/chapters/03_cube_model.tex",
+        " M thesis/chapters/04_algorithms.tex",
+        " M thesis/chapters/06_implementation.tex",
+        " M thesis/chapters/08_validation.tex",
+        " M thesis/chapters/09_experiments.tex",
+        " M thesis/chapters/10_conclusions.tex",
+        " M thesis/chapters/d_cli_reference.tex",
+        " M thesis/figures/fig_architecture.tex",
+        " M thesis/figures/fig_cubie_indexing.tex",
+        " M thesis/figures/fig_kociemba_twophase.tex",
+        " M thesis/figures/fig_solution_length_depth.tex",
+        " M thesis/main.pdf",
+        " M thesis/main.tex",
+        "?? thesis/assets/"
+      ]
     },
     "non_reproducible_entry_count": 0,
     "non_reproducible_examples": [],
-    "passed": true,
+    "passed": false,
     "regeneration_plan": [
       "Create an intentional commit or approved immutable source archive for the thesis baseline.",
       "Regenerate final metadata/result artifacts from that baseline.",
@@ -1026,20 +1056,18 @@
     "source_state_entry_count": 50,
     "unique_non_reproducible_states": [],
     "unreadable_json": [],
-    "warning": ""
+    "warning": "Current checkout is not a reproducible clean source baseline."
   },
-  "source_word_count": 33842,
+  "source_word_count": 34010,
   "submission_blockers": [
     {
       "description": "Final ECE front-matter metadata still contains placeholders.",
-      "evidence_count": 9,
+      "evidence_count": 7,
       "fields": [
         "committee member name/title/department",
         "division director name/title/signature details",
         "public examination date",
-        "place/month/year cover line",
-        "academic rank/title",
-        "student registration number"
+        "academic rank/title"
       ],
       "id": "front_matter_metadata_placeholders",
       "status": "supervisor_or_secretariat_required"
@@ -1059,6 +1087,87 @@
       "path": "docs/final_supervisor_approval.md",
       "placeholder_findings": [],
       "status": "supervisor_or_secretariat_required"
+    },
+    {
+      "description": "Final artifact provenance is not tied to a clean committed checkout.",
+      "dirty_path_count": 20,
+      "dirty_paths_sample": [
+        " M docs/progress.md",
+        " M results/processed/thesis_audit.json",
+        " M thesis/chapters/00_abstracts.tex",
+        " M thesis/chapters/00_front_matter.tex",
+        " M thesis/chapters/01_introduction.tex",
+        " M thesis/chapters/02_background.tex",
+        " M thesis/chapters/03_cube_model.tex",
+        " M thesis/chapters/04_algorithms.tex",
+        " M thesis/chapters/06_implementation.tex",
+        " M thesis/chapters/08_validation.tex",
+        " M thesis/chapters/09_experiments.tex",
+        " M thesis/chapters/10_conclusions.tex",
+        " M thesis/chapters/d_cli_reference.tex",
+        " M thesis/figures/fig_architecture.tex",
+        " M thesis/figures/fig_cubie_indexing.tex",
+        " M thesis/figures/fig_kociemba_twophase.tex",
+        " M thesis/figures/fig_solution_length_depth.tex",
+        " M thesis/main.pdf",
+        " M thesis/main.tex",
+        "?? thesis/assets/"
+      ],
+      "head_sha": "e822ca40a80e988030d8dffe4000a97aeb250cd1",
+      "id": "final_artifact_git_provenance",
+      "status": "repository_required"
+    },
+    {
+      "current_source_state": {
+        "commit": "e822ca40a80e988030d8dffe4000a97aeb250cd1",
+        "commit_short": "e822ca4",
+        "dirty": true,
+        "git_available": true,
+        "has_commit": true,
+        "is_reproducible_checkout": false,
+        "limitation": "Generated from a dirty working tree; the commit alone does not reproduce the exact source.",
+        "reproduction_plan": [
+          "Review git status --short and decide the intentional source baseline.",
+          "Create a real commit or an approved source archive; do not treat no_commit+dirty artifacts as final-submission evidence.",
+          "Regenerate final result metadata from that baseline and rerun python scripts/thesis_audit.py."
+        ],
+        "schema_version": 1,
+        "state": "e822ca4+dirty",
+        "status_entry_count": 20,
+        "status_sample": [
+          " M docs/progress.md",
+          " M results/processed/thesis_audit.json",
+          " M thesis/chapters/00_abstracts.tex",
+          " M thesis/chapters/00_front_matter.tex",
+          " M thesis/chapters/01_introduction.tex",
+          " M thesis/chapters/02_background.tex",
+          " M thesis/chapters/03_cube_model.tex",
+          " M thesis/chapters/04_algorithms.tex",
+          " M thesis/chapters/06_implementation.tex",
+          " M thesis/chapters/08_validation.tex",
+          " M thesis/chapters/09_experiments.tex",
+          " M thesis/chapters/10_conclusions.tex",
+          " M thesis/chapters/d_cli_reference.tex",
+          " M thesis/figures/fig_architecture.tex",
+          " M thesis/figures/fig_cubie_indexing.tex",
+          " M thesis/figures/fig_kociemba_twophase.tex",
+          " M thesis/figures/fig_solution_length_depth.tex",
+          " M thesis/main.pdf",
+          " M thesis/main.tex",
+          "?? thesis/assets/"
+        ]
+      },
+      "description": "Final generated metadata must come from a clean committed checkout or approved immutable source archive; current evidence includes no-commit, dirty, or otherwise non-reproducible source-state records.",
+      "examples": [],
+      "id": "source_snapshot_reproducibility",
+      "non_reproducible_entry_count": 0,
+      "regeneration_plan": [
+        "Create an intentional commit or approved immutable source archive for the thesis baseline.",
+        "Regenerate final metadata/result artifacts from that baseline.",
+        "Rerun python scripts/source_state_report.py and python scripts/thesis_audit.py."
+      ],
+      "status": "repository_required",
+      "unique_non_reproducible_states": []
     }
   ],
   "supervisor_approval": {
