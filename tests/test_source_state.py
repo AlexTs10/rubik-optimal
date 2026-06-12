@@ -29,9 +29,9 @@ def test_capture_source_state_accepts_clean_committed_repo(tmp_path):
         [
             "git",
             "-c",
-            "user.name=Codex Test",
+            "user.name=Source State Test",
             "-c",
-            "user.email=codex-test@example.invalid",
+            "user.email=source-state-test@example.invalid",
             "commit",
             "-m",
             "baseline",

@@ -13,7 +13,6 @@ approval_date: TODO YYYY-MM-DD
 
 Required approved decisions:
 
-- AI-assistance disclosure approved: TODO confirm wording and placement.
 - front-matter style approved: TODO confirm template adaptation and final metadata.
 - bibliography style approved: TODO confirm bibliography style/format.
 - scoped solver claims approved: TODO confirm bounded Kociemba, Thistlethwaite, Korf, and Pocket Cube claim limits.

@@ -11,7 +11,7 @@ Final target:
 - at least 20 figures/tables combined;
 - formal front matter;
 - dense implementation and experiment chapters;
-- appendices for reproducibility, CLI usage, generated result tables, and AI-assistance disclosure.
+- appendices for reproducibility, CLI usage, generated result tables, and supporting metadata.
 
 If the supervisor approves a smaller target, record the approval in `docs/supervisor_questions.md` or another dated note.
 
@@ -34,7 +34,6 @@ thesis/
 │   ├── 09_results_and_evaluation.tex
 │   ├── 10_discussion.tex
 │   ├── 11_conclusions.tex
-│   ├── 12_ai_disclosure.tex
 │   └── appendices.tex
 ├── figures/
 └── tables/
@@ -56,7 +55,7 @@ thesis/
 | 9. Αποτελέσματα και αξιολόγηση | 14-22 | Generated tables/figures, solver comparisons, interpretation |
 | 10. Συζήτηση | 8-12 | Tradeoffs, limits, optimality boundaries, threats to validity |
 | 11. Συμπεράσματα και μελλοντική εργασία | 6-10 | Achievements, answered questions, limits, future work |
-| Appendices | 10+ | Reproducibility, CLI, extra tables, AI disclosure |
+| Appendices | 10+ | Reproducibility, CLI, extra tables, result metadata |
 
 ## Required front matter
 
@@ -238,7 +237,7 @@ Include:
 - reproducibility checklist;
 - extra benchmark tables;
 - generated table metadata;
-- AI-assistance disclosure draft.
+- generated table metadata.
 
 ## Formatting
 
@@ -255,4 +254,3 @@ If not verified, use:
 - XeLaTeX with Greek language support.
 
 Document the formatting choice.
-

@@ -335,7 +335,7 @@ root/canonical PDF hashes and exits nonzero if both files exist but differ.
 
 ## Final Metadata Gate
 
-After final student/committee/exam metadata and AI/style approvals are supplied, fill a copy of `docs/final_metadata_values.template.json`, use `scripts/apply_final_metadata.py` to apply it, and create `docs/final_supervisor_approval.md` from `docs/final_supervisor_approval.template.md` with the real approval source/date and approved decisions, then run:
+After final student/committee/exam metadata and style/scoped-claim approvals are supplied, fill a copy of `docs/final_metadata_values.template.json`, use `scripts/apply_final_metadata.py` to apply it, and create `docs/final_supervisor_approval.md` from `docs/final_supervisor_approval.template.md` with the real approval source/date and approved decisions, then run:
 
 ```bash
 python scripts/apply_final_metadata.py <approved-values.json> --dry-run

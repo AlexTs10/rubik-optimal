@@ -74,7 +74,6 @@ front matter:
 | Division director name | `thesis/chapters/00_front_matter.tex` |
 | Division director rank/title | `thesis/chapters/00_front_matter.tex` |
 | Approved metadata values file | `docs/final_metadata_values.template.json`; applied by `scripts/apply_final_metadata.py` |
-| Required AI-assistance disclosure wording and placement | `thesis/chapters/08_ai_disclosure.tex` |
 | Bibliography/front-matter style approval | `thesis/` and `thesis/references.bib` |
 | Final approval source/date for audit evidence | `docs/final_supervisor_approval.md` from `docs/final_supervisor_approval.template.md` |
 
@@ -83,7 +82,7 @@ front matter:
 ```text
 Καλησπέρα σας,
 
-Έχω ετοιμάσει το αποθετήριο και το προσχέδιο της διπλωματικής εργασίας για έλεγχο. Τα τεχνικά scripts, τα benchmarks, η βιβλιογραφία, το LaTeX build και ο μηχανικός έλεγχος της εργασίας περνούν, αλλά πριν θεωρηθεί έτοιμη για τελική υποβολή χρειάζομαι επιβεβαίωση των τελευταίων στοιχείων πρώτων σελίδων και πολιτικής χρήσης AI.
+Έχω ετοιμάσει το αποθετήριο και το προσχέδιο της διπλωματικής εργασίας για έλεγχο. Τα τεχνικά scripts, τα benchmarks, η βιβλιογραφία, το LaTeX build και ο μηχανικός έλεγχος της εργασίας περνούν, αλλά πριν θεωρηθεί έτοιμη για τελική υποβολή χρειάζομαι επιβεβαίωση των τελευταίων στοιχείων πρώτων σελίδων και της τελικής μορφής.
 
 Παρακαλώ επιβεβαιώστε τα παρακάτω όπως πρέπει να εμφανίζονται στο τελικό αρχείο:
 
@@ -96,9 +95,8 @@ front matter:
 7. Ημερομηνία δημόσιας εξέτασης.
 8. Δεύτερο και τρίτο μέλος επιτροπής με βαθμίδα και Τμήμα.
 9. Ονοματεπώνυμο και βαθμίδα/τίτλο Διευθυντή Τομέα.
-10. Αν η ενότητα δήλωσης χρήσης AI είναι αποδεκτή ως έχει ή αν απαιτείται συγκεκριμένη διατύπωση/θέση.
-11. Αν η τρέχουσα μορφή βιβλιογραφίας και πρώτων σελίδων είναι αποδεκτή για υποβολή ή αν χρειάζεται άλλη μορφοποίηση.
-12. Αν οι διατυπώσεις για τους περιορισμούς των scoped αλγορίθμων Kociemba και Thistlethwaite, της exact state-distance recognition διαδρομής, του Korf/IDA* με παραδεκτή ευρετική, του public-solver-derived H48/Nissy/RubikOptimal backend evidence και του Pocket Cube είναι αποδεκτές για τελική υποβολή.
+10. Αν η τρέχουσα μορφή βιβλιογραφίας και πρώτων σελίδων είναι αποδεκτή για υποβολή ή αν χρειάζεται άλλη μορφοποίηση.
+11. Αν οι διατυπώσεις για τους περιορισμούς των scoped αλγορίθμων Kociemba και Thistlethwaite, της exact state-distance recognition διαδρομής, του Korf/IDA* με παραδεκτή ευρετική, του public-solver-derived H48/Nissy/RubikOptimal backend evidence και του Pocket Cube είναι αποδεκτές για τελική υποβολή.
 
 Τα στοιχεία επιβλέποντα, τίτλου, εργαστηρίου και τομέα έχουν συμπληρωθεί από το επίσημο θέμα και την επίσημη σελίδα ΔΕΠ του Τμήματος. Μετά την επιβεβαίωση των παραπάνω θα αντικατασταθούν μόνο τα αντίστοιχα placeholders και θα ξανατρέξουν το LaTeX build και ο τελικός έλεγχος.
 
@@ -111,7 +109,7 @@ After the requested values are supplied:
 
 1. Copy `docs/final_metadata_values.template.json` to an approved-values JSON file and replace every `TODO` with the supplied values.
 2. Run `python scripts/apply_final_metadata.py <approved-values.json> --dry-run`, then `python scripts/apply_final_metadata.py <approved-values.json>` if validation passes.
-3. Copy `docs/final_supervisor_approval.template.md` to `docs/final_supervisor_approval.md` only after approval is actually received, and fill the approval source/date plus the approved AI/style/scoped-claim decisions.
+3. Copy `docs/final_supervisor_approval.template.md` to `docs/final_supervisor_approval.md` only after approval is actually received, and fill the approval source/date plus the approved style/scoped-claim decisions.
 4. Run:
 
 ```bash

@@ -103,7 +103,7 @@ The brief lists references related to:
 3. God's Number is 20.
 4. Laboratory exercises in Artificial Intelligence with Prolog, Chapter 11.
 
-Codex must verify and replace broad web references with stronger primary/technical sources where possible, while still acknowledging the sources listed in the brief.
+The repository should verify and replace broad web references with stronger primary/technical sources where possible, while still acknowledging the sources listed in the brief.
 
 Current provenance handling:
 

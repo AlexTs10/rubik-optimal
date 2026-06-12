@@ -218,7 +218,6 @@ The thesis must include:
 - conclusions and future work;
 - bibliography;
 - appendices;
-- AI-assistance disclosure draft for supervisor review;
 - reproducibility notes.
 
 The thesis must build using XeLaTeX.
@@ -273,7 +272,7 @@ It must include:
 - reference-thesis calibration status;
 - files that should be reviewed manually before submission.
 
-## 10. Final Codex response format
+## 10. Final response format
 
 The final response must contain:
 

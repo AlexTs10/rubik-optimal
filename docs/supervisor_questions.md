@@ -23,7 +23,7 @@ repository lacks a 3x3 implementation answer.
 
 ### Front-matter fields currently detected as placeholders
 
-The audit script writes these unresolved fields to `results/processed/thesis_audit.json` under `front_matter_placeholders`, groups them under `submission_blockers`, and sets `final_submission_ready: false` until they are replaced by authoritative values. The same collection list is kept in `docs/final_metadata_packet.md`. A separate approval-evidence blocker remains until `docs/final_supervisor_approval.template.md` is copied to `docs/final_supervisor_approval.md` with the real approval source/date and approved AI/style/scoped-claim decisions.
+The audit script writes these unresolved fields to `results/processed/thesis_audit.json` under `front_matter_placeholders`, groups them under `submission_blockers`, and sets `final_submission_ready: false` until they are replaced by authoritative values. The same collection list is kept in `docs/final_metadata_packet.md`. A separate approval-evidence blocker remains until `docs/final_supervisor_approval.template.md` is copied to `docs/final_supervisor_approval.md` with the real approval source/date and approved style/scoped-claim decisions.
 
 - Greek student display name;
 - English student display name;
@@ -186,13 +186,6 @@ The repository now includes `LICENSE` and `THIRD_PARTY_NOTICES.md`. These files 
 2. Is a 22,000-30,000 word Greek body appropriate for this topic?
 3. Should generated code listings be placed in appendices or omitted in favor of repository references?
 4. How many implementation screenshots/diagrams are expected versus pure algorithmic tables/plots?
-
-## AI assistance
-
-1. What disclosure is required for use of Codex or other AI tools?
-2. Are AI-generated drafts allowed if the student verifies code, sources, and final text?
-3. Should AI assistance be mentioned in acknowledgements, appendix, or a formal declaration?
-4. Can the approval be recorded in `docs/final_supervisor_approval.md` with source/date and explicit approval of AI disclosure, front-matter style, bibliography style, and scoped solver claims?
 
 ## Results and evaluation
 

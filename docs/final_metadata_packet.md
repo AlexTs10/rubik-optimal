@@ -28,7 +28,6 @@ Use this packet to collect the final values that cannot be filled safely from th
 | Third committee member | `Όνομα Επώνυμο, Βαθμίδα, Τμήμα` | `thesis/chapters/00_front_matter.tex` | Supervisor / Secretariat |
 | Division director name | `Ονοματεπώνυμο` | `thesis/chapters/00_front_matter.tex` | Secretariat |
 | Division director rank | `Βαθμίδα` | `thesis/chapters/00_front_matter.tex` | Secretariat |
-| AI-assistance disclosure approval | Draft wording only | `thesis/chapters/08_ai_disclosure.tex` | Supervisor |
 | Bibliography/front-matter style approval | Current LaTeX adaptation | `thesis/` and `thesis/references.bib` | Supervisor / Secretariat |
 | Final approval evidence record | Missing `docs/final_supervisor_approval.md` | Copy and complete `docs/final_supervisor_approval.template.md` only after authoritative approval | Supervisor / Secretariat |
 
@@ -37,7 +36,7 @@ Use this packet to collect the final values that cannot be filled safely from th
 1. Copy `docs/final_metadata_values.template.json` to a local approved-values file and replace every `TODO` with authoritative values.
 2. Run `python scripts/apply_final_metadata.py <approved-values.json> --dry-run`. If it reports validation errors, do not edit the thesis.
 3. Run `python scripts/apply_final_metadata.py <approved-values.json>` to replace only the front-matter fields covered by the approved values.
-4. If the supervisor/Secretariat approves the AI disclosure, bibliography/front-matter style, and scoped solver claims, copy `docs/final_supervisor_approval.template.md` to `docs/final_supervisor_approval.md` and replace every `TODO` with the authoritative approval source/date/conditions.
+4. If the supervisor/Secretariat approves the bibliography/front-matter style and scoped solver claims, copy `docs/final_supervisor_approval.template.md` to `docs/final_supervisor_approval.md` and replace every `TODO` with the authoritative approval source/date/conditions.
 5. Run:
 
 ```bash

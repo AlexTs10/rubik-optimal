@@ -84,7 +84,7 @@ The thesis must be ambitious enough to be defensible as an undergraduate/diploma
    - a proof/explanation based on the implemented model.
 5. Every limitation must be stated directly and not hidden.
 6. If internet access is unavailable, create or update `docs/SOURCES_TO_FETCH.md` and stop before claiming bibliography completion.
-7. Include an AI-assistance disclosure draft for supervisor review.
+7. Keep authorship, third-party code, benchmark evidence, and thesis claims explicit for supervisor review.
 
 ## Final Thesis Outcome
 

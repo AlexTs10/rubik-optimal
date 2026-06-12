@@ -772,11 +772,15 @@ def build_h48_backend(
 def write_h48_latex_table(root: Path, rows: list[dict[str, object]]) -> Path:
     table_path = root / "thesis" / "tables" / "h48_metadata.tex"
     table_path.parent.mkdir(parents=True, exist_ok=True)
+
+    def tex(value: object) -> str:
+        return str(value).replace("\\", "\\textbackslash{}").replace("_", "\\_")
+
     body = []
     for row in rows:
         body.append(
-            f"{row['solver']} & {row['profile']} & {row['table_size_bytes']} & "
-            f"{row['checksum_sha256'][:12]} & {row['generation_status']} \\\\"
+            f"{tex(row['solver'])} & {tex(row['profile'])} & {row['table_size_bytes']} & "
+            f"{tex(row['checksum_sha256'][:12])} & {tex(row['generation_status'])} \\\\"
         )
     table_path.write_text(
         "{\\small\n"

@@ -58,7 +58,7 @@ must not be done while other agents may be working.
 
 ## Safe Baseline Plan
 
-1. Stop all solver generation, benchmark, LaTeX, and Codex worker activity.
+1. Stop all solver generation, benchmark, LaTeX, and background worker activity.
 2. Create an external copy or archive of the full current directory.
 3. Decide which artifacts belong in the submitted source baseline:
    source code, thesis text, scripts, generated JSON/CSV/TEX evidence, required

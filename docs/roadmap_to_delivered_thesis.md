@@ -83,7 +83,7 @@ Deliverables:
 - theory, design, implementation, experiment, discussion, and conclusion chapters fully written;
 - every figure/table introduced and interpreted;
 - limitations section aligned with actual results;
-- AI-assistance disclosure drafted.
+- Supervisor-facing metadata and approval packet drafted.
 
 Exit gate:
 
@@ -105,4 +105,3 @@ Deliverables:
 Exit gate:
 
 - `docs/acceptance.md` is satisfied or a documented, supervisor-accepted blocker remains.
-

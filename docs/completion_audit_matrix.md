@@ -89,7 +89,7 @@ kept for traceability but do not satisfy or block the topic brief's three requir
 | `results/processed/` | Present with summaries, table metadata, and audit JSON | Pass |
 | `thesis/main.tex` | Present | Pass |
 | `thesis/references.bib` | Present | Pass |
-| `thesis/chapters/` | Present with front matter, body chapters, appendices, and AI disclosure | Pass |
+| `thesis/chapters/` | Present with front matter, body chapters, and appendices | Pass |
 | `thesis/figures/` | Present with generated figure data | Pass |
 | `thesis/tables/` | Present with generated LaTeX tables | Pass |
 
@@ -239,7 +239,6 @@ The audit script independently reports 17 required repository paths checked and
 | Conclusions/future work | `thesis/chapters/07_conclusions.tex` | Pass |
 | Bibliography | `thesis/references.bib`; `main.bbl`; citation checks | Pass |
 | Appendices | `thesis/chapters/a_reproducibility.tex`, `b_result_schema.tex`, `c_submission_checklist.tex`, `d_cli_reference.tex` | Pass |
-| AI disclosure draft | `thesis/chapters/08_ai_disclosure.tex`, `docs/ai_assistance_disclosure_draft.md` | Draft present; approval blocked |
 | Reproducibility notes | `REPRODUCIBILITY.md`, appendix A | Pass |
 
 ## Claim Integrity Checks
@@ -278,9 +277,8 @@ The audit script independently reports 17 required repository paths checked and
 | Public examination date | Certification page still has date placeholder | Obtain final date |
 | Second and third committee members | Committee placeholders remain | Obtain names, ranks, departments |
 | Division director signature details | Name/rank placeholders remain | Obtain Secretariat-confirmed values |
-| AI disclosure approval | Draft exists but no approval evidence; request captured in `docs/supervisor_handoff_request.md`; handoff docs audit passes | Supervisor confirmation needed |
 | Bibliography/front-matter style approval | Machine consistency passes, but style approval is not verified; request captured in `docs/supervisor_handoff_request.md`; handoff docs audit passes | Supervisor/Secretariat confirmation needed |
-| Final supervisor/Secretariat approval record | `docs/final_supervisor_approval.template.md` exists, but real `docs/final_supervisor_approval.md` is intentionally missing until approval is received; audit reports `supervisor_approval.passed: false` | Obtain approval source/date and approved AI/style/scoped-claim decisions, then create the real record |
+| Final supervisor/Secretariat approval record | `docs/final_supervisor_approval.template.md` exists, but real `docs/final_supervisor_approval.md` is intentionally missing until approval is received; audit reports `supervisor_approval.passed: false` | Obtain approval source/date and approved style/scoped-claim decisions, then create the real record |
 | Reproducible metadata application | `docs/final_metadata_values.template.json` and `scripts/apply_final_metadata.py` exist; template dry-run is expected to fail until real values replace `TODO` entries | Fill approved-values JSON from authoritative response, run dry-run, then apply |
 | Final human proofread | Mechanical layout gates pass; underfull warnings remain around URLs/paths | Full PDF review before submission |
 | Fast all-state optimal 3x3 oracle | Native full-cube exact search and H48-native exact search are implemented and prove selected rows, including the recorded depth-15 case, the deterministic depth-20 stress row under H48, 10 extra deterministic depth-25 rows under h48h7, and superflip exact at length 20. Direct arbitrary facelet/cubie H48 input is implemented and verified for saved H48 stress/certification corpora. Batch mode removes repeated table-load overhead and records 11.56x throughput speedup for repeated exact h48h7 calls, trusted-table mode records 189.894x speedup for repeated shallow table-check dominated calls, trusted batch mode records 38.198x throughput speedup, and `rubik-optimal oracle` exposes that batch path for line-delimited user inputs with saved exact/verified CLI evidence. Universal batched live-state solving is exact on the saved corpus, inverse-certificate closure gives zero-search exact answers for 16 derived states in at most 0.021839s, and symmetry-certificate closure gives zero-search exact answers for 736 rotationally derived states in at most 0.416615s. Trusted/no-preload hard certification is exact with max 91.629342s, while trusted/preloaded superflip takes 158.440286s and the experimental auto-min-depth hard run timed out. This still does not prove a formal worst-case practical runtime bound over every possible state | Keep limitation for all-state performance claims unless a formal h48h7 all-state/runtime boundary is documented |

@@ -384,15 +384,13 @@ def test_handoff_document_audit_requires_metadata_packet_request_and_matrix(tmp_
         "scripts/apply_final_metadata.py\n"
         "final_supervisor_approval.md\n"
         "front_matter_placeholders: []\n"
-        "final_submission_ready: true\n"
-        "AI-assistance\n",
+        "final_submission_ready: true\n",
         encoding="utf-8",
     )
     request.write_text(
         "Student name in Greek\n"
         "Second committee member\n"
         "scripts/apply_final_metadata.py\n"
-        "AI-assistance disclosure\n"
         "final_supervisor_approval.md\n"
         "latexmk -xelatex\n"
         "final_submission_ready: true\n",
@@ -402,7 +400,6 @@ def test_handoff_document_audit_requires_metadata_packet_request_and_matrix(tmp_
         "Remaining Missing or Externally Blocked Requirements\n"
         "Student identity metadata\n"
         "scripts/apply_final_metadata.py\n"
-        "AI disclosure approval\n"
         "final_supervisor_approval.md\n"
         "front_matter_placeholders: []\n"
         "final_submission_ready: true\n",
@@ -430,7 +427,7 @@ def test_handoff_document_audit_reports_missing_terms(tmp_path):
     assert audit["passed"] is False
     assert audit["missing_documents"] == []
     assert "\\thesisStudentName" in audit["missing_terms"]["docs/final_metadata_packet.md"]
-    assert "AI-assistance disclosure" in audit["missing_terms"]["docs/supervisor_handoff_request.md"]
+    assert "final_supervisor_approval.md" in audit["missing_terms"]["docs/supervisor_handoff_request.md"]
     assert "final_submission_ready: true" in audit["missing_terms"]["docs/completion_audit_matrix.md"]
 
 
@@ -440,7 +437,7 @@ def test_supervisor_approval_audit_requires_final_record(tmp_path):
     assert audit["passed"] is False
     assert audit["exists"] is False
     assert audit["path"] == "docs/final_supervisor_approval.md"
-    assert "AI-assistance disclosure approved" in audit["missing_terms"]
+    assert "front-matter style approved" in audit["missing_terms"]
 
 
 def test_supervisor_approval_audit_accepts_completed_record(tmp_path):
@@ -450,7 +447,6 @@ def test_supervisor_approval_audit_accepts_completed_record(tmp_path):
         "approval_status: approved\n"
         "approval_source: supervisor email dated 2026-05-17\n"
         "approval_date: 2026-05-17\n"
-        "AI-assistance disclosure approved\n"
         "front-matter style approved\n"
         "bibliography style approved\n"
         "scoped solver claims approved\n",
@@ -517,9 +513,9 @@ def test_source_state_audit_accepts_clean_committed_artifact_metadata(tmp_path):
         [
             "git",
             "-c",
-            "user.name=Codex Test",
+            "user.name=Audit Test",
             "-c",
-            "user.email=codex-test@example.invalid",
+            "user.email=audit-test@example.invalid",
             "commit",
             "-m",
             "baseline",

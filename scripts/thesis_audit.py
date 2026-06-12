@@ -143,13 +143,11 @@ REQUIRED_HANDOFF_DOCUMENTS = {
         "final_supervisor_approval.md",
         "front_matter_placeholders: []",
         "final_submission_ready: true",
-        "AI-assistance",
     ],
     "docs/supervisor_handoff_request.md": [
         "Student name in Greek",
         "Second committee member",
         "scripts/apply_final_metadata.py",
-        "AI-assistance disclosure",
         "final_supervisor_approval.md",
         "latexmk -xelatex",
         "final_submission_ready: true",
@@ -158,7 +156,6 @@ REQUIRED_HANDOFF_DOCUMENTS = {
         "Remaining Missing or Externally Blocked Requirements",
         "Student identity metadata",
         "scripts/apply_final_metadata.py",
-        "AI disclosure approval",
         "final_supervisor_approval.md",
         "front_matter_placeholders: []",
         "final_submission_ready: true",
@@ -170,7 +167,6 @@ REQUIRED_SUPERVISOR_APPROVAL_TERMS = [
     "approval_status: approved",
     "approval_source:",
     "approval_date:",
-    "AI-assistance disclosure approved",
     "front-matter style approved",
     "bibliography style approved",
     "scoped solver claims approved",
@@ -3652,7 +3648,7 @@ def _submission_blockers(
             "id": "supervisor_approval_evidence",
             "status": "supervisor_or_secretariat_required",
             "description": (
-                "Final approval evidence for AI disclosure, front-matter/bibliography style, "
+                "Final approval evidence for front-matter/bibliography style "
                 "and scoped solver claims is missing or incomplete."
             ),
             "path": supervisor_approval["path"],

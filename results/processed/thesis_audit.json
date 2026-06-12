@@ -463,43 +463,43 @@
     },
     {
       "field": "exam_date",
-      "line": 60,
+      "line": 51,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "…….../……../………"
     },
     {
       "field": "committee_member",
-      "line": 68,
+      "line": 59,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "Όνομα Επώνυμο, Βαθμίδα, Τμήμα (μέλος επιτροπής)\\\\[0.25cm]"
     },
     {
       "field": "rank_placeholder",
-      "line": 68,
+      "line": 59,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "Όνομα Επώνυμο, Βαθμίδα, Τμήμα (μέλος επιτροπής)\\\\[0.25cm]"
     },
     {
       "field": "committee_member",
-      "line": 69,
+      "line": 60,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "Όνομα Επώνυμο, Βαθμίδα, Τμήμα (μέλος επιτροπής)"
     },
     {
       "field": "rank_placeholder",
-      "line": 69,
+      "line": 60,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "Όνομα Επώνυμο, Βαθμίδα, Τμήμα (μέλος επιτροπής)"
     },
     {
       "field": "division_director",
-      "line": 77,
+      "line": 68,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "\\centering \\thesisSupervisor && \\centering Ονοματεπώνυμο \\tabularnewline"
     },
     {
       "field": "rank_placeholder",
-      "line": 78,
+      "line": 69,
       "path": "thesis/chapters/00_front_matter.tex",
       "text": "\\centering \\thesisSupervisorRank && \\centering Βαθμίδα \\tabularnewline"
     }
@@ -514,7 +514,7 @@
     "dirty_path_count": 0,
     "dirty_paths_sample": [],
     "head_error": null,
-    "head_sha": "9080d50dbd5d6d68b75e088504a7d09bfb8ed0a2",
+    "head_sha": "e60e6a51c178166992e4eb7938687805214c6839",
     "inside_work_tree": true,
     "passed": true
   },
@@ -546,7 +546,7 @@
       "failed"
     ]
   },
-  "page_count": 129,
+  "page_count": 124,
   "pdf": "thesis/main.pdf",
   "pdf_deliverable": {
     "canonical_pdf": "thesis/main.pdf",
@@ -557,13 +557,13 @@
     "passed": true,
     "root_exists": true,
     "root_pdf": "main.pdf",
-    "root_sha256": "0b43afd23af4f31577a24d3f89c7ae5d3b29a11ccff6136108a8c377a32bb69d",
-    "root_size_bytes": 589255,
+    "root_sha256": "03db6133c7feabd7449a8147bc15c9507fb657e1a65f65f6c93a9a4bb99ea486",
+    "root_size_bytes": 581251,
     "thesis_exists": true,
-    "thesis_sha256": "0b43afd23af4f31577a24d3f89c7ae5d3b29a11ccff6136108a8c377a32bb69d",
-    "thesis_size_bytes": 589255
+    "thesis_sha256": "03db6133c7feabd7449a8147bc15c9507fb657e1a65f65f6c93a9a4bb99ea486",
+    "thesis_size_bytes": 581251
   },
-  "pdf_word_count": 43667,
+  "pdf_word_count": 42955,
   "repository": {
     "missing": [],
     "passed": true,
@@ -997,8 +997,8 @@
   "source_state": {
     "artifact_count_scanned": 375,
     "current_source_state": {
-      "commit": "9080d50dbd5d6d68b75e088504a7d09bfb8ed0a2",
-      "commit_short": "9080d50",
+      "commit": "e60e6a51c178166992e4eb7938687805214c6839",
+      "commit_short": "e60e6a5",
       "dirty": false,
       "git_available": true,
       "has_commit": true,
@@ -1010,7 +1010,7 @@
         "Regenerate final result metadata from that baseline and rerun python scripts/thesis_audit.py."
       ],
       "schema_version": 1,
-      "state": "9080d50",
+      "state": "e60e6a5",
       "status_entry_count": 0,
       "status_sample": []
     },
@@ -1028,7 +1028,7 @@
     "unreadable_json": [],
     "warning": ""
   },
-  "source_word_count": 34565,
+  "source_word_count": 33842,
   "submission_blockers": [
     {
       "description": "Final ECE front-matter metadata still contains placeholders.",
@@ -1045,14 +1045,13 @@
       "status": "supervisor_or_secretariat_required"
     },
     {
-      "description": "Final approval evidence for AI disclosure, front-matter/bibliography style, and scoped solver claims is missing or incomplete.",
+      "description": "Final approval evidence for front-matter/bibliography style and scoped solver claims is missing or incomplete.",
       "exists": false,
       "id": "supervisor_approval_evidence",
       "missing_terms": [
         "approval_status: approved",
         "approval_source:",
         "approval_date:",
-        "AI-assistance disclosure approved",
         "front-matter style approved",
         "bibliography style approved",
         "scoped solver claims approved"
@@ -1068,7 +1067,6 @@
       "approval_status: approved",
       "approval_source:",
       "approval_date:",
-      "AI-assistance disclosure approved",
       "front-matter style approved",
       "bibliography style approved",
       "scoped solver claims approved"
