@@ -1,0 +1,522 @@
+{
+  "all_state_fast_oracle_completion_gate": {
+    "broad_corpus_runtime_target_with_target_solver": false,
+    "can_claim_fast_oracle_for_every_possible_state": false,
+    "current_strongest_solver": "h48h7",
+    "first_missing_ladder_solver": "h48h8",
+    "formal_or_empirical_worst_case_runtime_bound": false,
+    "hard_case_certification_with_target_solver": false,
+    "reason": "The source supports arbitrary valid 3x3 exact solving, but the fast all-state claim requires the H48 fast target table plus hard-case and broad-corpus runtime evidence. H48H8 is only the first missing ladder table; H48H10 is the default target selected from the vendored upstream 16-thread H48 benchmark rows because it is the smallest profile with both distance-20 and superflip timings, while H48H11 remains a faster larger-memory optional target.",
+    "remaining_completion_requirements": [
+      "generate trusted h48h10 H48 table",
+      "validate full checksum for trusted h48h10 table on each worker",
+      "run hard-case exact certification with h48h10",
+      "run broad arbitrary-state runtime corpus with h48h10",
+      "record final cloud/runtime proof artifact before setting fast_runtime_proven_for_every_possible_state"
+    ],
+    "target_generation_safe_now": false,
+    "target_generation_safety_reasons": [
+      "available memory 0.17 GiB is below the 4.00 GiB mmap generation guard"
+    ],
+    "target_solver": "h48h10",
+    "target_table_expected_size_bytes": 30336314216,
+    "target_table_expected_size_gib": 28.252894,
+    "target_table_trusted": false,
+    "target_upstream_benchmark_has_distance20_timing": true,
+    "target_upstream_benchmark_has_superflip_timing": true,
+    "target_upstream_benchmark_row": {
+      "single_solution_16_threads_seconds": {
+        "distance_17": 0.03,
+        "distance_18": 0.08,
+        "distance_19": 0.33,
+        "distance_20": 2.34,
+        "superflip": 4.18
+      },
+      "size_gib": 28.3,
+      "solver": "h48h10"
+    },
+    "upstream_benchmark_source_path": ".codex_external/nissy-core/benchmarks/tables_16_threads.md"
+  },
+  "checked_at_utc": "2026-06-02T12:54:51.149169+00:00",
+  "conclusion": "The optimized exact oracle code path is present and can select stronger local H48 tables, but the local machine currently has no trusted h48h8-h48h11 table. The first missing ladder table is h48h8, while the default fast every-state target selected from vendored upstream benchmark hints is h48h10 because it is the smallest profile with distance-20 and superflip timings. Public Nissy 2.x tables are useful for the external optimal backend but do not provide drop-in H48 h48hN artifacts.",
+  "default_oracle_solver": "h48h7",
+  "estimated_h48h10_size_bytes": 30336314216,
+  "estimated_h48h11_size_bytes": 60670567784,
+  "estimated_h48h8_size_bytes": 7585624040,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "h48_16_thread_upstream_benchmark": {
+    "available": true,
+    "notes": "Upstream vendored nissy-core benchmark hints only; thesis fast-runtime claims still require locally generated artifacts and verification.",
+    "rows": [
+      {
+        "single_solution_16_threads_seconds": {
+          "distance_17": 0.02,
+          "distance_18": 0.06,
+          "distance_19": 0.22,
+          "distance_20": 1.33,
+          "superflip": 1.84
+        },
+        "size_gib": 56.5,
+        "solver": "h48h11"
+      },
+      {
+        "single_solution_16_threads_seconds": {
+          "distance_17": 0.03,
+          "distance_18": 0.08,
+          "distance_19": 0.33,
+          "distance_20": 2.34,
+          "superflip": 4.18
+        },
+        "size_gib": 28.3,
+        "solver": "h48h10"
+      },
+      {
+        "single_solution_16_threads_seconds": {
+          "distance_17": 0.04,
+          "distance_18": 0.15,
+          "distance_19": 0.64,
+          "distance_20": 4.45,
+          "superflip": 8.09
+        },
+        "size_gib": 14.1,
+        "solver": "h48h9"
+      },
+      {
+        "single_solution_16_threads_seconds": {
+          "distance_17": 0.06,
+          "distance_18": 0.34,
+          "distance_19": 1.36,
+          "distance_20": null,
+          "superflip": null
+        },
+        "size_gib": 7.1,
+        "solver": "h48h8"
+      },
+      {
+        "single_solution_16_threads_seconds": {
+          "distance_17": 0.07,
+          "distance_18": 0.47,
+          "distance_19": 2.2,
+          "distance_20": null,
+          "superflip": null
+        },
+        "size_gib": 3.5,
+        "solver": "h48h7"
+      },
+      {
+        "single_solution_16_threads_seconds": {
+          "distance_17": 0.13,
+          "distance_18": 0.91,
+          "distance_19": 4.39,
+          "distance_20": null,
+          "superflip": null
+        },
+        "size_gib": 1.8,
+        "solver": "h48h6"
+      }
+    ],
+    "source_path": ".codex_external/nissy-core/benchmarks/tables_16_threads.md",
+    "target_has_distance20_timing": true,
+    "target_has_superflip_timing": true,
+    "target_solver": "h48h10"
+  },
+  "h48_fast_target_generation_safety": {
+    "estimated_table_size_bytes": 30336314216,
+    "estimated_table_size_gib": 28.252894,
+    "machine": {
+      "available_memory_bytes": 179568640,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 38144139264,
+      "load_average": [
+        3.81787109375,
+        4.052734375,
+        4.55810546875
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 1.15,
+      "disk_multiplier_source": "storage_default",
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [
+      "available memory 0.17 GiB is below the 4.00 GiB mmap generation guard"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h10",
+    "threads": 4
+  },
+  "h48_fast_target_solver": "h48h10",
+  "h48_first_stronger_generation_safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 180682752,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 38144212992,
+      "load_average": [
+        3.81787109375,
+        4.052734375,
+        4.55810546875
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 1.15,
+      "disk_multiplier_source": "storage_default",
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [
+      "available memory 0.17 GiB is below the 4.00 GiB mmap generation guard"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h8",
+    "threads": 4
+  },
+  "h48_first_stronger_solver": "h48h8",
+  "h48_stronger_table_build_plan": [
+    {
+      "completion_evidence_required": [
+        "data/generated/h48/thesis_seed_2026/h48h8.bin",
+        "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+        "results/processed/h48_oracle_contract_seed_2026_thesis_h48h8.json",
+        "hard-case certification artifact using this solver under the thesis runtime target"
+      ],
+      "estimated_table_size_bytes": 7585624040,
+      "estimated_table_size_gib": 7.064663,
+      "recommended_command": "nice -n 20 python scripts/generate_h48_tables.py --profile thesis --seed 2026 --solver h48h8 --threads 4 --mmap-output --progress-log --require-safe",
+      "safe_to_generate_on_current_machine": false,
+      "safety_reasons": [
+        "available memory 0.17 GiB is below the 4.00 GiB mmap generation guard"
+      ],
+      "solver": "h48h8"
+    },
+    {
+      "completion_evidence_required": [
+        "data/generated/h48/thesis_seed_2026/h48h9.bin",
+        "results/processed/h48_metadata_seed_2026_thesis_h48h9.json",
+        "results/processed/h48_oracle_contract_seed_2026_thesis_h48h9.json",
+        "hard-case certification artifact using this solver under the thesis runtime target"
+      ],
+      "estimated_table_size_bytes": 15169187432,
+      "estimated_table_size_gib": 14.127407,
+      "recommended_command": "nice -n 20 python scripts/generate_h48_tables.py --profile thesis --seed 2026 --solver h48h9 --threads 4 --mmap-output --progress-log --require-safe",
+      "safe_to_generate_on_current_machine": false,
+      "safety_reasons": [
+        "available memory 0.17 GiB is below the 4.00 GiB mmap generation guard"
+      ],
+      "solver": "h48h9"
+    },
+    {
+      "completion_evidence_required": [
+        "data/generated/h48/thesis_seed_2026/h48h10.bin",
+        "results/processed/h48_metadata_seed_2026_thesis_h48h10.json",
+        "results/processed/h48_oracle_contract_seed_2026_thesis_h48h10.json",
+        "hard-case certification artifact using this solver under the thesis runtime target"
+      ],
+      "estimated_table_size_bytes": 30336314216,
+      "estimated_table_size_gib": 28.252894,
+      "recommended_command": "nice -n 20 python scripts/generate_h48_tables.py --profile thesis --seed 2026 --solver h48h10 --threads 4 --mmap-output --progress-log --require-safe",
+      "safe_to_generate_on_current_machine": false,
+      "safety_reasons": [
+        "available memory 0.16 GiB is below the 4.00 GiB mmap generation guard"
+      ],
+      "solver": "h48h10"
+    },
+    {
+      "completion_evidence_required": [
+        "data/generated/h48/thesis_seed_2026/h48h11.bin",
+        "results/processed/h48_metadata_seed_2026_thesis_h48h11.json",
+        "results/processed/h48_oracle_contract_seed_2026_thesis_h48h11.json",
+        "hard-case certification artifact using this solver under the thesis runtime target"
+      ],
+      "estimated_table_size_bytes": 60670567784,
+      "estimated_table_size_gib": 56.503869,
+      "recommended_command": "nice -n 20 python scripts/generate_h48_tables.py --profile thesis --seed 2026 --solver h48h11 --threads 4 --mmap-output --progress-log --require-safe",
+      "safe_to_generate_on_current_machine": false,
+      "safety_reasons": [
+        "available memory 0.17 GiB is below the 4.00 GiB mmap generation guard",
+        "free disk is below 1.15x the h48h11 table size, leaving little room for retries"
+      ],
+      "solver": "h48h11"
+    }
+  ],
+  "h48h8_generation_now_reasons": [
+    "available memory 0.17 GiB is below the 4.00 GiB mmap generation guard"
+  ],
+  "inventory_rows": [
+    {
+      "actual_table_size_bytes": 31683944,
+      "estimated_table_size_bytes": 31683944,
+      "estimated_table_size_gib": 0.029508,
+      "h_value": 0,
+      "metadata_exists": true,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h0.json",
+      "oracle_grade": false,
+      "solver": "h48h0",
+      "table_exists": true,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h0.bin",
+      "trusted_metadata_message": "trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h0.json",
+      "trusted_metadata_valid": true
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 61307240,
+      "estimated_table_size_gib": 0.057097,
+      "h_value": 1,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h1.json",
+      "oracle_grade": false,
+      "solver": "h48h1",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h1.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 120553832,
+      "estimated_table_size_gib": 0.112275,
+      "h_value": 2,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h2.json",
+      "oracle_grade": false,
+      "solver": "h48h2",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h2.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 239047016,
+      "estimated_table_size_gib": 0.22263,
+      "h_value": 3,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h3.json",
+      "oracle_grade": false,
+      "solver": "h48h3",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h3.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 476033384,
+      "estimated_table_size_gib": 0.443341,
+      "h_value": 4,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h4.json",
+      "oracle_grade": false,
+      "solver": "h48h4",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h4.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 950006120,
+      "estimated_table_size_gib": 0.884762,
+      "h_value": 5,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h5.json",
+      "oracle_grade": false,
+      "solver": "h48h5",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h5.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 1897951528,
+      "estimated_table_size_gib": 1.767605,
+      "h_value": 6,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h6.json",
+      "oracle_grade": false,
+      "solver": "h48h6",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h6.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": 3793842344,
+      "estimated_table_size_bytes": 3793842344,
+      "estimated_table_size_gib": 3.533291,
+      "h_value": 7,
+      "metadata_exists": true,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h7.json",
+      "oracle_grade": true,
+      "solver": "h48h7",
+      "table_exists": true,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+      "trusted_metadata_message": "trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json",
+      "trusted_metadata_valid": true
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 7585624040,
+      "estimated_table_size_gib": 7.064663,
+      "h_value": 8,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+      "oracle_grade": true,
+      "solver": "h48h8",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 15169187432,
+      "estimated_table_size_gib": 14.127407,
+      "h_value": 9,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h9.json",
+      "oracle_grade": true,
+      "solver": "h48h9",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h9.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 30336314216,
+      "estimated_table_size_gib": 28.252894,
+      "h_value": 10,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h10.json",
+      "oracle_grade": true,
+      "solver": "h48h10",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h10.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 60670567784,
+      "estimated_table_size_gib": 56.503869,
+      "h_value": 11,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h11.json",
+      "oracle_grade": true,
+      "solver": "h48h11",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h11.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    }
+  ],
+  "machine": {
+    "cpu_count": 8,
+    "data_generated_h48_free_bytes": 38144212992,
+    "load_average": [
+      3.81787109375,
+      4.052734375,
+      4.55810546875
+    ],
+    "memory_bytes": 17179869184,
+    "suggested_load_aware_threads": 4
+  },
+  "next_missing_oracle_grade_solver": "h48h8",
+  "oracle_grade_rows": [
+    {
+      "actual_table_size_bytes": 3793842344,
+      "estimated_table_size_bytes": 3793842344,
+      "estimated_table_size_gib": 3.533291,
+      "h_value": 7,
+      "metadata_exists": true,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h7.json",
+      "oracle_grade": true,
+      "solver": "h48h7",
+      "table_exists": true,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+      "trusted_metadata_message": "trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json",
+      "trusted_metadata_valid": true
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 7585624040,
+      "estimated_table_size_gib": 7.064663,
+      "h_value": 8,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+      "oracle_grade": true,
+      "solver": "h48h8",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 15169187432,
+      "estimated_table_size_gib": 14.127407,
+      "h_value": 9,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h9.json",
+      "oracle_grade": true,
+      "solver": "h48h9",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h9.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 30336314216,
+      "estimated_table_size_gib": 28.252894,
+      "h_value": 10,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h10.json",
+      "oracle_grade": true,
+      "solver": "h48h10",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h10.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    },
+    {
+      "actual_table_size_bytes": null,
+      "estimated_table_size_bytes": 60670567784,
+      "estimated_table_size_gib": 56.503869,
+      "h_value": 11,
+      "metadata_exists": false,
+      "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h11.json",
+      "oracle_grade": true,
+      "solver": "h48h11",
+      "table_exists": false,
+      "table_path": "data/generated/h48/thesis_seed_2026/h48h11.bin",
+      "trusted_metadata_message": "missing table or metadata",
+      "trusted_metadata_valid": false
+    }
+  ],
+  "profile": "thesis",
+  "public_nissy_tables": {
+    "contains_h48_entries": false,
+    "h48_entries": [],
+    "manifest_path": "results/processed/nissy_public_tables_manifest_seed_2026_thesis.json",
+    "source": "existing-artifact",
+    "source_url": "https://nissy.tronto.net/nissy-tables-2.0.4.zip",
+    "table_entry_count": 18
+  },
+  "safe_to_start_h48h8_generation_now": false,
+  "schema_version": 1,
+  "seed": 2026,
+  "strongest_local_oracle_solver": "h48h7"
+}

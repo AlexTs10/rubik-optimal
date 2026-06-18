@@ -1,0 +1,89 @@
+{
+  "batch_lower_bound_count": 4,
+  "batch_rows": [
+    {
+      "lower_bound": 3,
+      "notes": "in-repo native H48 admissible multi-cube lower-bound batch; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; table_loaded_once=true; batch_input_count=4; batch_row=0; return_code=0; backend_runtime_seconds=1.1e-05; partial_timeout_recovered=false; stdout_line_count=4; table_check=skipped; table_storage=mmap; table_preload=disabled; stderr=",
+      "runtime_seconds": 0.001939,
+      "solver_name": "h48_native_h48h7_lower_bound_batch",
+      "status": "lower_bound",
+      "table_bytes": 3793842344
+    },
+    {
+      "lower_bound": 2,
+      "notes": "in-repo native H48 admissible multi-cube lower-bound batch; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; table_loaded_once=true; batch_input_count=4; batch_row=1; return_code=0; backend_runtime_seconds=1e-06; partial_timeout_recovered=false; stdout_line_count=4; table_check=skipped; table_storage=mmap; table_preload=disabled; stderr=",
+      "runtime_seconds": 0.001939,
+      "solver_name": "h48_native_h48h7_lower_bound_batch",
+      "status": "lower_bound",
+      "table_bytes": 3793842344
+    },
+    {
+      "lower_bound": 5,
+      "notes": "in-repo native H48 admissible multi-cube lower-bound batch; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; table_loaded_once=true; batch_input_count=4; batch_row=2; return_code=0; backend_runtime_seconds=6e-06; partial_timeout_recovered=false; stdout_line_count=4; table_check=skipped; table_storage=mmap; table_preload=disabled; stderr=",
+      "runtime_seconds": 0.001939,
+      "solver_name": "h48_native_h48h7_lower_bound_batch",
+      "status": "lower_bound",
+      "table_bytes": 3793842344
+    },
+    {
+      "lower_bound": 3,
+      "notes": "in-repo native H48 admissible multi-cube lower-bound batch; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; table_loaded_once=true; batch_input_count=4; batch_row=3; return_code=0; backend_runtime_seconds=2e-06; partial_timeout_recovered=false; stdout_line_count=4; table_check=skipped; table_storage=mmap; table_preload=disabled; stderr=",
+      "runtime_seconds": 0.001939,
+      "solver_name": "h48_native_h48h7_lower_bound_batch",
+      "status": "lower_bound",
+      "table_bytes": 3793842344
+    }
+  ],
+  "batch_wall_seconds": 0.002765,
+  "case_count": 4,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "notes": "This benchmark measures the exact-safe H48 lower-bound batch path used by upper/lower certificate routing. It proves table-load amortization for the saved corpus only; it is not an all-state practical-runtime proof.",
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "sequential_lower_bound_count": 4,
+  "sequential_rows": [
+    {
+      "lower_bound": 3,
+      "notes": "in-repo native H48 admissible lower-bound probe; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; return_code=0; backend_runtime_seconds=0.001937; table_check=skipped; table_storage=mmap; table_preload=disabled; stderr=",
+      "runtime_seconds": 0.278036,
+      "solver_name": "h48_native_h48h7_lower_bound",
+      "status": "lower_bound",
+      "table_bytes": 3793842344
+    },
+    {
+      "lower_bound": 2,
+      "notes": "in-repo native H48 admissible lower-bound probe; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; return_code=0; backend_runtime_seconds=0.000293; table_check=skipped; table_storage=mmap; table_preload=disabled; stderr=",
+      "runtime_seconds": 0.00274,
+      "solver_name": "h48_native_h48h7_lower_bound",
+      "status": "lower_bound",
+      "table_bytes": 3793842344
+    },
+    {
+      "lower_bound": 5,
+      "notes": "in-repo native H48 admissible lower-bound probe; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; return_code=0; backend_runtime_seconds=0.001618; table_check=skipped; table_storage=mmap; table_preload=disabled; stderr=",
+      "runtime_seconds": 0.003659,
+      "solver_name": "h48_native_h48h7_lower_bound",
+      "status": "lower_bound",
+      "table_bytes": 3793842344
+    },
+    {
+      "lower_bound": 3,
+      "notes": "in-repo native H48 admissible lower-bound probe; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; return_code=0; backend_runtime_seconds=0.000738; table_check=skipped; table_storage=mmap; table_preload=disabled; stderr=",
+      "runtime_seconds": 0.002603,
+      "solver_name": "h48_native_h48h7_lower_bound",
+      "status": "lower_bound",
+      "table_bytes": 3793842344
+    }
+  ],
+  "sequential_total_seconds": 1.10922,
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "table_size_bytes": 3793842344,
+  "threads": 2,
+  "throughput_speedup": 401.116,
+  "timeout_seconds": 30.0,
+  "trusted_table": true
+}

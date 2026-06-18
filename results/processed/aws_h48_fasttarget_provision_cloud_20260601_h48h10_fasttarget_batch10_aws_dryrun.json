@@ -1,0 +1,112 @@
+{
+  "ami_id": "ami-0daff188b5216c5f0",
+  "ami_parameter": "/aws/service/canonical/ubuntu/server/24.04/stable/current/amd64/hvm/ebs-gp3/ami-id",
+  "aws_dry_run": {
+    "attempted": true,
+    "authorized": true,
+    "message": "An error occurred (DryRunOperation) when calling the RunInstances operation: Request would have succeeded, but DryRun flag is set.",
+    "passed": true,
+    "returncode": 254,
+    "unauthorized": false
+  },
+  "aws_run_instances_command": [
+    "aws",
+    "ec2",
+    "run-instances",
+    "--region",
+    "eu-west-1",
+    "--image-id",
+    "ami-0daff188b5216c5f0",
+    "--instance-type",
+    "m6id.4xlarge",
+    "--subnet-id",
+    "subnet-06759351f1288acd5",
+    "--block-device-mappings",
+    "[{\"DeviceName\":\"/dev/sda1\",\"Ebs\":{\"VolumeSize\":80,\"VolumeType\":\"gp3\",\"DeleteOnTermination\":true}}]",
+    "--tag-specifications",
+    "[{\"ResourceType\":\"instance\",\"Tags\":[{\"Key\":\"Name\",\"Value\":\"sgarbas-h48-fasttarget-cloud_20260601_h48h10_fasttarget_batch10\"},{\"Key\":\"Project\",\"Value\":\"sgarbas-h48-fasttarget\"},{\"Key\":\"Purpose\",\"Value\":\"h48-fast-optimal-oracle-proof\"}]}]",
+    "--user-data",
+    "file://results/aws_h48_fasttarget_aws_dryrun/cloud-init.yaml",
+    "--security-group-ids",
+    "sg-0e10f920665862d47",
+    "--dry-run"
+  ],
+  "cloud_init_has_ssh_key": true,
+  "cloud_init_path": "results/aws_h48_fasttarget_aws_dryrun/cloud-init.yaml",
+  "cloud_init_sha256": "ccaa207ceb366d0aae301df55912e7021acd93876a7ee152580496c1a66b068e",
+  "created_at_utc": "2026-06-01T20:45:31.231042+00:00",
+  "execute": false,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "instance_name": "sgarbas-h48-fasttarget-cloud_20260601_h48h10_fasttarget_batch10",
+  "instance_satisfies_runbook_requirements": true,
+  "instance_sizing_reasons": [],
+  "instance_summary": {
+    "architectures": [
+      "x86_64"
+    ],
+    "cpu_count": 16,
+    "instance_storage_disks": [
+      {
+        "Count": 1,
+        "SizeInGB": 950,
+        "Type": "ssd"
+      }
+    ],
+    "instance_type": "m6id.4xlarge",
+    "local_nvme_gib": 950.0,
+    "memory_gib": 64.0,
+    "nvme_support": "required"
+  },
+  "instance_type": "m6id.4xlarge",
+  "launch_result": null,
+  "launch_result_present": false,
+  "paid_ec2_ack_required_for_execute": "I understand this starts a paid EC2 instance",
+  "passed": true,
+  "profile": "thesis",
+  "proof_host_launch_dry_run_authorized": true,
+  "region": "eu-west-1",
+  "remote_access_dry_run_authorized": true,
+  "remote_command_template": "python scripts/run_h48_fasttarget_remote.py --runbook results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json --host ubuntu@PUBLIC_IP --identity-file /Users/alextoska/.ssh/id_ed25519 --remote-root /mnt/sgarbas-h48-proof --remote-action detached-staged-proof --install-fetched-prerequisites --execute",
+  "remote_command_template_path": "results/aws_h48_fasttarget_aws_dryrun/run_detached_staged_proof_after_launch.sh",
+  "remote_root": "/mnt/sgarbas-h48-proof",
+  "root_volume_gib": 80,
+  "run_suffix": "cloud_20260601_h48h10_fasttarget_batch10",
+  "runbook_manifest_path": "results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json",
+  "runbook_requirements": {
+    "cpu_count": 16,
+    "h48_target_solver": "h48h10",
+    "h48_target_table_size_bytes": 30336314216,
+    "h48_target_table_size_gib": 28.252894,
+    "local_nvme_gib": 250.0,
+    "memory_gib": 64.0
+  },
+  "schema_version": 1,
+  "security_group_explicit": true,
+  "security_group_id": "sg-0e10f920665862d47",
+  "seed": 2026,
+  "solver": "h48h10",
+  "ssh_cidr": "203.0.113.10/32",
+  "ssh_ingress_command": [
+    "aws",
+    "ec2",
+    "authorize-security-group-ingress",
+    "--region",
+    "eu-west-1",
+    "--group-id",
+    "sg-0e10f920665862d47",
+    "--ip-permissions",
+    "[{\"IpProtocol\":\"tcp\",\"FromPort\":22,\"ToPort\":22,\"IpRanges\":[{\"CidrIp\":\"203.0.113.10/32\",\"Description\":\"sgarbas H48 proof SSH\"}]}]",
+    "--dry-run"
+  ],
+  "ssh_ingress_dry_run": {
+    "attempted": true,
+    "authorized": true,
+    "message": "An error occurred (DryRunOperation) when calling the AuthorizeSecurityGroupIngress operation: Request would have succeeded, but DryRun flag is set.",
+    "passed": true,
+    "returncode": 254,
+    "unauthorized": false
+  },
+  "ssh_ingress_result": null,
+  "status": "ec2_and_ssh_dryrun_authorized_not_runtime_evidence",
+  "subnet_id": "subnet-06759351f1288acd5"
+}

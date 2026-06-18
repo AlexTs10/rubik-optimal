@@ -1,0 +1,82 @@
+{
+  "backend_payload": null,
+  "checked_at_utc": "2026-06-02T03:37:51+00:00",
+  "command": "/Users/alextoska/Desktop/sgarbas/native/build/h48_backend --generate --solver h48h8 --output /Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/probes/h48h8_bloom_workbatch1_180s.partial.bin --threads 6 --generate-mmap --progress-log",
+  "estimated_remaining_hours": 17138.345,
+  "estimated_remaining_seconds": 61698041.201,
+  "estimated_short_cubes_per_second": 0.120552,
+  "expected_table_size_bytes": 7585624040,
+  "expected_table_size_gib": 7.064663,
+  "full_table_generated": false,
+  "h48_gendata_workbatch": 1,
+  "latest_processed_short_cubes": 22,
+  "machine": {
+    "load_average_end": [
+      3.24169921875,
+      2.78271484375,
+      2.78564453125
+    ],
+    "load_average_start": [
+      2.34619140625,
+      2.68603515625,
+      2.7802734375
+    ]
+  },
+  "native_stderr_tail": "[H48 gendata] cocsep data computed\n[H48 gendata] Computing depth <=8\n[H48 gendata] Computed 7437855 positions\n[H48 gendata] Short-cube Bloom filter enabled (33554432 bytes)\n[H48 gendata] Processing 'short cubes'. This will take a while.\n[H48 gendata] Processed 10 / 7437855 cubes\n[H48 gendata] Processed 22 / 7437855 cubes",
+  "native_stdout": "",
+  "notes": "Bounded native H48 generation probe. A timed-out status is expected for h48h8+ short probes; the script records native progress and deletes the partial sparse table unless --keep-partial is explicitly used.",
+  "partial_allocated_size_bytes_before_cleanup": 7584673792,
+  "partial_cleanup_status": "deleted_partial_probe_file",
+  "partial_path": "data/generated/h48/thesis_seed_2026/probes/h48h8_bloom_workbatch1_180s.partial.bin",
+  "partial_sparse_size_bytes_before_cleanup": 7585624040,
+  "probe_completed": true,
+  "profile": "thesis",
+  "progress_samples": [
+    {
+      "processed_short_cubes": 10,
+      "total_short_cubes": 7437855
+    },
+    {
+      "processed_short_cubes": 22,
+      "total_short_cubes": 7437855
+    }
+  ],
+  "return_code": -15,
+  "runtime_seconds": 182.493598,
+  "safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 3474669568,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 19936641024,
+      "load_average": [
+        2.34619140625,
+        2.68603515625,
+        2.7802734375
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [
+      "available memory 3.24 GiB is below the 4.00 GiB mmap generation guard"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h8",
+    "threads": 6
+  },
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h8",
+  "status": "timed_out",
+  "threads": 6,
+  "timeout_seconds": 180.0,
+  "total_short_cubes": 7437855
+}

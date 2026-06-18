@@ -1,0 +1,68 @@
+{
+  "backend_payload": null,
+  "checked_at_utc": "2026-05-27T09:01:26+00:00",
+  "command": "/Users/alextoska/Desktop/sgarbas/native/build/h48_backend --generate --solver h48h8 --output /Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/probes/h48h8_lowload_15s.partial.bin --threads 1 --generate-mmap --progress-log",
+  "estimated_remaining_hours": null,
+  "estimated_remaining_seconds": null,
+  "estimated_short_cubes_per_second": null,
+  "expected_table_size_bytes": 7585624040,
+  "expected_table_size_gib": 7.064663,
+  "full_table_generated": false,
+  "latest_processed_short_cubes": null,
+  "machine": {
+    "load_average_end": [
+      2.3125,
+      10.474609375,
+      30.515625
+    ],
+    "load_average_start": [
+      2.35791015625,
+      11.0458984375,
+      31.189453125
+    ]
+  },
+  "native_stderr_tail": "[H48 gendata] cocsep data computed",
+  "native_stdout": "",
+  "notes": "Bounded native H48 generation probe. A timed-out status is expected for h48h8+ short probes; the script records native progress and deletes the partial sparse table unless --keep-partial is explicitly used.",
+  "partial_allocated_size_bytes_before_cleanup": 6026702848,
+  "partial_cleanup_status": "deleted_partial_probe_file",
+  "partial_path": "data/generated/h48/thesis_seed_2026/probes/h48h8_lowload_15s.partial.bin",
+  "partial_sparse_size_bytes_before_cleanup": 7585624040,
+  "probe_completed": true,
+  "profile": "thesis",
+  "progress_samples": [],
+  "return_code": -15,
+  "runtime_seconds": 19.114713,
+  "safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 65653886976,
+      "load_average": [
+        2.35791015625,
+        11.0458984375,
+        31.189453125
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35
+    },
+    "reasons": [
+      "h48h8 table size exceeds 35% of total RAM before generator overhead"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h8",
+    "threads": 1
+  },
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h8",
+  "status": "timed_out",
+  "threads": 1,
+  "timeout_seconds": 15.0,
+  "total_short_cubes": null
+}

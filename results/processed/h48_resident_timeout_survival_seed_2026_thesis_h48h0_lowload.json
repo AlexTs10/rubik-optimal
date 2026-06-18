@@ -1,0 +1,42 @@
+{
+  "created_at_utc": "2026-06-01T15:59:16.015846+00:00",
+  "fast_runtime_proven_for_every_possible_state": false,
+  "notes": "This probe checks an implementation optimization only: a resident H48 native timeout row should not force a table reload before the next query. It is not an all-state runtime proof.",
+  "passed": true,
+  "process_reused_after_timeout": true,
+  "profile": "thesis",
+  "row_count": 2,
+  "rows": [
+    {
+      "case_id": "superflip_tiny_timeout",
+      "expanded_nodes": 0,
+      "notes": "resident in-repo native H48 backend; table_loaded_once=true; stdout_wait_timeout_seconds=2.001; native_search_timeout_seconds=0.001; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h0.json; solver=h48h0; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h0.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.006211; table_lookups=1038; table_fallbacks=1038; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=1; timed_out_by_poll=True; search_deadline_expired=True; error=",
+      "runtime_seconds": 0.008195,
+      "solution_length": null,
+      "solver_name": "h48_native_h48h0",
+      "status": "timeout",
+      "table_bytes": 31683944,
+      "verified": false
+    },
+    {
+      "case_id": "post_timeout_simple_exact",
+      "expanded_nodes": 0,
+      "notes": "resident in-repo native H48 backend; table_loaded_once=true; stdout_wait_timeout_seconds=2.001; native_search_timeout_seconds=0.001; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h0.json; solver=h48h0; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h0.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.007965; table_lookups=9963; table_fallbacks=9963; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=1; timed_out_by_poll=False; search_deadline_expired=True; error=",
+      "runtime_seconds": 0.007983,
+      "solution_length": 1,
+      "solver_name": "h48_native_h48h0",
+      "status": "exact",
+      "table_bytes": 31683944,
+      "verified": true
+    }
+  ],
+  "runtime_seconds": 0.020351,
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h0",
+  "table_exists": true,
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h0.bin",
+  "table_size_bytes": 31683944,
+  "threads": 1,
+  "timeout_seconds": 0.001
+}

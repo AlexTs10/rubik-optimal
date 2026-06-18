@@ -1,0 +1,20 @@
+{
+  "checksums": {
+    "thesis_seed_2026_corner_orientation_move_table.json": "5633217211f1ee9c3e4fe8ccab4a0a8bfb6da941033a408b89eb4fda114167f8",
+    "thesis_seed_2026_corner_orientation_pruning_table.json": "9c69d50f1698f296e92665815576078bfc096d16d540b3026944e339fa106e49",
+    "thesis_seed_2026_edge_orientation_move_table.json": "4939a2061cbe12185659bba99f3715bdf049ef9686b2c2b2e1217c7f5536e3fe",
+    "thesis_seed_2026_edge_orientation_pruning_table.json": "9c7a26a206bc4bd57db14c458d2a1256fb540c1b747fd85d22539fba359f7bc4",
+    "thesis_seed_2026_phase2_corner_permutation_move_table.json": "412efa854c5695a4cdaf38e1f3178ec13456e588c1b44464317784dc43b4a31b",
+    "thesis_seed_2026_phase2_corner_permutation_pruning_table.json": "6c8ea88dd460f85dc25faa4c0adb744d0b7a6ad4922dba2cea7f67d2c9ab49dd",
+    "thesis_seed_2026_phase2_slice_edge_permutation_move_table.json": "fd9c35a2da35308d5fe97643aa4b60496faab074740bbd51ef847de21dddd7e6",
+    "thesis_seed_2026_phase2_slice_edge_permutation_pruning_table.json": "ed66b2348e343dbc0f7781a5319ab0e77dc5a8eaec79a9a0b606d0a8432001c8",
+    "thesis_seed_2026_phase2_ud_edge_permutation_move_table.json": "de7cccde87f824c01e4d02db970f809caafbc6e6173d7c9db5b0e1d8762f3a0c",
+    "thesis_seed_2026_phase2_ud_edge_permutation_pruning_table.json": "238560b5839e4cfd4653fef370efaea0d3d4499a375ab37a93829d7d66c2d872",
+    "thesis_seed_2026_ud_slice_move_table.json": "e2c51327c85d1b10c85734eff43d01f9440e10526eefac096985931357f52e23",
+    "thesis_seed_2026_ud_slice_pruning_table.json": "60f5de870fa99ff7488345cb5beecc88f17e4b703eba49a6842ef0cb0fdb97bf"
+  },
+  "description": "SHA-256 checksums of the cached Kociemba coordinate move/pruning tables consumed by rubik_optimal.solvers.kociemba. Used to verify the on-disk cache is the deterministic table set before trusting it.",
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026
+}

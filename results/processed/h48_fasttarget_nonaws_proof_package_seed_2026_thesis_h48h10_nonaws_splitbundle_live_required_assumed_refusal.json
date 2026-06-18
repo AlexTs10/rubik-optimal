@@ -1,0 +1,1481 @@
+{
+  "artifact_kind": "h48_fasttarget_nonaws_proof_package",
+  "assumed_preflight_allowed_for_package": false,
+  "assumed_preflight_path": "results/processed/cloud_hardtail_preflight_seed_2026_thesis_h48h10_assumed_nonaws_16c64g250g.json",
+  "assumed_preflight_summary": {
+    "assumed_machine_not_runtime_evidence": true,
+    "fast_runtime_proven_for_every_possible_state": false,
+    "live_preflight_required": true,
+    "live_runtime_evidence": false,
+    "machine": {
+      "cpu_count": 16,
+      "data_generated_h48_free_bytes": 42949672960,
+      "data_generated_h48_free_gib": 40.0,
+      "data_generated_h48_total_bytes": 268435456000,
+      "data_generated_h48_total_gib": 250.0,
+      "load_average": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "memory_bytes": 68719476736,
+      "memory_gib": 64.0
+    },
+    "machine_source": "assumed",
+    "passed": true,
+    "path": "results/processed/cloud_hardtail_preflight_seed_2026_thesis_h48h10_assumed_nonaws_16c64g250g.json",
+    "preflight_requirement_satisfied": false,
+    "present": true,
+    "target_h48_workspace": {
+      "available_workspace_bytes": 42949672960,
+      "available_workspace_gib": 40.0,
+      "required_workspace_bytes": 34886761349,
+      "required_workspace_gib": 32.490828,
+      "satisfies_workspace": true,
+      "solver": "h48h10",
+      "target_table_size_bytes": 30336314216,
+      "target_table_size_gib": 28.252894,
+      "workspace_headroom_bytes": 8062911611,
+      "workspace_headroom_gib": 7.509172,
+      "workspace_multiplier": 1.15
+    }
+  },
+  "aws_command_scan": {
+    "forbidden_aws_match_count": 0,
+    "matches": [],
+    "passed": true
+  },
+  "aws_unlock_env": "RUBIK_OPTIMAL_ENABLE_AWS",
+  "aws_unlock_env_present": false,
+  "aws_usage_allowed": false,
+  "canary_plan_summary": {
+    "available_scramble_rows": 25,
+    "distance": 20,
+    "h48_gendata_workbatch": 256,
+    "path_claim_scope": "canary",
+    "profile": "thesis",
+    "required_workload_count": 6,
+    "required_workload_ids": [
+      "stronger_table_h48h10",
+      "known_distance_20_shard_000",
+      "rubikoptimal_superflip_hardcase",
+      "postprocess_00",
+      "postprocess_01",
+      "postprocess_02"
+    ],
+    "seed": 2026,
+    "selected_offset_end": 3,
+    "selected_offset_start": 0,
+    "solver": "h48h10",
+    "stronger_table_workload": {
+      "command_args": [
+        "python",
+        "scripts/run_h48_stronger_table_campaign.py",
+        "--profile",
+        "thesis",
+        "--seed",
+        "2026",
+        "--target-solver",
+        "h48h10",
+        "--threads",
+        "16",
+        "--generation-timeout",
+        "43200.0",
+        "--certification-timeout",
+        "90.0",
+        "--runtime-target",
+        "60.0",
+        "--artifact-suffix",
+        "cloud_h48h10_fasttarget_shared_prereq_20260601_h48h10",
+        "--gendata-workbatch",
+        "256",
+        "--mmap-sync-mode",
+        "async",
+        "--backend-cflag=-march=native",
+        "--skip-generation-distribution-scan"
+      ],
+      "depends_on_workload_ids": [],
+      "environment": {
+        "RUBIK_OPTIMAL_H48_THREADS": "16",
+        "RUBIK_OPTIMAL_THREADS": "16"
+      },
+      "estimated_wall_seconds": 43200.0,
+      "expected_artifacts": [
+        "results/processed/h48_stronger_table_campaign_seed_2026_thesis_h48h10_cloud_h48h10_fasttarget_shared_prereq_20260601_h48h10.json",
+        "results/processed/h48_metadata_seed_2026_thesis_h48h10.json",
+        "data/generated/h48/thesis_seed_2026/h48h10.bin"
+      ],
+      "h48_backend_extra_cflags": [
+        "-march=native"
+      ],
+      "h48_gendata_workbatch": 256,
+      "h48_generation_distribution_mode": "expected_constants",
+      "h48_generation_distribution_scan_skipped": true,
+      "h48_generation_mmap_sync_mode": "async",
+      "id": "stronger_table_h48h10",
+      "kind": "h48_stronger_table_generation_and_certification",
+      "notes": "This is the main route toward reducing worst-case H48 search depth variance. If the hard-tail workloads use this same solver, this workload must finish and its table plus metadata must be copied to every worker before those workloads start. gendata_workbatch=256. generation_distribution_mode=expected_constants. mmap_sync_mode=async. backend_extra_cflags=-march=native.",
+      "proves": "whether a stronger trusted H48 table can be generated and certified on the cloud machine",
+      "required_for_fast_every_state_claim": true,
+      "run_on_cloud_or_idle_large_machine": true,
+      "shell_command": "env RUBIK_OPTIMAL_H48_THREADS=16 RUBIK_OPTIMAL_THREADS=16 python scripts/run_h48_stronger_table_campaign.py --profile thesis --seed 2026 --target-solver h48h10 --threads 16 --generation-timeout 43200.0 --certification-timeout 90.0 --runtime-target 60.0 --artifact-suffix cloud_h48h10_fasttarget_shared_prereq_20260601_h48h10 --gendata-workbatch 256 --mmap-sync-mode async --backend-cflag=-march=native --skip-generation-distribution-scan"
+    }
+  },
+  "checks": {
+    "archive_fetch_omitted_for_split_mode": true,
+    "assumed_preflight_not_runtime_evidence": true,
+    "assumed_preflight_passed": true,
+    "assumed_preflight_present": true,
+    "aws_scan_passed": true,
+    "contract_present": true,
+    "contract_still_requires_runtime_proof": true,
+    "preflight_requirement_satisfied": false,
+    "proof_volume_report_present_or_not_required": true,
+    "proof_volume_requirement_satisfied": false,
+    "runbook_validation_passed": true,
+    "split_bundle_mode_planned": true
+  },
+  "component_fingerprints": [
+    {
+      "kind": "runbook_manifest",
+      "mode_octal": "0o644",
+      "path": "results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json",
+      "sha256": "62d48f60f9acda48296adfa537e8b706290a0a87d21f9e4e254e84d8898d1dab",
+      "size_bytes": 17726
+    },
+    {
+      "mode_octal": "0o644",
+      "path": "results/processed/cloud_hardtail_campaign_plan_seed_2026_thesis_h48h10_cloud_h48h10_fasttarget_canary_batch3_20260601.json",
+      "sha256": "fde023889e98ec65472da0572fcd60816b9a6a775a7eaa762e76972d6db74394",
+      "size_bytes": 12985
+    },
+    {
+      "mode_octal": "0o644",
+      "path": "results/processed/cloud_hardtail_campaign_plan_seed_2026_thesis_h48h10_cloud_h48h10_fasttarget_hardtail_batch10_20260601.json",
+      "sha256": "efc96ff508b1c4af2daf37621b798260cec6c92da74533b9d881b84212f242b6",
+      "size_bytes": 19098
+    },
+    {
+      "mode_octal": "0o644",
+      "path": "results/processed/cloud_hardtail_preflight_seed_2026_thesis_h48h10_assumed_nonaws_16c64g250g.json",
+      "sha256": "a4cd309927774746eb4e33ffa4f75a03478db5e9067ff1fee0426afedd988986",
+      "size_bytes": 2684
+    },
+    {
+      "mode_octal": "0o644",
+      "path": "results/processed/h48_proof_volume_candidates_seed_2026_thesis_h48h10_local_noaws_current.json",
+      "sha256": "a41521973baf498de00fcb6cf4090b0bdffa7eea479a6fd44f6b7e31ed5c1ac2",
+      "size_bytes": 20788
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/bootstrap_cloud_machine.sh",
+      "present": true,
+      "sha256": "f87a71f73e776a09eea4d4a5cfd21ce57f08907b018f7ce474246fbe9a4e3e92",
+      "size_bytes": 1204
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh",
+      "present": true,
+      "sha256": "60260c97c824dc8694f2cc784fcd5e76e436633e68e51c265fbe497c0ca48ea1",
+      "size_bytes": 856
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_tables.sh",
+      "present": true,
+      "sha256": "8f76c247fd465b202d05c18ba40f4eb4da262fbb9ab512979851cb0cac798991",
+      "size_bytes": 1879
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh",
+      "present": true,
+      "sha256": "bca16d3088f03f0cab825791808b75f9b0f92ed730ed4cce9c2ca1586a202831",
+      "size_bytes": 1624
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/dry_run_canary.sh",
+      "present": true,
+      "sha256": "e1fbb51546bffed4266a633e5d983c029a2b6880537807bed60fed9af39326ab",
+      "size_bytes": 838
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh",
+      "present": true,
+      "sha256": "9b1c4fc64ee8c80ffba8d64cb6b0f656e735ce0b7c1949606f6efc4687b60cb5",
+      "size_bytes": 689
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/finalize_full_after_collect.sh",
+      "present": true,
+      "sha256": "176fa3d3d78ec0096611f1a1f214c18c78a24de343dbd1eeb85956aa753dc1d8",
+      "size_bytes": 1619
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/install_prerequisite_tables.sh",
+      "present": true,
+      "sha256": "8f0aa3d18e5ef8daf01185c62f8c33f137aedb3430326a2b68605bbb8e42a639",
+      "size_bytes": 775
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh",
+      "present": true,
+      "sha256": "b639fc90d985d5a39f246fa3c549970b352b8862114f960c7c9d5f819797adda",
+      "size_bytes": 675
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh",
+      "present": true,
+      "sha256": "9780f487a361e20c3a5b9d9d6180b17acb9bbbc1547380650f1ef79c77d29ed0",
+      "size_bytes": 698
+    },
+    {
+      "mode_octal": "0o644",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/README.md",
+      "present": true,
+      "sha256": "482a227f91cdc34ef718e488c1a944dc943ad877ede3e082c9fd70ea1735554c",
+      "size_bytes": 6837
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/recover_prerequisite_metadata.sh",
+      "present": true,
+      "sha256": "02ac0f9510b1f99bb8c1fd1becfbac33fcb2c02eddf3c73915a444a864b7c144",
+      "size_bytes": 1282
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary.sh",
+      "present": true,
+      "sha256": "100c3ef15a31c509d7e1445718430739773eef7c29291ecb8f76371cba4bd0de",
+      "size_bytes": 1041
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh",
+      "present": true,
+      "sha256": "d9f199d5a5f331c29129dba420e031acc5f3dec148f55937e201a53e0c79e295",
+      "size_bytes": 1029
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_end_to_end_single_machine.sh",
+      "present": true,
+      "sha256": "c49791cdf612d8b2e043ed7c2d938e66e0864803cc712ff6c2d05de9bad74c40",
+      "size_bytes": 1092
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh",
+      "present": true,
+      "sha256": "b10cfcf2e4b6c2de263af836a8458bd01dc8af7d501f1ffa5b5faf31242d28bb",
+      "size_bytes": 1468
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_00.sh",
+      "present": true,
+      "sha256": "16bfba0a3c68087b83709e928052da9c7bee397322dad86a44e720884e428afc",
+      "size_bytes": 1313
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_01.sh",
+      "present": true,
+      "sha256": "bcbfe5db0293bb99b874fdfaf0d805bde2a95b58bccb0a3ad696fb4e2c5df47f",
+      "size_bytes": 1313
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_02.sh",
+      "present": true,
+      "sha256": "b936085ec2dca291041a0eccc0e7ed8ac69442e31a2f2469336d19e20560e954",
+      "size_bytes": 1313
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_nonshard.sh",
+      "present": true,
+      "sha256": "e061319f18175ec7a2c16fe1ab1c96aaf2e24a71bd270a18c073bdcf70250655",
+      "size_bytes": 895
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh",
+      "present": true,
+      "sha256": "139e7a841be8cc1df0487d99388f2c5b6acd287da17d4fc38fa15ba9881d6b5b",
+      "size_bytes": 1108
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/unpack_results.sh",
+      "present": true,
+      "sha256": "4c62c38fc9489431af20381b6f1fc37025ddec289474206db942d568be5ab786",
+      "size_bytes": 612
+    },
+    {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh",
+      "present": true,
+      "sha256": "59187995366564f7ef77ed5cad4c140ff6a699e08b3e58a1a27cb5c3d5f53b5c",
+      "size_bytes": 622
+    }
+  ],
+  "contract_gap_summary": {
+    "all_state_exact_contract_supported": false,
+    "cloud_runtime_missing_or_failed_workload_count": 8,
+    "cloud_runtime_proof_passed": false,
+    "cloud_runtime_reason": "full-scope cloud runtime evidence is absent, incomplete, failed, not audit-backed, not produced with the configured H48 fast target, or the target table is not trusted",
+    "empirical_fast_corpus_supported": false,
+    "false_artifact_checks": [
+      "h48_capacity_stronger_table_plan_valid",
+      "h48_metadata_present",
+      "h48_solver_is_oracle_grade",
+      "h48_solver_is_oracle_grade_h48h7",
+      "h48_table_present",
+      "h48_table_size_matches_metadata",
+      "h48_trusted_metadata_valid"
+    ],
+    "false_empirical_checks": [
+      "certificate_cache_expanded_symmetry_closure_lowload_exact",
+      "certificate_cache_inverse_closure_lowload_exact",
+      "certificate_cache_symmetry_closure_lowload_exact",
+      "external_nissy_core_direct_thesis_all_exact",
+      "external_nissy_core_resident_mmap_h48_table_all_exact",
+      "fast_optimal_oracle_api_all_exact",
+      "learned_certificate_cache_lowload_exact",
+      "race_nissy_core_direct_lowload_exact",
+      "race_optimal_oracle_lowload_exact",
+      "resident_certification_all_exact",
+      "resident_race_nissy_core_direct_lowload_exact",
+      "resident_race_optimal_oracle_lowload_exact",
+      "resident_speedup_at_least_10x",
+      "universal_batch_oracle_corpus_lowload_exact",
+      "universal_h48_symmetry_lowload_exact",
+      "universal_nissy_core_direct_lowload_exact",
+      "universal_optimal_oracle_lowload_exact",
+      "universal_oracle_cli_adaptive_lowload_exact",
+      "universal_oracle_cli_broader_lowload_exact",
+      "universal_oracle_cli_expanded_adaptive_lowload_exact",
+      "universal_oracle_cli_h48_parallel_symmetry_lowload_exact",
+      "universal_oracle_cli_h48_symmetry_lowload_exact",
+      "universal_oracle_cli_known_distance_16_20_certificate_cache_exact",
+      "universal_oracle_cli_known_distance_17_18_adaptive_lowload_exact",
+      "universal_oracle_cli_known_distance_17_no_shortcuts_lowload_exact",
+      "universal_oracle_cli_known_distance_19_adaptive_lowload_exact",
+      "universal_oracle_cli_known_distance_20_adaptive_lowload_exact",
+      "universal_oracle_cli_known_distance_20_offset1_adaptive_lowload_exact",
+      "universal_oracle_cli_known_distance_20_offset1_trimmed_prepass_lowload_exact",
+      "universal_oracle_cli_late_nissy_core_direct_fallback_exact",
+      "universal_oracle_cli_live_no_shortcuts_broader_lowload_exact",
+      "universal_oracle_cli_live_no_shortcuts_lowload_exact",
+      "universal_oracle_cli_optimized_lowload_exact",
+      "universal_oracle_cli_rotational_lower_bound_certificate_exact",
+      "universal_oracle_cli_upper_lower_batch_lowload_exact",
+      "universal_resident_h48_batch_lowload_exact",
+      "universal_rubikoptimal_race_lowload_exact",
+      "universal_symmetry_oracle_lowload_exact"
+    ],
+    "fast_runtime_proven_for_every_possible_state": false,
+    "passed": false,
+    "present": true
+  },
+  "contract_path": "results/processed/h48_oracle_contract_seed_2026_thesis_h48h10.json",
+  "created_at_utc": "2026-06-02T21:24:59.063537+00:00",
+  "execution_provider": "generic_ssh_non_aws",
+  "fast_runtime_proven_for_every_possible_state": false,
+  "full_plan_summary": {
+    "available_scramble_rows": 25,
+    "distance": 20,
+    "h48_gendata_workbatch": 256,
+    "path_claim_scope": "full",
+    "profile": "thesis",
+    "required_workload_count": 8,
+    "required_workload_ids": [
+      "stronger_table_h48h10",
+      "known_distance_20_shard_000",
+      "known_distance_20_shard_001",
+      "known_distance_20_shard_002",
+      "rubikoptimal_superflip_hardcase",
+      "postprocess_00",
+      "postprocess_01",
+      "postprocess_02"
+    ],
+    "seed": 2026,
+    "selected_offset_end": 25,
+    "selected_offset_start": 0,
+    "solver": "h48h10",
+    "stronger_table_workload": {
+      "command_args": [
+        "python",
+        "scripts/run_h48_stronger_table_campaign.py",
+        "--profile",
+        "thesis",
+        "--seed",
+        "2026",
+        "--target-solver",
+        "h48h10",
+        "--threads",
+        "16",
+        "--generation-timeout",
+        "43200.0",
+        "--certification-timeout",
+        "90.0",
+        "--runtime-target",
+        "60.0",
+        "--artifact-suffix",
+        "cloud_h48h10_fasttarget_shared_prereq_20260601_h48h10",
+        "--gendata-workbatch",
+        "256",
+        "--mmap-sync-mode",
+        "async",
+        "--backend-cflag=-march=native",
+        "--skip-generation-distribution-scan"
+      ],
+      "depends_on_workload_ids": [],
+      "environment": {
+        "RUBIK_OPTIMAL_H48_THREADS": "16",
+        "RUBIK_OPTIMAL_THREADS": "16"
+      },
+      "estimated_wall_seconds": 43200.0,
+      "expected_artifacts": [
+        "results/processed/h48_stronger_table_campaign_seed_2026_thesis_h48h10_cloud_h48h10_fasttarget_shared_prereq_20260601_h48h10.json",
+        "results/processed/h48_metadata_seed_2026_thesis_h48h10.json",
+        "data/generated/h48/thesis_seed_2026/h48h10.bin"
+      ],
+      "h48_backend_extra_cflags": [
+        "-march=native"
+      ],
+      "h48_gendata_workbatch": 256,
+      "h48_generation_distribution_mode": "expected_constants",
+      "h48_generation_distribution_scan_skipped": true,
+      "h48_generation_mmap_sync_mode": "async",
+      "id": "stronger_table_h48h10",
+      "kind": "h48_stronger_table_generation_and_certification",
+      "notes": "This is the main route toward reducing worst-case H48 search depth variance. If the hard-tail workloads use this same solver, this workload must finish and its table plus metadata must be copied to every worker before those workloads start. gendata_workbatch=256. generation_distribution_mode=expected_constants. mmap_sync_mode=async. backend_extra_cflags=-march=native.",
+      "proves": "whether a stronger trusted H48 table can be generated and certified on the cloud machine",
+      "required_for_fast_every_state_claim": true,
+      "run_on_cloud_or_idle_large_machine": true,
+      "shell_command": "env RUBIK_OPTIMAL_H48_THREADS=16 RUBIK_OPTIMAL_THREADS=16 python scripts/run_h48_stronger_table_campaign.py --profile thesis --seed 2026 --target-solver h48h10 --threads 16 --generation-timeout 43200.0 --certification-timeout 90.0 --runtime-target 60.0 --artifact-suffix cloud_h48h10_fasttarget_shared_prereq_20260601_h48h10 --gendata-workbatch 256 --mmap-sync-mode async --backend-cflag=-march=native --skip-generation-distribution-scan"
+    }
+  },
+  "generated_file_fingerprints": {
+    "algorithm": "sha256-size-mode-v1",
+    "count": 23,
+    "missing": [],
+    "rows": {
+      "bootstrap_cloud_machine": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/bootstrap_cloud_machine.sh",
+        "present": true,
+        "sha256": "f87a71f73e776a09eea4d4a5cfd21ce57f08907b018f7ce474246fbe9a4e3e92",
+        "size_bytes": 1204
+      },
+      "collect_prerequisite_table_parts": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh",
+        "present": true,
+        "sha256": "60260c97c824dc8694f2cc784fcd5e76e436633e68e51c265fbe497c0ca48ea1",
+        "size_bytes": 856
+      },
+      "collect_prerequisite_tables": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_tables.sh",
+        "present": true,
+        "sha256": "8f76c247fd465b202d05c18ba40f4eb4da262fbb9ab512979851cb0cac798991",
+        "size_bytes": 1879
+      },
+      "collect_results": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh",
+        "present": true,
+        "sha256": "bca16d3088f03f0cab825791808b75f9b0f92ed730ed4cce9c2ca1586a202831",
+        "size_bytes": 1624
+      },
+      "dry_run_canary": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/dry_run_canary.sh",
+        "present": true,
+        "sha256": "e1fbb51546bffed4266a633e5d983c029a2b6880537807bed60fed9af39326ab",
+        "size_bytes": 838
+      },
+      "evaluate_full": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh",
+        "present": true,
+        "sha256": "9b1c4fc64ee8c80ffba8d64cb6b0f656e735ce0b7c1949606f6efc4687b60cb5",
+        "size_bytes": 689
+      },
+      "finalize_full_after_collect": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/finalize_full_after_collect.sh",
+        "present": true,
+        "sha256": "176fa3d3d78ec0096611f1a1f214c18c78a24de343dbd1eeb85956aa753dc1d8",
+        "size_bytes": 1619
+      },
+      "install_prerequisite_tables": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/install_prerequisite_tables.sh",
+        "present": true,
+        "sha256": "8f0aa3d18e5ef8daf01185c62f8c33f137aedb3430326a2b68605bbb8e42a639",
+        "size_bytes": 775
+      },
+      "preflight_leader": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh",
+        "present": true,
+        "sha256": "b639fc90d985d5a39f246fa3c549970b352b8862114f960c7c9d5f819797adda",
+        "size_bytes": 675
+      },
+      "preflight_worker": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh",
+        "present": true,
+        "sha256": "9780f487a361e20c3a5b9d9d6180b17acb9bbbc1547380650f1ef79c77d29ed0",
+        "size_bytes": 698
+      },
+      "readme": {
+        "mode_octal": "0o644",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/README.md",
+        "present": true,
+        "sha256": "482a227f91cdc34ef718e488c1a944dc943ad877ede3e082c9fd70ea1735554c",
+        "size_bytes": 6837
+      },
+      "recover_prerequisite_metadata": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/recover_prerequisite_metadata.sh",
+        "present": true,
+        "sha256": "02ac0f9510b1f99bb8c1fd1becfbac33fcb2c02eddf3c73915a444a864b7c144",
+        "size_bytes": 1282
+      },
+      "run_canary": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary.sh",
+        "present": true,
+        "sha256": "100c3ef15a31c509d7e1445718430739773eef7c29291ecb8f76371cba4bd0de",
+        "size_bytes": 1041
+      },
+      "run_canary_after_prerequisites": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh",
+        "present": true,
+        "sha256": "d9f199d5a5f331c29129dba420e031acc5f3dec148f55937e201a53e0c79e295",
+        "size_bytes": 1029
+      },
+      "run_end_to_end_single_machine": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_end_to_end_single_machine.sh",
+        "present": true,
+        "sha256": "c49791cdf612d8b2e043ed7c2d938e66e0864803cc712ff6c2d05de9bad74c40",
+        "size_bytes": 1092
+      },
+      "run_full": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh",
+        "present": true,
+        "sha256": "b10cfcf2e4b6c2de263af836a8458bd01dc8af7d501f1ffa5b5faf31242d28bb",
+        "size_bytes": 1468
+      },
+      "run_full_machine_00": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_00.sh",
+        "present": true,
+        "sha256": "16bfba0a3c68087b83709e928052da9c7bee397322dad86a44e720884e428afc",
+        "size_bytes": 1313
+      },
+      "run_full_machine_01": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_01.sh",
+        "present": true,
+        "sha256": "bcbfe5db0293bb99b874fdfaf0d805bde2a95b58bccb0a3ad696fb4e2c5df47f",
+        "size_bytes": 1313
+      },
+      "run_full_machine_02": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_02.sh",
+        "present": true,
+        "sha256": "b936085ec2dca291041a0eccc0e7ed8ac69442e31a2f2469336d19e20560e954",
+        "size_bytes": 1313
+      },
+      "run_full_nonshard": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_nonshard.sh",
+        "present": true,
+        "sha256": "e061319f18175ec7a2c16fe1ab1c96aaf2e24a71bd270a18c073bdcf70250655",
+        "size_bytes": 895
+      },
+      "run_full_prerequisites": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh",
+        "present": true,
+        "sha256": "139e7a841be8cc1df0487d99388f2c5b6acd287da17d4fc38fa15ba9881d6b5b",
+        "size_bytes": 1108
+      },
+      "unpack_results": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/unpack_results.sh",
+        "present": true,
+        "sha256": "4c62c38fc9489431af20381b6f1fc37025ddec289474206db942d568be5ab786",
+        "size_bytes": 612
+      },
+      "validate_prerequisite_tables": {
+        "mode_octal": "0o755",
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh",
+        "present": true,
+        "sha256": "59187995366564f7ef77ed5cad4c140ff6a699e08b3e58a1a27cb5c3d5f53b5c",
+        "size_bytes": 622
+      }
+    }
+  },
+  "launchable_for_execution": false,
+  "live_preflight_required": true,
+  "notes": "This artifact proves the non-AWS H48H10 proof package is byte-bound. Default planning mode may use assumed machine-shape evidence; launchable mode requires a passing live local preflight and a passing proof-volume launchability report. It is not table-generation evidence and cannot prove the every-state fast oracle claim.",
+  "operator_commands": {
+    "final_audit": "python scripts/verify_results.py && python scripts/thesis_audit.py",
+    "final_contract_refresh": "python scripts/generate_h48_oracle_contract.py --profile thesis --seed 2026 --solver h48h10",
+    "generic_ssh_detached_staged_split_proof": "python scripts/run_h48_fasttarget_nonaws_proof.py --runbook results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json --host proof-host.example --remote-root /mnt/sgarbas-h48 --remote-action detached-staged-proof --prerequisite-bundle-mode split --prerequisite-wait-timeout 43200 --prerequisite-poll-interval 60 --full-wait-timeout 28800 --full-poll-interval 60 --execute --artifact-suffix h48h10_detached_staged_nonaws_split_realhost",
+    "local_preflight_probe": "python scripts/run_h48_fasttarget_local_proof.py --runbook results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json --action preflight --execute --timeout 120 --artifact-suffix h48h10_preflight_real_nonaws_host",
+    "local_proof_volume_probe": "python scripts/inspect_h48_proof_volumes.py --profile thesis --seed 2026 --solver h48h10 --artifact-suffix local_noaws_current --min-cpus 16 --min-memory-gib 64 --min-storage-gib 250 --min-mmap-available-memory-gib 4 --threads 16"
+  },
+  "package_mode": "launchable",
+  "package_sha256": "e617d0b7dd3101ae0a43fd1fac3b8b2f9f1ee893bc3fe544ae5f68cdeb6803bd",
+  "passed": false,
+  "planned_step_count": 15,
+  "planned_step_ids": [
+    "remote_prepare",
+    "sync_repo_to_remote",
+    "remote_status",
+    "remote_bootstrap_cloud_machine",
+    "remote_preflight_leader",
+    "remote_start_prerequisites_detached",
+    "remote_wait_prerequisites",
+    "remote_start_full_detached",
+    "remote_wait_full",
+    "fetch_results_archive",
+    "fetch_prerequisite_table_parts",
+    "fetch_processed_artifacts",
+    "validate_results_archive",
+    "unpack_results_archive",
+    "finalize_after_collect"
+  ],
+  "planned_steps": [
+    {
+      "command": [
+        "ssh",
+        "proof-host.example",
+        "bash",
+        "-lc",
+        "mkdir -p /mnt/sgarbas-h48"
+      ],
+      "detached": false,
+      "id": "remote_prepare",
+      "location": "local_ssh",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "ssh proof-host.example bash -lc 'mkdir -p /mnt/sgarbas-h48'"
+    },
+    {
+      "command": [
+        "rsync",
+        "-az",
+        "--info=progress2",
+        "-e",
+        "ssh",
+        "--exclude",
+        ".git/",
+        "--exclude",
+        "__pycache__/",
+        "--exclude",
+        ".pytest_cache/",
+        "--exclude",
+        "tmp/",
+        "--exclude",
+        "results/cloud_hardtail_artifacts_*.tar.gz",
+        "--exclude",
+        "results/cloud_hardtail_prerequisite_tables_*.tar.gz",
+        "--exclude",
+        "results/cloud_hardtail_prerequisite_tables_*_parts/",
+        "/Users/alextoska/Desktop/sgarbas/",
+        "proof-host.example:/mnt/sgarbas-h48/"
+      ],
+      "detached": false,
+      "id": "sync_repo_to_remote",
+      "location": "local_rsync",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "rsync -az --info=progress2 -e ssh --exclude .git/ --exclude __pycache__/ --exclude .pytest_cache/ --exclude tmp/ --exclude 'results/cloud_hardtail_artifacts_*.tar.gz' --exclude 'results/cloud_hardtail_prerequisite_tables_*.tar.gz' --exclude 'results/cloud_hardtail_prerequisite_tables_*_parts/' /Users/alextoska/Desktop/sgarbas/ proof-host.example:/mnt/sgarbas-h48/"
+    },
+    {
+      "command": [
+        "ssh",
+        "proof-host.example",
+        "bash",
+        "-lc",
+        "cd /mnt/sgarbas-h48 && python - <<'PY'\nimport glob\nimport json\nimport os\nimport shutil\nimport time\nfrom pathlib import Path\nfrom rubik_optimal.tables.h48 import validate_trusted_h48_table_checksum\nconfig = json.loads('{\"expected_table_size_bytes\": 30336314216, \"prerequisite_bundle_mode\": \"split\", \"prerequisite_tables_archive\": \"results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10.tar.gz\", \"prerequisite_tables_parts_dir\": \"results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10_parts\", \"profile\": \"thesis\", \"results_archive\": \"results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz\", \"run_suffix\": \"cloud_20260601_h48h10_fasttarget_batch10\", \"seed\": 2026, \"solver\": \"h48h10\"}')\nroot = Path('.')\nsolver = config.get('solver')\nprofile = config.get('profile')\nseed = config.get('seed')\n\ndef safe_id(value):\n    return ''.join(char if char.isalnum() or char in '._-' else '_' for char in str(value))\n\ndef resolve_path(relative):\n    path = Path(str(relative))\n    return path if path.is_absolute() else root / path\n\ndef file_info(relative):\n    path = resolve_path(relative)\n    exists = path.exists()\n    info = {'path': str(relative), 'exists': exists}\n    if exists:\n        stat = path.stat()\n        info.update({'size_bytes': stat.st_size, 'mtime': stat.st_mtime})\n    return info\n\ndef directory_info(relative):\n    path = resolve_path(relative)\n    exists = path.is_dir()\n    info = {'path': str(relative), 'exists': exists, 'is_dir': exists}\n    if exists:\n        stat = path.stat()\n        manifest = path / 'h48_table_bundle_manifest.json'\n        info.update({'size_bytes': stat.st_size, 'mtime': stat.st_mtime, 'manifest_exists': manifest.is_file(), 'part_file_count': len(list(path.glob('*.part*'))), 'manifest': file_info(str(manifest))})\n    return info\n\ndef read_text_file(relative):\n    return resolve_path(relative).read_text(encoding='utf-8').strip()\n\ndef read_json_file(relative):\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        parsed = json.loads(path.read_text(encoding='utf-8'))\n    except Exception as exc:\n        return {'load_error': str(exc)}\n    return parsed if isinstance(parsed, dict) else {'load_error': 'not a JSON object'}\n\ndef file_tail_info(relative, max_bytes=8192, max_lines=40):\n    info = file_info(relative)\n    if not info.get('exists'):\n        return info\n    path = resolve_path(relative)\n    try:\n        with path.open('rb') as handle:\n            size = info.get('size_bytes') or 0\n            handle.seek(max(0, int(size) - max_bytes))\n            data = handle.read(max_bytes)\n        info['tail'] = data.decode('utf-8', errors='replace').splitlines()[-max_lines:]\n        info['tail_max_bytes'] = max_bytes\n        info['tail_max_lines'] = max_lines\n    except Exception as exc:\n        info['tail_error'] = str(exc)\n    return info\n\ndef detached_launch_status(launch_id):\n    safe_suffix = safe_id(config.get('run_suffix') or 'unknown')\n    launch_relative = f'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}_launch.json'\n    default_pid_relative = f'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}.pid'\n    default_log_relative = f'results/logs/h48_fasttarget_{safe_suffix}_{launch_id}.log'\n    launch_payload = read_json_file(launch_relative)\n    if not isinstance(launch_payload, dict) or launch_payload.get('load_error'):\n        launch_payload = None\n    pid_relative = default_pid_relative\n    log_relative = default_log_relative\n    if isinstance(launch_payload, dict):\n        pid_relative = launch_payload.get('pid_file') or pid_relative\n        log_relative = launch_payload.get('log_file') or log_relative\n    pid = None\n    pid_source = None\n    pid_parse_error = None\n    pid_info = file_info(pid_relative)\n    if pid_info.get('exists'):\n        try:\n            pid = int(read_text_file(pid_relative).splitlines()[0].strip())\n            pid_source = 'pid_file'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    if pid is None and isinstance(launch_payload, dict) and launch_payload.get('pid') is not None:\n        try:\n            pid = int(launch_payload['pid'])\n            pid_source = 'launch_json'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    process_alive = None\n    process_check_error = None\n    if pid is not None:\n        try:\n            os.kill(pid, 0)\n            process_alive = True\n        except ProcessLookupError:\n            process_alive = False\n        except PermissionError:\n            process_alive = True\n            process_check_error = 'permission denied, but process exists'\n        except Exception as exc:\n            process_check_error = str(exc)\n    return {\n        'launch_id': launch_id,\n        'launch_file': file_info(launch_relative),\n        'launch_payload': launch_payload,\n        'pid_file': pid_info,\n        'pid': pid,\n        'pid_source': pid_source,\n        'pid_parse_error': pid_parse_error,\n        'process_alive': process_alive,\n        'process_check_error': process_check_error,\n        'log_file': file_tail_info(log_relative),\n    }\n\ndef detached_prerequisite_status():\n    status = detached_launch_status('start_prerequisites')\n    archive = file_info(config['prerequisite_tables_archive'])\n    parts_dir = directory_info(config['prerequisite_tables_parts_dir'])\n    status['prerequisite_tables_archive'] = archive\n    status['prerequisite_tables_archive_present'] = archive.get('exists') is True\n    status['prerequisite_tables_parts_dir'] = parts_dir\n    status['prerequisite_tables_parts_present'] = parts_dir.get('manifest_exists') is True and int(parts_dir.get('part_file_count') or 0) > 0\n    return status\n\ndef detached_full_proof_status():\n    status = detached_launch_status('start_full')\n    archive = file_info(config['results_archive'])\n    status['results_archive'] = archive\n    status['results_archive_present'] = bool(archive.get('exists') and int(archive.get('size_bytes') or 0) > 0)\n    return status\n\ndef json_field(relative, key):\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        return json.loads(path.read_text(encoding='utf-8')).get(key)\n    except Exception:\n        return None\n\ndef checksum_status():\n    if not (solver and profile and seed is not None and table_relative and metadata_relative):\n        return {'valid': None, 'message': 'missing solver/profile/seed', 'details': {}}\n    table = root / table_relative\n    metadata = root / metadata_relative\n    expected = config.get('expected_table_size_bytes')\n    if not table.exists() or not metadata.exists():\n        return {'valid': False, 'message': 'missing target table or metadata', 'details': {}}\n    if expected and table.stat().st_size != expected:\n        return {'valid': False, 'message': 'target table size does not match expected size', 'details': {'table_size_bytes': table.stat().st_size, 'expected_table_size_bytes': expected}}\n    begin = time.perf_counter()\n    try:\n        passed, message, details = validate_trusted_h48_table_checksum(root=root, profile=profile, seed=int(seed), solver=solver, use_cache=False, persistent_cache=True)\n    except Exception as exc:\n        return {'valid': False, 'message': f'checksum validation raised: {exc}', 'runtime_seconds': round(time.perf_counter() - begin, 6), 'details': {}}\n    return {'valid': bool(passed), 'message': message, 'runtime_seconds': round(time.perf_counter() - begin, 6), 'details': details}\n\ntable_relative = None\nmetadata_relative = None\ncontract_relative = None\nh48_table_root = os.environ.get('RUBIK_OPTIMAL_H48_TABLE_ROOT', 'data/generated/h48')\nif solver and profile and seed is not None:\n    table_relative = str(Path(h48_table_root) / f'{profile}_seed_{seed}' / f'{solver}.bin')\n    metadata_relative = f'results/processed/h48_metadata_seed_{seed}_{profile}_{solver}.json'\n    contract_relative = f'results/processed/h48_oracle_contract_seed_{seed}_{profile}_{solver}.json'\ndisk = shutil.disk_usage('.')\npayload = {\n    'schema_version': 1,\n    'run_suffix': config.get('run_suffix'),\n    'solver': solver,\n    'profile': profile,\n    'seed': seed,\n    'h48_table_root': h48_table_root,\n    'cpu_count': os.cpu_count(),\n    'load_average': list(os.getloadavg()) if hasattr(os, 'getloadavg') else None,\n    'disk_free_bytes': disk.free,\n    'disk_total_bytes': disk.total,\n    'expected_table_size_bytes': config.get('expected_table_size_bytes'),\n    'table': file_info(table_relative) if table_relative else None,\n    'metadata': file_info(metadata_relative) if metadata_relative else None,\n    'metadata_trusted_table': json_field(metadata_relative, 'trusted_table') if metadata_relative else None,\n    'contract': file_info(contract_relative) if contract_relative else None,\n    'contract_fast_runtime_proven_for_every_possible_state': json_field(contract_relative, 'fast_runtime_proven_for_every_possible_state') if contract_relative else None,\n    'results_archive': file_info(config['results_archive']),\n    'prerequisite_tables_archive': file_info(config['prerequisite_tables_archive']),\n    'prerequisite_tables_parts_dir': directory_info(config['prerequisite_tables_parts_dir']),\n    'prerequisite_bundle_mode': config.get('prerequisite_bundle_mode'),\n    'detached_prerequisite': detached_prerequisite_status(),\n    'detached_full_proof': detached_full_proof_status(),\n    'processed_cloud_artifact_count': len(glob.glob('results/processed/cloud_hardtail*.json')),\n    'processed_workload_artifact_count': len(glob.glob('results/processed/cloud_hardtail_workload_*.json')),\n    'processed_evaluation_artifact_count': len(glob.glob('results/processed/cloud_hardtail_campaign_evaluation_*.json')),\n}\ntable = payload.get('table') or {}\nexpected = payload.get('expected_table_size_bytes')\npayload['target_table_size_matches_expected'] = bool(table.get('exists') and expected and table.get('size_bytes') == expected)\nchecksum = checksum_status()\npayload['target_table_full_checksum_valid'] = checksum.get('valid')\npayload['target_table_full_checksum_message'] = checksum.get('message')\npayload['target_table_full_checksum_runtime_seconds'] = checksum.get('runtime_seconds')\npayload['target_table_full_checksum_details'] = checksum.get('details')\npayload['target_table_ready_for_resume'] = bool(payload['target_table_size_matches_expected'] and payload.get('metadata_trusted_table') is True and payload['target_table_full_checksum_valid'] is True)\nprint(json.dumps(payload, sort_keys=True))\nPY"
+      ],
+      "detached": false,
+      "id": "remote_status",
+      "location": "remote",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "ssh proof-host.example bash -lc 'cd /mnt/sgarbas-h48 && python - <<'\"'\"'PY'\"'\"'\nimport glob\nimport json\nimport os\nimport shutil\nimport time\nfrom pathlib import Path\nfrom rubik_optimal.tables.h48 import validate_trusted_h48_table_checksum\nconfig = json.loads('\"'\"'{\"expected_table_size_bytes\": 30336314216, \"prerequisite_bundle_mode\": \"split\", \"prerequisite_tables_archive\": \"results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10.tar.gz\", \"prerequisite_tables_parts_dir\": \"results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10_parts\", \"profile\": \"thesis\", \"results_archive\": \"results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz\", \"run_suffix\": \"cloud_20260601_h48h10_fasttarget_batch10\", \"seed\": 2026, \"solver\": \"h48h10\"}'\"'\"')\nroot = Path('\"'\"'.'\"'\"')\nsolver = config.get('\"'\"'solver'\"'\"')\nprofile = config.get('\"'\"'profile'\"'\"')\nseed = config.get('\"'\"'seed'\"'\"')\n\ndef safe_id(value):\n    return '\"'\"''\"'\"'.join(char if char.isalnum() or char in '\"'\"'._-'\"'\"' else '\"'\"'_'\"'\"' for char in str(value))\n\ndef resolve_path(relative):\n    path = Path(str(relative))\n    return path if path.is_absolute() else root / path\n\ndef file_info(relative):\n    path = resolve_path(relative)\n    exists = path.exists()\n    info = {'\"'\"'path'\"'\"': str(relative), '\"'\"'exists'\"'\"': exists}\n    if exists:\n        stat = path.stat()\n        info.update({'\"'\"'size_bytes'\"'\"': stat.st_size, '\"'\"'mtime'\"'\"': stat.st_mtime})\n    return info\n\ndef directory_info(relative):\n    path = resolve_path(relative)\n    exists = path.is_dir()\n    info = {'\"'\"'path'\"'\"': str(relative), '\"'\"'exists'\"'\"': exists, '\"'\"'is_dir'\"'\"': exists}\n    if exists:\n        stat = path.stat()\n        manifest = path / '\"'\"'h48_table_bundle_manifest.json'\"'\"'\n        info.update({'\"'\"'size_bytes'\"'\"': stat.st_size, '\"'\"'mtime'\"'\"': stat.st_mtime, '\"'\"'manifest_exists'\"'\"': manifest.is_file(), '\"'\"'part_file_count'\"'\"': len(list(path.glob('\"'\"'*.part*'\"'\"'))), '\"'\"'manifest'\"'\"': file_info(str(manifest))})\n    return info\n\ndef read_text_file(relative):\n    return resolve_path(relative).read_text(encoding='\"'\"'utf-8'\"'\"').strip()\n\ndef read_json_file(relative):\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        parsed = json.loads(path.read_text(encoding='\"'\"'utf-8'\"'\"'))\n    except Exception as exc:\n        return {'\"'\"'load_error'\"'\"': str(exc)}\n    return parsed if isinstance(parsed, dict) else {'\"'\"'load_error'\"'\"': '\"'\"'not a JSON object'\"'\"'}\n\ndef file_tail_info(relative, max_bytes=8192, max_lines=40):\n    info = file_info(relative)\n    if not info.get('\"'\"'exists'\"'\"'):\n        return info\n    path = resolve_path(relative)\n    try:\n        with path.open('\"'\"'rb'\"'\"') as handle:\n            size = info.get('\"'\"'size_bytes'\"'\"') or 0\n            handle.seek(max(0, int(size) - max_bytes))\n            data = handle.read(max_bytes)\n        info['\"'\"'tail'\"'\"'] = data.decode('\"'\"'utf-8'\"'\"', errors='\"'\"'replace'\"'\"').splitlines()[-max_lines:]\n        info['\"'\"'tail_max_bytes'\"'\"'] = max_bytes\n        info['\"'\"'tail_max_lines'\"'\"'] = max_lines\n    except Exception as exc:\n        info['\"'\"'tail_error'\"'\"'] = str(exc)\n    return info\n\ndef detached_launch_status(launch_id):\n    safe_suffix = safe_id(config.get('\"'\"'run_suffix'\"'\"') or '\"'\"'unknown'\"'\"')\n    launch_relative = f'\"'\"'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}_launch.json'\"'\"'\n    default_pid_relative = f'\"'\"'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}.pid'\"'\"'\n    default_log_relative = f'\"'\"'results/logs/h48_fasttarget_{safe_suffix}_{launch_id}.log'\"'\"'\n    launch_payload = read_json_file(launch_relative)\n    if not isinstance(launch_payload, dict) or launch_payload.get('\"'\"'load_error'\"'\"'):\n        launch_payload = None\n    pid_relative = default_pid_relative\n    log_relative = default_log_relative\n    if isinstance(launch_payload, dict):\n        pid_relative = launch_payload.get('\"'\"'pid_file'\"'\"') or pid_relative\n        log_relative = launch_payload.get('\"'\"'log_file'\"'\"') or log_relative\n    pid = None\n    pid_source = None\n    pid_parse_error = None\n    pid_info = file_info(pid_relative)\n    if pid_info.get('\"'\"'exists'\"'\"'):\n        try:\n            pid = int(read_text_file(pid_relative).splitlines()[0].strip())\n            pid_source = '\"'\"'pid_file'\"'\"'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    if pid is None and isinstance(launch_payload, dict) and launch_payload.get('\"'\"'pid'\"'\"') is not None:\n        try:\n            pid = int(launch_payload['\"'\"'pid'\"'\"'])\n            pid_source = '\"'\"'launch_json'\"'\"'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    process_alive = None\n    process_check_error = None\n    if pid is not None:\n        try:\n            os.kill(pid, 0)\n            process_alive = True\n        except ProcessLookupError:\n            process_alive = False\n        except PermissionError:\n            process_alive = True\n            process_check_error = '\"'\"'permission denied, but process exists'\"'\"'\n        except Exception as exc:\n            process_check_error = str(exc)\n    return {\n        '\"'\"'launch_id'\"'\"': launch_id,\n        '\"'\"'launch_file'\"'\"': file_info(launch_relative),\n        '\"'\"'launch_payload'\"'\"': launch_payload,\n        '\"'\"'pid_file'\"'\"': pid_info,\n        '\"'\"'pid'\"'\"': pid,\n        '\"'\"'pid_source'\"'\"': pid_source,\n        '\"'\"'pid_parse_error'\"'\"': pid_parse_error,\n        '\"'\"'process_alive'\"'\"': process_alive,\n        '\"'\"'process_check_error'\"'\"': process_check_error,\n        '\"'\"'log_file'\"'\"': file_tail_info(log_relative),\n    }\n\ndef detached_prerequisite_status():\n    status = detached_launch_status('\"'\"'start_prerequisites'\"'\"')\n    archive = file_info(config['\"'\"'prerequisite_tables_archive'\"'\"'])\n    parts_dir = directory_info(config['\"'\"'prerequisite_tables_parts_dir'\"'\"'])\n    status['\"'\"'prerequisite_tables_archive'\"'\"'] = archive\n    status['\"'\"'prerequisite_tables_archive_present'\"'\"'] = archive.get('\"'\"'exists'\"'\"') is True\n    status['\"'\"'prerequisite_tables_parts_dir'\"'\"'] = parts_dir\n    status['\"'\"'prerequisite_tables_parts_present'\"'\"'] = parts_dir.get('\"'\"'manifest_exists'\"'\"') is True and int(parts_dir.get('\"'\"'part_file_count'\"'\"') or 0) > 0\n    return status\n\ndef detached_full_proof_status():\n    status = detached_launch_status('\"'\"'start_full'\"'\"')\n    archive = file_info(config['\"'\"'results_archive'\"'\"'])\n    status['\"'\"'results_archive'\"'\"'] = archive\n    status['\"'\"'results_archive_present'\"'\"'] = bool(archive.get('\"'\"'exists'\"'\"') and int(archive.get('\"'\"'size_bytes'\"'\"') or 0) > 0)\n    return status\n\ndef json_field(relative, key):\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        return json.loads(path.read_text(encoding='\"'\"'utf-8'\"'\"')).get(key)\n    except Exception:\n        return None\n\ndef checksum_status():\n    if not (solver and profile and seed is not None and table_relative and metadata_relative):\n        return {'\"'\"'valid'\"'\"': None, '\"'\"'message'\"'\"': '\"'\"'missing solver/profile/seed'\"'\"', '\"'\"'details'\"'\"': {}}\n    table = root / table_relative\n    metadata = root / metadata_relative\n    expected = config.get('\"'\"'expected_table_size_bytes'\"'\"')\n    if not table.exists() or not metadata.exists():\n        return {'\"'\"'valid'\"'\"': False, '\"'\"'message'\"'\"': '\"'\"'missing target table or metadata'\"'\"', '\"'\"'details'\"'\"': {}}\n    if expected and table.stat().st_size != expected:\n        return {'\"'\"'valid'\"'\"': False, '\"'\"'message'\"'\"': '\"'\"'target table size does not match expected size'\"'\"', '\"'\"'details'\"'\"': {'\"'\"'table_size_bytes'\"'\"': table.stat().st_size, '\"'\"'expected_table_size_bytes'\"'\"': expected}}\n    begin = time.perf_counter()\n    try:\n        passed, message, details = validate_trusted_h48_table_checksum(root=root, profile=profile, seed=int(seed), solver=solver, use_cache=False, persistent_cache=True)\n    except Exception as exc:\n        return {'\"'\"'valid'\"'\"': False, '\"'\"'message'\"'\"': f'\"'\"'checksum validation raised: {exc}'\"'\"', '\"'\"'runtime_seconds'\"'\"': round(time.perf_counter() - begin, 6), '\"'\"'details'\"'\"': {}}\n    return {'\"'\"'valid'\"'\"': bool(passed), '\"'\"'message'\"'\"': message, '\"'\"'runtime_seconds'\"'\"': round(time.perf_counter() - begin, 6), '\"'\"'details'\"'\"': details}\n\ntable_relative = None\nmetadata_relative = None\ncontract_relative = None\nh48_table_root = os.environ.get('\"'\"'RUBIK_OPTIMAL_H48_TABLE_ROOT'\"'\"', '\"'\"'data/generated/h48'\"'\"')\nif solver and profile and seed is not None:\n    table_relative = str(Path(h48_table_root) / f'\"'\"'{profile}_seed_{seed}'\"'\"' / f'\"'\"'{solver}.bin'\"'\"')\n    metadata_relative = f'\"'\"'results/processed/h48_metadata_seed_{seed}_{profile}_{solver}.json'\"'\"'\n    contract_relative = f'\"'\"'results/processed/h48_oracle_contract_seed_{seed}_{profile}_{solver}.json'\"'\"'\ndisk = shutil.disk_usage('\"'\"'.'\"'\"')\npayload = {\n    '\"'\"'schema_version'\"'\"': 1,\n    '\"'\"'run_suffix'\"'\"': config.get('\"'\"'run_suffix'\"'\"'),\n    '\"'\"'solver'\"'\"': solver,\n    '\"'\"'profile'\"'\"': profile,\n    '\"'\"'seed'\"'\"': seed,\n    '\"'\"'h48_table_root'\"'\"': h48_table_root,\n    '\"'\"'cpu_count'\"'\"': os.cpu_count(),\n    '\"'\"'load_average'\"'\"': list(os.getloadavg()) if hasattr(os, '\"'\"'getloadavg'\"'\"') else None,\n    '\"'\"'disk_free_bytes'\"'\"': disk.free,\n    '\"'\"'disk_total_bytes'\"'\"': disk.total,\n    '\"'\"'expected_table_size_bytes'\"'\"': config.get('\"'\"'expected_table_size_bytes'\"'\"'),\n    '\"'\"'table'\"'\"': file_info(table_relative) if table_relative else None,\n    '\"'\"'metadata'\"'\"': file_info(metadata_relative) if metadata_relative else None,\n    '\"'\"'metadata_trusted_table'\"'\"': json_field(metadata_relative, '\"'\"'trusted_table'\"'\"') if metadata_relative else None,\n    '\"'\"'contract'\"'\"': file_info(contract_relative) if contract_relative else None,\n    '\"'\"'contract_fast_runtime_proven_for_every_possible_state'\"'\"': json_field(contract_relative, '\"'\"'fast_runtime_proven_for_every_possible_state'\"'\"') if contract_relative else None,\n    '\"'\"'results_archive'\"'\"': file_info(config['\"'\"'results_archive'\"'\"']),\n    '\"'\"'prerequisite_tables_archive'\"'\"': file_info(config['\"'\"'prerequisite_tables_archive'\"'\"']),\n    '\"'\"'prerequisite_tables_parts_dir'\"'\"': directory_info(config['\"'\"'prerequisite_tables_parts_dir'\"'\"']),\n    '\"'\"'prerequisite_bundle_mode'\"'\"': config.get('\"'\"'prerequisite_bundle_mode'\"'\"'),\n    '\"'\"'detached_prerequisite'\"'\"': detached_prerequisite_status(),\n    '\"'\"'detached_full_proof'\"'\"': detached_full_proof_status(),\n    '\"'\"'processed_cloud_artifact_count'\"'\"': len(glob.glob('\"'\"'results/processed/cloud_hardtail*.json'\"'\"')),\n    '\"'\"'processed_workload_artifact_count'\"'\"': len(glob.glob('\"'\"'results/processed/cloud_hardtail_workload_*.json'\"'\"')),\n    '\"'\"'processed_evaluation_artifact_count'\"'\"': len(glob.glob('\"'\"'results/processed/cloud_hardtail_campaign_evaluation_*.json'\"'\"')),\n}\ntable = payload.get('\"'\"'table'\"'\"') or {}\nexpected = payload.get('\"'\"'expected_table_size_bytes'\"'\"')\npayload['\"'\"'target_table_size_matches_expected'\"'\"'] = bool(table.get('\"'\"'exists'\"'\"') and expected and table.get('\"'\"'size_bytes'\"'\"') == expected)\nchecksum = checksum_status()\npayload['\"'\"'target_table_full_checksum_valid'\"'\"'] = checksum.get('\"'\"'valid'\"'\"')\npayload['\"'\"'target_table_full_checksum_message'\"'\"'] = checksum.get('\"'\"'message'\"'\"')\npayload['\"'\"'target_table_full_checksum_runtime_seconds'\"'\"'] = checksum.get('\"'\"'runtime_seconds'\"'\"')\npayload['\"'\"'target_table_full_checksum_details'\"'\"'] = checksum.get('\"'\"'details'\"'\"')\npayload['\"'\"'target_table_ready_for_resume'\"'\"'] = bool(payload['\"'\"'target_table_size_matches_expected'\"'\"'] and payload.get('\"'\"'metadata_trusted_table'\"'\"') is True and payload['\"'\"'target_table_full_checksum_valid'\"'\"'] is True)\nprint(json.dumps(payload, sort_keys=True))\nPY'"
+    },
+    {
+      "command": [
+        "ssh",
+        "proof-host.example",
+        "bash",
+        "-lc",
+        "cd /mnt/sgarbas-h48 && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/bootstrap_cloud_machine.sh"
+      ],
+      "detached": false,
+      "id": "remote_bootstrap_cloud_machine",
+      "location": "remote",
+      "required": true,
+      "script": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/bootstrap_cloud_machine.sh",
+      "scripts": null,
+      "shell_command": "ssh proof-host.example bash -lc 'cd /mnt/sgarbas-h48 && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/bootstrap_cloud_machine.sh'"
+    },
+    {
+      "command": [
+        "ssh",
+        "proof-host.example",
+        "bash",
+        "-lc",
+        "cd /mnt/sgarbas-h48 && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh"
+      ],
+      "detached": false,
+      "id": "remote_preflight_leader",
+      "location": "remote",
+      "required": true,
+      "script": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh",
+      "scripts": null,
+      "shell_command": "ssh proof-host.example bash -lc 'cd /mnt/sgarbas-h48 && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh'"
+    },
+    {
+      "command": [
+        "ssh",
+        "proof-host.example",
+        "bash",
+        "-lc",
+        "cd /mnt/sgarbas-h48 && mkdir -p results/logs results/processed && nohup bash -lc 'bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh' > results/logs/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites.log 2>&1 < /dev/null & pid=$!; printf '%s\\n' \"$pid\" > results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites.pid; REMOTE_PID=\"$pid\" REMOTE_LOG=results/logs/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites.log REMOTE_PID_FILE=results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites.pid REMOTE_LAUNCH_FILE=results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites_launch.json REMOTE_SCRIPT_CHAIN='bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh' python - <<'PY'\nimport json\nimport os\nimport time\npayload = {\n    'schema_version': 1,\n    'run_suffix': 'cloud_20260601_h48h10_fasttarget_batch10',\n    'launch_id': 'start_prerequisites',\n    'pid': int(os.environ['REMOTE_PID']),\n    'pid_file': os.environ['REMOTE_PID_FILE'],\n    'log_file': os.environ['REMOTE_LOG'],\n    'script_chain': os.environ['REMOTE_SCRIPT_CHAIN'],\n    'launched_at_unix': time.time(),\n}\nwith open(os.environ['REMOTE_LAUNCH_FILE'], 'w', encoding='utf-8') as handle:\n    handle.write(json.dumps(payload, sort_keys=True) + '\\n')\nprint(json.dumps(payload, sort_keys=True))\nPY"
+      ],
+      "detached": true,
+      "id": "remote_start_prerequisites_detached",
+      "location": "remote",
+      "required": true,
+      "script": null,
+      "scripts": [
+        "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh",
+        "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh"
+      ],
+      "shell_command": "ssh proof-host.example bash -lc 'cd /mnt/sgarbas-h48 && mkdir -p results/logs results/processed && nohup bash -lc '\"'\"'bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh'\"'\"' > results/logs/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites.log 2>&1 < /dev/null & pid=$!; printf '\"'\"'%s\\n'\"'\"' \"$pid\" > results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites.pid; REMOTE_PID=\"$pid\" REMOTE_LOG=results/logs/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites.log REMOTE_PID_FILE=results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites.pid REMOTE_LAUNCH_FILE=results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_prerequisites_launch.json REMOTE_SCRIPT_CHAIN='\"'\"'bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh'\"'\"' python - <<'\"'\"'PY'\"'\"'\nimport json\nimport os\nimport time\npayload = {\n    '\"'\"'schema_version'\"'\"': 1,\n    '\"'\"'run_suffix'\"'\"': '\"'\"'cloud_20260601_h48h10_fasttarget_batch10'\"'\"',\n    '\"'\"'launch_id'\"'\"': '\"'\"'start_prerequisites'\"'\"',\n    '\"'\"'pid'\"'\"': int(os.environ['\"'\"'REMOTE_PID'\"'\"']),\n    '\"'\"'pid_file'\"'\"': os.environ['\"'\"'REMOTE_PID_FILE'\"'\"'],\n    '\"'\"'log_file'\"'\"': os.environ['\"'\"'REMOTE_LOG'\"'\"'],\n    '\"'\"'script_chain'\"'\"': os.environ['\"'\"'REMOTE_SCRIPT_CHAIN'\"'\"'],\n    '\"'\"'launched_at_unix'\"'\"': time.time(),\n}\nwith open(os.environ['\"'\"'REMOTE_LAUNCH_FILE'\"'\"'], '\"'\"'w'\"'\"', encoding='\"'\"'utf-8'\"'\"') as handle:\n    handle.write(json.dumps(payload, sort_keys=True) + '\"'\"'\\n'\"'\"')\nprint(json.dumps(payload, sort_keys=True))\nPY'"
+    },
+    {
+      "command": [
+        "ssh",
+        "proof-host.example",
+        "bash",
+        "-lc",
+        "cd /mnt/sgarbas-h48 && python - <<'PY'\nimport json\nimport os\nimport time\nfrom pathlib import Path\nfrom rubik_optimal.tables.h48 import validate_trusted_h48_table_checksum\nconfig = json.loads('{\"expected_table_size_bytes\": 30336314216, \"prerequisite_bundle_mode\": \"split\", \"prerequisite_poll_interval_seconds\": 60.0, \"prerequisite_tables_archive\": \"results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10.tar.gz\", \"prerequisite_tables_parts_dir\": \"results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10_parts\", \"prerequisite_wait_timeout_seconds\": 43200.0, \"profile\": \"thesis\", \"run_suffix\": \"cloud_20260601_h48h10_fasttarget_batch10\", \"seed\": 2026, \"solver\": \"h48h10\"}')\nroot = Path('.')\nsolver = config.get('solver')\nprofile = config.get('profile')\nseed = config.get('seed')\nwait_timeout = float(config.get('prerequisite_wait_timeout_seconds') or 0.0)\npoll_interval = max(1.0, float(config.get('prerequisite_poll_interval_seconds') or 30.0))\n\ndef safe_id(value):\n    return ''.join(char if char.isalnum() or char in '._-' else '_' for char in str(value))\n\ndef resolve_path(relative):\n    path = Path(str(relative))\n    return path if path.is_absolute() else root / path\n\ndef file_info(relative):\n    path = resolve_path(relative)\n    exists = path.exists()\n    info = {'path': str(relative), 'exists': exists}\n    if exists:\n        stat = path.stat()\n        info.update({'size_bytes': stat.st_size, 'mtime': stat.st_mtime})\n    return info\n\ndef directory_info(relative):\n    path = resolve_path(relative)\n    exists = path.is_dir()\n    info = {'path': str(relative), 'exists': exists, 'is_dir': exists}\n    if exists:\n        stat = path.stat()\n        manifest = path / 'h48_table_bundle_manifest.json'\n        info.update({'size_bytes': stat.st_size, 'mtime': stat.st_mtime, 'manifest_exists': manifest.is_file(), 'part_file_count': len(list(path.glob('*.part*'))), 'manifest': file_info(str(manifest))})\n    return info\n\ndef read_text_file(relative):\n    return resolve_path(relative).read_text(encoding='utf-8').strip()\n\ndef read_json_file(relative):\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        parsed = json.loads(path.read_text(encoding='utf-8'))\n    except Exception as exc:\n        return {'load_error': str(exc)}\n    return parsed if isinstance(parsed, dict) else {'load_error': 'not a JSON object'}\n\ndef file_tail_info(relative, max_bytes=8192, max_lines=40):\n    info = file_info(relative)\n    if not info.get('exists'):\n        return info\n    path = resolve_path(relative)\n    try:\n        with path.open('rb') as handle:\n            size = info.get('size_bytes') or 0\n            handle.seek(max(0, int(size) - max_bytes))\n            data = handle.read(max_bytes)\n        info['tail'] = data.decode('utf-8', errors='replace').splitlines()[-max_lines:]\n        info['tail_max_bytes'] = max_bytes\n        info['tail_max_lines'] = max_lines\n    except Exception as exc:\n        info['tail_error'] = str(exc)\n    return info\n\ndef process_alive_for_pid(pid):\n    if pid is None:\n        return None, None\n    try:\n        os.kill(pid, 0)\n        return True, None\n    except ProcessLookupError:\n        return False, None\n    except PermissionError:\n        return True, 'permission denied, but process exists'\n    except Exception as exc:\n        return None, str(exc)\n\ndef json_field(relative, key):\n    if relative is None:\n        return None\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        return json.loads(path.read_text(encoding='utf-8')).get(key)\n    except Exception:\n        return None\n\ndef checksum_status(table_relative, metadata_relative):\n    if not (solver and profile and seed is not None and table_relative and metadata_relative):\n        return {'valid': None, 'message': 'missing solver/profile/seed', 'details': {}}\n    table_path = resolve_path(table_relative)\n    metadata_path = resolve_path(metadata_relative)\n    expected = config.get('expected_table_size_bytes')\n    if not table_path.exists() or not metadata_path.exists():\n        return {'valid': False, 'message': 'missing target table or metadata', 'details': {}}\n    if expected and table_path.stat().st_size != expected:\n        return {'valid': False, 'message': 'target table size does not match expected size', 'details': {'table_size_bytes': table_path.stat().st_size, 'expected_table_size_bytes': expected}}\n    begin = time.perf_counter()\n    try:\n        passed, message, details = validate_trusted_h48_table_checksum(root=root, profile=profile, seed=int(seed), solver=solver, use_cache=False, persistent_cache=True)\n    except Exception as exc:\n        return {'valid': False, 'message': f'checksum validation raised: {exc}', 'runtime_seconds': round(time.perf_counter() - begin, 6), 'details': {}}\n    return {'valid': bool(passed), 'message': message, 'runtime_seconds': round(time.perf_counter() - begin, 6), 'details': details}\n\ndef snapshot():\n    safe_suffix = safe_id(config.get('run_suffix') or 'unknown')\n    launch_id = 'start_prerequisites'\n    launch_relative = f'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}_launch.json'\n    pid_relative = f'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}.pid'\n    log_relative = f'results/logs/h48_fasttarget_{safe_suffix}_{launch_id}.log'\n    launch_payload = read_json_file(launch_relative)\n    if not isinstance(launch_payload, dict) or launch_payload.get('load_error'):\n        launch_payload = None\n    if isinstance(launch_payload, dict):\n        pid_relative = launch_payload.get('pid_file') or pid_relative\n        log_relative = launch_payload.get('log_file') or log_relative\n    pid = None\n    pid_source = None\n    pid_parse_error = None\n    if file_info(pid_relative).get('exists'):\n        try:\n            pid = int(read_text_file(pid_relative).splitlines()[0].strip())\n            pid_source = 'pid_file'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    if pid is None and isinstance(launch_payload, dict) and launch_payload.get('pid') is not None:\n        try:\n            pid = int(launch_payload['pid'])\n            pid_source = 'launch_json'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    process_alive, process_check_error = process_alive_for_pid(pid)\n    table_relative = None\n    metadata_relative = None\n    h48_table_root = os.environ.get('RUBIK_OPTIMAL_H48_TABLE_ROOT', 'data/generated/h48')\n    if solver and profile and seed is not None:\n        table_relative = str(Path(h48_table_root) / f'{profile}_seed_{seed}' / f'{solver}.bin')\n        metadata_relative = f'results/processed/h48_metadata_seed_{seed}_{profile}_{solver}.json'\n    table = file_info(table_relative) if table_relative else None\n    metadata = file_info(metadata_relative) if metadata_relative else None\n    archive = file_info(config['prerequisite_tables_archive'])\n    parts_dir = directory_info(config['prerequisite_tables_parts_dir'])\n    expected = config.get('expected_table_size_bytes')\n    table_size_matches_expected = bool(table and table.get('exists') and expected and table.get('size_bytes') == expected)\n    archive_present = bool(archive.get('exists') and int(archive.get('size_bytes') or 0) > 0)\n    parts_present = bool(parts_dir.get('manifest_exists') and int(parts_dir.get('part_file_count') or 0) > 0)\n    bundle_mode = config.get('prerequisite_bundle_mode') or 'archive'\n    if bundle_mode == 'split':\n        prerequisite_transfer_ready = parts_present\n    elif bundle_mode == 'both':\n        prerequisite_transfer_ready = archive_present and parts_present\n    else:\n        prerequisite_transfer_ready = archive_present\n    metadata_present = bool(metadata and metadata.get('exists'))\n    metadata_trusted_table = json_field(metadata_relative, 'trusted_table') if metadata_relative else None\n    checksum = checksum_status(table_relative, metadata_relative)\n    target_table_full_checksum_valid = checksum.get('valid')\n    ready_for_resume = bool(prerequisite_transfer_ready and table_size_matches_expected and metadata_trusted_table is True and target_table_full_checksum_valid is True)\n    if ready_for_resume:\n        status = 'ready'\n    elif process_alive is True:\n        status = 'running'\n    elif launch_payload is None and pid is None:\n        status = 'not_started'\n    elif process_alive is False:\n        status = 'stopped_without_ready_artifacts'\n    else:\n        status = 'unknown'\n    return {\n        'schema_version': 1,\n        'run_suffix': config.get('run_suffix'),\n        'status': status,\n        'h48_table_root': h48_table_root,\n        'ready_for_resume': ready_for_resume,\n        'archive_present': archive_present,\n        'parts_present': parts_present,\n        'prerequisite_transfer_ready': prerequisite_transfer_ready,\n        'prerequisite_bundle_mode': bundle_mode,\n        'table_size_matches_expected': table_size_matches_expected,\n        'metadata_present': metadata_present,\n        'metadata_trusted_table': metadata_trusted_table,\n        'target_table_full_checksum_valid': target_table_full_checksum_valid,\n        'target_table_full_checksum_message': checksum.get('message'),\n        'target_table_full_checksum_runtime_seconds': checksum.get('runtime_seconds'),\n        'target_table_full_checksum_details': checksum.get('details'),\n        'expected_table_size_bytes': expected,\n        'launch_id': launch_id,\n        'launch_file': file_info(launch_relative),\n        'launch_payload': launch_payload,\n        'pid_file': file_info(pid_relative),\n        'pid': pid,\n        'pid_source': pid_source,\n        'pid_parse_error': pid_parse_error,\n        'process_alive': process_alive,\n        'process_check_error': process_check_error,\n        'log_file': file_tail_info(log_relative),\n        'table': table,\n        'metadata': metadata,\n        'prerequisite_tables_archive': archive,\n        'prerequisite_tables_parts_dir': parts_dir,\n    }\n\nbegin = time.time()\nattempts = 0\nlast = None\nwhile True:\n    attempts += 1\n    last = snapshot()\n    last['attempts'] = attempts\n    last['elapsed_seconds'] = round(time.time() - begin, 6)\n    last['prerequisite_wait_timeout_seconds'] = wait_timeout\n    last['prerequisite_poll_interval_seconds'] = poll_interval\n    if last.get('ready_for_resume') is True:\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(0)\n    if last.get('status') in {'not_started', 'stopped_without_ready_artifacts'}:\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(2)\n    if wait_timeout <= 0 or time.time() - begin >= wait_timeout:\n        last['status'] = 'wait_timeout'\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(3)\n    time.sleep(min(poll_interval, max(0.0, wait_timeout - (time.time() - begin))))\nPY"
+      ],
+      "detached": false,
+      "id": "remote_wait_prerequisites",
+      "location": "remote",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "ssh proof-host.example bash -lc 'cd /mnt/sgarbas-h48 && python - <<'\"'\"'PY'\"'\"'\nimport json\nimport os\nimport time\nfrom pathlib import Path\nfrom rubik_optimal.tables.h48 import validate_trusted_h48_table_checksum\nconfig = json.loads('\"'\"'{\"expected_table_size_bytes\": 30336314216, \"prerequisite_bundle_mode\": \"split\", \"prerequisite_poll_interval_seconds\": 60.0, \"prerequisite_tables_archive\": \"results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10.tar.gz\", \"prerequisite_tables_parts_dir\": \"results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10_parts\", \"prerequisite_wait_timeout_seconds\": 43200.0, \"profile\": \"thesis\", \"run_suffix\": \"cloud_20260601_h48h10_fasttarget_batch10\", \"seed\": 2026, \"solver\": \"h48h10\"}'\"'\"')\nroot = Path('\"'\"'.'\"'\"')\nsolver = config.get('\"'\"'solver'\"'\"')\nprofile = config.get('\"'\"'profile'\"'\"')\nseed = config.get('\"'\"'seed'\"'\"')\nwait_timeout = float(config.get('\"'\"'prerequisite_wait_timeout_seconds'\"'\"') or 0.0)\npoll_interval = max(1.0, float(config.get('\"'\"'prerequisite_poll_interval_seconds'\"'\"') or 30.0))\n\ndef safe_id(value):\n    return '\"'\"''\"'\"'.join(char if char.isalnum() or char in '\"'\"'._-'\"'\"' else '\"'\"'_'\"'\"' for char in str(value))\n\ndef resolve_path(relative):\n    path = Path(str(relative))\n    return path if path.is_absolute() else root / path\n\ndef file_info(relative):\n    path = resolve_path(relative)\n    exists = path.exists()\n    info = {'\"'\"'path'\"'\"': str(relative), '\"'\"'exists'\"'\"': exists}\n    if exists:\n        stat = path.stat()\n        info.update({'\"'\"'size_bytes'\"'\"': stat.st_size, '\"'\"'mtime'\"'\"': stat.st_mtime})\n    return info\n\ndef directory_info(relative):\n    path = resolve_path(relative)\n    exists = path.is_dir()\n    info = {'\"'\"'path'\"'\"': str(relative), '\"'\"'exists'\"'\"': exists, '\"'\"'is_dir'\"'\"': exists}\n    if exists:\n        stat = path.stat()\n        manifest = path / '\"'\"'h48_table_bundle_manifest.json'\"'\"'\n        info.update({'\"'\"'size_bytes'\"'\"': stat.st_size, '\"'\"'mtime'\"'\"': stat.st_mtime, '\"'\"'manifest_exists'\"'\"': manifest.is_file(), '\"'\"'part_file_count'\"'\"': len(list(path.glob('\"'\"'*.part*'\"'\"'))), '\"'\"'manifest'\"'\"': file_info(str(manifest))})\n    return info\n\ndef read_text_file(relative):\n    return resolve_path(relative).read_text(encoding='\"'\"'utf-8'\"'\"').strip()\n\ndef read_json_file(relative):\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        parsed = json.loads(path.read_text(encoding='\"'\"'utf-8'\"'\"'))\n    except Exception as exc:\n        return {'\"'\"'load_error'\"'\"': str(exc)}\n    return parsed if isinstance(parsed, dict) else {'\"'\"'load_error'\"'\"': '\"'\"'not a JSON object'\"'\"'}\n\ndef file_tail_info(relative, max_bytes=8192, max_lines=40):\n    info = file_info(relative)\n    if not info.get('\"'\"'exists'\"'\"'):\n        return info\n    path = resolve_path(relative)\n    try:\n        with path.open('\"'\"'rb'\"'\"') as handle:\n            size = info.get('\"'\"'size_bytes'\"'\"') or 0\n            handle.seek(max(0, int(size) - max_bytes))\n            data = handle.read(max_bytes)\n        info['\"'\"'tail'\"'\"'] = data.decode('\"'\"'utf-8'\"'\"', errors='\"'\"'replace'\"'\"').splitlines()[-max_lines:]\n        info['\"'\"'tail_max_bytes'\"'\"'] = max_bytes\n        info['\"'\"'tail_max_lines'\"'\"'] = max_lines\n    except Exception as exc:\n        info['\"'\"'tail_error'\"'\"'] = str(exc)\n    return info\n\ndef process_alive_for_pid(pid):\n    if pid is None:\n        return None, None\n    try:\n        os.kill(pid, 0)\n        return True, None\n    except ProcessLookupError:\n        return False, None\n    except PermissionError:\n        return True, '\"'\"'permission denied, but process exists'\"'\"'\n    except Exception as exc:\n        return None, str(exc)\n\ndef json_field(relative, key):\n    if relative is None:\n        return None\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        return json.loads(path.read_text(encoding='\"'\"'utf-8'\"'\"')).get(key)\n    except Exception:\n        return None\n\ndef checksum_status(table_relative, metadata_relative):\n    if not (solver and profile and seed is not None and table_relative and metadata_relative):\n        return {'\"'\"'valid'\"'\"': None, '\"'\"'message'\"'\"': '\"'\"'missing solver/profile/seed'\"'\"', '\"'\"'details'\"'\"': {}}\n    table_path = resolve_path(table_relative)\n    metadata_path = resolve_path(metadata_relative)\n    expected = config.get('\"'\"'expected_table_size_bytes'\"'\"')\n    if not table_path.exists() or not metadata_path.exists():\n        return {'\"'\"'valid'\"'\"': False, '\"'\"'message'\"'\"': '\"'\"'missing target table or metadata'\"'\"', '\"'\"'details'\"'\"': {}}\n    if expected and table_path.stat().st_size != expected:\n        return {'\"'\"'valid'\"'\"': False, '\"'\"'message'\"'\"': '\"'\"'target table size does not match expected size'\"'\"', '\"'\"'details'\"'\"': {'\"'\"'table_size_bytes'\"'\"': table_path.stat().st_size, '\"'\"'expected_table_size_bytes'\"'\"': expected}}\n    begin = time.perf_counter()\n    try:\n        passed, message, details = validate_trusted_h48_table_checksum(root=root, profile=profile, seed=int(seed), solver=solver, use_cache=False, persistent_cache=True)\n    except Exception as exc:\n        return {'\"'\"'valid'\"'\"': False, '\"'\"'message'\"'\"': f'\"'\"'checksum validation raised: {exc}'\"'\"', '\"'\"'runtime_seconds'\"'\"': round(time.perf_counter() - begin, 6), '\"'\"'details'\"'\"': {}}\n    return {'\"'\"'valid'\"'\"': bool(passed), '\"'\"'message'\"'\"': message, '\"'\"'runtime_seconds'\"'\"': round(time.perf_counter() - begin, 6), '\"'\"'details'\"'\"': details}\n\ndef snapshot():\n    safe_suffix = safe_id(config.get('\"'\"'run_suffix'\"'\"') or '\"'\"'unknown'\"'\"')\n    launch_id = '\"'\"'start_prerequisites'\"'\"'\n    launch_relative = f'\"'\"'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}_launch.json'\"'\"'\n    pid_relative = f'\"'\"'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}.pid'\"'\"'\n    log_relative = f'\"'\"'results/logs/h48_fasttarget_{safe_suffix}_{launch_id}.log'\"'\"'\n    launch_payload = read_json_file(launch_relative)\n    if not isinstance(launch_payload, dict) or launch_payload.get('\"'\"'load_error'\"'\"'):\n        launch_payload = None\n    if isinstance(launch_payload, dict):\n        pid_relative = launch_payload.get('\"'\"'pid_file'\"'\"') or pid_relative\n        log_relative = launch_payload.get('\"'\"'log_file'\"'\"') or log_relative\n    pid = None\n    pid_source = None\n    pid_parse_error = None\n    if file_info(pid_relative).get('\"'\"'exists'\"'\"'):\n        try:\n            pid = int(read_text_file(pid_relative).splitlines()[0].strip())\n            pid_source = '\"'\"'pid_file'\"'\"'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    if pid is None and isinstance(launch_payload, dict) and launch_payload.get('\"'\"'pid'\"'\"') is not None:\n        try:\n            pid = int(launch_payload['\"'\"'pid'\"'\"'])\n            pid_source = '\"'\"'launch_json'\"'\"'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    process_alive, process_check_error = process_alive_for_pid(pid)\n    table_relative = None\n    metadata_relative = None\n    h48_table_root = os.environ.get('\"'\"'RUBIK_OPTIMAL_H48_TABLE_ROOT'\"'\"', '\"'\"'data/generated/h48'\"'\"')\n    if solver and profile and seed is not None:\n        table_relative = str(Path(h48_table_root) / f'\"'\"'{profile}_seed_{seed}'\"'\"' / f'\"'\"'{solver}.bin'\"'\"')\n        metadata_relative = f'\"'\"'results/processed/h48_metadata_seed_{seed}_{profile}_{solver}.json'\"'\"'\n    table = file_info(table_relative) if table_relative else None\n    metadata = file_info(metadata_relative) if metadata_relative else None\n    archive = file_info(config['\"'\"'prerequisite_tables_archive'\"'\"'])\n    parts_dir = directory_info(config['\"'\"'prerequisite_tables_parts_dir'\"'\"'])\n    expected = config.get('\"'\"'expected_table_size_bytes'\"'\"')\n    table_size_matches_expected = bool(table and table.get('\"'\"'exists'\"'\"') and expected and table.get('\"'\"'size_bytes'\"'\"') == expected)\n    archive_present = bool(archive.get('\"'\"'exists'\"'\"') and int(archive.get('\"'\"'size_bytes'\"'\"') or 0) > 0)\n    parts_present = bool(parts_dir.get('\"'\"'manifest_exists'\"'\"') and int(parts_dir.get('\"'\"'part_file_count'\"'\"') or 0) > 0)\n    bundle_mode = config.get('\"'\"'prerequisite_bundle_mode'\"'\"') or '\"'\"'archive'\"'\"'\n    if bundle_mode == '\"'\"'split'\"'\"':\n        prerequisite_transfer_ready = parts_present\n    elif bundle_mode == '\"'\"'both'\"'\"':\n        prerequisite_transfer_ready = archive_present and parts_present\n    else:\n        prerequisite_transfer_ready = archive_present\n    metadata_present = bool(metadata and metadata.get('\"'\"'exists'\"'\"'))\n    metadata_trusted_table = json_field(metadata_relative, '\"'\"'trusted_table'\"'\"') if metadata_relative else None\n    checksum = checksum_status(table_relative, metadata_relative)\n    target_table_full_checksum_valid = checksum.get('\"'\"'valid'\"'\"')\n    ready_for_resume = bool(prerequisite_transfer_ready and table_size_matches_expected and metadata_trusted_table is True and target_table_full_checksum_valid is True)\n    if ready_for_resume:\n        status = '\"'\"'ready'\"'\"'\n    elif process_alive is True:\n        status = '\"'\"'running'\"'\"'\n    elif launch_payload is None and pid is None:\n        status = '\"'\"'not_started'\"'\"'\n    elif process_alive is False:\n        status = '\"'\"'stopped_without_ready_artifacts'\"'\"'\n    else:\n        status = '\"'\"'unknown'\"'\"'\n    return {\n        '\"'\"'schema_version'\"'\"': 1,\n        '\"'\"'run_suffix'\"'\"': config.get('\"'\"'run_suffix'\"'\"'),\n        '\"'\"'status'\"'\"': status,\n        '\"'\"'h48_table_root'\"'\"': h48_table_root,\n        '\"'\"'ready_for_resume'\"'\"': ready_for_resume,\n        '\"'\"'archive_present'\"'\"': archive_present,\n        '\"'\"'parts_present'\"'\"': parts_present,\n        '\"'\"'prerequisite_transfer_ready'\"'\"': prerequisite_transfer_ready,\n        '\"'\"'prerequisite_bundle_mode'\"'\"': bundle_mode,\n        '\"'\"'table_size_matches_expected'\"'\"': table_size_matches_expected,\n        '\"'\"'metadata_present'\"'\"': metadata_present,\n        '\"'\"'metadata_trusted_table'\"'\"': metadata_trusted_table,\n        '\"'\"'target_table_full_checksum_valid'\"'\"': target_table_full_checksum_valid,\n        '\"'\"'target_table_full_checksum_message'\"'\"': checksum.get('\"'\"'message'\"'\"'),\n        '\"'\"'target_table_full_checksum_runtime_seconds'\"'\"': checksum.get('\"'\"'runtime_seconds'\"'\"'),\n        '\"'\"'target_table_full_checksum_details'\"'\"': checksum.get('\"'\"'details'\"'\"'),\n        '\"'\"'expected_table_size_bytes'\"'\"': expected,\n        '\"'\"'launch_id'\"'\"': launch_id,\n        '\"'\"'launch_file'\"'\"': file_info(launch_relative),\n        '\"'\"'launch_payload'\"'\"': launch_payload,\n        '\"'\"'pid_file'\"'\"': file_info(pid_relative),\n        '\"'\"'pid'\"'\"': pid,\n        '\"'\"'pid_source'\"'\"': pid_source,\n        '\"'\"'pid_parse_error'\"'\"': pid_parse_error,\n        '\"'\"'process_alive'\"'\"': process_alive,\n        '\"'\"'process_check_error'\"'\"': process_check_error,\n        '\"'\"'log_file'\"'\"': file_tail_info(log_relative),\n        '\"'\"'table'\"'\"': table,\n        '\"'\"'metadata'\"'\"': metadata,\n        '\"'\"'prerequisite_tables_archive'\"'\"': archive,\n        '\"'\"'prerequisite_tables_parts_dir'\"'\"': parts_dir,\n    }\n\nbegin = time.time()\nattempts = 0\nlast = None\nwhile True:\n    attempts += 1\n    last = snapshot()\n    last['\"'\"'attempts'\"'\"'] = attempts\n    last['\"'\"'elapsed_seconds'\"'\"'] = round(time.time() - begin, 6)\n    last['\"'\"'prerequisite_wait_timeout_seconds'\"'\"'] = wait_timeout\n    last['\"'\"'prerequisite_poll_interval_seconds'\"'\"'] = poll_interval\n    if last.get('\"'\"'ready_for_resume'\"'\"') is True:\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(0)\n    if last.get('\"'\"'status'\"'\"') in {'\"'\"'not_started'\"'\"', '\"'\"'stopped_without_ready_artifacts'\"'\"'}:\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(2)\n    if wait_timeout <= 0 or time.time() - begin >= wait_timeout:\n        last['\"'\"'status'\"'\"'] = '\"'\"'wait_timeout'\"'\"'\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(3)\n    time.sleep(min(poll_interval, max(0.0, wait_timeout - (time.time() - begin))))\nPY'"
+    },
+    {
+      "command": [
+        "ssh",
+        "proof-host.example",
+        "bash",
+        "-lc",
+        "cd /mnt/sgarbas-h48 && mkdir -p results/logs results/processed && nohup bash -lc 'bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh' > results/logs/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full.log 2>&1 < /dev/null & pid=$!; printf '%s\\n' \"$pid\" > results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full.pid; REMOTE_PID=\"$pid\" REMOTE_LOG=results/logs/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full.log REMOTE_PID_FILE=results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full.pid REMOTE_LAUNCH_FILE=results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full_launch.json REMOTE_SCRIPT_CHAIN='bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh' python - <<'PY'\nimport json\nimport os\nimport time\npayload = {\n    'schema_version': 1,\n    'run_suffix': 'cloud_20260601_h48h10_fasttarget_batch10',\n    'launch_id': 'start_full',\n    'pid': int(os.environ['REMOTE_PID']),\n    'pid_file': os.environ['REMOTE_PID_FILE'],\n    'log_file': os.environ['REMOTE_LOG'],\n    'script_chain': os.environ['REMOTE_SCRIPT_CHAIN'],\n    'launched_at_unix': time.time(),\n}\nwith open(os.environ['REMOTE_LAUNCH_FILE'], 'w', encoding='utf-8') as handle:\n    handle.write(json.dumps(payload, sort_keys=True) + '\\n')\nprint(json.dumps(payload, sort_keys=True))\nPY"
+      ],
+      "detached": true,
+      "id": "remote_start_full_detached",
+      "location": "remote",
+      "required": true,
+      "script": null,
+      "scripts": [
+        "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh",
+        "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh",
+        "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh",
+        "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh",
+        "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh",
+        "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh"
+      ],
+      "shell_command": "ssh proof-host.example bash -lc 'cd /mnt/sgarbas-h48 && mkdir -p results/logs results/processed && nohup bash -lc '\"'\"'bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh'\"'\"' > results/logs/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full.log 2>&1 < /dev/null & pid=$!; printf '\"'\"'%s\\n'\"'\"' \"$pid\" > results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full.pid; REMOTE_PID=\"$pid\" REMOTE_LOG=results/logs/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full.log REMOTE_PID_FILE=results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full.pid REMOTE_LAUNCH_FILE=results/processed/h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10_start_full_launch.json REMOTE_SCRIPT_CHAIN='\"'\"'bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh'\"'\"' python - <<'\"'\"'PY'\"'\"'\nimport json\nimport os\nimport time\npayload = {\n    '\"'\"'schema_version'\"'\"': 1,\n    '\"'\"'run_suffix'\"'\"': '\"'\"'cloud_20260601_h48h10_fasttarget_batch10'\"'\"',\n    '\"'\"'launch_id'\"'\"': '\"'\"'start_full'\"'\"',\n    '\"'\"'pid'\"'\"': int(os.environ['\"'\"'REMOTE_PID'\"'\"']),\n    '\"'\"'pid_file'\"'\"': os.environ['\"'\"'REMOTE_PID_FILE'\"'\"'],\n    '\"'\"'log_file'\"'\"': os.environ['\"'\"'REMOTE_LOG'\"'\"'],\n    '\"'\"'script_chain'\"'\"': os.environ['\"'\"'REMOTE_SCRIPT_CHAIN'\"'\"'],\n    '\"'\"'launched_at_unix'\"'\"': time.time(),\n}\nwith open(os.environ['\"'\"'REMOTE_LAUNCH_FILE'\"'\"'], '\"'\"'w'\"'\"', encoding='\"'\"'utf-8'\"'\"') as handle:\n    handle.write(json.dumps(payload, sort_keys=True) + '\"'\"'\\n'\"'\"')\nprint(json.dumps(payload, sort_keys=True))\nPY'"
+    },
+    {
+      "command": [
+        "ssh",
+        "proof-host.example",
+        "bash",
+        "-lc",
+        "cd /mnt/sgarbas-h48 && python - <<'PY'\nimport json\nimport os\nimport time\nfrom pathlib import Path\nconfig = json.loads('{\"full_poll_interval_seconds\": 60.0, \"full_wait_timeout_seconds\": 28800.0, \"results_archive\": \"results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz\", \"run_suffix\": \"cloud_20260601_h48h10_fasttarget_batch10\"}')\nroot = Path('.')\nwait_timeout = float(config.get('full_wait_timeout_seconds') or 0.0)\npoll_interval = max(1.0, float(config.get('full_poll_interval_seconds') or 30.0))\n\ndef safe_id(value):\n    return ''.join(char if char.isalnum() or char in '._-' else '_' for char in str(value))\n\ndef resolve_path(relative):\n    path = Path(str(relative))\n    return path if path.is_absolute() else root / path\n\ndef file_info(relative):\n    path = resolve_path(relative)\n    exists = path.exists()\n    info = {'path': str(relative), 'exists': exists}\n    if exists:\n        stat = path.stat()\n        info.update({'size_bytes': stat.st_size, 'mtime': stat.st_mtime})\n    return info\n\ndef read_text_file(relative):\n    return resolve_path(relative).read_text(encoding='utf-8').strip()\n\ndef read_json_file(relative):\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        parsed = json.loads(path.read_text(encoding='utf-8'))\n    except Exception as exc:\n        return {'load_error': str(exc)}\n    return parsed if isinstance(parsed, dict) else {'load_error': 'not a JSON object'}\n\ndef file_tail_info(relative, max_bytes=8192, max_lines=40):\n    info = file_info(relative)\n    if not info.get('exists'):\n        return info\n    path = resolve_path(relative)\n    try:\n        with path.open('rb') as handle:\n            size = info.get('size_bytes') or 0\n            handle.seek(max(0, int(size) - max_bytes))\n            data = handle.read(max_bytes)\n        info['tail'] = data.decode('utf-8', errors='replace').splitlines()[-max_lines:]\n        info['tail_max_bytes'] = max_bytes\n        info['tail_max_lines'] = max_lines\n    except Exception as exc:\n        info['tail_error'] = str(exc)\n    return info\n\ndef process_alive_for_pid(pid):\n    if pid is None:\n        return None, None\n    try:\n        os.kill(pid, 0)\n        return True, None\n    except ProcessLookupError:\n        return False, None\n    except PermissionError:\n        return True, 'permission denied, but process exists'\n    except Exception as exc:\n        return None, str(exc)\n\ndef snapshot():\n    safe_suffix = safe_id(config.get('run_suffix') or 'unknown')\n    launch_id = 'start_full'\n    launch_relative = f'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}_launch.json'\n    pid_relative = f'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}.pid'\n    log_relative = f'results/logs/h48_fasttarget_{safe_suffix}_{launch_id}.log'\n    launch_payload = read_json_file(launch_relative)\n    if not isinstance(launch_payload, dict) or launch_payload.get('load_error'):\n        launch_payload = None\n    if isinstance(launch_payload, dict):\n        pid_relative = launch_payload.get('pid_file') or pid_relative\n        log_relative = launch_payload.get('log_file') or log_relative\n    pid = None\n    pid_source = None\n    pid_parse_error = None\n    if file_info(pid_relative).get('exists'):\n        try:\n            pid = int(read_text_file(pid_relative).splitlines()[0].strip())\n            pid_source = 'pid_file'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    if pid is None and isinstance(launch_payload, dict) and launch_payload.get('pid') is not None:\n        try:\n            pid = int(launch_payload['pid'])\n            pid_source = 'launch_json'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    process_alive, process_check_error = process_alive_for_pid(pid)\n    archive = file_info(config['results_archive'])\n    archive_present = bool(archive.get('exists') and int(archive.get('size_bytes') or 0) > 0)\n    if archive_present:\n        status = 'ready'\n    elif process_alive is True:\n        status = 'running'\n    elif launch_payload is None and pid is None:\n        status = 'not_started'\n    elif process_alive is False:\n        status = 'stopped_without_ready_artifacts'\n    else:\n        status = 'unknown'\n    return {\n        'schema_version': 1,\n        'run_suffix': config.get('run_suffix'),\n        'status': status,\n        'ready_for_finalize': archive_present,\n        'archive_present': archive_present,\n        'launch_id': launch_id,\n        'launch_file': file_info(launch_relative),\n        'launch_payload': launch_payload,\n        'pid_file': file_info(pid_relative),\n        'pid': pid,\n        'pid_source': pid_source,\n        'pid_parse_error': pid_parse_error,\n        'process_alive': process_alive,\n        'process_check_error': process_check_error,\n        'log_file': file_tail_info(log_relative),\n        'results_archive': archive,\n    }\n\nbegin = time.time()\nattempts = 0\nlast = None\nwhile True:\n    attempts += 1\n    last = snapshot()\n    last['attempts'] = attempts\n    last['elapsed_seconds'] = round(time.time() - begin, 6)\n    last['full_wait_timeout_seconds'] = wait_timeout\n    last['full_poll_interval_seconds'] = poll_interval\n    if last.get('ready_for_finalize') is True:\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(0)\n    if last.get('status') in {'not_started', 'stopped_without_ready_artifacts'}:\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(2)\n    if wait_timeout <= 0 or time.time() - begin >= wait_timeout:\n        last['status'] = 'wait_timeout'\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(3)\n    time.sleep(min(poll_interval, max(0.0, wait_timeout - (time.time() - begin))))\nPY"
+      ],
+      "detached": false,
+      "id": "remote_wait_full",
+      "location": "remote",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "ssh proof-host.example bash -lc 'cd /mnt/sgarbas-h48 && python - <<'\"'\"'PY'\"'\"'\nimport json\nimport os\nimport time\nfrom pathlib import Path\nconfig = json.loads('\"'\"'{\"full_poll_interval_seconds\": 60.0, \"full_wait_timeout_seconds\": 28800.0, \"results_archive\": \"results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz\", \"run_suffix\": \"cloud_20260601_h48h10_fasttarget_batch10\"}'\"'\"')\nroot = Path('\"'\"'.'\"'\"')\nwait_timeout = float(config.get('\"'\"'full_wait_timeout_seconds'\"'\"') or 0.0)\npoll_interval = max(1.0, float(config.get('\"'\"'full_poll_interval_seconds'\"'\"') or 30.0))\n\ndef safe_id(value):\n    return '\"'\"''\"'\"'.join(char if char.isalnum() or char in '\"'\"'._-'\"'\"' else '\"'\"'_'\"'\"' for char in str(value))\n\ndef resolve_path(relative):\n    path = Path(str(relative))\n    return path if path.is_absolute() else root / path\n\ndef file_info(relative):\n    path = resolve_path(relative)\n    exists = path.exists()\n    info = {'\"'\"'path'\"'\"': str(relative), '\"'\"'exists'\"'\"': exists}\n    if exists:\n        stat = path.stat()\n        info.update({'\"'\"'size_bytes'\"'\"': stat.st_size, '\"'\"'mtime'\"'\"': stat.st_mtime})\n    return info\n\ndef read_text_file(relative):\n    return resolve_path(relative).read_text(encoding='\"'\"'utf-8'\"'\"').strip()\n\ndef read_json_file(relative):\n    path = resolve_path(relative)\n    if not path.exists():\n        return None\n    try:\n        parsed = json.loads(path.read_text(encoding='\"'\"'utf-8'\"'\"'))\n    except Exception as exc:\n        return {'\"'\"'load_error'\"'\"': str(exc)}\n    return parsed if isinstance(parsed, dict) else {'\"'\"'load_error'\"'\"': '\"'\"'not a JSON object'\"'\"'}\n\ndef file_tail_info(relative, max_bytes=8192, max_lines=40):\n    info = file_info(relative)\n    if not info.get('\"'\"'exists'\"'\"'):\n        return info\n    path = resolve_path(relative)\n    try:\n        with path.open('\"'\"'rb'\"'\"') as handle:\n            size = info.get('\"'\"'size_bytes'\"'\"') or 0\n            handle.seek(max(0, int(size) - max_bytes))\n            data = handle.read(max_bytes)\n        info['\"'\"'tail'\"'\"'] = data.decode('\"'\"'utf-8'\"'\"', errors='\"'\"'replace'\"'\"').splitlines()[-max_lines:]\n        info['\"'\"'tail_max_bytes'\"'\"'] = max_bytes\n        info['\"'\"'tail_max_lines'\"'\"'] = max_lines\n    except Exception as exc:\n        info['\"'\"'tail_error'\"'\"'] = str(exc)\n    return info\n\ndef process_alive_for_pid(pid):\n    if pid is None:\n        return None, None\n    try:\n        os.kill(pid, 0)\n        return True, None\n    except ProcessLookupError:\n        return False, None\n    except PermissionError:\n        return True, '\"'\"'permission denied, but process exists'\"'\"'\n    except Exception as exc:\n        return None, str(exc)\n\ndef snapshot():\n    safe_suffix = safe_id(config.get('\"'\"'run_suffix'\"'\"') or '\"'\"'unknown'\"'\"')\n    launch_id = '\"'\"'start_full'\"'\"'\n    launch_relative = f'\"'\"'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}_launch.json'\"'\"'\n    pid_relative = f'\"'\"'results/processed/h48_fasttarget_{safe_suffix}_{launch_id}.pid'\"'\"'\n    log_relative = f'\"'\"'results/logs/h48_fasttarget_{safe_suffix}_{launch_id}.log'\"'\"'\n    launch_payload = read_json_file(launch_relative)\n    if not isinstance(launch_payload, dict) or launch_payload.get('\"'\"'load_error'\"'\"'):\n        launch_payload = None\n    if isinstance(launch_payload, dict):\n        pid_relative = launch_payload.get('\"'\"'pid_file'\"'\"') or pid_relative\n        log_relative = launch_payload.get('\"'\"'log_file'\"'\"') or log_relative\n    pid = None\n    pid_source = None\n    pid_parse_error = None\n    if file_info(pid_relative).get('\"'\"'exists'\"'\"'):\n        try:\n            pid = int(read_text_file(pid_relative).splitlines()[0].strip())\n            pid_source = '\"'\"'pid_file'\"'\"'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    if pid is None and isinstance(launch_payload, dict) and launch_payload.get('\"'\"'pid'\"'\"') is not None:\n        try:\n            pid = int(launch_payload['\"'\"'pid'\"'\"'])\n            pid_source = '\"'\"'launch_json'\"'\"'\n        except Exception as exc:\n            pid_parse_error = str(exc)\n    process_alive, process_check_error = process_alive_for_pid(pid)\n    archive = file_info(config['\"'\"'results_archive'\"'\"'])\n    archive_present = bool(archive.get('\"'\"'exists'\"'\"') and int(archive.get('\"'\"'size_bytes'\"'\"') or 0) > 0)\n    if archive_present:\n        status = '\"'\"'ready'\"'\"'\n    elif process_alive is True:\n        status = '\"'\"'running'\"'\"'\n    elif launch_payload is None and pid is None:\n        status = '\"'\"'not_started'\"'\"'\n    elif process_alive is False:\n        status = '\"'\"'stopped_without_ready_artifacts'\"'\"'\n    else:\n        status = '\"'\"'unknown'\"'\"'\n    return {\n        '\"'\"'schema_version'\"'\"': 1,\n        '\"'\"'run_suffix'\"'\"': config.get('\"'\"'run_suffix'\"'\"'),\n        '\"'\"'status'\"'\"': status,\n        '\"'\"'ready_for_finalize'\"'\"': archive_present,\n        '\"'\"'archive_present'\"'\"': archive_present,\n        '\"'\"'launch_id'\"'\"': launch_id,\n        '\"'\"'launch_file'\"'\"': file_info(launch_relative),\n        '\"'\"'launch_payload'\"'\"': launch_payload,\n        '\"'\"'pid_file'\"'\"': file_info(pid_relative),\n        '\"'\"'pid'\"'\"': pid,\n        '\"'\"'pid_source'\"'\"': pid_source,\n        '\"'\"'pid_parse_error'\"'\"': pid_parse_error,\n        '\"'\"'process_alive'\"'\"': process_alive,\n        '\"'\"'process_check_error'\"'\"': process_check_error,\n        '\"'\"'log_file'\"'\"': file_tail_info(log_relative),\n        '\"'\"'results_archive'\"'\"': archive,\n    }\n\nbegin = time.time()\nattempts = 0\nlast = None\nwhile True:\n    attempts += 1\n    last = snapshot()\n    last['\"'\"'attempts'\"'\"'] = attempts\n    last['\"'\"'elapsed_seconds'\"'\"'] = round(time.time() - begin, 6)\n    last['\"'\"'full_wait_timeout_seconds'\"'\"'] = wait_timeout\n    last['\"'\"'full_poll_interval_seconds'\"'\"'] = poll_interval\n    if last.get('\"'\"'ready_for_finalize'\"'\"') is True:\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(0)\n    if last.get('\"'\"'status'\"'\"') in {'\"'\"'not_started'\"'\"', '\"'\"'stopped_without_ready_artifacts'\"'\"'}:\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(2)\n    if wait_timeout <= 0 or time.time() - begin >= wait_timeout:\n        last['\"'\"'status'\"'\"'] = '\"'\"'wait_timeout'\"'\"'\n        print(json.dumps(last, sort_keys=True))\n        raise SystemExit(3)\n    time.sleep(min(poll_interval, max(0.0, wait_timeout - (time.time() - begin))))\nPY'"
+    },
+    {
+      "command": [
+        "rsync",
+        "-az",
+        "--info=progress2",
+        "-e",
+        "ssh",
+        "proof-host.example:/mnt/sgarbas-h48/results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz",
+        "/Users/alextoska/Desktop/sgarbas/results"
+      ],
+      "detached": false,
+      "id": "fetch_results_archive",
+      "location": "local_rsync",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "rsync -az --info=progress2 -e ssh proof-host.example:/mnt/sgarbas-h48/results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz /Users/alextoska/Desktop/sgarbas/results"
+    },
+    {
+      "command": [
+        "rsync",
+        "-az",
+        "--info=progress2",
+        "-e",
+        "ssh",
+        "proof-host.example:/mnt/sgarbas-h48/results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10_parts/",
+        "/Users/alextoska/Desktop/sgarbas/results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10_parts"
+      ],
+      "detached": false,
+      "id": "fetch_prerequisite_table_parts",
+      "location": "local_rsync",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "rsync -az --info=progress2 -e ssh proof-host.example:/mnt/sgarbas-h48/results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10_parts/ /Users/alextoska/Desktop/sgarbas/results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10_parts"
+    },
+    {
+      "command": [
+        "rsync",
+        "-az",
+        "--info=progress2",
+        "-e",
+        "ssh",
+        "proof-host.example:/mnt/sgarbas-h48/results/processed/",
+        "/Users/alextoska/Desktop/sgarbas/results/processed"
+      ],
+      "detached": false,
+      "id": "fetch_processed_artifacts",
+      "location": "local_rsync",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "rsync -az --info=progress2 -e ssh proof-host.example:/mnt/sgarbas-h48/results/processed/ /Users/alextoska/Desktop/sgarbas/results/processed"
+    },
+    {
+      "command": [
+        "python",
+        "scripts/validate_cloud_hardtail_archive.py",
+        "--root",
+        "/Users/alextoska/Desktop/sgarbas",
+        "--runbook",
+        "/Users/alextoska/Desktop/sgarbas/results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json",
+        "--archive",
+        "results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz",
+        "--artifact-suffix",
+        "h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10"
+      ],
+      "detached": false,
+      "id": "validate_results_archive",
+      "location": "local",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "python scripts/validate_cloud_hardtail_archive.py --root /Users/alextoska/Desktop/sgarbas --runbook /Users/alextoska/Desktop/sgarbas/results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json --archive results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz --artifact-suffix h48_fasttarget_cloud_20260601_h48h10_fasttarget_batch10"
+    },
+    {
+      "command": [
+        "bash",
+        "/Users/alextoska/Desktop/sgarbas/results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/unpack_results.sh",
+        "results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz"
+      ],
+      "detached": false,
+      "id": "unpack_results_archive",
+      "location": "local",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "bash /Users/alextoska/Desktop/sgarbas/results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/unpack_results.sh results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz"
+    },
+    {
+      "command": [
+        "bash",
+        "/Users/alextoska/Desktop/sgarbas/results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/finalize_full_after_collect.sh"
+      ],
+      "detached": false,
+      "id": "finalize_after_collect",
+      "location": "local",
+      "required": true,
+      "script": null,
+      "scripts": null,
+      "shell_command": "bash /Users/alextoska/Desktop/sgarbas/results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/finalize_full_after_collect.sh"
+    }
+  ],
+  "preflight_is_live_runtime_evidence": false,
+  "prerequisite_bundle_mode": "split",
+  "profile": "thesis",
+  "proof_volume_report_launchable": false,
+  "proof_volume_report_path": "results/processed/h48_proof_volume_candidates_seed_2026_thesis_h48h10_local_noaws_current.json",
+  "proof_volume_report_required": true,
+  "proof_volume_report_summary": {
+    "artifact_kind": "h48_proof_volume_candidates",
+    "available_memory_satisfies": false,
+    "best_candidate": {
+      "available_memory_satisfies": false,
+      "disk_free_bytes": 28023402496,
+      "disk_free_gib": 26.098827,
+      "disk_total_bytes": 494384795648,
+      "disk_total_gib": 460.431721,
+      "exists": true,
+      "h48_table_root": "data/generated/h48",
+      "h48_table_root_absolute": "/Users/alextoska/Desktop/sgarbas/data/generated/h48",
+      "host_machine_satisfies": false,
+      "label": "default",
+      "launchable_for_h48_generation": false,
+      "min_storage_gib": 250.0,
+      "nearest_existing_parent": "data/generated/h48",
+      "nearest_existing_parent_absolute": "/Users/alextoska/Desktop/sgarbas/data/generated/h48",
+      "nearest_existing_parent_writable": true,
+      "recommended_generation_command_after_approval": "RUBIK_OPTIMAL_H48_TABLE_ROOT=/Users/alextoska/Desktop/sgarbas/data/generated/h48 nice -n 20 python scripts/generate_h48_tables.py --profile thesis --seed 2026 --solver h48h10 --threads 16 --mmap-output --progress-log --require-safe --gendata-workbatch 256 --skip-generation-distribution-scan --mmap-sync-mode async --backend-cflag=-march=native",
+      "recommended_preflight_command": "RUBIK_OPTIMAL_H48_TABLE_ROOT=/Users/alextoska/Desktop/sgarbas/data/generated/h48 python scripts/cloud_hardtail_preflight.py --profile thesis --seed 2026 --solver h48h10 --artifact-suffix live_proof_volume --min-cpus 16 --min-memory-gib 64 --min-free-disk-gib 0 --min-storage-gib 250 --threads 16 --skip-external-assets",
+      "required_workspace_bytes": 34886761349,
+      "required_workspace_gib": 32.490828,
+      "satisfies_storage_class": true,
+      "satisfies_workspace": false,
+      "solver": "h48h10",
+      "source": "default",
+      "threads_satisfy_cpu": false,
+      "workspace_headroom_bytes": -6863358853,
+      "workspace_headroom_gib": -6.392001
+    },
+    "candidate_count": 10,
+    "fast_runtime_proven_for_every_possible_state": false,
+    "host_machine_satisfies": false,
+    "launchable_candidate_count": 0,
+    "launchable_for_h48_generation": false,
+    "live_launchable_evidence": false,
+    "machine_reasons": [
+      "cpu_count 8 is below required 16",
+      "memory_gib 16.000 is below required 64.000",
+      "available_memory_gib 0.167 is below required 4.000",
+      "threads 16 exceeds cpu_count 8"
+    ],
+    "machine_source": "local",
+    "path": "results/processed/h48_proof_volume_candidates_seed_2026_thesis_h48h10_local_noaws_current.json",
+    "present": true,
+    "proof_volume_report_required": true,
+    "proof_volume_requirement_satisfied": false,
+    "requirements": {
+      "min_cpus": 16,
+      "min_memory_gib": 64.0,
+      "min_mmap_available_memory_gib": 4.0,
+      "min_storage_gib": 250.0,
+      "required_workspace_bytes": 34886761349,
+      "required_workspace_gib": 32.490828,
+      "target_table_size_bytes": 30336314216,
+      "target_table_size_gib": 28.252894,
+      "threads": 16,
+      "workspace_multiplier": 1.15
+    },
+    "solver": "h48h10",
+    "threads_satisfy_cpu": false
+  },
+  "readiness_classification": "not_ready",
+  "remote_host_placeholder": "proof-host.example",
+  "remote_root_placeholder": "/mnt/sgarbas-h48",
+  "required_completion_gates": [
+    "trusted h48h10 table bytes exist at the canonical table path",
+    "h48h10 metadata exists and validates the full table size/checksum",
+    "the stronger_table_h48h10 workload passes",
+    "a live proof-volume inspector report records at least one launchable H48H10 candidate",
+    "all full-plan distance-20 hard-tail workloads pass",
+    "all required proof artifacts pass content-integrity validation",
+    "the final cloud/runtime evaluation passes thesis-audit acceptance gates",
+    "results/processed/h48_oracle_contract_seed_2026_thesis_h48h10.json records fast_runtime_proven_for_every_possible_state=true"
+  ],
+  "runbook_manifest_path": "results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json",
+  "runbook_validation": {
+    "aws_required": false,
+    "generated_file_fingerprint_algorithm": "sha256-size-mode-v1",
+    "generated_file_fingerprint_checks": [
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "f87a71f73e776a09eea4d4a5cfd21ce57f08907b018f7ce474246fbe9a4e3e92",
+        "actual_size_bytes": 1204,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/bootstrap_cloud_machine.sh",
+        "expected_sha256": "f87a71f73e776a09eea4d4a5cfd21ce57f08907b018f7ce474246fbe9a4e3e92",
+        "expected_size_bytes": 1204,
+        "key": "bootstrap_cloud_machine",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/bootstrap_cloud_machine.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "60260c97c824dc8694f2cc784fcd5e76e436633e68e51c265fbe497c0ca48ea1",
+        "actual_size_bytes": 856,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh",
+        "expected_sha256": "60260c97c824dc8694f2cc784fcd5e76e436633e68e51c265fbe497c0ca48ea1",
+        "expected_size_bytes": 856,
+        "key": "collect_prerequisite_table_parts",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "8f76c247fd465b202d05c18ba40f4eb4da262fbb9ab512979851cb0cac798991",
+        "actual_size_bytes": 1879,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_tables.sh",
+        "expected_sha256": "8f76c247fd465b202d05c18ba40f4eb4da262fbb9ab512979851cb0cac798991",
+        "expected_size_bytes": 1879,
+        "key": "collect_prerequisite_tables",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_tables.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "bca16d3088f03f0cab825791808b75f9b0f92ed730ed4cce9c2ca1586a202831",
+        "actual_size_bytes": 1624,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh",
+        "expected_sha256": "bca16d3088f03f0cab825791808b75f9b0f92ed730ed4cce9c2ca1586a202831",
+        "expected_size_bytes": 1624,
+        "key": "collect_results",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "e1fbb51546bffed4266a633e5d983c029a2b6880537807bed60fed9af39326ab",
+        "actual_size_bytes": 838,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/dry_run_canary.sh",
+        "expected_sha256": "e1fbb51546bffed4266a633e5d983c029a2b6880537807bed60fed9af39326ab",
+        "expected_size_bytes": 838,
+        "key": "dry_run_canary",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/dry_run_canary.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "9b1c4fc64ee8c80ffba8d64cb6b0f656e735ce0b7c1949606f6efc4687b60cb5",
+        "actual_size_bytes": 689,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh",
+        "expected_sha256": "9b1c4fc64ee8c80ffba8d64cb6b0f656e735ce0b7c1949606f6efc4687b60cb5",
+        "expected_size_bytes": 689,
+        "key": "evaluate_full",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "176fa3d3d78ec0096611f1a1f214c18c78a24de343dbd1eeb85956aa753dc1d8",
+        "actual_size_bytes": 1619,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/finalize_full_after_collect.sh",
+        "expected_sha256": "176fa3d3d78ec0096611f1a1f214c18c78a24de343dbd1eeb85956aa753dc1d8",
+        "expected_size_bytes": 1619,
+        "key": "finalize_full_after_collect",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/finalize_full_after_collect.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "8f0aa3d18e5ef8daf01185c62f8c33f137aedb3430326a2b68605bbb8e42a639",
+        "actual_size_bytes": 775,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/install_prerequisite_tables.sh",
+        "expected_sha256": "8f0aa3d18e5ef8daf01185c62f8c33f137aedb3430326a2b68605bbb8e42a639",
+        "expected_size_bytes": 775,
+        "key": "install_prerequisite_tables",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/install_prerequisite_tables.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "b639fc90d985d5a39f246fa3c549970b352b8862114f960c7c9d5f819797adda",
+        "actual_size_bytes": 675,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh",
+        "expected_sha256": "b639fc90d985d5a39f246fa3c549970b352b8862114f960c7c9d5f819797adda",
+        "expected_size_bytes": 675,
+        "key": "preflight_leader",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "9780f487a361e20c3a5b9d9d6180b17acb9bbbc1547380650f1ef79c77d29ed0",
+        "actual_size_bytes": 698,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh",
+        "expected_sha256": "9780f487a361e20c3a5b9d9d6180b17acb9bbbc1547380650f1ef79c77d29ed0",
+        "expected_size_bytes": 698,
+        "key": "preflight_worker",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o644",
+        "actual_sha256": "482a227f91cdc34ef718e488c1a944dc943ad877ede3e082c9fd70ea1735554c",
+        "actual_size_bytes": 6837,
+        "expected_mode_octal": "0o644",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/README.md",
+        "expected_sha256": "482a227f91cdc34ef718e488c1a944dc943ad877ede3e082c9fd70ea1735554c",
+        "expected_size_bytes": 6837,
+        "key": "readme",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/README.md",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "02ac0f9510b1f99bb8c1fd1becfbac33fcb2c02eddf3c73915a444a864b7c144",
+        "actual_size_bytes": 1282,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/recover_prerequisite_metadata.sh",
+        "expected_sha256": "02ac0f9510b1f99bb8c1fd1becfbac33fcb2c02eddf3c73915a444a864b7c144",
+        "expected_size_bytes": 1282,
+        "key": "recover_prerequisite_metadata",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/recover_prerequisite_metadata.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "100c3ef15a31c509d7e1445718430739773eef7c29291ecb8f76371cba4bd0de",
+        "actual_size_bytes": 1041,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary.sh",
+        "expected_sha256": "100c3ef15a31c509d7e1445718430739773eef7c29291ecb8f76371cba4bd0de",
+        "expected_size_bytes": 1041,
+        "key": "run_canary",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "d9f199d5a5f331c29129dba420e031acc5f3dec148f55937e201a53e0c79e295",
+        "actual_size_bytes": 1029,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh",
+        "expected_sha256": "d9f199d5a5f331c29129dba420e031acc5f3dec148f55937e201a53e0c79e295",
+        "expected_size_bytes": 1029,
+        "key": "run_canary_after_prerequisites",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "c49791cdf612d8b2e043ed7c2d938e66e0864803cc712ff6c2d05de9bad74c40",
+        "actual_size_bytes": 1092,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_end_to_end_single_machine.sh",
+        "expected_sha256": "c49791cdf612d8b2e043ed7c2d938e66e0864803cc712ff6c2d05de9bad74c40",
+        "expected_size_bytes": 1092,
+        "key": "run_end_to_end_single_machine",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_end_to_end_single_machine.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "b10cfcf2e4b6c2de263af836a8458bd01dc8af7d501f1ffa5b5faf31242d28bb",
+        "actual_size_bytes": 1468,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh",
+        "expected_sha256": "b10cfcf2e4b6c2de263af836a8458bd01dc8af7d501f1ffa5b5faf31242d28bb",
+        "expected_size_bytes": 1468,
+        "key": "run_full",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "16bfba0a3c68087b83709e928052da9c7bee397322dad86a44e720884e428afc",
+        "actual_size_bytes": 1313,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_00.sh",
+        "expected_sha256": "16bfba0a3c68087b83709e928052da9c7bee397322dad86a44e720884e428afc",
+        "expected_size_bytes": 1313,
+        "key": "run_full_machine_00",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_00.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "bcbfe5db0293bb99b874fdfaf0d805bde2a95b58bccb0a3ad696fb4e2c5df47f",
+        "actual_size_bytes": 1313,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_01.sh",
+        "expected_sha256": "bcbfe5db0293bb99b874fdfaf0d805bde2a95b58bccb0a3ad696fb4e2c5df47f",
+        "expected_size_bytes": 1313,
+        "key": "run_full_machine_01",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_01.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "b936085ec2dca291041a0eccc0e7ed8ac69442e31a2f2469336d19e20560e954",
+        "actual_size_bytes": 1313,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_02.sh",
+        "expected_sha256": "b936085ec2dca291041a0eccc0e7ed8ac69442e31a2f2469336d19e20560e954",
+        "expected_size_bytes": 1313,
+        "key": "run_full_machine_02",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_02.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "e061319f18175ec7a2c16fe1ab1c96aaf2e24a71bd270a18c073bdcf70250655",
+        "actual_size_bytes": 895,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_nonshard.sh",
+        "expected_sha256": "e061319f18175ec7a2c16fe1ab1c96aaf2e24a71bd270a18c073bdcf70250655",
+        "expected_size_bytes": 895,
+        "key": "run_full_nonshard",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_nonshard.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "139e7a841be8cc1df0487d99388f2c5b6acd287da17d4fc38fa15ba9881d6b5b",
+        "actual_size_bytes": 1108,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh",
+        "expected_sha256": "139e7a841be8cc1df0487d99388f2c5b6acd287da17d4fc38fa15ba9881d6b5b",
+        "expected_size_bytes": 1108,
+        "key": "run_full_prerequisites",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "4c62c38fc9489431af20381b6f1fc37025ddec289474206db942d568be5ab786",
+        "actual_size_bytes": 612,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/unpack_results.sh",
+        "expected_sha256": "4c62c38fc9489431af20381b6f1fc37025ddec289474206db942d568be5ab786",
+        "expected_size_bytes": 612,
+        "key": "unpack_results",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/unpack_results.sh",
+        "present": true
+      },
+      {
+        "actual_mode_octal": "0o755",
+        "actual_sha256": "59187995366564f7ef77ed5cad4c140ff6a699e08b3e58a1a27cb5c3d5f53b5c",
+        "actual_size_bytes": 622,
+        "expected_mode_octal": "0o755",
+        "expected_path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh",
+        "expected_sha256": "59187995366564f7ef77ed5cad4c140ff6a699e08b3e58a1a27cb5c3d5f53b5c",
+        "expected_size_bytes": 622,
+        "key": "validate_prerequisite_tables",
+        "passed": true,
+        "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh",
+        "present": true
+      }
+    ],
+    "generated_file_fingerprint_count": 23,
+    "h48_gendata_workbatch": 256,
+    "issues": [],
+    "manifest_path": "results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json",
+    "missing_generated_file_fingerprint_keys": [],
+    "missing_generated_file_keys": [],
+    "missing_generated_files": [],
+    "nonaws_entrypoint": "scripts/run_h48_fasttarget_nonaws_proof.py",
+    "nonaws_generic_ssh_supported": true,
+    "passed": true,
+    "plan_checks": [
+      {
+        "claim_scope": "canary",
+        "distance": 20,
+        "h48_gendata_workbatch": 256,
+        "json_valid": true,
+        "path": "results/processed/cloud_hardtail_campaign_plan_seed_2026_thesis_h48h10_cloud_h48h10_fasttarget_canary_batch3_20260601.json",
+        "present": true,
+        "profile": "thesis",
+        "required_workload_ids": [
+          "stronger_table_h48h10",
+          "known_distance_20_shard_000",
+          "rubikoptimal_superflip_hardcase",
+          "postprocess_00",
+          "postprocess_01",
+          "postprocess_02"
+        ],
+        "scope": "canary",
+        "seed": 2026,
+        "solver": "h48h10",
+        "stronger_table_workload": {
+          "command_args": [
+            "python",
+            "scripts/run_h48_stronger_table_campaign.py",
+            "--profile",
+            "thesis",
+            "--seed",
+            "2026",
+            "--target-solver",
+            "h48h10",
+            "--threads",
+            "16",
+            "--generation-timeout",
+            "43200.0",
+            "--certification-timeout",
+            "90.0",
+            "--runtime-target",
+            "60.0",
+            "--artifact-suffix",
+            "cloud_h48h10_fasttarget_shared_prereq_20260601_h48h10",
+            "--gendata-workbatch",
+            "256",
+            "--mmap-sync-mode",
+            "async",
+            "--backend-cflag=-march=native",
+            "--skip-generation-distribution-scan"
+          ],
+          "h48_gendata_workbatch": 256,
+          "id": "stronger_table_h48h10",
+          "kind": "h48_stronger_table_generation_and_certification",
+          "required_for_fast_every_state_claim": true
+        },
+        "stronger_table_workload_present": true,
+        "summary_h48_gendata_workbatch": 256,
+        "summary_required_workload_count": 6,
+        "workload_count": 6
+      },
+      {
+        "claim_scope": "full",
+        "distance": 20,
+        "h48_gendata_workbatch": 256,
+        "json_valid": true,
+        "path": "results/processed/cloud_hardtail_campaign_plan_seed_2026_thesis_h48h10_cloud_h48h10_fasttarget_hardtail_batch10_20260601.json",
+        "present": true,
+        "profile": "thesis",
+        "required_workload_ids": [
+          "stronger_table_h48h10",
+          "known_distance_20_shard_000",
+          "known_distance_20_shard_001",
+          "known_distance_20_shard_002",
+          "rubikoptimal_superflip_hardcase",
+          "postprocess_00",
+          "postprocess_01",
+          "postprocess_02"
+        ],
+        "scope": "full",
+        "seed": 2026,
+        "solver": "h48h10",
+        "stronger_table_workload": {
+          "command_args": [
+            "python",
+            "scripts/run_h48_stronger_table_campaign.py",
+            "--profile",
+            "thesis",
+            "--seed",
+            "2026",
+            "--target-solver",
+            "h48h10",
+            "--threads",
+            "16",
+            "--generation-timeout",
+            "43200.0",
+            "--certification-timeout",
+            "90.0",
+            "--runtime-target",
+            "60.0",
+            "--artifact-suffix",
+            "cloud_h48h10_fasttarget_shared_prereq_20260601_h48h10",
+            "--gendata-workbatch",
+            "256",
+            "--mmap-sync-mode",
+            "async",
+            "--backend-cflag=-march=native",
+            "--skip-generation-distribution-scan"
+          ],
+          "h48_gendata_workbatch": 256,
+          "id": "stronger_table_h48h10",
+          "kind": "h48_stronger_table_generation_and_certification",
+          "required_for_fast_every_state_claim": true
+        },
+        "stronger_table_workload_present": true,
+        "summary_h48_gendata_workbatch": 256,
+        "summary_required_workload_count": 8,
+        "workload_count": 8
+      }
+    ],
+    "profile": "thesis",
+    "required_generated_file_keys": [
+      "bootstrap_cloud_machine",
+      "preflight_leader",
+      "preflight_worker",
+      "run_full_prerequisites",
+      "collect_prerequisite_tables",
+      "collect_prerequisite_table_parts",
+      "validate_prerequisite_tables",
+      "recover_prerequisite_metadata",
+      "run_canary_after_prerequisites",
+      "run_full",
+      "evaluate_full",
+      "collect_results",
+      "unpack_results",
+      "finalize_full_after_collect"
+    ],
+    "run_suffix": "cloud_20260601_h48h10_fasttarget_batch10",
+    "seed": 2026,
+    "solver": "h48h10",
+    "strict_h48h10_validation": true
+  },
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h10"
+}

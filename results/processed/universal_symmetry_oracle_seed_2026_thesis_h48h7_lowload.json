@@ -1,0 +1,54 @@
+{
+  "all_exact": true,
+  "all_nissy_symmetry_batch": true,
+  "all_verified": true,
+  "api_class": "UniversalOptimalOracle",
+  "case_ids": [
+    "shallow_r_u_f2"
+  ],
+  "errors": [],
+  "fast_runtime_proven_for_every_possible_state": false,
+  "max_runtime_seconds": 1.651504,
+  "nissy_threads": 1,
+  "oracle_contract": {
+    "exactness_policy": "exact only after the rotated exact solution is mapped back and verified on the original input state",
+    "latency_strategy": "try non-identity whole-cube rotations through one exact Nissy batch before resident race",
+    "runtime_claim": "this artifact proves the optimized symmetry-batch control path on a small corpus, not exhaustive every-state timing",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "backend_solver": "nissy_symmetry_batch_oracle",
+      "case_id": "shallow_r_u_f2",
+      "description": "direct facelet/cubie state for a shallow three-move scramble",
+      "expected_distance": 3,
+      "fast_runtime_proven_for_every_possible_state": true,
+      "notes": "universal exact oracle; exactness_policy=verified_exact_only; arbitrary_valid_3x3_domain=true; optimized_paths=exact_certificate_cache,upper_lower_certificate,nissy_symmetry_batch,resident_race; fast_runtime_proven_for_every_possible_state=false; selected_backend=nissy-symmetry-batch; backend_solver=nissy_symmetry_batch_oracle; backend_runtime_seconds=1.650470; resident race exact oracle; exactness_policy=first_verified_exact_solution_wins; resident_h48_process=shared_batch_session; selected_backend=nissy-symmetry-batch; started_backends=nissy-symmetry-batch; stopped_backends=resident-h48-deferred; h48_start_delay_seconds=45.000000; backend_solver=nissy_symmetry_batch_oracle; backend_runtime_seconds=1.647671; setup_notes=; resident race backend=nissy-symmetry-batch; exactness_policy=rotated_exact_solution_mapped_back_and_verified; identity_rotation_included=true; symmetry_variants=3; selected_rotation=rot00; rotated_solution_length=3; scramble_source=source_sequence; threads=1; required_table=pt_nxopt31_HTM; return_code=0; h48_competes_concurrently=true",
+      "rotated_backend_solver": null,
+      "rotated_runtime_seconds": null,
+      "runtime_seconds": 1.651504,
+      "selected_backend": "nissy-symmetry-batch",
+      "selected_rotation": "rot00",
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "symmetry_variants": "3",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "selected_backends": [
+    "nissy-symmetry-batch"
+  ],
+  "solver": "h48h7",
+  "symmetry_variants": 2,
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "threads": 1,
+  "timeout_seconds": 45.0,
+  "trusted_table": true
+}

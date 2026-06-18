@@ -1,0 +1,21 @@
+{
+  "byte_size": 3497892,
+  "class_count": 64430,
+  "classes_with_nontrivial_stabilizer": 2033,
+  "description": "Phase-1 FlipUDSlice 16-symmetry reduction (classidx/sym/rep/stab + twist conjugation)",
+  "flip_count": 2048,
+  "flipudslice_count": 1013760,
+  "generation_seconds": 35.32058587484062,
+  "path": "data/generated/phase1_sym_tables.bin",
+  "profile": "thesis",
+  "schema_version": 3,
+  "seed": 2026,
+  "sha256": "225ccd4ff4a0fe3d0f0ac7bf09ed143bdc3aaf46f415a501e0d8849b9c3f4ee7",
+  "source": "src/rubik_optimal/symmetry.py g1_preserving_symmetries()",
+  "sym_count": 16,
+  "symmetry_group": "16 G1-preserving whole-cube symmetries (UD-axis stabilizer, incl. reflections)",
+  "table_name": "phase1_sym_tables",
+  "twist_count": 2187,
+  "udslice_count": 495,
+  "validated": "twist bijection, representative consistency, sampled reduction round-trip, inv_sym"
+}

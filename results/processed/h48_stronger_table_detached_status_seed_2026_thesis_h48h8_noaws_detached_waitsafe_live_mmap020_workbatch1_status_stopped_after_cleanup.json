@@ -1,0 +1,138 @@
+{
+  "artifact_suffix": "noaws_detached_waitsafe_live_mmap020_workbatch1",
+  "campaign_result_exists": true,
+  "campaign_result_passed": false,
+  "campaign_result_path": "results/processed/h48_stronger_table_campaign_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_workbatch1.json",
+  "campaign_result_status": "generation_failed_or_timed_out",
+  "checked_at_utc": "2026-06-02T03:12:09.912331+00:00",
+  "current_safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 1689010176,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 22175997952,
+      "load_average": [
+        3.10888671875,
+        3.4453125,
+        3.38037109375
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 214748364,
+      "mmap_output": true
+    },
+    "reasons": [],
+    "safe_to_start": true,
+    "solver": "h48h8",
+    "threads": 5
+  },
+  "detached_launch_status": "detached_waitsafe_started_not_runtime_evidence",
+  "detached_payload_path": "results/processed/h48_stronger_table_detached_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_workbatch1.json",
+  "detached_status": {
+    "effective_pid": 64049,
+    "log_path_exists": true,
+    "log_tail": "[H48 gendata] cocsep data computed\n[H48 gendata] Computing depth <=8\n[H48 gendata] Computed 7437855 positions\n[H48 gendata] Processing 'short cubes'. This will take a while.\n[H48 gendata] Processed 14 / 7437855 cubes\n[H48 gendata] Processed 25 / 7437855 cubes\n[H48 gendata] Processed 36 / 7437855 cubes\n[H48 gendata] Processed 52 / 7437855 cubes\n[H48 gendata] Processed 65 / 7437855 cubes\n[H48 gendata] Processed 76 / 7437855 cubes\n[H48 gendata] Processed 90 / 7437855 cubes\n[H48 gendata] Processed 103 / 7437855 cubes\n[H48 gendata] Processed 117 / 7437855 cubes\n{\n  \"output\": \"/Users/alextoska/Desktop/sgarbas/results/processed/h48_stronger_table_campaign_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_workbatch1.json\",\n  \"table\": \"/Users/alextoska/Desktop/sgarbas/thesis/tables/h48_stronger_table_campaign_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_workbatch1.tex\",\n  \"status\": \"generation_failed_or_timed_out\",\n  \"passed\": false,\n  \"target_trusted_table\": false,\n  \"full_checksum_valid\": false,\n  \"fast_runtime_proven_for_every_possible_state\": false\n}",
+    "pid": 64049,
+    "pid_alive": false,
+    "pid_file_exists": true,
+    "pid_file_pid": 64049,
+    "process_resources": {
+      "available": false,
+      "matches": [],
+      "return_code": 1,
+      "stderr_tail": ""
+    }
+  },
+  "fast_runtime_proven_for_every_possible_state": false,
+  "full_checksum_details": {},
+  "full_checksum_message": "not requested",
+  "full_checksum_requested": false,
+  "full_checksum_valid": null,
+  "generation_log_progress": {
+    "available": true,
+    "computed_short_positions": 7437855,
+    "latest_processed_short_cubes": 117,
+    "latest_progress_fraction": 1.573e-05,
+    "latest_progress_line": "[H48 gendata] Processed 117 / 7437855 cubes",
+    "partial_table_allocated_bytes": null,
+    "partial_table_exists": false,
+    "partial_table_size_bytes": 0,
+    "progress_sample_count": 9,
+    "recent_progress_samples": [
+      {
+        "line": "[H48 gendata] Processed 65 / 7437855 cubes",
+        "processed_short_cubes": 65,
+        "progress_fraction": 8.739e-06,
+        "total_short_cubes": 7437855
+      },
+      {
+        "line": "[H48 gendata] Processed 76 / 7437855 cubes",
+        "processed_short_cubes": 76,
+        "progress_fraction": 1.0218e-05,
+        "total_short_cubes": 7437855
+      },
+      {
+        "line": "[H48 gendata] Processed 90 / 7437855 cubes",
+        "processed_short_cubes": 90,
+        "progress_fraction": 1.21e-05,
+        "total_short_cubes": 7437855
+      },
+      {
+        "line": "[H48 gendata] Processed 103 / 7437855 cubes",
+        "processed_short_cubes": 103,
+        "progress_fraction": 1.3848e-05,
+        "total_short_cubes": 7437855
+      },
+      {
+        "line": "[H48 gendata] Processed 117 / 7437855 cubes",
+        "processed_short_cubes": 117,
+        "progress_fraction": 1.573e-05,
+        "total_short_cubes": 7437855
+      }
+    ],
+    "saw_processing_phase": true,
+    "total_short_cubes": 7437855
+  },
+  "native_h48_backend_process_resources": {
+    "available": true,
+    "matches": []
+  },
+  "native_h48_backend_processes": {
+    "available": true,
+    "matches": [],
+    "return_code": 0,
+    "stderr_tail": ""
+  },
+  "native_h48_backend_running": false,
+  "notes": "Read-only local no-AWS detached status. This proves process/table state only; the fast every-state claim remains false until trusted stronger-table metadata, full checksum, certification, broad runtime evidence, and a worst-case runtime boundary exist.",
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "status": "detached_campaign_result_present_no_trusted_table",
+  "target_metadata": {
+    "exists": false,
+    "path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+    "size_bytes": 0
+  },
+  "target_partial_table": {
+    "allocated_bytes": null,
+    "exists": false,
+    "path": "data/generated/h48/thesis_seed_2026/.h48h8.bin.partial",
+    "size_bytes": 0
+  },
+  "target_solver": "h48h8",
+  "target_table": {
+    "exists": false,
+    "expected_size_bytes": 7585624040,
+    "path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+    "size_bytes": 0
+  },
+  "target_trusted_message": "missing target table or metadata",
+  "target_trusted_table": false
+}

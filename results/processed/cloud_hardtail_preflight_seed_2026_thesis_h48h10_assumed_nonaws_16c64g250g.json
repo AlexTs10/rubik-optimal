@@ -1,0 +1,92 @@
+{
+  "assumed_machine": {
+    "available_memory_gib": 64.0,
+    "cpu_count": 16,
+    "data_generated_h48_free_gib": 40.0,
+    "data_generated_h48_total_gib": 250.0,
+    "memory_gib": 64.0
+  },
+  "assumed_machine_not_runtime_evidence": true,
+  "created_at_utc": "2026-06-02T19:32:44.339402+00:00",
+  "fast_runtime_proven_for_every_possible_state": false,
+  "generation_safety": {
+    "assumed_machine": true,
+    "estimated_table_size_bytes": 30336314216,
+    "estimated_table_size_gib": 28.252894,
+    "machine": {
+      "available_memory_bytes": 68719476736,
+      "cpu_count": 16,
+      "data_generated_h48_free_bytes": 42949672960,
+      "load_average": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "memory_bytes": 68719476736
+    },
+    "policy": {
+      "disk_multiplier": 1.15,
+      "disk_multiplier_source": "explicit",
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [],
+    "safe_to_start": true,
+    "solver": "h48h10",
+    "threads": 16
+  },
+  "machine": {
+    "cpu_count": 16,
+    "data_generated_h48_free_bytes": 42949672960,
+    "data_generated_h48_free_gib": 40.0,
+    "data_generated_h48_total_bytes": 268435456000,
+    "data_generated_h48_total_gib": 250.0,
+    "load_average": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "memory_bytes": 68719476736,
+    "memory_gib": 64.0
+  },
+  "machine_source": "assumed",
+  "min_cpus": 16,
+  "min_free_disk_gib": 0.0,
+  "min_memory_gib": 64.0,
+  "min_storage_gib": 250.0,
+  "missing_external_paths": [],
+  "notes": "This is an assumed-machine shape check only. It is not evidence that a real host exists, that the H48 table was generated, or that any runtime workload passed.",
+  "passed": true,
+  "profile": "thesis",
+  "reasons": [],
+  "require_external_assets": false,
+  "require_target_table": false,
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h10",
+  "target_h48_workspace": {
+    "available_workspace_bytes": 42949672960,
+    "available_workspace_gib": 40.0,
+    "required_workspace_bytes": 34886761349,
+    "required_workspace_gib": 32.490828,
+    "satisfies_workspace": true,
+    "solver": "h48h10",
+    "target_table_size_bytes": 30336314216,
+    "target_table_size_gib": 28.252894,
+    "workspace_headroom_bytes": 8062911611,
+    "workspace_headroom_gib": 7.509172,
+    "workspace_multiplier": 1.15
+  },
+  "target_table_validation": null,
+  "threads": 16,
+  "tool_paths": {
+    "c++": "/usr/bin/c++",
+    "cc": "/usr/bin/cc",
+    "gzip": "/usr/bin/gzip",
+    "python": "/opt/miniconda3/bin/python",
+    "tar": "/usr/bin/tar"
+  }
+}

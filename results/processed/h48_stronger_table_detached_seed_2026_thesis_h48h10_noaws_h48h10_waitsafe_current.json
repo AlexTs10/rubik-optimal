@@ -1,0 +1,103 @@
+{
+  "artifact_suffix": "noaws_h48h10_waitsafe_current",
+  "checked_at_utc": "2026-06-02T17:01:46.846786+00:00",
+  "child_command": "/opt/miniconda3/bin/python scripts/run_h48_stronger_table_campaign.py --profile thesis --seed 2026 --target-solver h48h10 --threads auto --certification-timeout 300.0 --runtime-target 300.0 --artifact-suffix noaws_h48h10_waitsafe_current --wait-for-safe --safety-wait-timeout 21600.0 --safety-check-interval 300.0 --safety-required-consecutive-checks 2 --min-mmap-available-memory-gib 4.0 --gendata-workbatch 256 --mmap-sync-mode async --backend-cflag=-march=native --skip-generation-distribution-scan",
+  "child_command_args": [
+    "/opt/miniconda3/bin/python",
+    "scripts/run_h48_stronger_table_campaign.py",
+    "--profile",
+    "thesis",
+    "--seed",
+    "2026",
+    "--target-solver",
+    "h48h10",
+    "--threads",
+    "auto",
+    "--certification-timeout",
+    "300.0",
+    "--runtime-target",
+    "300.0",
+    "--artifact-suffix",
+    "noaws_h48h10_waitsafe_current",
+    "--wait-for-safe",
+    "--safety-wait-timeout",
+    "21600.0",
+    "--safety-check-interval",
+    "300.0",
+    "--safety-required-consecutive-checks",
+    "2",
+    "--min-mmap-available-memory-gib",
+    "4.0",
+    "--gendata-workbatch",
+    "256",
+    "--mmap-sync-mode",
+    "async",
+    "--backend-cflag=-march=native",
+    "--skip-generation-distribution-scan"
+  ],
+  "detached_status": {
+    "effective_pid": null,
+    "log_path_exists": false,
+    "log_tail": "",
+    "pid": null,
+    "pid_alive": null,
+    "pid_file_exists": false,
+    "pid_file_pid": null,
+    "process_resources": {
+      "available": true,
+      "matches": []
+    }
+  },
+  "dynamic_thread_selection": true,
+  "execute": false,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "h48_backend_extra_cflags": [
+    "-march=native"
+  ],
+  "h48_disk_multiplier": null,
+  "h48_gendata_workbatch": 256,
+  "h48_generation_distribution_mode": "expected_constants",
+  "h48_generation_distribution_scan_skipped": true,
+  "h48_generation_mmap_sync_mode": "async",
+  "log_path": "results/logs/h48_stronger_table_detached_seed_2026_thesis_h48h10_noaws_h48h10_waitsafe_current.log",
+  "min_mmap_available_memory_gib": 4.0,
+  "notes": "Local no-AWS detached stronger-table launcher. A started process is still not runtime evidence; the fast every-state claim requires the resulting trusted table, checksum, certification, broad runtime corpus, and final contract proof.",
+  "pid": null,
+  "pid_file_path": "results/processed/h48_stronger_table_detached_seed_2026_thesis_h48h10_noaws_h48h10_waitsafe_current.pid",
+  "preflight_safety": {
+    "estimated_table_size_bytes": 30336314216,
+    "estimated_table_size_gib": 28.252894,
+    "machine": {
+      "available_memory_bytes": 297779200,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 39486644224,
+      "load_average": [
+        3.3330078125,
+        3.95458984375,
+        3.970703125
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 1.15,
+      "disk_multiplier_source": "storage_default",
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [
+      "available memory 0.28 GiB is below the 4.00 GiB mmap generation guard"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h10",
+    "threads": 5
+  },
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "status": "detached_waitsafe_dryrun_planned_not_runtime_evidence",
+  "target_solver": "h48h10",
+  "thread_setting": "auto"
+}

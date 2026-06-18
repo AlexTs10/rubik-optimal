@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rubik-optimal"
+version = "0.1.0"
+description = "Reproducible Rubik's Cube solver experiments for a Greek thesis"
+readme = "README.md"
+requires-python = ">=3.10"
+# No project-wide license is declared here; see LICENSE and THIRD_PARTY_NOTICES.md.
+# The default install pulls no third-party solver. The student's own algorithms
+# (Thistlethwaite, Kociemba two-phase, Korf IDA*) and the native C++ optimal
+# engine work without any optional dependency.
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+# The pip `kociemba` package (GPLv2, author muodov) is used ONLY by
+# `solve_kociemba_adapter` as a non-exact cross-check baseline; the adapter
+# degrades gracefully when it is absent. It is an opt-in extra so the default
+# install does not pull GPL-licensed code. See THIRD_PARTY_NOTICES.md.
+baselines = ["kociemba>=1.2"]
+
+[project.scripts]
+rubik-optimal = "rubik_optimal.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+markers = [
+  "native: tests that invoke the native C++ optimal solver binary (may be slow or require a built binary)",
+  "infrastructure: tests covering packaging, reproducibility, and repository-hygiene infrastructure rather than solver algorithms",
+]

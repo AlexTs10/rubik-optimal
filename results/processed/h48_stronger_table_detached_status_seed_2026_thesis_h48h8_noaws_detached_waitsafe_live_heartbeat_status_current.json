@@ -1,0 +1,84 @@
+{
+  "artifact_suffix": "noaws_detached_waitsafe_live_heartbeat",
+  "campaign_result_exists": false,
+  "campaign_result_passed": null,
+  "campaign_result_path": "results/processed/h48_stronger_table_campaign_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_heartbeat.json",
+  "campaign_result_status": null,
+  "checked_at_utc": "2026-06-02T01:36:21.307975+00:00",
+  "current_safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 115785728,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 23465025536,
+      "load_average": [
+        2.77001953125,
+        3.09521484375,
+        3.0869140625
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [
+      "available memory 0.11 GiB is below the 4.00 GiB mmap generation guard"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h8",
+    "threads": 5
+  },
+  "detached_launch_status": "detached_waitsafe_started_not_runtime_evidence",
+  "detached_payload_path": "results/processed/h48_stronger_table_detached_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_heartbeat.json",
+  "detached_status": {
+    "effective_pid": 25010,
+    "log_path_exists": true,
+    "log_tail": "{\"available_memory_bytes\": 206192640, \"checked_at_utc\": \"2026-06-02T01:32:10.761344+00:00\", \"elapsed_seconds\": 0.0037, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.93310546875, 3.29296875, 3.146484375], \"reasons\": [\"available memory 0.19 GiB is below the 4.00 GiB mmap generation guard\"], \"safe_to_start\": false, \"sample_index\": 1}\n{\"available_memory_bytes\": 248299520, \"checked_at_utc\": \"2026-06-02T01:33:10.771344+00:00\", \"elapsed_seconds\": 60.013518, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.853515625, 3.1826171875, 3.111328125], \"reasons\": [\"available memory 0.23 GiB is below the 4.00 GiB mmap generation guard\"], \"safe_to_start\": false, \"sample_index\": 2}\n{\"available_memory_bytes\": 133529600, \"checked_at_utc\": \"2026-06-02T01:34:10.795883+00:00\", \"elapsed_seconds\": 120.037897, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.73583984375, 3.0615234375, 3.0673828125], \"reasons\": [\"available memory 0.12 GiB is below the 4.00 GiB mmap generation guard\"], \"safe_to_start\": false, \"sample_index\": 3}\n{\"available_memory_bytes\": 161054720, \"checked_at_utc\": \"2026-06-02T01:35:10.816551+00:00\", \"elapsed_seconds\": 180.058383, \"event\": \"h48_generation_safety_sample\", \"load_average\": [3.53955078125, 3.2314453125, 3.1298828125], \"reasons\": [\"available memory 0.15 GiB is below the 4.00 GiB mmap generation guard\", \"requested generation threads do not leave the load-aware CPU headroom recommended for this machine\"], \"safe_to_start\": false, \"sample_index\": 4}\n{\"available_memory_bytes\": 108363776, \"checked_at_utc\": \"2026-06-02T01:36:10.834347+00:00\", \"elapsed_seconds\": 240.076032, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.744140625, 3.099609375, 3.0888671875], \"reasons\": [\"available memory 0.10 GiB is below the 4.00 GiB mmap generation guard\"], \"safe_to_start\": false, \"sample_index\": 5}",
+    "pid": 25010,
+    "pid_alive": true,
+    "pid_file_exists": true,
+    "pid_file_pid": 25010
+  },
+  "fast_runtime_proven_for_every_possible_state": false,
+  "full_checksum_details": {},
+  "full_checksum_message": "not requested",
+  "full_checksum_requested": false,
+  "full_checksum_valid": null,
+  "native_h48_backend_processes": {
+    "available": true,
+    "matches": [],
+    "return_code": 0,
+    "stderr_tail": ""
+  },
+  "native_h48_backend_running": false,
+  "notes": "Read-only local no-AWS detached status. This proves process/table state only; the fast every-state claim remains false until trusted stronger-table metadata, full checksum, certification, broad runtime evidence, and a worst-case runtime boundary exist.",
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "status": "detached_python_alive_waiting_or_running_no_trusted_table",
+  "target_metadata": {
+    "exists": false,
+    "path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+    "size_bytes": 0
+  },
+  "target_partial_table": {
+    "exists": false,
+    "path": "data/generated/h48/thesis_seed_2026/.h48h8.bin.partial",
+    "size_bytes": 0
+  },
+  "target_solver": "h48h8",
+  "target_table": {
+    "exists": false,
+    "expected_size_bytes": 7585624040,
+    "path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+    "size_bytes": 0
+  },
+  "target_trusted_message": "missing target table or metadata",
+  "target_trusted_table": false
+}

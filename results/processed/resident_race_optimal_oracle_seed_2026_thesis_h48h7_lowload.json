@@ -1,0 +1,72 @@
+{
+  "all_exact": true,
+  "all_verified": true,
+  "errors": [],
+  "h48_repetitions": 2,
+  "h48_reuse_wall_seconds": 1.463221,
+  "max_runtime_seconds": 5.829176,
+  "nissy_threads": 1,
+  "oracle_contract": {
+    "exactness_policy": "exact only after independent verification from the original input state",
+    "latency_strategy": "race external Nissy optimal against a resident FastOptimalOracle H48 session",
+    "runtime_claim": "this artifact proves low-overhead resident race behavior on a corpus, not exhaustive every-state timing",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "case_id": "shallow_r_u_f2",
+      "description": "direct facelet/cubie state for a shallow three-move scramble",
+      "mode": "resident_race",
+      "notes": "resident race exact oracle; exactness_policy=first_verified_exact_solution_wins; resident_h48_process=shared_batch_session; selected_backend=nissy-optimal; started_backends=resident-h48,nissy-optimal; stopped_backends=resident-h48; backend_solver=nissy_optimal_external; backend_runtime_seconds=3.797973; setup_notes=; race backend=nissy-optimal; input_mode=representative_scramble; source_sequence_provided=False; scramble_source=inverse_verified_kociemba_solution; threads=1; required_table=pt_nxopt31_HTM; return_code=0",
+      "runtime_seconds": 5.829176,
+      "selected_backend": "nissy-optimal",
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "started_backends": "resident-h48,nissy-optimal",
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "stopped_backends": "resident-h48",
+      "verified": true
+    },
+    {
+      "case_id": "shallow_r_u_f2_repeat_1",
+      "description": "direct facelet/cubie state for a shallow three-move scramble",
+      "mode": "resident_h48_reuse",
+      "notes": "resident race exact oracle; exactness_policy=first_verified_exact_solution_wins; resident_h48_process=shared_batch_session; selected_backend=resident-h48; started_backends=resident-h48; stopped_backends=none; backend_solver=fast_optimal_oracle_h48h7; backend_runtime_seconds=1.359268; setup_notes=; fast optimal oracle API; arbitrary_valid_3x3_domain=true; resident_native_h48=true; max_depth=20; trusted_table=True; resident in-repo native H48 backend; table_loaded_once=true; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=1.351513; table_lookups=43032; table_fallbacks=43032; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; error=",
+      "runtime_seconds": 1.403477,
+      "selected_backend": "resident-h48",
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "started_backends": "resident-h48",
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "stopped_backends": "none",
+      "verified": true
+    },
+    {
+      "case_id": "shallow_r_u_f2_repeat_2",
+      "description": "direct facelet/cubie state for a shallow three-move scramble",
+      "mode": "resident_h48_reuse",
+      "notes": "resident race exact oracle; exactness_policy=first_verified_exact_solution_wins; resident_h48_process=shared_batch_session; selected_backend=resident-h48; started_backends=resident-h48; stopped_backends=none; backend_solver=fast_optimal_oracle_h48h7; backend_runtime_seconds=0.016813; setup_notes=; fast optimal oracle API; arbitrary_valid_3x3_domain=true; resident_native_h48=true; max_depth=20; trusted_table=True; resident in-repo native H48 backend; table_loaded_once=true; trusted_table_metadata=valid; trusted_table_note=trusted H48 metadata validated without per-call checksum scan: /Users/alextoska/Desktop/sgarbas/results/processed/h48_metadata_seed_2026_thesis_h48h7.json; solver=h48h7; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h7.bin; return_code=0; table_check=skipped; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.01675; table_lookups=43032; table_fallbacks=43032; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; error=",
+      "runtime_seconds": 0.050199,
+      "selected_backend": "resident-h48",
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "started_backends": "resident-h48",
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "stopped_backends": "none",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h7",
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "threads": 1,
+  "timeout_seconds": 45.0,
+  "trusted_table": true
+}

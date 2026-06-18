@@ -1,0 +1,104 @@
+{
+  "artifact_suffix": "noaws_detached_waitsafe_live_mmap020_workbatch1",
+  "checked_at_utc": "2026-06-02T03:01:27.685214+00:00",
+  "child_command": "/opt/miniconda3/bin/python scripts/run_h48_stronger_table_campaign.py --profile thesis --seed 2026 --target-solver h48h8 --threads auto --certification-timeout 300.0 --runtime-target 300.0 --artifact-suffix noaws_detached_waitsafe_live_mmap020_workbatch1 --wait-for-safe --safety-wait-timeout 43200.0 --safety-check-interval 60.0 --safety-required-consecutive-checks 2 --min-mmap-available-memory-gib 0.19999999925494194 --gendata-workbatch 1",
+  "child_command_args": [
+    "/opt/miniconda3/bin/python",
+    "scripts/run_h48_stronger_table_campaign.py",
+    "--profile",
+    "thesis",
+    "--seed",
+    "2026",
+    "--target-solver",
+    "h48h8",
+    "--threads",
+    "auto",
+    "--certification-timeout",
+    "300.0",
+    "--runtime-target",
+    "300.0",
+    "--artifact-suffix",
+    "noaws_detached_waitsafe_live_mmap020_workbatch1",
+    "--wait-for-safe",
+    "--safety-wait-timeout",
+    "43200.0",
+    "--safety-check-interval",
+    "60.0",
+    "--safety-required-consecutive-checks",
+    "2",
+    "--min-mmap-available-memory-gib",
+    "0.19999999925494194",
+    "--gendata-workbatch",
+    "1"
+  ],
+  "detached_status": {
+    "effective_pid": 64049,
+    "log_path_exists": true,
+    "log_tail": "",
+    "pid": 64049,
+    "pid_alive": true,
+    "pid_file_exists": true,
+    "pid_file_pid": 64049,
+    "process_resources": {
+      "available": true,
+      "matches": [
+        {
+          "command": "/opt/miniconda3/bin/python scripts/run_h48_stronger_table_campaign.py --profile thesis --seed 2026 --target-solver h48h8 --threads auto --certification-timeout 300.0 --runtime-target 300.0 --artifact-suffix noaws_detached_waitsafe_live_mmap020_workbatch1 --wait-for-safe --safety-wait-timeout 43200.0 --safety-check-interval 60.0 --safety-required-consecutive-checks 2 --min-mmap-available-memory-gib 0.19999999925494194 --gendata-workbatch 1",
+          "cpu_percent": 1.2,
+          "elapsed": "00:00",
+          "mem_percent": 0.0,
+          "pgid": 64049,
+          "pid": 64049,
+          "ppid": 64020,
+          "rss_bytes": 6471680,
+          "rss_kib": 6320,
+          "stat": "Rs"
+        }
+      ],
+      "return_code": 0,
+      "stderr_tail": ""
+    }
+  },
+  "dynamic_thread_selection": true,
+  "execute": true,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "h48_gendata_workbatch": 1,
+  "log_path": "results/logs/h48_stronger_table_detached_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_workbatch1.log",
+  "min_mmap_available_memory_gib": 0.19999999925494194,
+  "notes": "Local no-AWS detached stronger-table launcher. A started process is still not runtime evidence; the fast every-state claim requires the resulting trusted table, checksum, certification, broad runtime corpus, and final contract proof.",
+  "pid": 64049,
+  "pid_file_path": "results/processed/h48_stronger_table_detached_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_mmap020_workbatch1.pid",
+  "preflight_safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 1648459776,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 22197714944,
+      "load_average": [
+        3.09765625,
+        3.1142578125,
+        3.2548828125
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 214748364,
+      "mmap_output": true
+    },
+    "reasons": [],
+    "safe_to_start": true,
+    "solver": "h48h8",
+    "threads": 5
+  },
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "status": "detached_waitsafe_started_not_runtime_evidence",
+  "target_solver": "h48h8",
+  "thread_setting": "auto"
+}

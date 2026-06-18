@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "target": "superflip",
+  "metric": "HTM",
+  "algorithm": "bidirectional BFS in full edge-subset projection",
+  "backend": "native",
+  "max_depth": 12,
+  "results": [
+    {
+      "subset_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "subset_size": 11,
+      "projected_state_count": 980995276800,
+      "target_label": "superflip",
+      "found_distance": null,
+      "proved_greater_than": 12,
+      "max_depth": 12,
+      "elapsed_seconds": 78.8421,
+      "start_seen": 7672278,
+      "target_seen": 7672278,
+      "start_frontier": 7070103,
+      "target_frontier": 7070103
+    }
+  ],
+  "notes": "This is design evidence for WORSTCASE Path 2. It does not build a runtime heuristic table; it identifies the first edge projection size that raises the projected superflip distance."
+}

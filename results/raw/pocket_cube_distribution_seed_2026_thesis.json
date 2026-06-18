@@ -1,0 +1,87 @@
+{
+  "distribution": {
+    "complete": true,
+    "distribution": {
+      "0": 1,
+      "1": 9,
+      "2": 54,
+      "3": 321,
+      "4": 1847,
+      "5": 9992,
+      "6": 50136,
+      "7": 227536,
+      "8": 870072,
+      "9": 1887748,
+      "10": 623800,
+      "11": 2644
+    },
+    "expanded_nodes": 3674160,
+    "generated_nodes": 3674159,
+    "max_depth": null,
+    "max_distance": 11,
+    "runtime_seconds": 25.232388667063788,
+    "state_count": 3674160
+  },
+  "expected_state_count": 3674160,
+  "profile": "thesis",
+  "representative_solutions": [
+    {
+      "case_id": "pocket_rep_1",
+      "expanded_nodes": 1,
+      "generated_nodes": 5,
+      "input_sequence": "R",
+      "solution": "R'",
+      "solution_length": 1,
+      "state_coord": 2208639,
+      "status": "exact",
+      "verified": true
+    },
+    {
+      "case_id": "pocket_rep_2",
+      "expanded_nodes": 3,
+      "generated_nodes": 17,
+      "input_sequence": "R U",
+      "solution": "U' R'",
+      "solution_length": 2,
+      "state_coord": 266493,
+      "status": "exact",
+      "verified": true
+    },
+    {
+      "case_id": "pocket_rep_3",
+      "expanded_nodes": 54,
+      "generated_nodes": 322,
+      "input_sequence": "R U F",
+      "solution": "F' U' R'",
+      "solution_length": 3,
+      "state_coord": 2472203,
+      "status": "exact",
+      "verified": true
+    },
+    {
+      "case_id": "pocket_rep_4",
+      "expanded_nodes": 370,
+      "generated_nodes": 2147,
+      "input_sequence": "R U R' F2",
+      "solution": "F2 R U' R'",
+      "solution_length": 4,
+      "state_coord": 2630402,
+      "status": "exact",
+      "verified": true
+    },
+    {
+      "case_id": "pocket_rep_5",
+      "expanded_nodes": 9037,
+      "generated_nodes": 46662,
+      "input_sequence": "F R U R' U' F'",
+      "solution": "F U R U' R' F'",
+      "solution_length": 6,
+      "state_coord": 542637,
+      "status": "exact",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "state_space": "fixed DBL reference corner, HTM moves U/R/F"
+}

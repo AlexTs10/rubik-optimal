@@ -1,0 +1,13 @@
+{
+  "thesis_student_name": "TODO Greek student display name",
+  "thesis_student_name_english": "TODO English student display name",
+  "thesis_student_full_name": "TODO full student name with patronymic",
+  "thesis_registration_number": "TODO registration number",
+  "thesis_place_date": "TODO ΠΑΤΡΑ - ΜΗΝΑΣ ΕΤΟΣ",
+  "copyright_year": "TODO YYYY",
+  "exam_date": "TODO DD/MM/YYYY",
+  "committee_member_2": "TODO name, rank, department",
+  "committee_member_3": "TODO name, rank, department",
+  "division_director_name": "TODO division director name",
+  "division_director_rank": "TODO division director rank/title"
+}

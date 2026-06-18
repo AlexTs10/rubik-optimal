@@ -1,0 +1,46 @@
+{
+  "generated_at_unix": 1781111367.595644,
+  "profile": "thesis",
+  "quick": false,
+  "row_count": 52,
+  "seed": 2026,
+  "solvers": {
+    "kociemba_native_scoped": {
+      "cases": 13,
+      "max_solution_length": 23,
+      "median_runtime_seconds": 0.0032096663489937782,
+      "statuses": [
+        "non_exact"
+      ],
+      "verified_solutions": 13
+    },
+    "kociemba_two_phase_adapter": {
+      "cases": 13,
+      "max_solution_length": 21,
+      "median_runtime_seconds": 0.00047279195860028267,
+      "statuses": [
+        "non_exact"
+      ],
+      "verified_solutions": 13
+    },
+    "korf_ida_star_scoped": {
+      "cases": 13,
+      "max_solution_length": 9,
+      "median_runtime_seconds": 0.030162999872118235,
+      "statuses": [
+        "exact",
+        "lower_bound"
+      ],
+      "verified_solutions": 11
+    },
+    "thistlethwaite_native_scoped": {
+      "cases": 13,
+      "max_solution_length": 32,
+      "median_runtime_seconds": 0.013515832833945751,
+      "statuses": [
+        "non_exact"
+      ],
+      "verified_solutions": 13
+    }
+  }
+}

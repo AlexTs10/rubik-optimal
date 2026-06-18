@@ -1,0 +1,16 @@
+Repository License Status
+=========================
+
+This repository does not currently declare a single project-wide license for
+the original thesis code, documents, scripts, generated artifacts, or LaTeX
+materials.
+
+Third-party components keep their own upstream licenses and notices. The
+current third-party inventory and provenance boundary is documented in
+THIRD_PARTY_NOTICES.md.
+
+Do not treat this file as permission to redistribute the original repository
+contents under an open-source license. Before public release, submission
+packaging, or redistribution outside the thesis review workflow, choose and
+record an explicit repository license or supervisor-approved distribution
+policy.

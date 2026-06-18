@@ -1,0 +1,114 @@
+{
+  "before_ready": false,
+  "checked_at_utc": "2026-05-31T11:37:13.661394+00:00",
+  "command": "nice -n 20 /opt/homebrew/bin/pypy3 -c import optimal.solver; print('rubikoptimal_tables_ready')",
+  "dry_run": false,
+  "errors": [
+    "RubikOptimal table generation exited with -15"
+  ],
+  "executable": "/opt/homebrew/bin/pypy3",
+  "expected_table_count": 10,
+  "expected_total_size_bytes": 963061264,
+  "inventory": [
+    {
+      "actual_size_bytes": 69984,
+      "exists": true,
+      "expected_size_bytes": 69984,
+      "name": "conj_twist",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/conj_twist",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 97320960,
+      "exists": true,
+      "expected_size_bytes": 97320960,
+      "name": "fs24_classidx",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/fs24_classidx",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 24330240,
+      "exists": true,
+      "expected_size_bytes": 24330240,
+      "name": "fs24_sym",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/fs24_sym",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 6095456,
+      "exists": true,
+      "expected_size_bytes": 6095456,
+      "name": "fs24_rep",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/fs24_rep",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 78732,
+      "exists": true,
+      "expected_size_bytes": 78732,
+      "name": "move_twist",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_twist",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 73728,
+      "exists": true,
+      "expected_size_bytes": 73728,
+      "name": "move_flip",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_flip",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 427680,
+      "exists": true,
+      "expected_size_bytes": 427680,
+      "name": "move_slice_sorted",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_slice_sorted",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 1451520,
+      "exists": true,
+      "expected_size_bytes": 1451520,
+      "name": "move_corners",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_corners",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": null,
+      "exists": false,
+      "expected_size_bytes": 833172644,
+      "name": "phase1x24_prun",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/phase1x24_prun",
+      "size_matches": false
+    },
+    {
+      "actual_size_bytes": null,
+      "exists": false,
+      "expected_size_bytes": 40320,
+      "name": "cornerprun",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/cornerprun",
+      "size_matches": false
+    }
+  ],
+  "missing_or_wrong_tables": [
+    "phase1x24_prun",
+    "cornerprun"
+  ],
+  "notes": "RubikOptimal is a separate public optimal-solver backend. Its table generation is isolated under .codex_external so importing optimal.solver never writes large pruning files into the repository root.",
+  "package_path": "/opt/miniconda3/lib/python3.12/site-packages",
+  "passed": false,
+  "ready": false,
+  "run_result": {
+    "return_code": -15,
+    "runtime_seconds": 192.751005,
+    "stderr_tail": "",
+    "stdout_tail": "On the first run, several tables will be created. This may take 8 hours using CPython (depending on the hardware). \nUsing PyPy reduces the time to about 15 minutes.\nAll tables are stored in /Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables\n\ncreating conj_twist table...\ncreating flipslicesorted sym-tables...\nThis may take about 15 minutes.\n................................................................................\n................................................................................\n................................................................................\n................................................................................\n................................................................................\n................................................................................\n................................................................................\n................................................\ncreating move_twist table...\ncreating move_flip table...\ncreating move_slice_sorted table...\n............................................................\ncreating move_corners table...\n................................................................................\n................................................................................\n.........................................\ncreating phase1x24_prun table...\nThis may take 8 hours or even longer, depending on the hardware and the Python version.\nUsing PyPy instead of CPython gives a table creation speedup by a factor of about 20.\n...............................................................\ndepth: 0 done: 1/3332690568\n............................................................................\ndepth: 1 done: 3/3332690568\n............................................................................\ndepth: 2 done: 15/3332690568\n............................................................................\ndepth: 3 done: 130/3332690568\n............................................................................\ndepth: 4 done: 1476/3332690568\n............................................................................\ndepth: 5 done: 18110/3332690568\n............................................................................\ndepth: 6 done: 224318/3332690568\n............................................................................\ndepth: 7 done: 2730759/3332690568\n............................................................................\ndepth: 8 done: 31943982/3332690568\n.........................................................",
+    "timed_out": false
+  },
+  "runtime_seconds": 192.944366,
+  "schema_version": 1,
+  "table_bytes": 129848300,
+  "table_dir": ".codex_external/rubikoptimal_tables",
+  "timeout_seconds": 1800.0
+}

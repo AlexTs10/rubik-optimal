@@ -1,0 +1,135 @@
+{
+  "before_ready": false,
+  "checked_at_utc": "2026-05-31T12:08:26.860241+00:00",
+  "command": "nice -n 20 /opt/homebrew/bin/pypy3 -c import optimal.solver; print('rubikoptimal_tables_ready')",
+  "cornerprun_only": false,
+  "dry_run": false,
+  "errors": [],
+  "executable": "/opt/homebrew/bin/pypy3",
+  "expected_table_count": 10,
+  "expected_total_size_bytes": 963061264,
+  "force": false,
+  "inventory": [
+    {
+      "actual_size_bytes": 69984,
+      "exists": true,
+      "expected_size_bytes": 69984,
+      "name": "conj_twist",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/conj_twist",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 97320960,
+      "exists": true,
+      "expected_size_bytes": 97320960,
+      "name": "fs24_classidx",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/fs24_classidx",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 24330240,
+      "exists": true,
+      "expected_size_bytes": 24330240,
+      "name": "fs24_sym",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/fs24_sym",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 6095456,
+      "exists": true,
+      "expected_size_bytes": 6095456,
+      "name": "fs24_rep",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/fs24_rep",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 78732,
+      "exists": true,
+      "expected_size_bytes": 78732,
+      "name": "move_twist",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_twist",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 73728,
+      "exists": true,
+      "expected_size_bytes": 73728,
+      "name": "move_flip",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_flip",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 427680,
+      "exists": true,
+      "expected_size_bytes": 427680,
+      "name": "move_slice_sorted",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_slice_sorted",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 1451520,
+      "exists": true,
+      "expected_size_bytes": 1451520,
+      "name": "move_corners",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/move_corners",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 833172644,
+      "exists": true,
+      "expected_size_bytes": 833172644,
+      "name": "phase1x24_prun",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/phase1x24_prun",
+      "size_matches": true
+    },
+    {
+      "actual_size_bytes": 40320,
+      "exists": true,
+      "expected_size_bytes": 40320,
+      "name": "cornerprun",
+      "path": "/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables/cornerprun",
+      "size_matches": true
+    }
+  ],
+  "missing_or_wrong_tables": [],
+  "notes": "RubikOptimal is a separate public optimal-solver backend. Its table generation is isolated under .codex_external so importing optimal.solver never writes large pruning files into the repository root.",
+  "operation_succeeded": true,
+  "package_path": "/opt/miniconda3/lib/python3.12/site-packages",
+  "passed": true,
+  "ready": true,
+  "require_safe": true,
+  "run_result": {
+    "return_code": 0,
+    "runtime_seconds": 1067.611674,
+    "stderr_tail": "",
+    "stdout_tail": "loading conj_twist table...\nloading flipslicesorted sym-tables...\nloading move_twist table...\nloading move_flip table...\nloading move_slice_sorted table...\nloading move_corners table...\ncreating phase1x24_prun table...\nThis may take 8 hours or even longer, depending on the hardware and the Python version.\nUsing PyPy instead of CPython gives a table creation speedup by a factor of about 20.\n...............................................................\ndepth: 0 done: 1/3332690568\n............................................................................\ndepth: 1 done: 3/3332690568\n............................................................................\ndepth: 2 done: 15/3332690568\n............................................................................\ndepth: 3 done: 130/3332690568\n............................................................................\ndepth: 4 done: 1476/3332690568\n............................................................................\ndepth: 5 done: 18110/3332690568\n............................................................................\ndepth: 6 done: 224318/3332690568\n............................................................................\ndepth: 7 done: 2730759/3332690568\n............................................................................\ndepth: 8 done: 31943982/3332690568\n............................................................................\ndepth: 9 done: 327366645/3332690568\n............................................................................\ndepth: 10 done: 1969877906/3332690568\nflipping to backwards search...\n............................................................................\ndepth: 11 done: 3321830299/3332690568\n............................................................................\ndepth: 12 done: 3332690547/3332690568\n............................................................................\ndepth: 13 done: 3332690568/3332690568\nloading cornerprun table...\nrubikoptimal_tables_ready",
+    "timed_out": false
+  },
+  "runtime_seconds": 1067.615984,
+  "safety": {
+    "current_table_bytes": 129888620,
+    "expected_total_size_bytes": 963061264,
+    "machine": {
+      "cpu_count": 8,
+      "load_average": [
+        3.59521484375,
+        10.0166015625,
+        12.86962890625
+      ],
+      "table_dir_free_bytes": 36807524352
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "load_fraction_limit": 0.5
+    },
+    "reasons": [],
+    "remaining_table_bytes": 833172644,
+    "safe_to_start": true,
+    "table_dir": ".codex_external/rubikoptimal_tables"
+  },
+  "schema_version": 1,
+  "status": "full_generation",
+  "table_bytes": 963061264,
+  "table_dir": ".codex_external/rubikoptimal_tables",
+  "timeout_seconds": 3600.0
+}

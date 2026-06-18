@@ -1,0 +1,166 @@
+{
+  "artifact_suffix": "noaws_h48h10_waitsafe_current",
+  "campaign_result_exists": false,
+  "campaign_result_passed": null,
+  "campaign_result_path": "results/processed/h48_stronger_table_campaign_seed_2026_thesis_h48h10_noaws_h48h10_waitsafe_current.json",
+  "campaign_result_status": null,
+  "checked_at_utc": "2026-06-02T17:01:53.122405+00:00",
+  "child_command_args": [
+    "/opt/miniconda3/bin/python",
+    "scripts/run_h48_stronger_table_campaign.py",
+    "--profile",
+    "thesis",
+    "--seed",
+    "2026",
+    "--target-solver",
+    "h48h10",
+    "--threads",
+    "auto",
+    "--certification-timeout",
+    "300.0",
+    "--runtime-target",
+    "300.0",
+    "--artifact-suffix",
+    "noaws_h48h10_waitsafe_current",
+    "--wait-for-safe",
+    "--safety-wait-timeout",
+    "21600.0",
+    "--safety-check-interval",
+    "300.0",
+    "--safety-required-consecutive-checks",
+    "2",
+    "--min-mmap-available-memory-gib",
+    "4.0",
+    "--gendata-workbatch",
+    "256",
+    "--mmap-sync-mode",
+    "async",
+    "--backend-cflag=-march=native",
+    "--skip-generation-distribution-scan"
+  ],
+  "current_safety": {
+    "estimated_table_size_bytes": 30336314216,
+    "estimated_table_size_gib": 28.252894,
+    "machine": {
+      "available_memory_bytes": 219693056,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 39487963136,
+      "load_average": [
+        3.20751953125,
+        3.90625,
+        3.953125
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 1.15,
+      "disk_multiplier_source": "storage_default",
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [
+      "available memory 0.20 GiB is below the 4.00 GiB mmap generation guard"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h10",
+    "threads": 5
+  },
+  "detached_launch_status": "detached_waitsafe_dryrun_planned_not_runtime_evidence",
+  "detached_payload_path": "results/processed/h48_stronger_table_detached_seed_2026_thesis_h48h10_noaws_h48h10_waitsafe_current.json",
+  "detached_status": {
+    "effective_pid": null,
+    "log_path_exists": false,
+    "log_tail": "",
+    "pid": null,
+    "pid_alive": null,
+    "pid_file_exists": false,
+    "pid_file_pid": null,
+    "process_resources": {
+      "available": true,
+      "matches": []
+    }
+  },
+  "effective_pid": null,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "full_checksum_details": {},
+  "full_checksum_message": "not requested",
+  "full_checksum_requested": false,
+  "full_checksum_valid": null,
+  "generation_log_progress": {
+    "available": false,
+    "computed_short_positions": null,
+    "latest_processed_short_cubes": null,
+    "latest_progress_fraction": null,
+    "latest_progress_line": "",
+    "latest_scanned_shortcube_slots": null,
+    "partial_table_allocated_bytes": null,
+    "partial_table_exists": false,
+    "partial_table_size_bytes": 0,
+    "progress_sample_count": 0,
+    "recent_progress_samples": [],
+    "saw_processing_phase": false,
+    "total_short_cubes": null,
+    "total_shortcube_slots": null
+  },
+  "h48_backend_extra_cflags": [
+    "-march=native"
+  ],
+  "h48_gendata_workbatch": 256,
+  "h48_generation_distribution_mode": "expected_constants",
+  "h48_generation_distribution_scan_skipped": true,
+  "h48_generation_mmap_sync_mode": "async",
+  "native_h48_backend_process_resources": {
+    "available": true,
+    "matches": []
+  },
+  "native_h48_backend_processes": {
+    "available": true,
+    "matches": [],
+    "return_code": 0,
+    "stderr_tail": ""
+  },
+  "native_h48_backend_running": false,
+  "notes": "Read-only local no-AWS detached status. This proves process/table state only; the fast every-state claim remains false until trusted stronger-table metadata, full checksum, certification, broad runtime evidence, and a worst-case runtime boundary exist.",
+  "pid": null,
+  "pid_alive": null,
+  "pid_file_pid": null,
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "status": "detached_launch_artifact_only_no_running_process",
+  "target_metadata": {
+    "exists": false,
+    "path": "results/processed/h48_metadata_seed_2026_thesis_h48h10.json",
+    "size_bytes": 0
+  },
+  "target_partial_table": {
+    "allocated_bytes": null,
+    "exists": false,
+    "path": "data/generated/h48/thesis_seed_2026/.h48h10.bin.partial",
+    "size_bytes": 0
+  },
+  "target_solver": "h48h10",
+  "target_table": {
+    "exists": false,
+    "expected_size_bytes": 30336314216,
+    "path": "data/generated/h48/thesis_seed_2026/h48h10.bin",
+    "size_bytes": 0
+  },
+  "target_trusted_message": "missing target table or metadata",
+  "target_trusted_table": false,
+  "wait_safe_progress": {
+    "available": false,
+    "consecutive_safe_tail_count": 0,
+    "ever_safe_to_start": false,
+    "latest_available_memory_bytes": null,
+    "latest_reasons": [],
+    "latest_safe_to_start": null,
+    "latest_sample": null,
+    "max_available_memory_bytes": null,
+    "recent_samples": [],
+    "sample_count": 0
+  }
+}

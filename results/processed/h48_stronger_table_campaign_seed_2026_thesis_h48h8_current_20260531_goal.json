@@ -1,0 +1,79 @@
+{
+  "all_state_fast_oracle_goal_satisfied": false,
+  "all_state_fast_oracle_goal_satisfied_by_this_decision": false,
+  "allow_unsafe_generation": false,
+  "artifact_suffix": "current_20260531_goal",
+  "checked_at_utc": "2026-05-31T11:24:10.647371+00:00",
+  "commands": [],
+  "current_next_missing_oracle_grade_solver": "h48h8",
+  "current_strongest_local_oracle_solver": "h48h7",
+  "dry_run": false,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "generation_command": "nice -n 20 /opt/miniconda3/bin/python scripts/generate_h48_tables.py --profile thesis --seed 2026 --solver h48h8 --threads 1 --mmap-output --progress-log --require-safe",
+  "generation_command_args": [
+    "nice",
+    "-n",
+    "20",
+    "/opt/miniconda3/bin/python",
+    "scripts/generate_h48_tables.py",
+    "--profile",
+    "thesis",
+    "--seed",
+    "2026",
+    "--solver",
+    "h48h8",
+    "--threads",
+    "1",
+    "--mmap-output",
+    "--progress-log",
+    "--require-safe"
+  ],
+  "notes": "Stronger H48 table campaign for the requested fast optimal oracle over every valid 3x3 state. This artifact is deliberately not a completion claim unless the target table is trusted, hard-case certification passes, broad runtime evidence exists, and a worst-case runtime boundary is documented.",
+  "passed": false,
+  "post_campaign_target_trusted_message": "missing target table or metadata after campaign",
+  "post_campaign_target_trusted_table": false,
+  "profile": "thesis",
+  "remaining_completion_requirements": [
+    "trusted h48h8 table metadata and checksum",
+    "hard-case exact certification with h48h8",
+    "broad arbitrary-state corpus under thesis runtime target with h48h8",
+    "formal or supervisor-approved empirical worst-case runtime boundary"
+  ],
+  "safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 38156394496,
+      "load_average": [
+        4.6640625,
+        6.39404296875,
+        10.990234375
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35
+    },
+    "reasons": [
+      "h48h8 table size exceeds 35% of total RAM before generator overhead",
+      "current one-minute load average 4.66 is at least 50% of logical CPUs"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h8",
+    "threads": 1
+  },
+  "schema_version": 1,
+  "seed": 2026,
+  "should_run_generation": false,
+  "status": "refused_unsafe_generation",
+  "target_estimated_table_size_bytes": 7585624040,
+  "target_h_value": 8,
+  "target_metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+  "target_solver": "h48h8",
+  "target_table_path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+  "target_trusted_message": "missing target table or metadata",
+  "target_trusted_table": false
+}

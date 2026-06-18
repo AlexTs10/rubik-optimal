@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "seed": 2026,
+  "seven_edge_pdbs_present": [
+    "thesis_seed_2026_edge_subset_0_1_2_3_4_5_6_pdb.bin",
+    "thesis_seed_2026_edge_subset_5_6_7_8_9_10_11_pdb.bin"
+  ],
+  "seven_edge_pdbs_present_count": 2,
+  "branching_factor": 13.3,
+  "rows": [
+    {
+      "state": "rand_d10",
+      "corner": 7,
+      "edge6_max": 8,
+      "edge7_max": 8,
+      "current": 8,
+      "improved": 8,
+      "gain": 0
+    },
+    {
+      "state": "rand_d12",
+      "corner": 10,
+      "edge6_max": 8,
+      "edge7_max": 9,
+      "current": 10,
+      "improved": 10,
+      "gain": 0
+    },
+    {
+      "state": "rand_d14",
+      "corner": 8,
+      "edge6_max": 8,
+      "edge7_max": 9,
+      "current": 8,
+      "improved": 9,
+      "gain": 1
+    },
+    {
+      "state": "rand_d16",
+      "corner": 7,
+      "edge6_max": 8,
+      "edge7_max": 9,
+      "current": 8,
+      "improved": 9,
+      "gain": 1
+    },
+    {
+      "state": "rand_d18",
+      "corner": 8,
+      "edge6_max": 9,
+      "edge7_max": 10,
+      "current": 9,
+      "improved": 10,
+      "gain": 1
+    },
+    {
+      "state": "rand_d20",
+      "corner": 9,
+      "edge6_max": 8,
+      "edge7_max": 9,
+      "current": 9,
+      "improved": 9,
+      "gain": 0
+    },
+    {
+      "state": "superflip20",
+      "corner": 0,
+      "edge6_max": 8,
+      "edge7_max": 8,
+      "current": 8,
+      "improved": 8,
+      "gain": 0
+    }
+  ],
+  "superflip_gain": 0,
+  "superflip_node_factor": 1.0,
+  "mean_random_gain": 0.5,
+  "admissibility_checked": 15,
+  "admissibility_inadmissible": 0
+}

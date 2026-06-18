@@ -1,0 +1,383 @@
+{
+  "aws_account_boundary_note": "AWS helper scripts are not required for this runbook. Use the non-AWS generic SSH entrypoint for an approved PC or other non-AWS host unless the correct AWS account is explicitly reauthorized.",
+  "aws_required": false,
+  "canary_plan_path": "results/processed/cloud_hardtail_campaign_plan_seed_2026_thesis_h48h10_cloud_h48h10_fasttarget_canary_batch3_20260601.json",
+  "canary_plan_summary": {
+    "claim_scope": "canary",
+    "distance": 20,
+    "fast_runtime_proven_for_every_possible_state": false,
+    "h48_gendata_workbatch": 256,
+    "hardtail_execution_mode": "batch",
+    "hardtail_prerequisite_workload_ids": [
+      "stronger_table_h48h10"
+    ],
+    "hardtail_state_count": 3,
+    "hardtail_strategy": "native-h48-only",
+    "objective": "prove or falsify a fast optimal oracle claim for every valid 3x3 state",
+    "profile": "thesis",
+    "recommended_minimum_machine": {
+      "cpu_count": 16,
+      "h48_target_solver": "h48h10",
+      "h48_target_table_size_bytes": 30336314216,
+      "h48_target_table_size_gib": 28.252894,
+      "local_nvme_gib": 250,
+      "memory_gib": 64,
+      "reason": "distance-20 hard-tail live exact search and h48h10 table generation are memory/I/O sensitive; the target table alone is about 28.25 GiB, so the local 16 GiB Mac is not an appropriate proof machine under load"
+    },
+    "required_workload_count": 6,
+    "required_workload_count_by_kind": {
+      "h48_stronger_table_generation_and_certification": 1,
+      "postprocess_and_audit": 3,
+      "public_known_distance_hardtail_batch": 1,
+      "rubikoptimal_table_complete_hardcase": 1
+    },
+    "required_workload_ids": [
+      "stronger_table_h48h10",
+      "known_distance_20_shard_000",
+      "rubikoptimal_superflip_hardcase",
+      "postprocess_00",
+      "postprocess_01",
+      "postprocess_02"
+    ],
+    "requires_table_distribution_before_hardtail": true,
+    "seed": 2026,
+    "solver": "h48h10",
+    "worker_threads": 16,
+    "workload_count": 6,
+    "workload_count_by_kind": {
+      "h48_stronger_table_generation_and_certification": 1,
+      "postprocess_and_audit": 3,
+      "public_known_distance_hardtail_batch": 1,
+      "rubikoptimal_table_complete_hardcase": 1
+    }
+  },
+  "canary_reuses_full_prerequisites": true,
+  "completion_gate": "Only a full-scope campaign whose workloads pass and whose regenerated contract records fast_runtime_proven_for_every_possible_state=true can satisfy the final claim.",
+  "created_at_utc": "2026-06-02T19:50:22.781732+00:00",
+  "default_threads": 16,
+  "execution_environment": "generic_large_machine_or_approved_cloud",
+  "fast_runtime_proven_for_every_possible_state": false,
+  "full_plan_path": "results/processed/cloud_hardtail_campaign_plan_seed_2026_thesis_h48h10_cloud_h48h10_fasttarget_hardtail_batch10_20260601.json",
+  "full_plan_summary": {
+    "claim_scope": "full",
+    "distance": 20,
+    "fast_runtime_proven_for_every_possible_state": false,
+    "h48_gendata_workbatch": 256,
+    "hardtail_execution_mode": "batch",
+    "hardtail_prerequisite_workload_ids": [
+      "stronger_table_h48h10"
+    ],
+    "hardtail_state_count": 25,
+    "hardtail_strategy": "native-h48-only",
+    "objective": "prove or falsify a fast optimal oracle claim for every valid 3x3 state",
+    "profile": "thesis",
+    "recommended_minimum_machine": {
+      "cpu_count": 16,
+      "h48_target_solver": "h48h10",
+      "h48_target_table_size_bytes": 30336314216,
+      "h48_target_table_size_gib": 28.252894,
+      "local_nvme_gib": 250,
+      "memory_gib": 64,
+      "reason": "distance-20 hard-tail live exact search and h48h10 table generation are memory/I/O sensitive; the target table alone is about 28.25 GiB, so the local 16 GiB Mac is not an appropriate proof machine under load"
+    },
+    "required_workload_count": 8,
+    "required_workload_count_by_kind": {
+      "h48_stronger_table_generation_and_certification": 1,
+      "postprocess_and_audit": 3,
+      "public_known_distance_hardtail_batch": 3,
+      "rubikoptimal_table_complete_hardcase": 1
+    },
+    "required_workload_ids": [
+      "stronger_table_h48h10",
+      "known_distance_20_shard_000",
+      "known_distance_20_shard_001",
+      "known_distance_20_shard_002",
+      "rubikoptimal_superflip_hardcase",
+      "postprocess_00",
+      "postprocess_01",
+      "postprocess_02"
+    ],
+    "requires_table_distribution_before_hardtail": true,
+    "seed": 2026,
+    "solver": "h48h10",
+    "worker_threads": 16,
+    "workload_count": 8,
+    "workload_count_by_kind": {
+      "h48_stronger_table_generation_and_certification": 1,
+      "postprocess_and_audit": 3,
+      "public_known_distance_hardtail_batch": 3,
+      "rubikoptimal_table_complete_hardcase": 1
+    }
+  },
+  "generated_file_fingerprint_algorithm": "sha256-size-mode-v1",
+  "generated_file_fingerprints": {
+    "bootstrap_cloud_machine": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/bootstrap_cloud_machine.sh",
+      "sha256": "f87a71f73e776a09eea4d4a5cfd21ce57f08907b018f7ce474246fbe9a4e3e92",
+      "size_bytes": 1204
+    },
+    "collect_prerequisite_table_parts": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh",
+      "sha256": "60260c97c824dc8694f2cc784fcd5e76e436633e68e51c265fbe497c0ca48ea1",
+      "size_bytes": 856
+    },
+    "collect_prerequisite_tables": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_tables.sh",
+      "sha256": "8f76c247fd465b202d05c18ba40f4eb4da262fbb9ab512979851cb0cac798991",
+      "size_bytes": 1879
+    },
+    "collect_results": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh",
+      "sha256": "bca16d3088f03f0cab825791808b75f9b0f92ed730ed4cce9c2ca1586a202831",
+      "size_bytes": 1624
+    },
+    "dry_run_canary": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/dry_run_canary.sh",
+      "sha256": "e1fbb51546bffed4266a633e5d983c029a2b6880537807bed60fed9af39326ab",
+      "size_bytes": 838
+    },
+    "evaluate_full": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh",
+      "sha256": "9b1c4fc64ee8c80ffba8d64cb6b0f656e735ce0b7c1949606f6efc4687b60cb5",
+      "size_bytes": 689
+    },
+    "finalize_full_after_collect": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/finalize_full_after_collect.sh",
+      "sha256": "176fa3d3d78ec0096611f1a1f214c18c78a24de343dbd1eeb85956aa753dc1d8",
+      "size_bytes": 1619
+    },
+    "install_prerequisite_tables": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/install_prerequisite_tables.sh",
+      "sha256": "8f0aa3d18e5ef8daf01185c62f8c33f137aedb3430326a2b68605bbb8e42a639",
+      "size_bytes": 775
+    },
+    "preflight_leader": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh",
+      "sha256": "b639fc90d985d5a39f246fa3c549970b352b8862114f960c7c9d5f819797adda",
+      "size_bytes": 675
+    },
+    "preflight_worker": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh",
+      "sha256": "9780f487a361e20c3a5b9d9d6180b17acb9bbbc1547380650f1ef79c77d29ed0",
+      "size_bytes": 698
+    },
+    "readme": {
+      "mode_octal": "0o644",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/README.md",
+      "sha256": "482a227f91cdc34ef718e488c1a944dc943ad877ede3e082c9fd70ea1735554c",
+      "size_bytes": 6837
+    },
+    "recover_prerequisite_metadata": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/recover_prerequisite_metadata.sh",
+      "sha256": "02ac0f9510b1f99bb8c1fd1becfbac33fcb2c02eddf3c73915a444a864b7c144",
+      "size_bytes": 1282
+    },
+    "run_canary": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary.sh",
+      "sha256": "100c3ef15a31c509d7e1445718430739773eef7c29291ecb8f76371cba4bd0de",
+      "size_bytes": 1041
+    },
+    "run_canary_after_prerequisites": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh",
+      "sha256": "d9f199d5a5f331c29129dba420e031acc5f3dec148f55937e201a53e0c79e295",
+      "size_bytes": 1029
+    },
+    "run_end_to_end_single_machine": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_end_to_end_single_machine.sh",
+      "sha256": "c49791cdf612d8b2e043ed7c2d938e66e0864803cc712ff6c2d05de9bad74c40",
+      "size_bytes": 1092
+    },
+    "run_full": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh",
+      "sha256": "b10cfcf2e4b6c2de263af836a8458bd01dc8af7d501f1ffa5b5faf31242d28bb",
+      "size_bytes": 1468
+    },
+    "run_full_machine_00": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_00.sh",
+      "sha256": "16bfba0a3c68087b83709e928052da9c7bee397322dad86a44e720884e428afc",
+      "size_bytes": 1313
+    },
+    "run_full_machine_01": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_01.sh",
+      "sha256": "bcbfe5db0293bb99b874fdfaf0d805bde2a95b58bccb0a3ad696fb4e2c5df47f",
+      "size_bytes": 1313
+    },
+    "run_full_machine_02": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_02.sh",
+      "sha256": "b936085ec2dca291041a0eccc0e7ed8ac69442e31a2f2469336d19e20560e954",
+      "size_bytes": 1313
+    },
+    "run_full_nonshard": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_nonshard.sh",
+      "sha256": "e061319f18175ec7a2c16fe1ab1c96aaf2e24a71bd270a18c073bdcf70250655",
+      "size_bytes": 895
+    },
+    "run_full_prerequisites": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh",
+      "sha256": "139e7a841be8cc1df0487d99388f2c5b6acd287da17d4fc38fa15ba9881d6b5b",
+      "size_bytes": 1108
+    },
+    "unpack_results": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/unpack_results.sh",
+      "sha256": "4c62c38fc9489431af20381b6f1fc37025ddec289474206db942d568be5ab786",
+      "size_bytes": 612
+    },
+    "validate_prerequisite_tables": {
+      "mode_octal": "0o755",
+      "path": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh",
+      "sha256": "59187995366564f7ef77ed5cad4c140ff6a699e08b3e58a1a27cb5c3d5f53b5c",
+      "size_bytes": 622
+    }
+  },
+  "generated_files": {
+    "bootstrap_cloud_machine": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/bootstrap_cloud_machine.sh",
+    "collect_prerequisite_table_parts": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_table_parts.sh",
+    "collect_prerequisite_tables": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_tables.sh",
+    "collect_results": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_results.sh",
+    "dry_run_canary": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/dry_run_canary.sh",
+    "evaluate_full": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/evaluate_full.sh",
+    "finalize_full_after_collect": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/finalize_full_after_collect.sh",
+    "install_prerequisite_tables": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/install_prerequisite_tables.sh",
+    "preflight_leader": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_leader.sh",
+    "preflight_worker": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/preflight_worker.sh",
+    "readme": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/README.md",
+    "recover_prerequisite_metadata": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/recover_prerequisite_metadata.sh",
+    "run_canary": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary.sh",
+    "run_canary_after_prerequisites": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_canary_after_prerequisites.sh",
+    "run_end_to_end_single_machine": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_end_to_end_single_machine.sh",
+    "run_full": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full.sh",
+    "run_full_machine_00": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_00.sh",
+    "run_full_machine_01": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_01.sh",
+    "run_full_machine_02": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_02.sh",
+    "run_full_nonshard": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_nonshard.sh",
+    "run_full_prerequisites": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh",
+    "unpack_results": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/unpack_results.sh",
+    "validate_prerequisite_tables": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/validate_prerequisite_tables.sh"
+  },
+  "manual_staged_run_order": [
+    "bootstrap_cloud_machine",
+    "preflight_leader",
+    "dry_run_canary",
+    "run_full_prerequisites",
+    "collect_prerequisite_tables",
+    "install_prerequisite_tables",
+    "preflight_worker",
+    "validate_prerequisite_tables",
+    "run_canary_after_prerequisites",
+    "run_full",
+    "evaluate_full",
+    "collect_results"
+  ],
+  "nonaws_entrypoint": "scripts/run_h48_fasttarget_nonaws_proof.py",
+  "nonaws_generic_ssh_supported": true,
+  "output_dir": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10",
+  "parallel_assignments": [
+    {
+      "estimated_wall_seconds": 900.0,
+      "machine_index": 0,
+      "script": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_00.sh",
+      "workload_ids": [
+        "known_distance_20_shard_000"
+      ]
+    },
+    {
+      "estimated_wall_seconds": 900.0,
+      "machine_index": 1,
+      "script": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_01.sh",
+      "workload_ids": [
+        "known_distance_20_shard_001"
+      ]
+    },
+    {
+      "estimated_wall_seconds": 450.0,
+      "machine_index": 2,
+      "script": "results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_machine_02.sh",
+      "workload_ids": [
+        "known_distance_20_shard_002"
+      ]
+    }
+  ],
+  "parallel_estimate": {
+    "estimated_wall_hours_raw": 12.5,
+    "estimated_wall_hours_scaled": 15.625,
+    "hardtail_stage_hours_raw": 0.25,
+    "machine_count": 3,
+    "nonshard_compute_hours_raw": 0.05,
+    "postprocess_hours_raw": 0.25,
+    "prerequisite_hours_raw": 12.0,
+    "shard_machine_hours_raw": [
+      0.25,
+      0.25,
+      0.125
+    ],
+    "steady_state_after_prerequisites_hours_raw": 0.5,
+    "steady_state_after_prerequisites_hours_scaled": 0.625
+  },
+  "parallel_machine_count": 3,
+  "profile": "thesis",
+  "recommended_minimum_cloud_machine": {
+    "cpu_count": 16,
+    "h48_target_solver": "h48h10",
+    "h48_target_table_size_bytes": 30336314216,
+    "h48_target_table_size_gib": 28.252894,
+    "local_nvme_gib": 250,
+    "memory_gib": 64,
+    "reason": "distance-20 hard-tail live exact search and h48h10 table generation are memory/I/O sensitive; the target table alone is about 28.25 GiB, so the local 16 GiB Mac is not an appropriate proof machine under load"
+  },
+  "run_order": [
+    "bootstrap_cloud_machine",
+    "preflight_leader",
+    "dry_run_canary",
+    "run_full_prerequisites",
+    "collect_prerequisite_tables",
+    "install_prerequisite_tables",
+    "preflight_worker",
+    "validate_prerequisite_tables",
+    "run_canary_after_prerequisites",
+    "run_full",
+    "evaluate_full",
+    "collect_results"
+  ],
+  "run_suffix": "cloud_20260601_h48h10_fasttarget_batch10",
+  "schema_version": 1,
+  "seed": 2026,
+  "shared_canary_prerequisite_ids": [
+    "stronger_table_h48h10"
+  ],
+  "single_machine_run_order": [
+    "bootstrap_cloud_machine",
+    "preflight_leader",
+    "run_full_prerequisites",
+    "preflight_worker",
+    "validate_prerequisite_tables",
+    "run_canary_after_prerequisites",
+    "run_full",
+    "evaluate_full",
+    "collect_results",
+    "finalize_full_after_collect"
+  ],
+  "solver": "h48h10",
+  "status": "runbook_generated_not_runtime_evidence",
+  "timeout_scale": 1.25
+}

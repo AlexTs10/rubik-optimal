@@ -1,0 +1,60 @@
+{
+  "algorithmic_contract": {
+    "exactness_rule": "exact is propagated only from a backend row that independently verified the solution",
+    "metric": "HTM / face-turn metric",
+    "portfolio_order": "try Nissy optimal table for a bounded interval, then fall back to resident H48",
+    "runtime_claim": "this artifact proves the recorded corpus, not every-state practical worst-case runtime",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "all_exact": true,
+  "all_expected_distances_match": true,
+  "case_ids": [
+    "superflip_distance_20"
+  ],
+  "case_set": "hard",
+  "errors": [],
+  "h48_solver": "h48h7",
+  "h48_table_exists": true,
+  "h48_table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "h48_table_profile": "thesis",
+  "h48_threads": 4,
+  "h48_timeout_seconds": 360.0,
+  "max_runtime_seconds": 0.012885,
+  "nissy_threads": 2,
+  "nissy_timeout_seconds": 3.0,
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "case_id": "superflip_distance_20",
+      "description": "standard all-edges-flipped superflip state",
+      "expanded_nodes": 0,
+      "expected_distance": 20,
+      "expected_distance_matches": true,
+      "generated_nodes": null,
+      "notes": "portfolio exact oracle; selected_backend=exact-certificate-cache; nissy_optimal_invoked=false; resident_h48_invoked=false; saved exact/verified artifact row revalidated before reuse; certificate_artifact=results/processed/h48_resident_certification_seed_2026_thesis_h48h7_trusted.json; certificate_case_id=superflip_distance_20; certificate_source_solver=saved_exact_artifact; certificate_source_runtime_seconds=77.822389",
+      "profile": "thesis",
+      "runtime_seconds": 0.012885,
+      "seed": 2026,
+      "selected_backend": "exact-certificate-cache",
+      "solution": "U R D2 F' B' D L2 U F2 D L2 D R L D2 F R2 F2 L2 D'",
+      "solution_length": 20,
+      "solver": "portfolio_optimal_oracle",
+      "source_depth": 0,
+      "source_sequence": "",
+      "state": "UBULURUFURURFRBRDRFUFLFRFDFDFDLDRDBDLULBLFLDLBUBRBLBDB",
+      "status": "exact",
+      "table_size_bytes": 0,
+      "valid": true,
+      "validation_message": "Cube is physically solvable",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "selected_backends": [
+    "exact-certificate-cache"
+  ],
+  "trusted_table": true
+}

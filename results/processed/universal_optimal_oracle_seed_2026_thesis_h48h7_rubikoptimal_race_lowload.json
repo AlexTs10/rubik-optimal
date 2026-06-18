@@ -1,0 +1,82 @@
+{
+  "all_exact": true,
+  "all_verified": true,
+  "api_class": "UniversalOptimalOracle",
+  "case_ids": [
+    "shallow_r_u_f2"
+  ],
+  "direct_nissy_core_rows": 0,
+  "errors": [],
+  "fast_runtime_proven_for_every_possible_state": false,
+  "h48_start_delay_seconds": 10.0,
+  "include_h48": false,
+  "include_nissy": false,
+  "max_runtime_seconds": 1.784907,
+  "nested_selected_backends": [
+    "rubikoptimal-race",
+    "rubikoptimal_resident"
+  ],
+  "nissy_threads": 1,
+  "oracle_contract": {
+    "exactness_policy": "exact only after independent verification from the original input state or revalidated saved certificate",
+    "latency_strategy": "exact certificate cache, upper/lower certificate, then resident exact-backend race",
+    "resident_h48_symmetry_strategy": "optional bounded non-identity whole-cube rotations before the resident race",
+    "runtime_claim": "this artifact proves optimized universal-oracle control flow on a corpus, not exhaustive every-state timing",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "resident_h48_symmetry_timeout_seconds": 5.0,
+  "resident_h48_symmetry_variants": 0,
+  "rows": [
+    {
+      "backend_solver": "resident_race_optimal_oracle",
+      "case_id": "shallow_r_u_f2",
+      "description": "direct facelet/cubie state for a shallow three-move scramble",
+      "direct_nissy_core_used": false,
+      "expected_distance": 3,
+      "fast_runtime_proven_for_every_possible_state": true,
+      "h48_start_delay_seconds": "10.000000",
+      "nested_backend_solvers": [
+        "resident_race_optimal_oracle",
+        "rubikoptimal_external",
+        "rubikoptimal_external"
+      ],
+      "nested_selected_backends": [
+        "rubikoptimal-race",
+        "rubikoptimal-race",
+        "rubikoptimal_resident"
+      ],
+      "notes": "universal exact oracle; exactness_policy=verified_exact_only; arbitrary_valid_3x3_domain=true; optimized_paths=exact_certificate_cache,upper_lower_certificate,nissy_symmetry_batch,resident_h48_symmetry_batch,parallel_h48_symmetry_race,resident_h48_batch,rubikoptimal_prepass,rubikoptimal_race,portfolio_after_resident_h48_fallback,nissy_core_direct_late_fallback,rubikoptimal_table_complete_fallback,resident_race; fast_runtime_proven_for_every_possible_state=false; selected_backend=rubikoptimal-race; backend_solver=resident_race_optimal_oracle; backend_runtime_seconds=1.784870; resident race exact oracle; exactness_policy=first_verified_exact_solution_wins; resident_h48_process=shared_batch_session; selected_backend=rubikoptimal-race; started_backends=rubikoptimal-race; stopped_backends=none; h48_start_delay_seconds=10.000000; backend_solver=rubikoptimal_external; backend_runtime_seconds=1.754239; setup_notes=; resident race backend=rubikoptimal-race; input_mode=cube_state; source_sequence_provided=false; h48_competes_concurrently=true; rubikoptimal_timeout_seconds=90.000000; resident RubikOptimal backend; selected_backend=rubikoptimal_resident; backend_solver=rubikoptimal_external; input_mode=facelet_state; raw_solution=F2 U3 R3 (3f*); table_dir=/Users/alextoska/Desktop/sgarbas/.codex_external/rubikoptimal_tables; table_load_seconds=1.6121045001782477; resident_table_load_seconds=1.6121045001782477; resident_request_index=1; resident_start_count=1; resident_process_reused=false",
+      "resident_h48_symmetry_used": false,
+      "resident_h48_symmetry_variants": null,
+      "runtime_seconds": 1.784907,
+      "selected_backend": "rubikoptimal-race",
+      "selected_rotation": null,
+      "solution": "F2 U' R'",
+      "solution_length": 3,
+      "source_sequence_provided_to_solver": false,
+      "started_backends": "rubikoptimal-race",
+      "state": "UUUUUUBDDLBBLRRDRRDFFDFFRRRFFFDDBDDBFFRLLRLLULLLUBBUBB",
+      "status": "exact",
+      "stopped_backends": "none",
+      "verified": true
+    }
+  ],
+  "rubikoptimal_race_timeout_seconds": 90.0,
+  "rubikoptimal_table_dir": null,
+  "schema_version": 1,
+  "seed": 2026,
+  "selected_backends": [
+    "rubikoptimal-race"
+  ],
+  "solver": "h48h7",
+  "state_input_only": true,
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "threads": 1,
+  "timeout_seconds": 90.0,
+  "trusted_table": true,
+  "try_certificate_cache": false,
+  "try_upper_lower_certificate": false
+}

@@ -1,0 +1,41 @@
+{
+  "created_at_utc": "2026-06-01T16:05:13.144449+00:00",
+  "fast_runtime_proven_for_every_possible_state": false,
+  "notes": "This probe simulates an outer native H48 batch process timeout after one JSON row has already been printed. It proves the Python wrapper keeps completed exact rows instead of marking the whole batch as timeout. It is not an all-state runtime proof.",
+  "partial_rows_preserved": true,
+  "passed": true,
+  "profile": "thesis",
+  "row_count": 2,
+  "rows": [
+    {
+      "case_id": "completed_before_outer_timeout",
+      "expanded_nodes": 1,
+      "notes": "in-repo native H48 batch row completed before process timeout; table_loaded_once=true; partial_timeout_recovered=true; batch_wall_seconds=0.000023; partial_completed_count=1; solver=h48h0; input_mode=cube_state; source_sequence_provided=False; table=/Users/alextoska/Desktop/sgarbas/data/generated/h48/thesis_seed_2026/h48h0.bin; return_code=-1; table_check=verified; table_storage=mmap; table_preload=disabled; backend_solve_seconds=0.01; table_lookups=1; table_fallbacks=0; proved_lower_bound=0; auto_min_depth=disabled; lower_bound=0; min_depth=0; max_depth=20; search_timeout_ms=1000; timed_out_by_poll=False; search_deadline_expired=False; error=",
+      "runtime_seconds": 0.01,
+      "solution_length": 1,
+      "solver_name": "h48_native_h48h0",
+      "status": "exact",
+      "table_bytes": 31683944,
+      "verified": true
+    },
+    {
+      "case_id": "unfinished_when_outer_timeout_fired",
+      "expanded_nodes": null,
+      "notes": "in-repo H48 batch backend timed out after 1.0s; partial_timeout_recovered=true; partial_completed_count=1; partial_stdout='{\"status\":\"exact\",\"solution\":\"R\\\\u0027\",\"solution_length\":1,\"proved_lower_bound\":0,\"runtime_seconds\":0.01,\"expanded_nodes\":1,\"table_lookups\":1,\"table_fallbacks\":0,\"table_size_bytes\":31683944,\"table_check\":\"verified\",\"table_storage\":\"mmap\",\"table_preload\":\"disabled\",\"auto_min_depth\":\"disabled\",\"lower_bound\":0,\"min_depth\":0,\"max_depth\":20,\"search_timeout_ms\":1000,\"timed_out_by_poll\":false,\"search_deadline_expired\":false}\\n'; partial_stderr=''",
+      "runtime_seconds": 2.3e-05,
+      "solution_length": null,
+      "solver_name": "h48_native_h48h0",
+      "status": "timeout",
+      "table_bytes": 31683944,
+      "verified": false
+    }
+  ],
+  "runtime_seconds": 0.000518,
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h0",
+  "table_exists": true,
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h0.bin",
+  "table_size_bytes": 31683944,
+  "timeout_seconds": 1.0
+}

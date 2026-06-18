@@ -1,0 +1,93 @@
+{
+  "all_exact": true,
+  "all_universal_portfolio_batch": true,
+  "all_verified": true,
+  "api_class": "UniversalOptimalOracle",
+  "case_count": 3,
+  "cases_per_depth": 1,
+  "depths": [
+    5,
+    10,
+    15
+  ],
+  "errors": [],
+  "fast_runtime_proven_for_every_possible_state": false,
+  "max_runtime_seconds": 5.16422,
+  "nested_selected_backends": [
+    "nissy-optimal-batch"
+  ],
+  "nissy_threads": 1,
+  "oracle_contract": {
+    "batch_strategy": "universal solve_many applies certificate/upper-lower filters, then one portfolio batch for live states",
+    "exactness_policy": "exact only after independent verification from the original input state",
+    "runtime_claim": "this artifact proves the recorded deterministic corpus, not exhaustive every-state timing",
+    "state_scope": "every physically valid 3x3 CubeState accepted by the local verifier"
+  },
+  "passed": true,
+  "preload_table": false,
+  "profile": "thesis",
+  "rows": [
+    {
+      "case_id": "random_depth_5_0",
+      "nested_selected_backend": "nissy-optimal-batch",
+      "notes": "universal exact oracle; exactness_policy=verified_exact_only; arbitrary_valid_3x3_domain=true; optimized_paths=exact_certificate_cache,upper_lower_certificate,resident_race; fast_runtime_proven_for_every_possible_state=false; selected_backend=portfolio-batch; backend_solver=portfolio_optimal_oracle; backend_runtime_seconds=5.163165; portfolio exact oracle; nissy_optimal_batch_invoked=true; resident_h48_invoked=false; selected_backend=nissy-optimal-batch; backend_solver=nissy_optimal_external; backend_runtime_seconds=5.163165; external Nissy `solve optimal -o -i` batch backend; batch_size=3; batch_index=0; input_mode=representative_scramble; source_sequence_provided=False; scramble_source=inverse_verified_kociemba_solution; threads=1; required_table=pt_nxopt31_HTM; return_code=0",
+      "runtime_seconds": 5.16422,
+      "selected_backend": "portfolio-batch",
+      "solution": "D2 B' L' F2 B'",
+      "solution_length": 5,
+      "solver": "universal_optimal_oracle",
+      "source_depth": 5,
+      "source_sequence_provided_to_solver": false,
+      "state": "DDDBUUBDDLRLLRLBRRRFFUFFUDLRLUDDFUUFRUURLLLRFBBBBBBDFF",
+      "status": "exact",
+      "valid": true,
+      "validation_message": "Cube is physically solvable",
+      "verified": true
+    },
+    {
+      "case_id": "random_depth_10_0",
+      "nested_selected_backend": "nissy-optimal-batch",
+      "notes": "universal exact oracle; exactness_policy=verified_exact_only; arbitrary_valid_3x3_domain=true; optimized_paths=exact_certificate_cache,upper_lower_certificate,resident_race; fast_runtime_proven_for_every_possible_state=false; selected_backend=portfolio-batch; backend_solver=portfolio_optimal_oracle; backend_runtime_seconds=5.163165; portfolio exact oracle; nissy_optimal_batch_invoked=true; resident_h48_invoked=false; selected_backend=nissy-optimal-batch; backend_solver=nissy_optimal_external; backend_runtime_seconds=5.163165; external Nissy `solve optimal -o -i` batch backend; batch_size=3; batch_index=1; input_mode=representative_scramble; source_sequence_provided=False; scramble_source=inverse_verified_kociemba_solution; threads=1; required_table=pt_nxopt31_HTM; return_code=0",
+      "runtime_seconds": 5.16422,
+      "selected_backend": "portfolio-batch",
+      "solution": "B' L B2 U D2 R2 F L D2 B",
+      "solution_length": 10,
+      "solver": "universal_optimal_oracle",
+      "source_depth": 10,
+      "source_sequence_provided_to_solver": false,
+      "state": "ULDFURBFRFFRURDDDRDLUUFBDFLLDBBDBUBBLURRLRLRFFUBLBDULF",
+      "status": "exact",
+      "valid": true,
+      "validation_message": "Cube is physically solvable",
+      "verified": true
+    },
+    {
+      "case_id": "random_depth_15_0",
+      "nested_selected_backend": "nissy-optimal-batch",
+      "notes": "universal exact oracle; exactness_policy=verified_exact_only; arbitrary_valid_3x3_domain=true; optimized_paths=exact_certificate_cache,upper_lower_certificate,resident_race; fast_runtime_proven_for_every_possible_state=false; selected_backend=portfolio-batch; backend_solver=portfolio_optimal_oracle; backend_runtime_seconds=5.163165; portfolio exact oracle; nissy_optimal_batch_invoked=true; resident_h48_invoked=false; selected_backend=nissy-optimal-batch; backend_solver=nissy_optimal_external; backend_runtime_seconds=5.163165; external Nissy `solve optimal -o -i` batch backend; batch_size=3; batch_index=2; input_mode=representative_scramble; source_sequence_provided=False; scramble_source=inverse_verified_kociemba_solution; threads=1; required_table=pt_nxopt31_HTM; return_code=0",
+      "runtime_seconds": 5.16422,
+      "selected_backend": "portfolio-batch",
+      "solution": "L2 D2 B2 L2 D' F R' F2 L' R U' L' D F2 U",
+      "solution_length": 15,
+      "solver": "universal_optimal_oracle",
+      "source_depth": 15,
+      "source_sequence_provided_to_solver": false,
+      "state": "DDURUDRLBDFRURDFLLFFRBFFLLLUBDDDUDUUFUURLRLLFBBRRBFBBB",
+      "status": "exact",
+      "valid": true,
+      "validation_message": "Cube is physically solvable",
+      "verified": true
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "selected_backends": [
+    "portfolio-batch"
+  ],
+  "solver": "h48h7",
+  "state_input_only": true,
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h7.bin",
+  "threads": 1,
+  "timeout_seconds": 45.0,
+  "trusted_table": true
+}

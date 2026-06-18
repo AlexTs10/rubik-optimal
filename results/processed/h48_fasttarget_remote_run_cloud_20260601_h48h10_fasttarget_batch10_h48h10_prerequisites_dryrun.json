@@ -1,0 +1,182 @@
+{
+  "all_steps_passed": false,
+  "created_at_utc": "2026-06-01T15:51:12.643423+00:00",
+  "diagnostic_fetch_command": "rsync -az --info=progress2 -e ssh ubuntu@h48-proof-machine:/mnt/sgarbas-h48-proof/results/processed/ /Users/alextoska/Desktop/sgarbas/results/processed",
+  "dry_run": true,
+  "execute": false,
+  "executed_step_count": 0,
+  "expected_table_size_bytes": 30336314216,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "fetch_diagnostics_on_fail": true,
+  "fetch_processed_command": "rsync -az --info=progress2 -e ssh ubuntu@h48-proof-machine:/mnt/sgarbas-h48-proof/results/processed/ /Users/alextoska/Desktop/sgarbas/results/processed",
+  "halted": false,
+  "notes": "Remote proof runner for the H48 fast-target runbook. Passing this runner only means the remote run, fetch, unpack, and finalize commands completed; the final claim still requires the regenerated H48 contract to record fast_runtime_proven_for_every_possible_state=true.",
+  "parallel_estimate": {
+    "estimated_wall_hours_raw": 15.528,
+    "estimated_wall_hours_scaled": 19.41,
+    "hardtail_stage_hours_raw": 3.278,
+    "machine_count": 3,
+    "nonshard_compute_hours_raw": 0.05,
+    "postprocess_hours_raw": 0.25,
+    "prerequisite_hours_raw": 12.0,
+    "shard_machine_hours_raw": [
+      3.278,
+      3.278,
+      1.639
+    ],
+    "steady_state_after_prerequisites_hours_raw": 3.528,
+    "steady_state_after_prerequisites_hours_scaled": 4.41
+  },
+  "passed": false,
+  "passed_step_count": 0,
+  "prerequisite_tables_archive": "results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10.tar.gz",
+  "profile": "thesis",
+  "recommended_minimum_cloud_machine": {
+    "cpu_count": 16,
+    "h48_target_solver": "h48h10",
+    "h48_target_table_size_bytes": 30336314216,
+    "h48_target_table_size_gib": 28.252894,
+    "local_nvme_gib": 250,
+    "memory_gib": 64,
+    "reason": "distance-20 hard-tail live exact search and h48h10 table generation are memory/I/O sensitive; the target table alone is about 28.25 GiB, so the local 16 GiB Mac is not an appropriate proof machine under load"
+  },
+  "remote_action": "prerequisites",
+  "remote_host": "ubuntu@h48-proof-machine",
+  "remote_root": "/mnt/sgarbas-h48-proof",
+  "remote_status": null,
+  "results_archive": "results/cloud_hardtail_artifacts_cloud_20260601_h48h10_fasttarget_batch10.tar.gz",
+  "rows": [
+    {
+      "command": [
+        "ssh",
+        "ubuntu@h48-proof-machine",
+        "bash",
+        "-lc",
+        "mkdir -p /mnt/sgarbas-h48-proof"
+      ],
+      "executed": false,
+      "id": "remote_prepare",
+      "location": "local_ssh",
+      "passed": false,
+      "required": true,
+      "return_code": null,
+      "shell_command": "ssh ubuntu@h48-proof-machine bash -lc 'mkdir -p /mnt/sgarbas-h48-proof'",
+      "timed_out": false
+    },
+    {
+      "command": [
+        "rsync",
+        "-az",
+        "--info=progress2",
+        "-e",
+        "ssh",
+        "--exclude",
+        ".git/",
+        "--exclude",
+        "__pycache__/",
+        "--exclude",
+        ".pytest_cache/",
+        "--exclude",
+        "tmp/",
+        "--exclude",
+        "results/cloud_hardtail_artifacts_*.tar.gz",
+        "--exclude",
+        "results/cloud_hardtail_prerequisite_tables_*.tar.gz",
+        "/Users/alextoska/Desktop/sgarbas/",
+        "ubuntu@h48-proof-machine:/mnt/sgarbas-h48-proof/"
+      ],
+      "executed": false,
+      "id": "sync_repo_to_remote",
+      "location": "local_rsync",
+      "passed": false,
+      "required": true,
+      "return_code": null,
+      "shell_command": "rsync -az --info=progress2 -e ssh --exclude .git/ --exclude __pycache__/ --exclude .pytest_cache/ --exclude tmp/ --exclude 'results/cloud_hardtail_artifacts_*.tar.gz' --exclude 'results/cloud_hardtail_prerequisite_tables_*.tar.gz' /Users/alextoska/Desktop/sgarbas/ ubuntu@h48-proof-machine:/mnt/sgarbas-h48-proof/",
+      "timed_out": false
+    },
+    {
+      "command": [
+        "ssh",
+        "ubuntu@h48-proof-machine",
+        "bash",
+        "-lc",
+        "cd /mnt/sgarbas-h48-proof && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh"
+      ],
+      "executed": false,
+      "id": "remote_run_prerequisites",
+      "location": "remote",
+      "passed": false,
+      "required": true,
+      "return_code": null,
+      "shell_command": "ssh ubuntu@h48-proof-machine bash -lc 'cd /mnt/sgarbas-h48-proof && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/run_full_prerequisites.sh'",
+      "timed_out": false
+    },
+    {
+      "command": [
+        "ssh",
+        "ubuntu@h48-proof-machine",
+        "bash",
+        "-lc",
+        "cd /mnt/sgarbas-h48-proof && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_tables.sh"
+      ],
+      "executed": false,
+      "id": "remote_collect_prerequisite_tables",
+      "location": "remote",
+      "passed": false,
+      "required": true,
+      "return_code": null,
+      "shell_command": "ssh ubuntu@h48-proof-machine bash -lc 'cd /mnt/sgarbas-h48-proof && bash results/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10/collect_prerequisite_tables.sh'",
+      "timed_out": false
+    },
+    {
+      "command": [
+        "rsync",
+        "-az",
+        "--info=progress2",
+        "-e",
+        "ssh",
+        "ubuntu@h48-proof-machine:/mnt/sgarbas-h48-proof/results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10.tar.gz",
+        "/Users/alextoska/Desktop/sgarbas/results"
+      ],
+      "executed": false,
+      "id": "fetch_prerequisite_tables_archive",
+      "location": "local_rsync",
+      "passed": false,
+      "required": true,
+      "return_code": null,
+      "shell_command": "rsync -az --info=progress2 -e ssh ubuntu@h48-proof-machine:/mnt/sgarbas-h48-proof/results/cloud_hardtail_prerequisite_tables_cloud_20260601_h48h10_fasttarget_batch10.tar.gz /Users/alextoska/Desktop/sgarbas/results",
+      "timed_out": false
+    },
+    {
+      "command": [
+        "rsync",
+        "-az",
+        "--info=progress2",
+        "-e",
+        "ssh",
+        "ubuntu@h48-proof-machine:/mnt/sgarbas-h48-proof/results/processed/",
+        "/Users/alextoska/Desktop/sgarbas/results/processed"
+      ],
+      "executed": false,
+      "id": "fetch_processed_artifacts",
+      "location": "local_rsync",
+      "passed": false,
+      "required": true,
+      "return_code": null,
+      "shell_command": "rsync -az --info=progress2 -e ssh ubuntu@h48-proof-machine:/mnt/sgarbas-h48-proof/results/processed/ /Users/alextoska/Desktop/sgarbas/results/processed",
+      "timed_out": false
+    }
+  ],
+  "rsync_delete": false,
+  "run_suffix": "cloud_20260601_h48h10_fasttarget_batch10",
+  "runbook_manifest_path": "results/processed/cloud_hardtail_runbook_cloud_20260601_h48h10_fasttarget_batch10.json",
+  "runtime_seconds": 0.00055,
+  "schema_version": 1,
+  "seed": 2026,
+  "skip_fetch": false,
+  "skip_local_finalize": false,
+  "skip_sync": false,
+  "solver": "h48h10",
+  "step_count": 6,
+  "timeout_seconds": null
+}

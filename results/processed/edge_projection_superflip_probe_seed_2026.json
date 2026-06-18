@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "target": "superflip",
+  "metric": "HTM",
+  "algorithm": "bidirectional BFS in full edge-subset projection",
+  "max_depth": 11,
+  "results": [
+    {
+      "subset_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "subset_size": 6,
+      "projected_state_count": 42577920,
+      "target_label": "superflip",
+      "found_distance": 7,
+      "proved_greater_than": null,
+      "max_depth": 11,
+      "elapsed_seconds": 0.1694221249781549,
+      "start_seen": 3579,
+      "target_seen": 2996,
+      "start_frontier": 583,
+      "target_frontier": 2747
+    },
+    {
+      "subset_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "subset_size": 7,
+      "projected_state_count": 510935040,
+      "target_label": "superflip",
+      "found_distance": 8,
+      "proved_greater_than": null,
+      "max_depth": 11,
+      "elapsed_seconds": 1.1358224996365607,
+      "start_seen": 40293,
+      "target_seen": 3400,
+      "start_frontier": 37021,
+      "target_frontier": 128
+    },
+    {
+      "subset_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "subset_size": 8,
+      "projected_state_count": 5109350400,
+      "target_label": "superflip",
+      "found_distance": 8,
+      "proved_greater_than": null,
+      "max_depth": 11,
+      "elapsed_seconds": 1.1715729171410203,
+      "start_seen": 43009,
+      "target_seen": 3491,
+      "start_frontier": 39647,
+      "target_frontier": 129
+    },
+    {
+      "subset_edges": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "subset_size": 9,
+      "projected_state_count": 40874803200,
+      "target_label": "superflip",
+      "found_distance": 11,
+      "proved_greater_than": null,
+      "max_depth": 11,
+      "elapsed_seconds": 39.20519716665149,
+      "start_seen": 851264,
+      "target_seen": 583623,
+      "start_frontier": 267641,
+      "target_frontier": 538152
+    }
+  ],
+  "notes": "This is design evidence for WORSTCASE Path 2. It does not build a runtime heuristic table; it identifies the first edge projection size that raises the projected superflip distance."
+}

@@ -1,0 +1,41 @@
+{
+  "created_at_utc": "2026-06-01T16:14:27.845870+00:00",
+  "fast_runtime_proven_for_every_possible_state": false,
+  "notes": "This probe simulates an outer H48 lower-bound batch timeout after two JSON rows have already been printed. It proves the Python wrapper keeps the admissible partial lower bound and still uses partial rows to order a later rotational race. It is not an all-state runtime proof.",
+  "partial_lower_bound_preserved": true,
+  "partial_ordering_preserved": true,
+  "passed": true,
+  "profile": "thesis",
+  "row_count": 2,
+  "rows": [
+    {
+      "case_id": "rotational_lower_bound_partial_timeout",
+      "lower_bound": 9,
+      "notes": "in-repo native H48 rotational admissible lower-bound batch; return_code=None; rotation_count=3; include_identity=True; best_rotation=rot02; best_rotation_backend_runtime_seconds=0.02; partial_timeout_recovered=true; partial_completed_count=2; valid_bounds=[('rot00', 1, 0.01), ('rot02', 9, 0.02)]; failed_rows=[]; parse_errors=[]; stdout_line_count=2; table_check=verified; table_storage=mmap; table_preload=disabled; stderr=",
+      "runtime_seconds": 1.2e-05,
+      "solver_name": "h48_native_h48h0_rotational_lower_bound",
+      "status": "lower_bound",
+      "table_bytes": 31683944
+    },
+    {
+      "case_id": "parallel_order_partial_timeout",
+      "expanded_nodes": null,
+      "notes": "parallel H48 rotational symmetry race finished without a verified exact rotated solution; exactness_policy=first_rotated_exact_solution_mapped_back_and_verified; identity_rotation_included=True; symmetry_variants=3; started_rotations=['rot02', 'rot00', 'rot05']; max_concurrency=1; parallel_wave_count=3; effective_total_timeout_seconds=3.0; pending_rotations_not_started=0; race_timeout_seconds=1.0; per_rotation_timeout_seconds=1.0; per_candidate_threads=1; h48_lower_bound_rotation_order=true; order_status=partial_timeout_recovered; order_runtime_seconds=0.000019; order_timeout_seconds=1.0; return_code=None; partial_timeout_recovered=true; partial_completed_count=2; rotation_count=3; valid_bounds=[('rot00', 1, 0.01), ('rot02', 9, 0.02)]; failed_rows=[]; parse_errors=[]; ordered_rotations=['rot02', 'rot00', 'rot05']; stdout_line_count=2; stderr=; per_candidate_timeouts=[]; setup_errors=[]; completed_rotations=[('rot02', 'failed', False, 6.916932761669159e-06), ('rot00', 'failed', False, 0.05502999993041158), ('rot05', 'failed', False, 0.05502387462183833)]",
+      "runtime_seconds": 0.11059,
+      "solution_length": null,
+      "solver_name": "h48_native_h48h0_parallel_symmetry_race",
+      "status": "timeout",
+      "table_bytes": 31683944,
+      "verified": false
+    }
+  ],
+  "runtime_seconds": 0.111486,
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h0",
+  "started_candidate_count_after_partial_order": 3,
+  "table_exists": true,
+  "table_path": "data/generated/h48/thesis_seed_2026/h48h0.bin",
+  "table_size_bytes": 31683944,
+  "timeout_seconds": 1.0
+}

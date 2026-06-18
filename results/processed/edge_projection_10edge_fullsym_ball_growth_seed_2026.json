@@ -1,0 +1,27 @@
+{
+  "mode": "ball",
+  "subset_edges": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+  "subset_size": 10,
+  "projected_state_count": 245248819200,
+  "max_depth": 7,
+  "max_seen": 50000000,
+  "canonical_rotations": true,
+  "canonical_full_symmetries": true,
+  "canonical_transform_count": 48,
+  "completed": true,
+  "stopped_reason": null,
+  "completed_depth": 7,
+  "seen": 23517154,
+  "frontier": 21604439,
+  "elapsed_seconds": 459.908,
+  "layers": [
+    {"depth": 0, "frontier": 1, "seen": 1, "elapsed_seconds": 0.00142225},
+    {"depth": 1, "frontier": 8, "seen": 9, "elapsed_seconds": 0.00160188},
+    {"depth": 2, "frontier": 71, "seen": 80, "elapsed_seconds": 0.0029395},
+    {"depth": 3, "frontier": 852, "seen": 932, "elapsed_seconds": 0.0157368},
+    {"depth": 4, "frontier": 10866, "seen": 11798, "elapsed_seconds": 0.174681},
+    {"depth": 5, "frontier": 139298, "seen": 151096, "elapsed_seconds": 2.2283},
+    {"depth": 6, "frontier": 1761619, "seen": 1912715, "elapsed_seconds": 31.0798},
+    {"depth": 7, "frontier": 21604439, "seen": 23517154, "elapsed_seconds": 455.425}
+  ]
+}

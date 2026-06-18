@@ -1,0 +1,57 @@
+{
+  "max_depth": 20,
+  "profile": "thesis",
+  "rows": [
+    {
+      "expanded_nodes": 10816266,
+      "full_symmetry_transpositions": false,
+      "generated_nodes": 144596790,
+      "is_verified": false,
+      "mode_id": "root48",
+      "notes": "native C++ IDA* with corner+edge PDB heuristic; initial_lower_bound=8; final_bound=16; edge_pdb_count=10; additive_edge_pdb_count=0; threads=8; split_depth=3; split_tasks=2118; child_order=heuristic-desc; dual_heuristic=False; nissy_heuristic=False; nissy_axis_transforms=False; upper_solution_verified=False; exact_certified_by_upper_bound=False; upper_bound_solution_length=0; upper_bound_proof_strategy=single-bound; upper_bound_proof_search_bound=-1; upper_bound_proof_exhaustive=False; upper_bound_shorter_solution_found=False; root_symmetry_prune=True; root_move_count=2; root_move_mask_enabled=True; symmetry_transpositions=False; symmetry_rotation_count=0; full_symmetry_transpositions=False; symmetry_transform_count=0; tt_entry_limit=1000000; tt_hits=1023; tt_capacity_skips=8580995; return_code=0; error=",
+      "root_symmetry_prune": true,
+      "runtime_seconds": 20.0557,
+      "solution_length": null,
+      "status": "timeout",
+      "symmetry_transpositions": false,
+      "wrapper_elapsed_seconds": 20.099482832942158
+    },
+    {
+      "expanded_nodes": 11755898,
+      "full_symmetry_transpositions": false,
+      "generated_nodes": 176338353,
+      "is_verified": false,
+      "mode_id": "rot24_tt",
+      "notes": "native C++ IDA* with corner+edge PDB heuristic; initial_lower_bound=8; final_bound=16; edge_pdb_count=10; additive_edge_pdb_count=0; threads=8; split_depth=3; split_tasks=2405; child_order=heuristic-desc; dual_heuristic=False; nissy_heuristic=False; nissy_axis_transforms=False; upper_solution_verified=False; exact_certified_by_upper_bound=False; upper_bound_solution_length=0; upper_bound_proof_strategy=single-bound; upper_bound_proof_search_bound=-1; upper_bound_proof_exhaustive=False; upper_bound_shorter_solution_found=False; root_symmetry_prune=True; root_move_count=2; root_move_mask_enabled=True; symmetry_transpositions=True; symmetry_rotation_count=24; full_symmetry_transpositions=False; symmetry_transform_count=24; tt_entry_limit=1000000; tt_hits=320739; tt_capacity_skips=9442694; return_code=0; error=",
+      "root_symmetry_prune": true,
+      "runtime_seconds": 20.1185,
+      "solution_length": null,
+      "status": "timeout",
+      "symmetry_transpositions": true,
+      "wrapper_elapsed_seconds": 20.175624874886125
+    },
+    {
+      "expanded_nodes": 11768406,
+      "full_symmetry_transpositions": true,
+      "generated_nodes": 176525973,
+      "is_verified": false,
+      "mode_id": "full48_tt",
+      "notes": "native C++ IDA* with corner+edge PDB heuristic; initial_lower_bound=8; final_bound=16; edge_pdb_count=10; additive_edge_pdb_count=0; threads=8; split_depth=3; split_tasks=2405; child_order=heuristic-desc; dual_heuristic=False; nissy_heuristic=False; nissy_axis_transforms=False; upper_solution_verified=False; exact_certified_by_upper_bound=False; upper_bound_solution_length=0; upper_bound_proof_strategy=single-bound; upper_bound_proof_search_bound=-1; upper_bound_proof_exhaustive=False; upper_bound_shorter_solution_found=False; root_symmetry_prune=True; root_move_count=2; root_move_mask_enabled=True; symmetry_transpositions=True; symmetry_rotation_count=24; full_symmetry_transpositions=True; symmetry_transform_count=48; tt_entry_limit=1000000; tt_hits=322422; tt_capacity_skips=9487206; return_code=0; error=",
+      "root_symmetry_prune": true,
+      "runtime_seconds": 20.0658,
+      "solution_length": null,
+      "status": "timeout",
+      "symmetry_transpositions": true,
+      "wrapper_elapsed_seconds": 20.121568042319268
+    }
+  ],
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "korf_native_optimal",
+  "split_depth": 3,
+  "target": "superflip",
+  "threads": 8,
+  "timeout_seconds": 20.0,
+  "tt_entries": 1000000,
+  "uses_h48_or_nissy": false
+}

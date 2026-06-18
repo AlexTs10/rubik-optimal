@@ -1,0 +1,81 @@
+{
+  "artifact_suffix": "noaws_detached_waitsafe_live_dynamic_threads",
+  "checked_at_utc": "2026-06-02T01:46:56.467763+00:00",
+  "child_command": "/opt/miniconda3/bin/python scripts/run_h48_stronger_table_campaign.py --profile thesis --seed 2026 --target-solver h48h8 --threads auto --certification-timeout 300.0 --runtime-target 300.0 --artifact-suffix noaws_detached_waitsafe_live_dynamic_threads --wait-for-safe --safety-wait-timeout 43200.0 --safety-check-interval 60.0 --safety-required-consecutive-checks 2",
+  "child_command_args": [
+    "/opt/miniconda3/bin/python",
+    "scripts/run_h48_stronger_table_campaign.py",
+    "--profile",
+    "thesis",
+    "--seed",
+    "2026",
+    "--target-solver",
+    "h48h8",
+    "--threads",
+    "auto",
+    "--certification-timeout",
+    "300.0",
+    "--runtime-target",
+    "300.0",
+    "--artifact-suffix",
+    "noaws_detached_waitsafe_live_dynamic_threads",
+    "--wait-for-safe",
+    "--safety-wait-timeout",
+    "43200.0",
+    "--safety-check-interval",
+    "60.0",
+    "--safety-required-consecutive-checks",
+    "2"
+  ],
+  "detached_status": {
+    "effective_pid": 47984,
+    "log_path_exists": true,
+    "log_tail": "",
+    "pid": 47984,
+    "pid_alive": true,
+    "pid_file_exists": true,
+    "pid_file_pid": 47984
+  },
+  "dynamic_thread_selection": true,
+  "execute": true,
+  "fast_runtime_proven_for_every_possible_state": false,
+  "log_path": "results/logs/h48_stronger_table_detached_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_dynamic_threads.log",
+  "notes": "Local no-AWS detached stronger-table launcher. A started process is still not runtime evidence; the fast every-state claim requires the resulting trusted table, checksum, certification, broad runtime corpus, and final contract proof.",
+  "pid": 47984,
+  "pid_file_path": "results/processed/h48_stronger_table_detached_seed_2026_thesis_h48h8_noaws_detached_waitsafe_live_dynamic_threads.pid",
+  "preflight_safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 136167424,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 23456309248,
+      "load_average": [
+        3.16162109375,
+        3.19384765625,
+        3.15771484375
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [
+      "available memory 0.13 GiB is below the 4.00 GiB mmap generation guard"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h8",
+    "threads": 5
+  },
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "status": "detached_waitsafe_started_not_runtime_evidence",
+  "target_solver": "h48h8",
+  "thread_setting": "auto"
+}

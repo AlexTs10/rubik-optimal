@@ -1,0 +1,269 @@
+{
+  "artifact_suffix": "noaws_workbatch256_waitsafe_live",
+  "campaign_result_exists": false,
+  "campaign_result_passed": null,
+  "campaign_result_path": "results/processed/h48_stronger_table_campaign_seed_2026_thesis_h48h8_noaws_workbatch256_waitsafe_live.json",
+  "campaign_result_status": null,
+  "checked_at_utc": "2026-06-02T09:58:04.042144+00:00",
+  "current_safety": {
+    "estimated_table_size_bytes": 7585624040,
+    "estimated_table_size_gib": 7.064663,
+    "machine": {
+      "available_memory_bytes": 217874432,
+      "cpu_count": 8,
+      "data_generated_h48_free_bytes": 40050618368,
+      "load_average": [
+        3.48681640625,
+        6.91552734375,
+        14.66748046875
+      ],
+      "memory_bytes": 17179869184
+    },
+    "policy": {
+      "disk_multiplier": 2.0,
+      "generation_storage": "mmap_file",
+      "load_fraction_limit": 0.5,
+      "memory_fraction_limit": 0.35,
+      "min_mmap_available_memory_bytes": 4294967296,
+      "mmap_output": true
+    },
+    "reasons": [
+      "available memory 0.20 GiB is below the 4.00 GiB mmap generation guard"
+    ],
+    "safe_to_start": false,
+    "solver": "h48h8",
+    "threads": 5
+  },
+  "detached_launch_status": "detached_waitsafe_started_not_runtime_evidence",
+  "detached_payload_path": "results/processed/h48_stronger_table_detached_seed_2026_thesis_h48h8_noaws_workbatch256_waitsafe_live.json",
+  "detached_status": {
+    "effective_pid": 69585,
+    "log_path_exists": true,
+    "log_tail": "{\"available_memory_bytes\": 1521074176, \"checked_at_utc\": \"2026-06-02T04:41:33.684474+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 1860.591129, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.185546875, 2.1943359375, 2.39599609375], \"reasons\": [\"available memory 1.42 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 32, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 1500758016, \"checked_at_utc\": \"2026-06-02T04:42:33.699112+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 1920.606403, \"event\": \"h48_generation_safety_sample\", \"load_average\": [1.58740234375, 2.04296875, 2.32568359375], \"reasons\": [\"available memory 1.40 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 33, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 150781952, \"checked_at_utc\": \"2026-06-02T05:13:36.038063+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 1980.632188, \"event\": \"h48_generation_safety_sample\", \"load_average\": [1.77978515625, 2.0537109375, 2.31298828125], \"reasons\": [\"available memory 0.14 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 34, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 525402112, \"checked_at_utc\": \"2026-06-02T05:29:37.157788+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2040.651488, \"event\": \"h48_generation_safety_sample\", \"load_average\": [6.6787109375, 3.14208984375, 2.68310546875], \"reasons\": [\"available memory 0.49 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 6.68 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 35, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 230178816, \"checked_at_utc\": \"2026-06-02T05:45:42.891921+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2100.673838, \"event\": \"h48_generation_safety_sample\", \"load_average\": [4.0458984375, 3.0361328125, 2.67138671875], \"reasons\": [\"available memory 0.21 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 4.05 is at least 50% of logical CPUs\"], \"resolved_threads\": 4, \"safe_to_start\": false, \"sample_index\": 36, \"thread_setting\": \"auto\", \"threads\": 4}\n{\"available_memory_bytes\": 214384640, \"checked_at_utc\": \"2026-06-02T06:01:44.001131+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2160.706508, \"event\": \"h48_generation_safety_sample\", \"load_average\": [3.43212890625, 3.11474609375, 2.7275390625], \"reasons\": [\"available memory 0.20 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 37, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 186777600, \"checked_at_utc\": \"2026-06-02T06:32:46.442209+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2220.73524, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.68896484375, 2.9794921875, 2.703125], \"reasons\": [\"available memory 0.17 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 38, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 393838592, \"checked_at_utc\": \"2026-06-02T06:43:57.339207+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2280.766784, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.546875, 2.83935546875, 2.66552734375], \"reasons\": [\"available memory 0.37 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 39, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 369639424, \"checked_at_utc\": \"2026-06-02T06:59:58.234028+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2340.786863, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.10791015625, 2.666015625, 2.61279296875], \"reasons\": [\"available memory 0.34 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 40, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 482066432, \"checked_at_utc\": \"2026-06-02T07:16:14.799761+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2400.818884, \"event\": \"h48_generation_safety_sample\", \"load_average\": [1.92919921875, 2.53662109375, 2.56689453125], \"reasons\": [\"available memory 0.45 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 41, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 208027648, \"checked_at_utc\": \"2026-06-02T07:35:12.325828+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2460.846813, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.8095703125, 2.64013671875, 2.6015625], \"reasons\": [\"available memory 0.19 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 42, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 326828032, \"checked_at_utc\": \"2026-06-02T07:39:27.294622+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2520.880242, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.32470703125, 2.52294921875, 2.55908203125], \"reasons\": [\"available memory 0.30 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 43, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 243613696, \"checked_at_utc\": \"2026-06-02T07:45:15.324359+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2580.908433, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.2265625, 2.4443359375, 2.52392578125], \"reasons\": [\"available memory 0.23 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 44, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 263176192, \"checked_at_utc\": \"2026-06-02T08:16:18.091562+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2640.940858, \"event\": \"h48_generation_safety_sample\", \"load_average\": [4.28369140625, 3.1259765625, 2.77978515625], \"reasons\": [\"available memory 0.25 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 4.28 is at least 50% of logical CPUs\"], \"resolved_threads\": 4, \"safe_to_start\": false, \"sample_index\": 45, \"thread_setting\": \"auto\", \"threads\": 4}\n{\"available_memory_bytes\": 231391232, \"checked_at_utc\": \"2026-06-02T08:32:18.843774+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2700.971807, \"event\": \"h48_generation_safety_sample\", \"load_average\": [3.0439453125, 2.95458984375, 2.7353515625], \"reasons\": [\"available memory 0.22 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 46, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 199507968, \"checked_at_utc\": \"2026-06-02T08:46:07.215805+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2761.004366, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.60986328125, 2.83984375, 2.7060546875], \"reasons\": [\"available memory 0.19 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 47, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 166723584, \"checked_at_utc\": \"2026-06-02T09:02:07.646075+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2821.038469, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.298828125, 2.73681640625, 2.6767578125], \"reasons\": [\"available memory 0.16 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 48, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 307691520, \"checked_at_utc\": \"2026-06-02T09:32:16.595131+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2881.06389, \"event\": \"h48_generation_safety_sample\", \"load_average\": [13.52490234375, 4.97216796875, 3.4658203125], \"reasons\": [\"available memory 0.29 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 13.52 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 49, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 9147367424, \"checked_at_utc\": \"2026-06-02T09:35:45.891381+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 2954.053653, \"event\": \"h48_generation_safety_sample\", \"load_average\": [15.13818359375, 8.29833984375, 4.91064453125], \"reasons\": [\"current one-minute load average 15.14 is at least 50% of logical CPUs\", \"free disk is below 2.0x the h48h8 table size, leaving little room for retries\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 50, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 350388224, \"checked_at_utc\": \"2026-06-02T09:37:13.479952+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3041.643749, \"event\": \"h48_generation_safety_sample\", \"load_average\": [322.880859375, 106.6689453125, 42.7197265625], \"reasons\": [\"available memory 0.33 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 322.88 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 51, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 244826112, \"checked_at_utc\": \"2026-06-02T09:38:13.527339+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3101.691279, \"event\": \"h48_generation_safety_sample\", \"load_average\": [149.16162109375, 99.365234375, 44.56494140625], \"reasons\": [\"available memory 0.23 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 149.16 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 52, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 289095680, \"checked_at_utc\": \"2026-06-02T09:39:13.559513+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3161.722837, \"event\": \"h48_generation_safety_sample\", \"load_average\": [56.04833984375, 81.642578125, 41.6640625], \"reasons\": [\"available memory 0.27 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 56.05 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 53, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 319193088, \"checked_at_utc\": \"2026-06-02T09:40:13.585446+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3221.749562, \"event\": \"h48_generation_safety_sample\", \"load_average\": [21.88232421875, 67.1728515625, 38.9716796875], \"reasons\": [\"available memory 0.30 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 21.88 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 54, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 292601856, \"checked_at_utc\": \"2026-06-02T09:41:13.608855+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3281.773069, \"event\": \"h48_generation_safety_sample\", \"load_average\": [10.48681640625, 55.64501953125, 36.57666015625], \"reasons\": [\"available memory 0.27 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 10.49 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 55, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 133693440, \"checked_at_utc\": \"2026-06-02T09:42:13.637676+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3341.80197, \"event\": \"h48_generation_safety_sample\", \"load_average\": [6.85888671875, 46.39453125, 34.41162109375], \"reasons\": [\"available memory 0.12 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 6.86 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 56, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 134496256, \"checked_at_utc\": \"2026-06-02T09:43:13.653611+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3401.817844, \"event\": \"h48_generation_safety_sample\", \"load_average\": [9.439453125, 39.8193359375, 32.7568359375], \"reasons\": [\"available memory 0.13 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 9.44 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 57, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 222986240, \"checked_at_utc\": \"2026-06-02T09:44:13.666773+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3461.831095, \"event\": \"h48_generation_safety_sample\", \"load_average\": [5.6923828125, 33.2197265625, 30.76611328125], \"reasons\": [\"available memory 0.21 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 5.69 is at least 50% of logical CPUs\"], \"resolved_threads\": 2, \"safe_to_start\": false, \"sample_index\": 58, \"thread_setting\": \"auto\", \"threads\": 2}\n{\"available_memory_bytes\": 117145600, \"checked_at_utc\": \"2026-06-02T09:45:13.687021+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3521.851421, \"event\": \"h48_generation_safety_sample\", \"load_average\": [4.93115234375, 28.02685546875, 28.9912109375], \"reasons\": [\"available memory 0.11 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 4.93 is at least 50% of logical CPUs\"], \"resolved_threads\": 3, \"safe_to_start\": false, \"sample_index\": 59, \"thread_setting\": \"auto\", \"threads\": 3}\n{\"available_memory_bytes\": 417103872, \"checked_at_utc\": \"2026-06-02T09:46:13.703944+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3581.868463, \"event\": \"h48_generation_safety_sample\", \"load_average\": [3.48486328125, 23.40771484375, 27.1962890625], \"reasons\": [\"available memory 0.39 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 60, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 207732736, \"checked_at_utc\": \"2026-06-02T09:47:13.718325+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3641.882914, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.1748046875, 19.4267578125, 25.4482421875], \"reasons\": [\"available memory 0.19 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 61, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 271826944, \"checked_at_utc\": \"2026-06-02T09:48:13.739537+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3701.904234, \"event\": \"h48_generation_safety_sample\", \"load_average\": [3.38232421875, 16.7294921875, 24.03271484375], \"reasons\": [\"available memory 0.25 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 62, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 262701056, \"checked_at_utc\": \"2026-06-02T09:49:13.766116+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3761.930809, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.53515625, 14.03466796875, 22.5244140625], \"reasons\": [\"available memory 0.24 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 63, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 199819264, \"checked_at_utc\": \"2026-06-02T09:50:13.778854+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3821.943739, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.23046875, 11.88037109375, 21.140625], \"reasons\": [\"available memory 0.19 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 6, \"safe_to_start\": false, \"sample_index\": 64, \"thread_setting\": \"auto\", \"threads\": 6}\n{\"available_memory_bytes\": 139165696, \"checked_at_utc\": \"2026-06-02T09:51:13.804829+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3881.969809, \"event\": \"h48_generation_safety_sample\", \"load_average\": [3.087890625, 10.40478515625, 19.95849609375], \"reasons\": [\"available memory 0.13 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 65, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 163004416, \"checked_at_utc\": \"2026-06-02T09:52:13.837039+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 3942.002078, \"event\": \"h48_generation_safety_sample\", \"load_average\": [3.06494140625, 9.115234375, 18.8271484375], \"reasons\": [\"available memory 0.15 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 66, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 104497152, \"checked_at_utc\": \"2026-06-02T09:53:13.856831+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 4002.022003, \"event\": \"h48_generation_safety_sample\", \"load_average\": [2.56787109375, 7.86474609375, 17.6962890625], \"reasons\": [\"available memory 0.10 GiB is below the 4.00 GiB mmap generation guard\"], \"resolved_threads\": 5, \"safe_to_start\": false, \"sample_index\": 67, \"thread_setting\": \"auto\", \"threads\": 5}\n{\"available_memory_bytes\": 309362688, \"checked_at_utc\": \"2026-06-02T09:54:13.927814+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 4062.09305, \"event\": \"h48_generation_safety_sample\", \"load_average\": [18.9150390625, 10.9951171875, 18.15673828125], \"reasons\": [\"available memory 0.29 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 18.92 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 68, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 129449984, \"checked_at_utc\": \"2026-06-02T09:55:13.948573+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 4122.115603, \"event\": \"h48_generation_safety_sample\", \"load_average\": [9.33837890625, 9.6767578125, 17.173828125], \"reasons\": [\"available memory 0.12 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 9.34 is at least 50% of logical CPUs\"], \"resolved_threads\": 1, \"safe_to_start\": false, \"sample_index\": 69, \"thread_setting\": \"auto\", \"threads\": 1}\n{\"available_memory_bytes\": 187924480, \"checked_at_utc\": \"2026-06-02T09:56:13.965709+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 4182.133041, \"event\": \"h48_generation_safety_sample\", \"load_average\": [6.0498046875, 8.634765625, 16.27099609375], \"reasons\": [\"available memory 0.18 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 6.05 is at least 50% of logical CPUs\"], \"resolved_threads\": 2, \"safe_to_start\": false, \"sample_index\": 70, \"thread_setting\": \"auto\", \"threads\": 2}\n{\"available_memory_bytes\": 532627456, \"checked_at_utc\": \"2026-06-02T09:57:13.987487+00:00\", \"dynamic_thread_selection\": true, \"elapsed_seconds\": 4242.154944, \"event\": \"h48_generation_safety_sample\", \"load_average\": [4.43701171875, 7.6982421875, 15.39892578125], \"reasons\": [\"available memory 0.50 GiB is below the 4.00 GiB mmap generation guard\", \"current one-minute load average 4.44 is at least 50% of logical CPUs\"], \"resolved_threads\": 4, \"safe_to_start\": false, \"sample_index\": 71, \"thread_setting\": \"auto\", \"threads\": 4}",
+    "pid": 69585,
+    "pid_alive": true,
+    "pid_file_exists": true,
+    "pid_file_pid": 69585,
+    "process_resources": {
+      "available": true,
+      "matches": [
+        {
+          "command": "/opt/miniconda3/bin/python scripts/run_h48_stronger_table_campaign.py --profile thesis --seed 2026 --target-solver h48h8 --threads auto --certification-timeout 300.0 --runtime-target 300.0 --artifact-suffix noaws_workbatch256_waitsafe_live --wait-for-safe --safety-wait-timeout 43200.0 --safety-check-interval 60.0 --safety-required-consecutive-checks 2 --min-mmap-available-memory-gib 4.0 --gendata-workbatch 256",
+          "cpu_percent": 0.0,
+          "elapsed": "05:47:32",
+          "mem_percent": 0.1,
+          "pgid": 69585,
+          "pid": 69585,
+          "ppid": 1,
+          "rss_bytes": 8601600,
+          "rss_kib": 8400,
+          "stat": "Ss"
+        }
+      ],
+      "return_code": 0,
+      "stderr_tail": ""
+    }
+  },
+  "fast_runtime_proven_for_every_possible_state": false,
+  "full_checksum_details": {},
+  "full_checksum_message": "not requested",
+  "full_checksum_requested": false,
+  "full_checksum_valid": null,
+  "generation_log_progress": {
+    "available": false,
+    "computed_short_positions": null,
+    "latest_processed_short_cubes": null,
+    "latest_progress_fraction": null,
+    "latest_progress_line": "",
+    "latest_scanned_shortcube_slots": null,
+    "partial_table_allocated_bytes": null,
+    "partial_table_exists": false,
+    "partial_table_size_bytes": 0,
+    "progress_sample_count": 0,
+    "recent_progress_samples": [],
+    "saw_processing_phase": false,
+    "total_short_cubes": null,
+    "total_shortcube_slots": null
+  },
+  "native_h48_backend_process_resources": {
+    "available": true,
+    "matches": []
+  },
+  "native_h48_backend_processes": {
+    "available": true,
+    "matches": [],
+    "return_code": 0,
+    "stderr_tail": ""
+  },
+  "native_h48_backend_running": false,
+  "notes": "Read-only local no-AWS detached status. This proves process/table state only; the fast every-state claim remains false until trusted stronger-table metadata, full checksum, certification, broad runtime evidence, and a worst-case runtime boundary exist.",
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "status": "detached_python_alive_waiting_safety_gate_no_trusted_table",
+  "target_metadata": {
+    "exists": false,
+    "path": "results/processed/h48_metadata_seed_2026_thesis_h48h8.json",
+    "size_bytes": 0
+  },
+  "target_partial_table": {
+    "allocated_bytes": null,
+    "exists": false,
+    "path": "data/generated/h48/thesis_seed_2026/.h48h8.bin.partial",
+    "size_bytes": 0
+  },
+  "target_solver": "h48h8",
+  "target_table": {
+    "exists": false,
+    "expected_size_bytes": 7585624040,
+    "path": "data/generated/h48/thesis_seed_2026/h48h8.bin",
+    "size_bytes": 0
+  },
+  "target_trusted_message": "missing target table or metadata",
+  "target_trusted_table": false,
+  "wait_safe_progress": {
+    "available": true,
+    "consecutive_safe_tail_count": 0,
+    "ever_safe_to_start": false,
+    "first_checked_at_utc": "2026-06-02T04:10:33.095039+00:00",
+    "last_checked_at_utc": "2026-06-02T09:57:13.987487+00:00",
+    "latest_available_memory_bytes": 532627456,
+    "latest_elapsed_seconds": 4242.154944,
+    "latest_load_average": [
+      4.43701171875,
+      7.6982421875,
+      15.39892578125
+    ],
+    "latest_reasons": [
+      "available memory 0.50 GiB is below the 4.00 GiB mmap generation guard",
+      "current one-minute load average 4.44 is at least 50% of logical CPUs"
+    ],
+    "latest_resolved_threads": 4,
+    "latest_safe_to_start": false,
+    "latest_sample": {
+      "available_memory_bytes": 532627456,
+      "checked_at_utc": "2026-06-02T09:57:13.987487+00:00",
+      "dynamic_thread_selection": true,
+      "elapsed_seconds": 4242.154944,
+      "load_average": [
+        4.43701171875,
+        7.6982421875,
+        15.39892578125
+      ],
+      "reasons": [
+        "available memory 0.50 GiB is below the 4.00 GiB mmap generation guard",
+        "current one-minute load average 4.44 is at least 50% of logical CPUs"
+      ],
+      "resolved_threads": 4,
+      "safe_to_start": false,
+      "sample_index": 71,
+      "thread_setting": "auto",
+      "threads": 4
+    },
+    "latest_sample_index": 71,
+    "max_available_memory_bytes": 9147367424,
+    "min_available_memory_bytes": 104497152,
+    "recent_samples": [
+      {
+        "available_memory_bytes": 104497152,
+        "checked_at_utc": "2026-06-02T09:53:13.856831+00:00",
+        "dynamic_thread_selection": true,
+        "elapsed_seconds": 4002.022003,
+        "load_average": [
+          2.56787109375,
+          7.86474609375,
+          17.6962890625
+        ],
+        "reasons": [
+          "available memory 0.10 GiB is below the 4.00 GiB mmap generation guard"
+        ],
+        "resolved_threads": 5,
+        "safe_to_start": false,
+        "sample_index": 67,
+        "thread_setting": "auto",
+        "threads": 5
+      },
+      {
+        "available_memory_bytes": 309362688,
+        "checked_at_utc": "2026-06-02T09:54:13.927814+00:00",
+        "dynamic_thread_selection": true,
+        "elapsed_seconds": 4062.09305,
+        "load_average": [
+          18.9150390625,
+          10.9951171875,
+          18.15673828125
+        ],
+        "reasons": [
+          "available memory 0.29 GiB is below the 4.00 GiB mmap generation guard",
+          "current one-minute load average 18.92 is at least 50% of logical CPUs"
+        ],
+        "resolved_threads": 1,
+        "safe_to_start": false,
+        "sample_index": 68,
+        "thread_setting": "auto",
+        "threads": 1
+      },
+      {
+        "available_memory_bytes": 129449984,
+        "checked_at_utc": "2026-06-02T09:55:13.948573+00:00",
+        "dynamic_thread_selection": true,
+        "elapsed_seconds": 4122.115603,
+        "load_average": [
+          9.33837890625,
+          9.6767578125,
+          17.173828125
+        ],
+        "reasons": [
+          "available memory 0.12 GiB is below the 4.00 GiB mmap generation guard",
+          "current one-minute load average 9.34 is at least 50% of logical CPUs"
+        ],
+        "resolved_threads": 1,
+        "safe_to_start": false,
+        "sample_index": 69,
+        "thread_setting": "auto",
+        "threads": 1
+      },
+      {
+        "available_memory_bytes": 187924480,
+        "checked_at_utc": "2026-06-02T09:56:13.965709+00:00",
+        "dynamic_thread_selection": true,
+        "elapsed_seconds": 4182.133041,
+        "load_average": [
+          6.0498046875,
+          8.634765625,
+          16.27099609375
+        ],
+        "reasons": [
+          "available memory 0.18 GiB is below the 4.00 GiB mmap generation guard",
+          "current one-minute load average 6.05 is at least 50% of logical CPUs"
+        ],
+        "resolved_threads": 2,
+        "safe_to_start": false,
+        "sample_index": 70,
+        "thread_setting": "auto",
+        "threads": 2
+      },
+      {
+        "available_memory_bytes": 532627456,
+        "checked_at_utc": "2026-06-02T09:57:13.987487+00:00",
+        "dynamic_thread_selection": true,
+        "elapsed_seconds": 4242.154944,
+        "load_average": [
+          4.43701171875,
+          7.6982421875,
+          15.39892578125
+        ],
+        "reasons": [
+          "available memory 0.50 GiB is below the 4.00 GiB mmap generation guard",
+          "current one-minute load average 4.44 is at least 50% of logical CPUs"
+        ],
+        "resolved_threads": 4,
+        "safe_to_start": false,
+        "sample_index": 71,
+        "thread_setting": "auto",
+        "threads": 4
+      }
+    ],
+    "sample_count": 71
+  }
+}

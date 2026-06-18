@@ -1,0 +1,73 @@
+{
+  "artifact_suffix": "local_source",
+  "assembled_size_bytes": 31683944,
+  "bundle_kind": "h48_split_table_bundle",
+  "created_at_utc": "2026-06-02T20:21:46.805187+00:00",
+  "fast_runtime_proven_for_every_possible_state": false,
+  "manifest_path": "results/h48_split_bundle_smoke_seed_2026_thesis_h48h0_local_parts/h48_table_bundle_manifest.json",
+  "metadata_path": "h48_metadata_seed_2026_thesis_h48h0.json",
+  "metadata_sha256": "a137a1ada9a042e641cc91fe86a70265c3cb511b072bdc591dfcad84e8d67a5d",
+  "notes": "Created a split H48 table bundle with per-part SHA-256 hashes. This improves proof-host transfer/resume ergonomics for large H48 tables, but the fast every-state oracle claim still requires installing the table, validating the full checksum, and passing the hard-tail proof workloads.",
+  "output_dir": "results/h48_split_bundle_smoke_seed_2026_thesis_h48h0_local_parts",
+  "part_count": 4,
+  "part_size_bytes": 8388608,
+  "parts": [
+    {
+      "index": 0,
+      "path": "h48h0.bin.part00000",
+      "sha256": "d08007c19669ac8887147926a3a1a238e8f7a9a04510d57d1b142c70af53588a",
+      "size_bytes": 8388608
+    },
+    {
+      "index": 1,
+      "path": "h48h0.bin.part00001",
+      "sha256": "3627e8662e333d48691fc9705ab6b9e6a328721ce84344da1596953868a163cc",
+      "size_bytes": 8388608
+    },
+    {
+      "index": 2,
+      "path": "h48h0.bin.part00002",
+      "sha256": "ec61eec65062eada141ef4bd3886f617db4844174f2ac5f80e7435e44e664c74",
+      "size_bytes": 8388608
+    },
+    {
+      "index": 3,
+      "path": "h48h0.bin.part00003",
+      "sha256": "88bb2d863a7090eaad84cdf678ad5957fd2d6ea803c48bae8cc1a2a3e76c6873",
+      "size_bytes": 6518120
+    }
+  ],
+  "passed": true,
+  "profile": "thesis",
+  "schema_version": 1,
+  "seed": 2026,
+  "solver": "h48h0",
+  "source_full_checksum_details": {
+    "actual_checksum_sha256": "46dcee74f59cf61852ac55acc7e1f5c6ec5acc63e2bf67320ee338466fb34f53",
+    "checksum_cache_hit": false,
+    "checksum_certificate_created_at_utc": "2026-06-02T20:17:21.378735+00:00",
+    "checksum_certificate_message": "checksum certificate identity validated",
+    "checksum_certificate_path": "results/processed/h48_checksum_certificate_seed_2026_thesis_h48h0.json",
+    "checksum_certificate_present": true,
+    "checksum_persistent_cache_enabled": true,
+    "checksum_persistent_cache_hit": true,
+    "checksum_runtime_seconds": 0.021986,
+    "expected_checksum_sha256": "46dcee74f59cf61852ac55acc7e1f5c6ec5acc63e2bf67320ee338466fb34f53",
+    "full_checksum_valid": true,
+    "metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h0.json",
+    "profile": "thesis",
+    "seed": 2026,
+    "solver": "h48h0",
+    "table_path": "data/generated/h48/thesis_seed_2026/h48h0.bin",
+    "table_size_bytes": 31683944,
+    "trusted_metadata_valid": true
+  },
+  "source_full_checksum_message": "trusted H48 full checksum certificate reused: /Users/alextoska/Desktop/sgarbas/results/processed/h48_checksum_certificate_seed_2026_thesis_h48h0.json",
+  "source_full_checksum_valid": true,
+  "source_metadata_path": "results/processed/h48_metadata_seed_2026_thesis_h48h0.json",
+  "source_table_path": "data/generated/h48/thesis_seed_2026/h48h0.bin",
+  "split_reused_part_count": 0,
+  "split_written_part_count": 4,
+  "table_checksum_sha256": "46dcee74f59cf61852ac55acc7e1f5c6ec5acc63e2bf67320ee338466fb34f53",
+  "table_size_bytes": 31683944
+}
